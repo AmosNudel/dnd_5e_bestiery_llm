@@ -1,0 +1,5525 @@
+{
+  "monster_type": "humanoid",
+  "count": 45,
+  "monsters": [
+    {
+      "name": "Aberrant Cultist",
+      "source": "XMM",
+      "page": 86,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 137,
+        "formula": "25d8 + 25"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 10,
+      "dex": 19,
+      "con": 12,
+      "int": 16,
+      "wis": 18,
+      "cha": 15,
+      "save": {
+        "int": "+6",
+        "wis": "+7"
+      },
+      "skill": {
+        "arcana": "+6",
+        "perception": "+7",
+        "religion": "+6"
+      },
+      "senses": [
+        "darkvision 90 ft."
+      ],
+      "passive": 17,
+      "languages": [
+        "Common",
+        "Deep Speech; telepathy 30 ft."
+      ],
+      "cr": "8",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cultist casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Detect Thoughts|XPHB}",
+            "{@spell Minor Illusion|XPHB}"
+          ],
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Counterspell (2/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cultist casts {@spell Counterspell|XPHB} in response to that spell's trigger, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "2": [
+              "{@spell Counterspell|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "reaction",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cultist makes two Tentacle Lash attacks. It can replace any attack with a use of Mind Rot."
+          ]
+        },
+        {
+          "name": "Tentacle Lash",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 10 ft. {@h}7 ({@damage 1d6 + 4}) Slashing damage plus 14 ({@damage 4d6}) Psychic damage. If the target is a Large or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 14}) from one of two tentacles, and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+          ]
+        },
+        {
+          "name": "Mind Rot",
+          "entries": [
+            "{@actSave wis} {@dc 15}, one creature the cultist can see within 90 feet. {@actSaveFail} 27 ({@damage 6d8}) Psychic damage, and the target has the {@condition Poisoned|XPHB} condition until the start of the cultist's next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "DS",
+        "TP"
+      ],
+      "damageTags": [
+        "S",
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "poisoned",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Archmage",
+      "source": "XMM",
+      "page": 199,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "wizard"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 170,
+        "formula": "31d8 + 31"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 10,
+      "dex": 14,
+      "con": 12,
+      "int": 20,
+      "wis": 15,
+      "cha": 16,
+      "save": {
+        "int": "+9",
+        "wis": "+6"
+      },
+      "skill": {
+        "arcana": "+13",
+        "history": "+9",
+        "perception": "+6"
+      },
+      "passive": 16,
+      "immune": [
+        "psychic"
+      ],
+      "conditionImmune": [
+        {
+          "conditionImmune": [
+            "charmed"
+          ],
+          "note": "(with Mind Blank)",
+          "cond": true
+        }
+      ],
+      "languages": [
+        "Common plus five other languages"
+      ],
+      "cr": "12",
+      "gear": [
+        "wand|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The archmage casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 17}):"
+          ],
+          "will": [
+            "{@spell Detect Magic|XPHB}",
+            "{@spell Detect Thoughts|XPHB}",
+            "{@spell Disguise Self|XPHB}",
+            "{@spell Invisibility|XPHB}",
+            "{@spell Light|XPHB}",
+            "{@spell Mage Armor|XPHB} (included in AC)",
+            "{@spell Mage Hand|XPHB}",
+            "{@spell Prestidigitation|XPHB}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell Fly|XPHB}",
+              "{@spell Lightning Bolt|XPHB} (level 7 version)"
+            ],
+            "1e": [
+              "{@spell Cone of Cold|XPHB} (level 9 version)",
+              "{@spell Mind Blank|XPHB} (cast before combat)",
+              "{@spell Scrying|XPHB}",
+              "{@spell Teleport|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "action"
+        },
+        {
+          "name": "Misty Step (3/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The mage casts {@spell Misty Step|XPHB}, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "3": [
+              "{@spell Misty Step|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "bonus",
+          "hidden": [
+            "daily"
+          ]
+        },
+        {
+          "name": "Protective Magic (3/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The archmage casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "3": [
+              "{@spell Counterspell|XPHB}",
+              "{@spell Shield|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "reaction",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The archmage has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The archmage makes four Arcane Burst attacks."
+          ]
+        },
+        {
+          "name": "Arcane Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 9}, reach 5 ft. or range 150 ft. {@h}27 ({@damage 4d10 + 5}) Force damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "arcana",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/archmage.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "O"
+      ],
+      "damageTagsSpell": [
+        "C",
+        "L",
+        "O"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "invisible"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "dexterity",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Archpriest",
+      "source": "XMM",
+      "page": 248,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "cleric"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 240,
+        "formula": "32d8 + 96"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 16,
+      "dex": 12,
+      "con": 17,
+      "int": 14,
+      "wis": 21,
+      "cha": 14,
+      "save": {
+        "str": "+7",
+        "con": "+7",
+        "int": "+6",
+        "wis": "+9"
+      },
+      "skill": {
+        "insight": "+9",
+        "medicine": "+9",
+        "perception": "+9",
+        "religion": "+10"
+      },
+      "passive": 19,
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "12",
+      "gear": [
+        "chain mail|xphb",
+        "holy symbol|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The archpriest casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 17}):"
+          ],
+          "will": [
+            "{@spell Light|XPHB}",
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Flame Strike|XPHB} (level 6 version)",
+              "{@spell Greater Restoration|XPHB}",
+              "{@spell Raise Dead|XPHB}",
+              "{@spell Zone of Truth|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Divine Aid (3/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The priest casts {@spell Bless|XPHB}, {@spell Dispel Magic|XPHB}, {@spell Healing Word|XPHB}, or {@spell Lesser Restoration|XPHB}, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "3": [
+              "{@spell Bless|XPHB}",
+              "{@spell Dispel Magic|XPHB}",
+              "{@spell Healing Word|XPHB}",
+              "{@spell Lesser Restoration|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "bonus",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The archpriest makes three Radiant Burst attacks."
+          ]
+        },
+        {
+          "name": "Radiant Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 9}, reach 5 ft. or range 60 ft. {@h}27 ({@damage 4d10 + 5}) Radiant damage."
+          ]
+        },
+        {
+          "name": "Holy Word {@recharge 4}",
+          "entries": [
+            "{@actSave wis} {@dc 17}, each enemy in a 20-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the archpriest. {@actSaveFail} 21 ({@damage 6d6}) Radiant damage, and the target has the {@condition Stunned|XPHB} condition until the end of the archpriest's next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "R"
+      ],
+      "damageTagsSpell": [
+        "F",
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "stunned"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "charisma",
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Assassin",
+      "source": "XMM",
+      "page": 22,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 97,
+        "formula": "15d8 + 30"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 11,
+      "dex": 18,
+      "con": 14,
+      "int": 16,
+      "wis": 11,
+      "cha": 10,
+      "save": {
+        "dex": "+7",
+        "int": "+6"
+      },
+      "skill": {
+        "acrobatics": "+7",
+        "perception": "+6",
+        "stealth": "+10"
+      },
+      "passive": 16,
+      "resist": [
+        "poison"
+      ],
+      "languages": [
+        "Common",
+        "Thieves' cant"
+      ],
+      "cr": "8",
+      "gear": [
+        "light crossbow|xphb",
+        "shortsword|xphb",
+        "studded leather armor|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Evasion",
+          "entries": [
+            "If the assassin is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the assassin instead takes no damage if it succeeds on the save and only half damage if it fails. It can't use this trait if it has the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The assassin makes three attacks, using Shortsword or Light Crossbow in any combination."
+          ]
+        },
+        {
+          "name": "Shortsword",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}7 ({@damage 1d6 + 4}) Piercing damage plus 17 ({@damage 5d6}) Poison damage, and the target has the {@condition Poisoned|XPHB} condition until the start of the assassin's next turn."
+          ]
+        },
+        {
+          "name": "Light Crossbow",
+          "entries": [
+            "{@atkr r} {@hit 7}, range 80/320 ft. {@h}8 ({@damage 1d8 + 4}) Piercing damage plus 21 ({@damage 6d6}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Cunning Action",
+          "entries": [
+            "The assassin takes the Dash, Disengage, or Hide action."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/assassin.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "TC"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "conditionInflict": [
+        "incapacitated",
+        "poisoned"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bandit",
+      "source": "XMM",
+      "page": 27,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "BQGT"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 11,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 12,
+      "con": 12,
+      "int": 10,
+      "wis": 10,
+      "cha": 10,
+      "passive": 10,
+      "languages": [
+        "Common",
+        "Thieves' cant"
+      ],
+      "cr": "1/8",
+      "gear": [
+        "leather armor|xphb",
+        "light crossbow|xphb",
+        "scimitar|xphb"
+      ],
+      "action": [
+        {
+          "name": "Scimitar",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}4 ({@damage 1d6 + 1}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Light Crossbow",
+          "entries": [
+            "{@atkr r} {@hit 3}, range 80/320 ft. {@h}5 ({@damage 1d8 + 1}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/bandit.mp3"
+      },
+      "languageTags": [
+        "C",
+        "TC"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bandit Captain",
+      "source": "XMM",
+      "page": 27,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 52,
+        "formula": "8d8 + 16"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 15,
+      "dex": 16,
+      "con": 14,
+      "int": 14,
+      "wis": 11,
+      "cha": 14,
+      "save": {
+        "str": "+4",
+        "dex": "+5",
+        "wis": "+2"
+      },
+      "skill": {
+        "athletics": "+4",
+        "deception": "+4"
+      },
+      "passive": 10,
+      "languages": [
+        "Common",
+        "Thieves' cant"
+      ],
+      "cr": "2",
+      "gear": [
+        "pistol|xphb",
+        "scimitar|xphb",
+        "studded leather armor|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The bandit makes two attacks, using Scimitar and Pistol in any combination."
+          ]
+        },
+        {
+          "name": "Scimitar",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Pistol",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 30/90 ft. {@h}8 ({@damage 1d10 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "{@actTrigger} The bandit is hit by a melee attack roll while holding a weapon. {@actResponse} The bandit adds 2 to its AC against that attack, possibly causing it to miss."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/bandit-captain.mp3"
+      },
+      "actionTags": [
+        "Multiattack",
+        "Parry"
+      ],
+      "languageTags": [
+        "C",
+        "TC"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bandit Crime Lord",
+      "source": "XMM",
+      "page": 28,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 169,
+        "formula": "26d8 + 52"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 10,
+      "dex": 20,
+      "con": 14,
+      "int": 18,
+      "wis": 14,
+      "cha": 15,
+      "save": {
+        "dex": "+9",
+        "con": "+6"
+      },
+      "skill": {
+        "acrobatics": "+9",
+        "perception": "+10",
+        "stealth": "+13"
+      },
+      "passive": 20,
+      "languages": [
+        "Common",
+        "Thieves' cant"
+      ],
+      "cr": "11",
+      "gear": [
+        {
+          "item": "pistol|xphb",
+          "quantity": 2
+        },
+        "scimitar|xphb",
+        "studded leather armor|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Evasion",
+          "entries": [
+            "If the bandit is subjected to an effect that allows it to make a Dexterity saving throw to take only half damage, the bandit instead takes no damage if it succeeds on the save and only half damage if it fails. It can't use this trait if it has the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The bandit makes three attacks, using Scimitar or Pistol in any combination."
+          ]
+        },
+        {
+          "name": "Scimitar",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}12 ({@damage 2d6 + 5}) Slashing damage plus 14 ({@damage 4d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Pistol",
+          "entries": [
+            "{@atkr r} {@hit 9}, range 30/90 ft. {@h}10 ({@damage 1d10 + 5}) Piercing damage plus 14 ({@damage 4d6}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Deadly Aim",
+          "entries": [
+            "The bandit gives itself {@variantrule Advantage|XPHB} on the next attack roll it makes during the current turn. If that attack hits, the target takes an extra 28 ({@damage 8d6}) Poison damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "TC"
+      ],
+      "damageTags": [
+        "I",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "conditionInflict": [
+        "incapacitated"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bandit Deceiver",
+      "source": "XMM",
+      "page": 28,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 130,
+        "formula": "20d8 + 40"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 8,
+      "dex": 16,
+      "con": 14,
+      "int": 17,
+      "wis": 12,
+      "cha": 16,
+      "save": {
+        "dex": "+6",
+        "int": "+6"
+      },
+      "skill": {
+        "acrobatics": "+6",
+        "perception": "+4",
+        "stealth": "+9"
+      },
+      "passive": 14,
+      "languages": [
+        "Common",
+        "Thieves' cant"
+      ],
+      "cr": "7",
+      "gear": [
+        {
+          "item": "dagger|xphb",
+          "quantity": 6
+        },
+        "wand|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The bandit casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 14}):"
+          ],
+          "will": [
+            "{@spell Disguise Self|XPHB}",
+            "{@spell Mage Hand|XPHB}",
+            "{@spell Minor Illusion|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Hold Person|XPHB} (level 4 version)",
+              "{@spell Mage Armor|XPHB} (included in AC)",
+              "{@spell Major Image|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The bandit makes three Dagger attacks."
+          ]
+        },
+        {
+          "name": "Dagger",
+          "entries": [
+            "{@atkr m,r} {@hit 6}, reach 5 ft. or range 20/60 ft. {@h}8 ({@damage 2d4 + 3}) Piercing damage plus 10 ({@damage 3d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Blinding Flash {@recharge 4}",
+          "entries": [
+            "{@actSave con} {@dc 14}, each creature in a 10-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point the bandit can see within 120 feet. {@actSaveFail} 13 ({@damage 3d6 + 3}) Radiant damage, and the target has the {@condition Blinded|XPHB} condition until the start of the bandit's next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "TC"
+      ],
+      "damageTags": [
+        "I",
+        "P",
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "conditionInflict": [
+        "blinded"
+      ],
+      "conditionInflictSpell": [
+        "paralyzed"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Berserker",
+      "source": "XMM",
+      "page": 37,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "ScoEE"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 67,
+        "formula": "9d8 + 27"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 16,
+      "dex": 12,
+      "con": 17,
+      "int": 9,
+      "wis": 11,
+      "cha": 9,
+      "passive": 10,
+      "languages": [
+        "Common"
+      ],
+      "cr": "2",
+      "gear": [
+        "greataxe|xphb",
+        "hide armor|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Bloodied Frenzy",
+          "entries": [
+            "While {@variantrule Bloodied|XPHB}, the berserker has {@variantrule Advantage|XPHB} on attack rolls and saving throws."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Greataxe",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}9 ({@damage 1d12 + 3}) Slashing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/berserker.mp3"
+      },
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Berserker Commander",
+      "source": "XMM",
+      "page": 37,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 136,
+        "formula": "16d8 + 64"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 19,
+      "dex": 14,
+      "con": 19,
+      "int": 10,
+      "wis": 14,
+      "cha": 9,
+      "save": {
+        "str": "+7",
+        "con": "+7"
+      },
+      "skill": {
+        "athletics": "+7",
+        "perception": "+5"
+      },
+      "passive": 15,
+      "conditionImmune": [
+        "charmed",
+        "frightened"
+      ],
+      "languages": [
+        "Common"
+      ],
+      "cr": "8",
+      "gear": [
+        "greataxe|xphb",
+        {
+          "item": "javelin|xphb",
+          "quantity": 6
+        }
+      ],
+      "trait": [
+        {
+          "name": "Bloodied Frenzy",
+          "entries": [
+            "While {@variantrule Bloodied|XPHB}, the berserker has {@variantrule Advantage|XPHB} on attack rolls and saving throws."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The berserker makes three attacks, using Greataxe or Javelin in any combination."
+          ]
+        },
+        {
+          "name": "Greataxe",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}10 ({@damage 1d12 + 4}) Slashing damage, plus 10 ({@damage 3d6}) Thunder damage to the target or another creature within 5 feet of the target."
+          ]
+        },
+        {
+          "name": "Javelin",
+          "entries": [
+            "{@atkr m,r} {@hit 7}, reach 5 ft. or range 30/120 ft. {@h}18 ({@damage 4d6 + 4}) Piercing damage, and the target's {@variantrule Speed|XPHB} decreases by 5 feet until the start of the berserker's next turn."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Frenzied Rush",
+          "entries": [
+            "Each ally within 30 feet of the berserker can take a {@variantrule Reaction|XPHB} to move up to half the ally's {@variantrule Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}. The berserker can also move up to half its {@variantrule Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "P",
+        "S",
+        "T"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Commoner",
+      "source": "XMM",
+      "page": 77,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        10
+      ],
+      "hp": {
+        "average": 4,
+        "formula": "1d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 10,
+      "con": 10,
+      "int": 10,
+      "wis": 10,
+      "cha": 10,
+      "passive": 10,
+      "languages": [
+        "Common"
+      ],
+      "cr": "0",
+      "gear": [
+        "club|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Training",
+          "entries": [
+            "The commoner has proficiency in one skill of the DM's choice and has {@variantrule Advantage|XPHB} whenever it makes an ability check using that skill."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Club",
+          "entries": [
+            "{@atkr m} {@hit 2}, reach 5 ft. {@h}2 ({@damage 1d4}) Bludgeoning damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/commoner.mp3"
+      },
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Cultist",
+      "source": "XMM",
+      "page": 84,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "ScoEE"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 9,
+        "formula": "2d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 12,
+      "con": 10,
+      "int": 10,
+      "wis": 11,
+      "cha": 10,
+      "save": {
+        "wis": "+2"
+      },
+      "skill": {
+        "deception": "+2",
+        "religion": "+2"
+      },
+      "passive": 10,
+      "languages": [
+        "Common"
+      ],
+      "cr": "1/8",
+      "gear": [
+        "leather armor|xphb",
+        "sickle|xphb"
+      ],
+      "action": [
+        {
+          "name": "Ritual Sickle",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}3 ({@damage 1d4 + 1}) Slashing damage plus 1 Necrotic damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/cultist.mp3"
+      },
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "N",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Cultist Fanatic",
+      "source": "XMM",
+      "page": 85,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "ScoEE"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 44,
+        "formula": "8d8 + 8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 14,
+      "con": 12,
+      "int": 10,
+      "wis": 14,
+      "cha": 13,
+      "save": {
+        "wis": "+4"
+      },
+      "skill": {
+        "deception": "+3",
+        "persuasion": "+3",
+        "religion": "+2"
+      },
+      "passive": 12,
+      "languages": [
+        "Common"
+      ],
+      "cr": "2",
+      "gear": [
+        "holy symbol|xphb",
+        "leather armor|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cultist casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 12}, {@hit 4} to hit with spell attacks):"
+          ],
+          "will": [
+            "{@spell Light|XPHB}",
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "daily": {
+            "1": [
+              "{@spell Hold Person|XPHB}"
+            ],
+            "2": [
+              "{@spell Command|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Spiritual Weapon (2/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cultist casts the {@spell Spiritual Weapon|XPHB} spell, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "2": [
+              "{@spell Spiritual Weapon|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "bonus",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Pact Blade",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}6 ({@damage 1d8 + 2}) Slashing damage plus 7 ({@damage 2d6}) Necrotic damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "N",
+        "S"
+      ],
+      "damageTagsSpell": [
+        "O"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflictSpell": [
+        "paralyzed",
+        "prone"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Cultist Hierophant",
+      "source": "XMM",
+      "page": 85,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 144,
+        "formula": "17d8 + 68"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 14,
+      "dex": 18,
+      "con": 18,
+      "int": 13,
+      "wis": 16,
+      "cha": 20,
+      "save": {
+        "wis": "+7",
+        "cha": "+9"
+      },
+      "skill": {
+        "perception": "+7",
+        "persuasion": "+9",
+        "religion": "+5"
+      },
+      "passive": 17,
+      "languages": [
+        "Celestial",
+        "Common"
+      ],
+      "cr": "10",
+      "gear": [
+        "breastplate|xphb",
+        "holy symbol|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cultist casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 17}):"
+          ],
+          "will": [
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Jallarzi's Storm of Radiance|XPHB} (level 7 version)",
+              "{@spell Mass Suggestion|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cultist makes three attacks, using Pact Blade or Radiant Ray in any combination."
+          ]
+        },
+        {
+          "name": "Pact Blade",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}12 ({@damage 2d6 + 5}) Slashing damage plus 18 ({@damage 4d8}) Radiant damage."
+          ]
+        },
+        {
+          "name": "Radiant Ray",
+          "entries": [
+            "{@atkr r} {@hit 9}, range 120 ft. {@h}31 ({@damage 4d12 + 5}) Radiant damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "CE"
+      ],
+      "damageTags": [
+        "R",
+        "S"
+      ],
+      "damageTagsSpell": [
+        "R",
+        "T"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "blinded",
+        "charmed",
+        "deafened"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Death Cultist",
+      "source": "XMM",
+      "page": 86,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 127,
+        "formula": "15d8 + 60"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 19,
+      "dex": 12,
+      "con": 18,
+      "int": 12,
+      "wis": 16,
+      "cha": 14,
+      "save": {
+        "con": "+7",
+        "wis": "+6"
+      },
+      "skill": {
+        "insight": "+6",
+        "perception": "+6",
+        "religion": "+4"
+      },
+      "passive": 16,
+      "languages": [
+        "Common"
+      ],
+      "cr": "8",
+      "gear": [
+        "splint armor|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cultist casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 14}):"
+          ],
+          "will": [
+            "{@spell Speak with Dead|XPHB}",
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cultist makes three attacks, using Dread Scythe or Deathly Ray in any combination."
+          ]
+        },
+        {
+          "name": "Dread Scythe",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 10 ft. {@h}9 ({@damage 1d10 + 4}) Slashing damage plus 11 ({@damage 2d10}) Necrotic damage, and the target can't regain {@variantrule Hit Points|XPHB} until the end of its next turn."
+          ]
+        },
+        {
+          "name": "Deathly Ray",
+          "entries": [
+            "{@atkr r} {@hit 6}, range 120 ft. {@h}22 ({@damage 4d10}) Necrotic damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Spirit Wail {@recharge 5}",
+          "entries": [
+            "{@actSave wis} {@dc 14}, each creature in a 20-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the cultist. {@actSaveFail} 14 ({@damage 4d6}) Psychic damage, and the target has the {@condition Frightened|XPHB} condition until the end of its next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "N",
+        "S",
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "frightened"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Druid",
+      "source": "XMM",
+      "page": 106,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 44,
+        "formula": "8d8 + 8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 12,
+      "con": 13,
+      "int": 12,
+      "wis": 16,
+      "cha": 11,
+      "skill": {
+        "medicine": "+5",
+        "nature": "+3",
+        "perception": "+5"
+      },
+      "passive": 15,
+      "languages": [
+        "Common",
+        "Druidic",
+        "Sylvan"
+      ],
+      "cr": "2",
+      "gear": [
+        "studded leather armor|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The druid casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+          ],
+          "will": [
+            "{@spell Druidcraft|XPHB}",
+            "{@spell Speak with Animals|XPHB}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell Entangle|XPHB}",
+              "{@spell Thunderwave|XPHB}"
+            ],
+            "1e": [
+              "{@spell Animal Messenger|XPHB}",
+              "{@spell Longstrider|XPHB}",
+              "{@spell Moonbeam|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The druid makes two attacks, using Vine Staff or Verdant Wisp in any combination."
+          ]
+        },
+        {
+          "name": "Vine Staff",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Bludgeoning damage plus 2 ({@damage 1d4}) Poison damage."
+          ]
+        },
+        {
+          "name": "Verdant Wisp",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 90 ft. {@h}10 ({@damage 3d6}) Radiant damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/druid.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "DU",
+        "S"
+      ],
+      "damageTags": [
+        "B",
+        "I",
+        "R"
+      ],
+      "damageTagsSpell": [
+        "R",
+        "T"
+      ],
+      "spellcastingTags": [
+        "CD"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "restrained"
+      ],
+      "savingThrowForcedSpell": [
+        "charisma",
+        "constitution",
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Elemental Cultist",
+      "source": "XMM",
+      "page": 87,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 135,
+        "formula": "18d8 + 54"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 18,
+      "dex": 12,
+      "con": 16,
+      "int": 14,
+      "wis": 18,
+      "cha": 12,
+      "save": {
+        "con": "+6",
+        "wis": "+7"
+      },
+      "skill": {
+        "arcana": "+5",
+        "perception": "+7",
+        "religion": "+5"
+      },
+      "passive": 17,
+      "languages": [
+        "Common",
+        "Primordial"
+      ],
+      "cr": "8",
+      "gear": [
+        "chain mail|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cultist casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Elementalism|XPHB}",
+            "{@spell Mage Hand|XPHB}"
+          ],
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cultist makes three attacks, using Elemental Flail or Elemental Claw in any combination."
+          ]
+        },
+        {
+          "name": "Elemental Flail",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}25 ({@damage 6d6 + 4}) damage of a type chosen by the cultist: Acid, Cold, Fire, Lightning, or Thunder."
+          ]
+        },
+        {
+          "name": "Elemental Claw",
+          "entries": [
+            "{@atkr r} {@hit 7}, range 120 ft. {@h}22 ({@damage 4d10}) damage of a type chosen by the cultist: Acid, Cold, Fire, Lightning, or Thunder. If the target is a Medium or smaller creature, the cultist moves the target up to 10 feet straight toward or away from itself."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Elemental Absorption (1/Day)",
+          "entries": [
+            "{@actTrigger} The cultist takes Acid, Cold, Fire, Lightning, or Thunder damage. {@actResponse} The cultist gives itself {@variantrule Resistance|XPHB} to that instance of damage and gains 10 {@variantrule Temporary Hit Points|XPHB}."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "P"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Fiend Cultist",
+      "source": "XMM",
+      "page": 87,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 127,
+        "formula": "17d8 + 51"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 19,
+      "dex": 15,
+      "con": 16,
+      "int": 12,
+      "wis": 18,
+      "cha": 10,
+      "save": {
+        "con": "+6",
+        "wis": "+7"
+      },
+      "skill": {
+        "perception": "+7",
+        "religion": "+4"
+      },
+      "senses": [
+        "darkvision 90 ft. (unimpeded by magical {@variantrule Darkness|XPHB})"
+      ],
+      "passive": 17,
+      "languages": [
+        "Abyssal",
+        "Common",
+        "Infernal"
+      ],
+      "cr": "8",
+      "gear": [
+        "breastplate|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cultist casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 15}, {@hit 7} to hit with spell attacks):"
+          ],
+          "will": [
+            "{@spell Scorching Ray|XPHB} (level 5 version)",
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "daily": {
+            "2": [
+              "{@spell Fireball|XPHB} (level 6 version)"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Hellish Rebuke",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cultist casts {@spell Hellish Rebuke|XPHB} in response to that spell's trigger, using the same spellcasting ability as Spellcasting."
+          ],
+          "will": [
+            "{@spell Hellish Rebuke|XPHB}"
+          ],
+          "ability": "wis",
+          "displayAs": "reaction",
+          "hidden": [
+            "will"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cultist makes three Pact Axe attacks."
+          ]
+        },
+        {
+          "name": "Pact Axe",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}10 ({@damage 1d12 + 4}) Slashing damage plus 13 ({@damage 3d8}) Fire damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "traitTags": [
+        "Devil's Sight"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AB",
+        "C",
+        "I"
+      ],
+      "damageTags": [
+        "F",
+        "S"
+      ],
+      "damageTagsSpell": [
+        "F"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Gladiator",
+      "source": "XMM",
+      "page": 139,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 112,
+        "formula": "15d8 + 45"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 18,
+      "dex": 15,
+      "con": 16,
+      "int": 10,
+      "wis": 12,
+      "cha": 15,
+      "save": {
+        "str": "+7",
+        "dex": "+5",
+        "con": "+6",
+        "wis": "+4"
+      },
+      "skill": {
+        "athletics": "+10",
+        "performance": "+5"
+      },
+      "passive": 11,
+      "languages": [
+        "Common"
+      ],
+      "cr": "5",
+      "gear": [
+        "shield|xphb",
+        {
+          "item": "spear|xphb",
+          "quantity": 3
+        },
+        "studded leather armor|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The gladiator makes three Spear attacks. It can replace one attack with a use of Shield Bash."
+          ]
+        },
+        {
+          "name": "Spear",
+          "entries": [
+            "{@atkr m,r} {@hit 7}, reach 5 ft. or range 20/60 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Shield Bash",
+          "entries": [
+            "{@actSave str} {@dc 15}, one creature within 5 feet that the gladiator can see. {@actSaveFail} 9 ({@damage 2d4 + 4}) Bludgeoning damage. If the target is a Medium or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "{@actTrigger} The gladiator is hit by a melee attack roll while holding a weapon. {@actResponse} The gladiator adds 3 to its AC against that attack, possibly causing it to miss."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/gladiator.mp3"
+      },
+      "actionTags": [
+        "Multiattack",
+        "Parry"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Guard",
+      "source": "XMM",
+      "page": 162,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 11,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 13,
+      "dex": 12,
+      "con": 12,
+      "int": 10,
+      "wis": 11,
+      "cha": 10,
+      "skill": {
+        "perception": "+2"
+      },
+      "passive": 12,
+      "languages": [
+        "Common"
+      ],
+      "cr": "1/8",
+      "gear": [
+        "chain shirt|xphb",
+        "shield|xphb",
+        "spear|xphb"
+      ],
+      "action": [
+        {
+          "name": "Spear",
+          "entries": [
+            "{@atkr m,r} {@hit 3}, reach 5 ft. or range 20/60 ft. {@h}4 ({@damage 1d6 + 1}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/guard.mp3"
+      },
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Guard Captain",
+      "source": "XMM",
+      "page": 162,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 75,
+        "formula": "10d8 + 30"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 16,
+      "int": 12,
+      "wis": 14,
+      "cha": 13,
+      "skill": {
+        "athletics": "+6",
+        "perception": "+4"
+      },
+      "passive": 14,
+      "languages": [
+        "Common"
+      ],
+      "cr": "4",
+      "gear": [
+        "breastplate|xphb",
+        {
+          "item": "javelin|xphb",
+          "quantity": 6
+        },
+        "longsword|xphb",
+        "shield|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The guard makes two attacks, using Javelin or Longsword in any combination."
+          ]
+        },
+        {
+          "name": "Javelin",
+          "entries": [
+            "{@atkr m,r} {@hit 6}, reach 5 ft. or range 30/120 ft. {@h}14 ({@damage 3d6 + 4}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Longsword",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}15 ({@damage 2d10 + 4}) Slashing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Knight",
+      "source": "XMM",
+      "page": 184,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "ScoEE"
+        },
+        {
+          "source": "HBTD"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 52,
+        "formula": "8d8 + 16"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 16,
+      "dex": 11,
+      "con": 14,
+      "int": 11,
+      "wis": 11,
+      "cha": 15,
+      "save": {
+        "con": "+4",
+        "wis": "+2"
+      },
+      "passive": 10,
+      "conditionImmune": [
+        "frightened"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "3",
+      "gear": [
+        "greatsword|xphb",
+        "heavy crossbow|xphb",
+        "plate armor|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The knight makes two attacks, using Greatsword or Heavy Crossbow in any combination."
+          ]
+        },
+        {
+          "name": "Greatsword",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Slashing damage plus 4 ({@damage 1d8}) Radiant damage."
+          ]
+        },
+        {
+          "name": "Heavy Crossbow",
+          "entries": [
+            "{@atkr r} {@hit 2}, range 100/400 ft. {@h}11 ({@damage 2d10}) Piercing damage plus 4 ({@damage 1d8}) Radiant damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "{@actTrigger} The knight is hit by a melee attack roll while holding a weapon. {@actResponse} The knight adds 2 to its AC against that attack, possibly causing it to miss."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/knight.mp3"
+      },
+      "actionTags": [
+        "Multiattack",
+        "Parry"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P",
+        "R",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Mage",
+      "source": "XMM",
+      "page": 199,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "UtHftLH"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "wizard"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 81,
+        "formula": "18d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 9,
+      "dex": 14,
+      "con": 11,
+      "int": 17,
+      "wis": 12,
+      "cha": 11,
+      "save": {
+        "int": "+6",
+        "wis": "+4"
+      },
+      "skill": {
+        "arcana": "+6",
+        "history": "+6",
+        "perception": "+4"
+      },
+      "passive": 14,
+      "languages": [
+        "Common and any three languages"
+      ],
+      "cr": "6",
+      "gear": [
+        "wand|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The mage casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 14}):"
+          ],
+          "will": [
+            "{@spell Detect Magic|XPHB}",
+            "{@spell Light|XPHB}",
+            "{@spell Mage Armor|XPHB} (included in AC)",
+            "{@spell Mage Hand|XPHB}",
+            "{@spell Prestidigitation|XPHB}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell Fireball|XPHB} (level 4 version)",
+              "{@spell Invisibility|XPHB}"
+            ],
+            "1e": [
+              "{@spell Cone of Cold|XPHB}",
+              "{@spell Fly|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "action"
+        },
+        {
+          "name": "Misty Step (3/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The mage casts {@spell Misty Step|XPHB}, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "3": [
+              "{@spell Misty Step|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "bonus",
+          "hidden": [
+            "daily"
+          ]
+        },
+        {
+          "name": "Protective Magic (3/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The mage casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "3": [
+              "{@spell Counterspell|XPHB}",
+              "{@spell Shield|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "reaction",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The mage makes three Arcane Burst attacks."
+          ]
+        },
+        {
+          "name": "Arcane Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 6}, reach 5 ft. or range 120 ft. {@h}16 ({@damage 3d8 + 3}) Force damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "arcana",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/mage.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "O"
+      ],
+      "damageTagsSpell": [
+        "C",
+        "F"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "invisible"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Mage Apprentice",
+      "source": "XMM",
+      "page": 198,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "wizard"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 49,
+        "formula": "9d8 + 9"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 8,
+      "dex": 14,
+      "con": 12,
+      "int": 16,
+      "wis": 13,
+      "cha": 10,
+      "save": {
+        "int": "+5",
+        "wis": "+3"
+      },
+      "skill": {
+        "arcana": "+5",
+        "perception": "+3"
+      },
+      "passive": 13,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "2",
+      "gear": [
+        "component pouch|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The mage casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
+          ],
+          "will": [
+            "{@spell Mage Hand|XPHB}",
+            "{@spell Prestidigitation|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Disguise Self|XPHB}",
+              "{@spell Ice Knife|XPHB}",
+              "{@spell Mage Armor|XPHB} (included in AC)",
+              "{@spell Thunderwave|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Arcane Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 120 ft. {@h}14 ({@damage 2d10 + 3}) Force damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "arcana",
+        "individual"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "O"
+      ],
+      "damageTagsSpell": [
+        "C",
+        "P",
+        "T"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Noble",
+      "source": "XMM",
+      "page": 227,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 9,
+        "formula": "2d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 12,
+      "con": 11,
+      "int": 12,
+      "wis": 14,
+      "cha": 16,
+      "skill": {
+        "deception": "+5",
+        "insight": "+4",
+        "persuasion": "+5"
+      },
+      "passive": 12,
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "1/8",
+      "gear": [
+        "breastplate|xphb",
+        "rapier|xphb"
+      ],
+      "action": [
+        {
+          "name": "Rapier",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}5 ({@damage 1d8 + 1}) Piercing damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "{@actTrigger} The noble is hit by a melee attack roll while holding a weapon. {@actResponse} The noble adds 2 to its AC against that attack, possibly causing it to miss."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/noble.mp3"
+      },
+      "actionTags": [
+        "Parry"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Noble Prodigy",
+      "source": "XMM",
+      "page": 227,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 148,
+        "formula": "27d8 + 27"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 8,
+      "dex": 16,
+      "con": 12,
+      "int": 15,
+      "wis": 14,
+      "cha": 19,
+      "save": {
+        "dex": "+7",
+        "con": "+5",
+        "wis": "+6",
+        "cha": "+8"
+      },
+      "skill": {
+        "perception": "+6",
+        "persuasion": "+8"
+      },
+      "passive": 16,
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "10",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The noble casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 16}):"
+          ],
+          "will": [
+            "{@spell Mage Armor|XPHB} (included in AC)",
+            "{@spell Mage Hand|XPHB}",
+            "{@spell Minor Illusion|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Befuddlement|XPHB}",
+              "{@spell Detect Thoughts|XPHB}",
+              "{@spell Fly|XPHB}",
+              "{@spell Scrying|XPHB}",
+              "{@spell Shatter|XPHB} (level 7 version)"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        },
+        {
+          "name": "Shield (2/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The noble casts {@spell Shield|XPHB} in response to that spell's trigger, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "2": [
+              "{@spell Shield|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "reaction",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The noble makes three Beguiling Strike attacks."
+          ]
+        },
+        {
+          "name": "Beguiling Strike",
+          "entries": [
+            "{@atkr m,r} {@hit 8}, reach 5 ft. or range 60 ft. {@h}18 ({@damage 4d6 + 4}) Psychic damage, and the target has the {@condition Charmed|XPHB} condition until the start of the noble's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "Y"
+      ],
+      "damageTagsSpell": [
+        "T",
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "intelligence",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Performer",
+      "source": "XMM",
+      "page": 236,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 27,
+        "formula": "5d8 + 5"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 12,
+      "dex": 16,
+      "con": 12,
+      "int": 13,
+      "wis": 14,
+      "cha": 16,
+      "save": {
+        "dex": "+5",
+        "cha": "+5"
+      },
+      "skill": {
+        "acrobatics": "+5",
+        "athletics": "+3",
+        "performance": "+7"
+      },
+      "passive": 12,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "1/2",
+      "gear": [
+        "shortsword|xphb"
+      ],
+      "action": [
+        {
+          "name": "Shortsword",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Uncanny Dodge",
+          "entries": [
+            "{@actTrigger} The performer is hit by an attack roll. {@actResponse} The performer halves the damage (round down) it takes from that attack."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Performer Legend",
+      "source": "XMM",
+      "page": 237,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 162,
+        "formula": "25d8 + 50"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 12,
+      "dex": 20,
+      "con": 14,
+      "int": 15,
+      "wis": 16,
+      "cha": 20,
+      "save": {
+        "dex": "+9",
+        "int": "+6",
+        "wis": "+7",
+        "cha": "+9"
+      },
+      "skill": {
+        "acrobatics": "+13",
+        "athletics": "+5",
+        "perception": "+7",
+        "performance": "+13",
+        "stealth": "+9"
+      },
+      "passive": 17,
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "10",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The performer casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 17}):"
+          ],
+          "will": [
+            "{@spell Mage Hand|XPHB}",
+            "{@spell Minor Illusion|XPHB}",
+            "{@spell Prestidigitation|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Major Image|XPHB}",
+              "{@spell Project Image|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The performer makes three Bejeweled Baton attacks."
+          ]
+        },
+        {
+          "name": "Bejeweled Baton",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}10 ({@damage 2d4 + 5}) Bludgeoning damage plus 10 ({@damage 3d6}) Psychic damage."
+          ]
+        },
+        {
+          "name": "Majestic Song",
+          "entries": [
+            "{@actSave wis} {@dc 17}, each creature in a 20-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point within 120 feet. {@actSaveFail} 22 ({@damage 4d8 + 4}) Psychic damage, and the target has the {@condition Charmed|XPHB} or {@condition Frightened|XPHB} condition (performer's choice) until the end of the performer's next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Warding Charm",
+          "entries": [
+            "{@actTrigger} A creature hits the performer with an attack roll. {@actResponse d}{@actSave wis} {@dc 17}, the triggering creature. {@actSaveFail} The attack roll misses the performer, and the target has the {@condition Charmed|XPHB} condition until the end of the performer's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "B",
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA"
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Performer Maestro",
+      "source": "XMM",
+      "page": 237,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 110,
+        "formula": "17d8 + 34"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 12,
+      "dex": 18,
+      "con": 14,
+      "int": 13,
+      "wis": 14,
+      "cha": 19,
+      "save": {
+        "dex": "+7",
+        "cha": "+7"
+      },
+      "skill": {
+        "acrobatics": "+10",
+        "athletics": "+4",
+        "perception": "+5",
+        "performance": "+10",
+        "stealth": "+7"
+      },
+      "passive": 15,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "6",
+      "gear": [
+        "rapier|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The performer casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Minor Illusion|XPHB}",
+            "{@spell Prestidigitation|XPHB}"
+          ],
+          "daily": {
+            "1": [
+              "{@spell Tasha's Hideous Laughter|XPHB} (level 3 version)"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The performer makes three Rapier attacks."
+          ]
+        },
+        {
+          "name": "Rapier",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}8 ({@damage 1d8 + 4}) Piercing damage plus 7 ({@damage 2d6}) Psychic damage."
+          ]
+        },
+        {
+          "name": "Beguiling Song",
+          "entries": [
+            "{@actSave wis} {@dc 15}, each creature in a 20-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point within 120 feet. {@actSaveFail} 20 ({@damage 3d10 + 4}) Psychic damage, and the target has the {@condition Charmed|XPHB} condition until the end of the performer's next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P",
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "MLW"
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "conditionInflictSpell": [
+        "incapacitated",
+        "prone"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Pirate",
+      "source": "XMM",
+      "page": 241,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "ScoEE"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 33,
+        "formula": "6d8 + 6"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 10,
+      "dex": 16,
+      "con": 12,
+      "int": 8,
+      "wis": 12,
+      "cha": 14,
+      "save": {
+        "dex": "+5",
+        "cha": "+4"
+      },
+      "passive": 11,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "1",
+      "gear": [
+        {
+          "item": "dagger|xphb",
+          "quantity": 6
+        },
+        "leather armor|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The pirate makes two Dagger attacks. It can replace one attack with a use of Enthralling Panache."
+          ]
+        },
+        {
+          "name": "Dagger",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 20/60 ft. {@h}5 ({@damage 1d4 + 3}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Enthralling Panache",
+          "entries": [
+            "{@actSave wis} {@dc 12}, one creature the pirate can see within 30 feet. {@actSaveFail} The target has the {@condition Charmed|XPHB} condition until the start of the pirate's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Pirate Admiral",
+      "source": "XMM",
+      "page": 242,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 182,
+        "formula": "28d8 + 56"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 14,
+      "dex": 22,
+      "con": 14,
+      "int": 12,
+      "wis": 14,
+      "cha": 19,
+      "save": {
+        "str": "+6",
+        "dex": "+10",
+        "wis": "+6",
+        "cha": "+8"
+      },
+      "skill": {
+        "acrobatics": "+10",
+        "athletics": "+6",
+        "perception": "+6"
+      },
+      "passive": 16,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "12",
+      "gear": [
+        "pistol|xphb",
+        "scimitar|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The pirate makes three attacks, using Scimitar or Pistol in any combination."
+          ]
+        },
+        {
+          "name": "Scimitar",
+          "entries": [
+            "{@atkr m} {@hit 10}, reach 5 ft. {@h}16 ({@damage 3d6 + 6}) Slashing damage plus 7 ({@damage 2d6}) Poison damage, and the target suffers one of the following effects of the pirate's choice:",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "Awestruck",
+                  "entries": [
+                    "The target has the {@condition Charmed|XPHB} condition until the start of the pirate's next turn."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Poison",
+                  "entries": [
+                    "The target has the {@condition Poisoned|XPHB} condition until the start of the pirate's next turn."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Pistol",
+          "entries": [
+            "{@atkr r} {@hit 10}, range 30/90 ft. {@h}28 ({@damage 4d10 + 6}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Rally (1/Day)",
+          "entries": [
+            "The pirate chooses up to three other creatures it can see within 30 feet. Until the start of the pirate's next turn, the targets have {@variantrule Advantage|XPHB} on attack rolls and saving throws."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Defensive Stance",
+          "entries": [
+            "{@actTrigger} The pirate is hit by a melee attack roll while holding a weapon. {@actResponse} The pirate adds 4 to its AC against melee attack rolls (including the triggering attack) until the start of its next turn, possibly causing the attacks to miss."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "I",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "conditionInflict": [
+        "charmed",
+        "poisoned"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Pirate Captain",
+      "source": "XMM",
+      "page": 242,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "ScoEE"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 84,
+        "formula": "13d8 + 26"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 10,
+      "dex": 18,
+      "con": 14,
+      "int": 10,
+      "wis": 14,
+      "cha": 17,
+      "save": {
+        "str": "+3",
+        "dex": "+7",
+        "wis": "+5",
+        "cha": "+6"
+      },
+      "skill": {
+        "acrobatics": "+7",
+        "perception": "+5"
+      },
+      "passive": 15,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "6",
+      "gear": [
+        "pistol|xphb",
+        "rapier|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The pirate makes three attacks, using Rapier or Pistol in any combination."
+          ]
+        },
+        {
+          "name": "Rapier",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}13 ({@damage 2d8 + 4}) Piercing damage, and the pirate has {@variantrule Advantage|XPHB} on the next attack roll it makes before the end of this turn."
+          ]
+        },
+        {
+          "name": "Pistol",
+          "entries": [
+            "{@atkr r} {@hit 7}, range 30/90 ft. {@h}15 ({@damage 2d10 + 4}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Captain's Charm",
+          "entries": [
+            "{@actSave wis} {@dc 14}, one creature the pirate can see within 30 feet. {@actSaveFail} The target has the {@condition Charmed|XPHB} condition until the start of the pirate's next turn."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Riposte",
+          "entries": [
+            "{@actTrigger} The pirate is hit by a melee attack roll while holding a weapon. {@actResponse} The pirate adds 3 to its AC against that attack, possibly causing it to miss. On a miss, the pirate makes one Rapier attack against the triggering creature if within range."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Priest",
+      "source": "XMM",
+      "page": 248,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "cleric"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 38,
+        "formula": "7d8 + 7"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 16,
+      "dex": 10,
+      "con": 12,
+      "int": 13,
+      "wis": 16,
+      "cha": 13,
+      "skill": {
+        "medicine": "+7",
+        "perception": "+5",
+        "religion": "+5"
+      },
+      "passive": 15,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "2",
+      "gear": [
+        "chain shirt|xphb",
+        "holy symbol|xphb",
+        "mace|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The priest casts one of the following spells, using Wisdom as the spellcasting ability:"
+          ],
+          "will": [
+            "{@spell Light|XPHB}",
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "daily": {
+            "1": [
+              "{@spell Spirit Guardians|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Divine Aid (3/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The priest casts {@spell Bless|XPHB}, {@spell Dispel Magic|XPHB}, {@spell Healing Word|XPHB}, or {@spell Lesser Restoration|XPHB}, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "3": [
+              "{@spell Bless|XPHB}",
+              "{@spell Dispel Magic|XPHB}",
+              "{@spell Healing Word|XPHB}",
+              "{@spell Lesser Restoration|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "bonus",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The priest makes two attacks, using Mace or Radiant Flame in any combination."
+          ]
+        },
+        {
+          "name": "Mace",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Bludgeoning damage plus 5 ({@damage 2d4}) Radiant damage."
+          ]
+        },
+        {
+          "name": "Radiant Flame",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 60 ft. {@h}11 ({@damage 2d10}) Radiant damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/priest.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "B",
+        "R"
+      ],
+      "damageTagsSpell": [
+        "N",
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Priest Acolyte",
+      "source": "XMM",
+      "page": 247,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "humanoid",
+        "tags": [
+          "cleric"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 11,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 14,
+      "dex": 10,
+      "con": 12,
+      "int": 10,
+      "wis": 14,
+      "cha": 11,
+      "skill": {
+        "medicine": "+4",
+        "religion": "+2"
+      },
+      "passive": 12,
+      "languages": [
+        "Common"
+      ],
+      "cr": "1/4",
+      "gear": [
+        "chain shirt|xphb",
+        "holy symbol|xphb",
+        "mace|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The priest casts one of the following spells, using Wisdom as the spellcasting ability:"
+          ],
+          "will": [
+            "{@spell Light|XPHB}",
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Divine Aid (1/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The priest casts {@spell Bless|XPHB}, {@spell Healing Word|XPHB}, or {@spell Sanctuary|XPHB}, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "1": [
+              "{@spell Bless|XPHB}",
+              "{@spell Healing Word|XPHB}",
+              "{@spell Sanctuary|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "bonus",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Mace",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Bludgeoning damage plus 2 ({@damage 1d4}) Radiant damage."
+          ]
+        },
+        {
+          "name": "Radiant Flame",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 60 ft. {@h}7 ({@damage 2d6}) Radiant damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "individual",
+        "relics"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "B",
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Questing Knight",
+      "source": "XMM",
+      "page": 184,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 202,
+        "formula": "27d8 + 81"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 20,
+      "dex": 16,
+      "con": 16,
+      "int": 11,
+      "wis": 12,
+      "cha": 18,
+      "save": {
+        "str": "+9",
+        "con": "+7",
+        "wis": "+5",
+        "cha": "+8"
+      },
+      "skill": {
+        "athletics": "+9",
+        "perception": "+5",
+        "persuasion": "+8"
+      },
+      "passive": 15,
+      "conditionImmune": [
+        "charmed",
+        "frightened"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "12",
+      "gear": [
+        "greatsword|xphb",
+        "longbow|xphb",
+        "plate armor|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The knight casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 16}):"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Daylight|XPHB}",
+              "{@spell Dispel Evil and Good|XPHB}",
+              "{@spell Greater Restoration|XPHB}",
+              "{@spell Phantom Steed|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Aura of Bravery",
+          "entries": [
+            "Creatures of the knight's choice in a 30-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from it have {@variantrule Immunity|XPHB} to the {@condition Charmed|XPHB} and {@condition Frightened|XPHB} conditions while there."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The knight makes three attacks, using Greatsword or Longbow in any combination."
+          ]
+        },
+        {
+          "name": "Greatsword",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}12 ({@damage 2d6 + 5}) Slashing damage plus 22 ({@damage 5d8}) Radiant damage."
+          ]
+        },
+        {
+          "name": "Longbow",
+          "entries": [
+            "{@atkr r} {@hit 7}, range 150/600 ft. {@h}12 ({@damage 2d8 + 3}) Piercing damage plus 22 ({@damage 5d8}) Radiant damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P",
+        "R",
+        "S"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "savingThrowForcedSpell": [
+        "charisma"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Scout",
+      "source": "XMM",
+      "page": 270,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "HBTD"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 16,
+        "formula": "3d8 + 3"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 14,
+      "con": 12,
+      "int": 11,
+      "wis": 13,
+      "cha": 11,
+      "skill": {
+        "nature": "+4",
+        "perception": "+5",
+        "stealth": "+6",
+        "survival": "+5"
+      },
+      "passive": 15,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "1/2",
+      "gear": [
+        "leather armor|xphb",
+        "longbow|xphb",
+        "shortsword|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The scout makes two attacks, using Shortsword and Longbow in any combination."
+          ]
+        },
+        {
+          "name": "Shortsword",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Longbow",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 150/600 ft. {@h}6 ({@damage 1d8 + 2}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/scout.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Scout Captain",
+      "source": "XMM",
+      "page": 270,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 66,
+        "formula": "12d8 + 12"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 11,
+      "dex": 16,
+      "con": 12,
+      "int": 14,
+      "wis": 15,
+      "cha": 11,
+      "save": {
+        "dex": "+5",
+        "int": "+4"
+      },
+      "skill": {
+        "perception": "+6",
+        "stealth": "+7",
+        "survival": "+6"
+      },
+      "passive": 16,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "3",
+      "gear": [
+        "longbow|xphb",
+        "shortsword|xphb",
+        "studded leather armor|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The scout makes two attacks, using Shortsword or Longbow in any combination."
+          ]
+        },
+        {
+          "name": "Shortsword",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage, plus 10 ({@damage 3d6}) Piercing damage if the attack was made with {@variantrule Advantage|XPHB}."
+          ]
+        },
+        {
+          "name": "Longbow",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 150/600 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage, plus 10 ({@damage 3d6}) Piercing damage if the attack was made with {@variantrule Advantage|XPHB}."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Aim",
+          "entries": [
+            "The scout has {@variantrule Advantage|XPHB} on the next attack roll it makes during the current turn."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Uncanny Dodge",
+          "entries": [
+            "{@actTrigger} The scout is hit by an attack roll. {@actResponse} The scout halves the damage (round down) it takes from that attack."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Spy",
+      "source": "XMM",
+      "page": 295,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 27,
+        "formula": "6d8"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 10,
+      "dex": 15,
+      "con": 10,
+      "int": 12,
+      "wis": 14,
+      "cha": 16,
+      "skill": {
+        "deception": "+5",
+        "insight": "+4",
+        "investigation": "+5",
+        "perception": "+6",
+        "sleight of hand": "+4",
+        "stealth": "+6"
+      },
+      "passive": 16,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "1",
+      "gear": [
+        "hand crossbow|xphb",
+        "shortsword|xphb",
+        "thieves' tools|xphb"
+      ],
+      "action": [
+        {
+          "name": "Shortsword",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage plus 7 ({@damage 2d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Hand Crossbow",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 30/120 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage plus 7 ({@damage 2d6}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Cunning Action",
+          "entries": [
+            "The spy takes the Dash, Disengage, or Hide action."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/spy.mp3"
+      },
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Spy Master",
+      "source": "XMM",
+      "page": 295,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        19
+      ],
+      "hp": {
+        "average": 137,
+        "formula": "25d8 + 25"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 10,
+      "dex": 20,
+      "con": 12,
+      "int": 18,
+      "wis": 16,
+      "cha": 16,
+      "save": {
+        "dex": "+9",
+        "con": "+5",
+        "int": "+8",
+        "wis": "+7"
+      },
+      "skill": {
+        "deception": "+7",
+        "insight": "+7",
+        "investigation": "+8",
+        "perception": "+11",
+        "sleight of hand": "+9",
+        "stealth": "+13"
+      },
+      "passive": 21,
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "10",
+      "gear": [
+        "hand crossbow|xphb",
+        "rapier|xphb",
+        "thieves' tools|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The spy makes three attacks, using Rapier or Hand Crossbow in any combination."
+          ]
+        },
+        {
+          "name": "Rapier",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}14 ({@damage 2d8 + 5}) Piercing damage plus 7 ({@damage 2d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Hand Crossbow",
+          "entries": [
+            "{@atkr r} {@hit 9}, range 30/120 ft. {@h}12 ({@damage 2d6 + 5}) Piercing damage plus 9 ({@damage 2d8}) Poison damage."
+          ]
+        },
+        {
+          "name": "Smoke Bomb (1/Day)",
+          "entries": [
+            "The spy throws a bomb to a point it can see within 30 feet of itself. {@actSave con} {@dc 16}, each creature in a 20-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on that point. {@actSaveFail} 28 ({@damage 8d6}) Poison damage, and the target has the {@condition Blinded|XPHB} condition until the end of the spy's next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Cunning Action",
+          "entries": [
+            "The spy takes the Dash, Disengage, or Hide action."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "conditionInflict": [
+        "blinded"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Tough",
+      "source": "XMM",
+      "page": 307,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 32,
+        "formula": "5d8 + 10"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 15,
+      "dex": 12,
+      "con": 14,
+      "int": 10,
+      "wis": 10,
+      "cha": 11,
+      "passive": 10,
+      "languages": [
+        "Common"
+      ],
+      "cr": "1/2",
+      "gear": [
+        "heavy crossbow|xphb",
+        "leather armor|xphb",
+        "mace|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Pack Tactics",
+          "entries": [
+            "The tough has {@variantrule Advantage|XPHB} on an attack roll against a creature if at least one of the tough's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Mace",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Heavy Crossbow",
+          "entries": [
+            "{@atkr r} {@hit 3}, range 100/400 ft. {@h}6 ({@damage 1d10 + 1}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "traitTags": [
+        "Pack Tactics"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Tough Boss",
+      "source": "XMM",
+      "page": 307,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "ScoEE"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 82,
+        "formula": "11d8 + 33"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 17,
+      "dex": 14,
+      "con": 16,
+      "int": 11,
+      "wis": 10,
+      "cha": 11,
+      "save": {
+        "str": "+5",
+        "con": "+5",
+        "cha": "+2"
+      },
+      "passive": 10,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "4",
+      "gear": [
+        "chain mail|xphb",
+        "heavy crossbow|xphb",
+        "warhammer|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Pack Tactics",
+          "entries": [
+            "The tough has {@variantrule Advantage|XPHB} on an attack roll against a creature if at least one of the tough's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The tough makes two attacks, using Warhammer or Heavy Crossbow in any combination."
+          ]
+        },
+        {
+          "name": "Warhammer",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}12 ({@damage 2d8 + 3}) Bludgeoning damage. If the target is a Large or smaller creature, the tough pushes the target up to 10 feet straight away from itself."
+          ]
+        },
+        {
+          "name": "Heavy Crossbow",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 100/400 ft. {@h}13 ({@damage 2d10 + 2}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "traitTags": [
+        "Pack Tactics"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Vampire Familiar",
+      "source": "XMM",
+      "page": 314,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 65,
+        "formula": "10d8 + 20"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 17,
+      "dex": 16,
+      "con": 15,
+      "int": 10,
+      "wis": 10,
+      "cha": 14,
+      "save": {
+        "dex": "+5",
+        "wis": "+2"
+      },
+      "skill": {
+        "perception": "+4",
+        "persuasion": "+4",
+        "stealth": "+7"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "resist": [
+        "necrotic"
+      ],
+      "conditionImmune": [
+        {
+          "conditionImmune": [
+            "charmed"
+          ],
+          "note": "(except from its vampire master)",
+          "cond": true
+        }
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "3",
+      "gear": [
+        {
+          "item": "dagger|xphb",
+          "quantity": 10
+        }
+      ],
+      "trait": [
+        {
+          "name": "Vampiric Connection",
+          "entries": [
+            "While the familiar and its vampire master are on the same plane of existence, the vampire can communicate with the familiar telepathically, and the vampire can perceive through the familiar's senses."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The familiar makes two Umbral Dagger attacks."
+          ]
+        },
+        {
+          "name": "Umbral Dagger",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 20/60 ft. {@h}5 ({@damage 1d4 + 3}) Piercing damage plus 7 ({@damage 3d4}) Necrotic damage. If the target is reduced to 0 {@variantrule Hit Points|XPHB} by this attack, the target becomes {@variantrule Stable|XPHB} but has the {@condition Poisoned|XPHB} condition for 1 hour. While it has the {@condition Poisoned|XPHB} condition, the target has the {@condition Paralyzed|XPHB} condition."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Deathless Agility",
+          "entries": [
+            "The familiar takes the Dash or Disengage action."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "N",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "conditionInflict": [
+        "paralyzed",
+        "poisoned"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Warrior Commander",
+      "source": "XMM",
+      "page": 321,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 161,
+        "formula": "19d8 + 76"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 21,
+      "dex": 20,
+      "con": 18,
+      "int": 14,
+      "wis": 16,
+      "cha": 14,
+      "save": {
+        "str": "+9",
+        "dex": "+9",
+        "con": "+8",
+        "wis": "+7"
+      },
+      "skill": {
+        "athletics": "+9",
+        "insight": "+7",
+        "perception": "+7"
+      },
+      "passive": 17,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "10",
+      "gear": [
+        "greatsword|xphb",
+        "longbow|xphb",
+        "plate armor|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The warrior makes three attacks, using Greatsword or Longbow in any combination."
+          ]
+        },
+        {
+          "name": "Greatsword",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}19 ({@damage 4d6 + 5}) Slashing damage. The warrior also creates one of the following effects:",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "Sap",
+                  "entries": [
+                    "The target has {@variantrule Disadvantage|XPHB} on its next attack roll before the start of the warrior's next turn."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Maneuver",
+                  "entries": [
+                    "One ally who can see or hear the warrior can take a {@variantrule Reaction|XPHB} to move up to half the ally's {@variantrule Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Longbow",
+          "entries": [
+            "{@atkr r} {@hit 9}, range 150/600 ft. {@h}18 ({@damage 3d8 + 5}) Piercing damage, and the target's {@variantrule Speed|XPHB} decreases by 10 feet until the end of the target's next turn."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Tactical Charge",
+          "entries": [
+            "The warrior moves up to half its {@variantrule Speed|XPHB} straight toward an enemy it can see without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Counterattack",
+          "entries": [
+            "{@actTrigger} The warrior is hit by an attack roll. {@actResponse} The warrior adds 4 to its AC against that attack, possibly causing it to miss. On a miss, the warrior can make one Greatsword or Longbow attack against the attacker."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Warrior Infantry",
+      "source": "XMM",
+      "page": 320,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 9,
+        "formula": "2d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 13,
+      "dex": 11,
+      "con": 11,
+      "int": 8,
+      "wis": 11,
+      "cha": 8,
+      "passive": 10,
+      "languages": [
+        "Common"
+      ],
+      "cr": "1/8",
+      "gear": [
+        "chain shirt|xphb",
+        "spear|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Pack Tactics",
+          "entries": [
+            "The warrior has {@variantrule Advantage|XPHB} on an attack roll against a creature if at least one of the warrior's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Spear",
+          "entries": [
+            "{@atkr m,r} {@hit 3}, reach 5 ft. or range 20/60 ft. {@h}4 ({@damage 1d6 + 1}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "traitTags": [
+        "Pack Tactics"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Warrior Veteran",
+      "source": "XMM",
+      "page": 320,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "humanoid",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 65,
+        "formula": "10d8 + 20"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 16,
+      "dex": 13,
+      "con": 14,
+      "int": 10,
+      "wis": 11,
+      "cha": 10,
+      "skill": {
+        "athletics": "+5",
+        "perception": "+2"
+      },
+      "passive": 12,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "3",
+      "gear": [
+        "greatsword|xphb",
+        "heavy crossbow|xphb",
+        "splint armor|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The warrior makes two Greatsword or Heavy Crossbow attacks."
+          ]
+        },
+        {
+          "name": "Greatsword",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Heavy Crossbow",
+          "entries": [
+            "{@atkr r} {@hit 3}, range 100/400 ft. {@h}12 ({@damage 2d10 + 1}) Piercing damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "{@actTrigger} The warrior is hit by a melee attack roll while holding a weapon. {@actResponse} The warrior adds 2 to its AC against that attack, possibly causing it to miss."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Parry"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
+}

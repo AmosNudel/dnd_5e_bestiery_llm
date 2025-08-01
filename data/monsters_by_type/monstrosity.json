@@ -1,0 +1,6932 @@
+{
+  "monster_type": "monstrosity",
+  "count": 61,
+  "monsters": [
+    {
+      "name": "Abominable Yeti",
+      "source": "XMM",
+      "page": 340,
+      "size": [
+        "H"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 137,
+        "formula": "11d12 + 66"
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 40
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 24,
+      "dex": 10,
+      "con": 22,
+      "int": 9,
+      "wis": 13,
+      "cha": 9,
+      "skill": {
+        "perception": "+9",
+        "stealth": "+8"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 19,
+      "immune": [
+        "cold"
+      ],
+      "languages": [
+        "Yeti"
+      ],
+      "cr": "9",
+      "trait": [
+        {
+          "name": "Fear of Fire",
+          "entries": [
+            "If the yeti takes Fire damage, it has {@variantrule Disadvantage|XPHB} on attack rolls and ability checks until the end of its next turn."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The yeti can use its Chilling Gaze and makes two attacks, using Claw or Ice Throw in any combination."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 11}, reach 5 ft. {@h}14 ({@damage 2d6 + 7}) Slashing damage plus 7 ({@damage 2d6}) Cold damage."
+          ]
+        },
+        {
+          "name": "Ice Throw",
+          "entries": [
+            "{@atkr r} {@hit 11}, range 60/240 ft. {@h}12 ({@damage 2d4 + 7}) Bludgeoning damage plus 7 ({@damage 2d6}) Cold damage."
+          ]
+        },
+        {
+          "name": "Chilling Gaze",
+          "entries": [
+            "{@actSave con} {@dc 18}, one creature the yeti can see within 30 feet. {@actSaveFail} 21 ({@damage 6d6}) Cold damage, and the target has the {@condition Paralyzed|XPHB} condition until the start of the yeti's next turn unless the target has {@variantrule Immunity|XPHB} to Cold damage. {@actSaveSuccess} The target is immune to this yeti's Chilling Gaze for 1 hour."
+          ]
+        },
+        {
+          "name": "Cold Breath {@recharge}",
+          "entries": [
+            "{@actSave con} {@dc 18}, each creature in a 30-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 45 ({@damage 10d8}) Cold damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/abominable-yeti.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Breath Weapon",
+        "Multiattack"
+      ],
+      "languageTags": [
+        "OTH"
+      ],
+      "damageTags": [
+        "B",
+        "C",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "paralyzed"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ankheg",
+      "source": "XMM",
+      "page": 18,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "6d10 + 12"
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 10
+      },
+      "str": 17,
+      "dex": 11,
+      "con": 14,
+      "int": 1,
+      "wis": 13,
+      "cha": 6,
+      "senses": [
+        "darkvision 60 ft.",
+        "tremorsense 60 ft."
+      ],
+      "passive": 11,
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Tunneler",
+          "entries": [
+            "The ankheg can burrow through solid rock at half its {@variantrule Burrow Speed|XPHB} and leaves a 10-foot-diameter tunnel in its wake."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5} (with {@variantrule Advantage|XPHB} if the target is {@condition Grappled|XPHB} by the ankheg), reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Slashing damage plus 3 ({@damage 1d6}) Acid damage. If the target is a Large or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 13})."
+          ]
+        },
+        {
+          "name": "Acid Spray {@recharge}",
+          "entries": [
+            "{@actSave dex} {@dc 12}, each creature in a 30-foot-long, 5-foot-wide {@variantrule Line [Area of Effect]|XPHB|Line}. {@actSaveFail} 14 ({@damage 4d6}) Acid damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/ankheg.mp3"
+      },
+      "traitTags": [
+        "Tunneler"
+      ],
+      "senseTags": [
+        "D",
+        "T"
+      ],
+      "damageTags": [
+        "A",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "grappled"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Axe Beak",
+      "source": "XMM",
+      "page": 24,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 19,
+        "formula": "3d10 + 3"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "str": 14,
+      "dex": 12,
+      "con": 12,
+      "int": 2,
+      "wis": 10,
+      "cha": 5,
+      "passive": 10,
+      "cr": "1/4",
+      "action": [
+        {
+          "name": "Beak",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Slashing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "grassland",
+        "hill"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/axe-beak.mp3"
+      },
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Basilisk",
+      "source": "XMM",
+      "page": 32,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 52,
+        "formula": "8d8 + 16"
+      },
+      "speed": {
+        "walk": 20
+      },
+      "str": 16,
+      "dex": 8,
+      "con": 15,
+      "int": 2,
+      "wis": 8,
+      "cha": 7,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "cr": "3",
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Piercing damage plus 7 ({@damage 2d6}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Petrifying Gaze {@recharge 4}",
+          "entries": [
+            "{@actSave con} {@dc 12}, each creature in a 30-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. If the basilisk sees its reflection within the {@variantrule Cone [Area of Effect]|XPHB|Cone}, the basilisk must make this save. {@actSaveFail 1} The target has the {@condition Restrained|XPHB} condition and repeats the save at the end of its next turn if it is still {@condition Restrained|XPHB}, ending the effect on itself on a success. {@actSaveFail 2} The target has the {@condition Petrified|XPHB} condition instead of the {@condition Restrained|XPHB} condition."
+          ]
+        }
+      ],
+      "environment": [
+        "mountain",
+        "underdark"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/basilisk.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "petrified",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Behir",
+      "source": "XMM",
+      "page": 34,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "H"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 168,
+        "formula": "16d12 + 64"
+      },
+      "speed": {
+        "walk": 50,
+        "climb": 50
+      },
+      "str": 23,
+      "dex": 16,
+      "con": 18,
+      "int": 7,
+      "wis": 14,
+      "cha": 12,
+      "skill": {
+        "perception": "+6",
+        "stealth": "+7"
+      },
+      "senses": [
+        "darkvision 90 ft."
+      ],
+      "passive": 16,
+      "immune": [
+        "lightning"
+      ],
+      "languages": [
+        "Draconic"
+      ],
+      "cr": "11",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The behir makes one Bite attack and uses Constrict."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 10}, reach 10 ft. {@h}19 ({@damage 2d12 + 6}) Piercing damage plus 11 ({@damage 2d10}) Lightning damage."
+          ]
+        },
+        {
+          "name": "Constrict",
+          "entries": [
+            "{@actSave str} {@dc 18}, one Large or smaller creature the behir can see within 5 feet. {@actSaveFail} 28 ({@damage 5d8 + 6}) Bludgeoning damage. The target has the {@condition Grappled|XPHB} condition (escape {@dc 16}), and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+          ]
+        },
+        {
+          "name": "Lightning Breath {@recharge 5}",
+          "entries": [
+            "{@actSave dex} {@dc 16}, each creature in a 90-foot-long, 5-foot-wide {@variantrule Line [Area of Effect]|XPHB|Line}. {@actSaveFail} 66 ({@damage 12d10}) Lightning damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Swallow",
+          "entries": [
+            "{@actSave dex} {@dc 18}, one Large or smaller creature {@condition Grappled|XPHB} by the behir (the behir can have only one creature swallowed at a time). {@actSaveFail} The behir swallows the target, which is no longer {@condition Grappled|XPHB}. While swallowed, a creature has the {@condition Blinded|XPHB} and {@condition Restrained|XPHB} conditions, has {@variantrule Cover|XPHB|Total Cover} against attacks and other effects outside the behir, and takes 21 ({@damage 6d6}) Acid damage at the start of each of the behir's turns.",
+            "If the behir takes 30 damage or more on a single turn from the swallowed creature, the behir must succeed on a {@dc 14} Constitution saving throw at the end of that turn or regurgitate the creature, which falls in a space within 10 feet of the behir and has the {@condition Prone|XPHB} condition. If the behir dies, a swallowed creature is no longer {@condition Restrained|XPHB} and can escape from the corpse by using 15 feet of movement, exiting {@condition Prone|XPHB}."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/behir.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Breath Weapon",
+        "Multiattack",
+        "Swallow"
+      ],
+      "languageTags": [
+        "DR"
+      ],
+      "damageTags": [
+        "A",
+        "B",
+        "L",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "prone",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "dexterity",
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bulette",
+      "source": "XMM",
+      "page": 63,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 94,
+        "formula": "9d10 + 45"
+      },
+      "speed": {
+        "walk": 40,
+        "burrow": 40
+      },
+      "str": 19,
+      "dex": 11,
+      "con": 21,
+      "int": 2,
+      "wis": 10,
+      "cha": 5,
+      "skill": {
+        "perception": "+6"
+      },
+      "senses": [
+        "darkvision 60 ft.",
+        "tremorsense 120 ft."
+      ],
+      "passive": 16,
+      "cr": "5",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The bulette makes two Bite attacks."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}17 ({@damage 2d12 + 4}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Deadly Leap",
+          "entries": [
+            "The bulette spends 5 feet of movement to jump to a space within 15 feet that contains one or more Large or smaller creatures. {@actSave dex} {@dc 15}, each creature in the bulette's destination space. {@actSaveFail} 19 ({@damage 3d12}) Bludgeoning damage, and the target has the {@condition Prone|XPHB} condition. {@actSaveSuccess} Half damage, and the target is pushed 5 feet straight away from the bulette."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Leap",
+          "entries": [
+            "The bulette jumps up to 30 feet by spending 10 feet of movement."
+          ]
+        }
+      ],
+      "environment": [
+        "grassland",
+        "hill",
+        "mountain"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/bulette.mp3"
+      },
+      "senseTags": [
+        "D",
+        "T"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bulette Pup",
+      "source": "XMM",
+      "page": 63,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "6d8 + 18"
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 20
+      },
+      "str": 16,
+      "dex": 8,
+      "con": 17,
+      "int": 2,
+      "wis": 10,
+      "cha": 4,
+      "skill": {
+        "perception": "+4"
+      },
+      "senses": [
+        "darkvision 30 ft.",
+        "tremorsense 60 ft."
+      ],
+      "passive": 14,
+      "cr": "2",
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}14 ({@damage 2d10 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Leap",
+          "entries": [
+            "The bulette jumps up to 30 feet by spending 10 feet of movement."
+          ]
+        }
+      ],
+      "environment": [
+        "grassland",
+        "hill",
+        "mountain"
+      ],
+      "senseTags": [
+        "D",
+        "T"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Carrion Crawler",
+      "source": "XMM",
+      "page": 66,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 51,
+        "formula": "6d10 + 18"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 14,
+      "dex": 13,
+      "con": 16,
+      "int": 1,
+      "wis": 12,
+      "cha": 5,
+      "skill": {
+        "perception": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 15,
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Spider Climb",
+          "entries": [
+            "The carrion crawler can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The carrion crawler uses Paralyzing Tentacles and makes one Bite attack."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}7 ({@damage 2d4 + 2}) Piercing damage plus 3 ({@damage 1d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Paralyzing Tentacles",
+          "entries": [
+            "{@actSave con} {@dc 12}, one creature the carrion crawler can see within 10 feet. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. While {@condition Poisoned|XPHB}, the target has the {@condition Paralyzed|XPHB} condition."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/carrion-crawler.mp3"
+      },
+      "traitTags": [
+        "Spider Climb"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "paralyzed",
+        "poisoned"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Chimera",
+      "source": "XMM",
+      "page": 70,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 114,
+        "formula": "12d10 + 48"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 60
+      },
+      "str": 19,
+      "dex": 11,
+      "con": 19,
+      "int": 3,
+      "wis": 14,
+      "cha": 10,
+      "skill": {
+        "perception": "+8"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 18,
+      "languages": [
+        "understands Draconic but can't speak"
+      ],
+      "cr": "6",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The chimera makes one Ram attack, one Bite attack, and one Claw attack. It can replace the Claw attack with a use of Fire Breath if available."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage, or 18 ({@damage 4d6 + 4}) Piercing damage if the chimera had {@variantrule Advantage|XPHB} on the attack roll."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}7 ({@damage 1d6 + 4}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Ram",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}10 ({@damage 1d12 + 4}) Bludgeoning damage. If the target is a Medium or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Fire Breath {@recharge 5}",
+          "entries": [
+            "{@actSave dex} {@dc 15}, each creature in a 15-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 31 ({@damage 7d8}) Fire damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "environment": [
+        "grassland",
+        "hill",
+        "mountain"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/chimera.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Breath Weapon",
+        "Multiattack"
+      ],
+      "languageTags": [
+        "CS",
+        "DR"
+      ],
+      "damageTags": [
+        "B",
+        "F",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Cockatrice",
+      "source": "XMM",
+      "page": 75,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "5d6 + 5"
+      },
+      "speed": {
+        "walk": 20,
+        "fly": 40
+      },
+      "str": 6,
+      "dex": 12,
+      "con": 12,
+      "int": 2,
+      "wis": 13,
+      "cha": 5,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "conditionImmune": [
+        "petrified"
+      ],
+      "cr": "1/2",
+      "action": [
+        {
+          "name": "Petrifying Bite",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}3 ({@damage 1d4 + 1}) Piercing damage. If the target is a creature, it is subjected to the following effect. {@actSave con} {@dc 11}. {@actSaveFail 1} The target has the {@condition Restrained|XPHB} condition. The target repeats the save at the end of its next turn if it is still {@condition Restrained|XPHB}, ending the effect on itself on a success. {@actSaveFail 2} The target has the {@condition Petrified|XPHB} condition, instead of the {@condition Restrained|XPHB} condition, for 24 hours."
+          ]
+        }
+      ],
+      "environment": [
+        "grassland"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/cockatrice.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "petrified",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Cockatrice Regent",
+      "source": "XMM",
+      "page": 75,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 136,
+        "formula": "16d10 + 48"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 60
+      },
+      "str": 19,
+      "dex": 14,
+      "con": 16,
+      "int": 3,
+      "wis": 16,
+      "cha": 5,
+      "save": {
+        "wis": "+6"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 13,
+      "conditionImmune": [
+        "petrified"
+      ],
+      "cr": "8",
+      "trait": [
+        {
+          "name": "Flyby",
+          "entries": [
+            "The cockatrice doesn't provoke an Opportunity Attack when it flies out of an enemy's reach."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cockatrice makes one Petrifying Bite attack and two Talons attacks."
+          ]
+        },
+        {
+          "name": "Petrifying Bite",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}13 ({@damage 2d8 + 4}) Piercing damage. If the target is a creature, it is subjected to the following effect. {@actSave con} {@dc 14}. {@actSaveFail 1} The target has the {@condition Restrained|XPHB} condition and repeats the save at the end of its next turn if it is still {@condition Restrained|XPHB}, ending the effect on itself on a success. {@actSaveFail 2} The target has the {@condition Petrified|XPHB} condition instead of the {@condition Restrained|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Talons",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}18 ({@damage 4d6 + 4}) Slashing damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Magical Backlash",
+          "entries": [
+            "{@actTrigger} A creature within 120 feet of the cockatrice deals damage to it. {@actResponse d}{@actSave dex} {@dc 14}, the triggering creature. {@actSaveFail} 13 ({@damage 3d6 + 3}) Force damage."
+          ]
+        }
+      ],
+      "environment": [
+        "grassland"
+      ],
+      "traitTags": [
+        "Flyby"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "O",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "petrified",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Death Dog",
+      "source": "XMM",
+      "page": 91,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 39,
+        "formula": "6d8 + 12"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 15,
+      "dex": 14,
+      "con": 14,
+      "int": 3,
+      "wis": 13,
+      "cha": 6,
+      "skill": {
+        "perception": "+5",
+        "stealth": "+4"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 15,
+      "conditionImmune": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "frightened",
+        "stunned",
+        "unconscious"
+      ],
+      "cr": "1",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The death dog makes two Bite attacks."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Piercing damage. If the target is a creature, it is subjected to the following effect. {@actSave con} {@dc 12}. {@actSaveFail 1} The target has the {@condition Poisoned|XPHB} condition. While {@condition Poisoned|XPHB}, the target's {@variantrule Hit Points|XPHB|Hit Point} maximum doesn't return to normal when finishing a {@variantrule Long Rest|XPHB}, and it repeats the save every 24 hours that elapse, ending the effect on itself on a success. Subsequent Failures: The {@condition Poisoned|XPHB} target's {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by 5 ({@dice 1d10})."
+          ]
+        }
+      ],
+      "environment": [
+        "desert"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/death-dog.mp3"
+      },
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "poisoned"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Displacer Beast",
+      "source": "XMM",
+      "page": 98,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 76,
+        "formula": "9d10 + 27"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 18,
+      "dex": 15,
+      "con": 16,
+      "int": 6,
+      "wis": 12,
+      "cha": 8,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "languages": [
+        "understands Sylvan but can't speak"
+      ],
+      "cr": "3",
+      "trait": [
+        {
+          "name": "Avoidance",
+          "entries": [
+            "If the displacer beast is subjected to an effect that allows it to make a saving throw to take only half damage, it instead takes no damage if it succeeds on the save and half damage if it fails. It can't use this trait if it has the {@condition Incapacitated|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Displacement",
+          "entries": [
+            "Attack rolls against the displacer beast have {@variantrule Disadvantage|XPHB}, since it projects an illusion that makes it appear to be near its actual location. This trait is suppressed while the displacer beast has the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The displacer beast makes one Rend attack and one Tentacle attack."
+          ]
+        },
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 feet. {@h}9 ({@damage 1d10 + 4}) Slashing damage. If target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Tentacle",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 10 feet. {@h}11 ({@damage 2d6 + 4}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "forest"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/displacer-beast.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Tentacles"
+      ],
+      "languageTags": [
+        "CS",
+        "S"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "incapacitated",
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Doppelganger",
+      "source": "XMM",
+      "page": 100,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "HBTD"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 52,
+        "formula": "8d8 + 16"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 18,
+      "con": 14,
+      "int": 11,
+      "wis": 12,
+      "cha": 14,
+      "skill": {
+        "deception": "+6",
+        "insight": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "conditionImmune": [
+        "charmed"
+      ],
+      "languages": [
+        "Common plus three other languages"
+      ],
+      "cr": "3",
+      "spellcasting": [
+        {
+          "name": "Read Thoughts",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The doppelganger casts {@spell Detect Thoughts|XPHB}, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 12})."
+          ],
+          "will": [
+            "{@spell Detect Thoughts|XPHB}"
+          ],
+          "ability": "cha",
+          "displayAs": "action",
+          "hidden": [
+            "will"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The doppelganger makes two Slam attacks and uses Unsettling Visage if available."
+          ]
+        },
+        {
+          "name": "Slam",
+          "entries": [
+            "{@atkr m} {@hit 6} (with {@variantrule Advantage|XPHB} during the first round of each combat), reach 5 ft. {@h}11 ({@damage 2d6 + 4}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Unsettling Visage {@recharge}",
+          "entries": [
+            "{@actSave wis} {@dc 12}, each creature in a 15-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the doppelganger that can see the doppelganger. {@actSaveFail} The target has the {@condition Frightened|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The doppelganger shape-shifts into a Medium or Small Humanoid, or it returns to its true form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/doppelganger.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "frightened"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Drider",
+      "source": "XMM",
+      "page": 105,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        19
+      ],
+      "hp": {
+        "average": 123,
+        "formula": "13d10 + 52"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 16,
+      "dex": 19,
+      "con": 18,
+      "int": 13,
+      "wis": 16,
+      "cha": 12,
+      "skill": {
+        "perception": "+6",
+        "stealth": "+10"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 16,
+      "languages": [
+        "Elvish",
+        "Undercommon"
+      ],
+      "cr": "6",
+      "spellcasting": [
+        {
+          "name": "Magic of the Spider Queen {@recharge 5}",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The drider casts {@spell Darkness|XPHB}, {@spell Faerie Fire|XPHB}, or {@spell Web|XPHB}, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 14})."
+          ],
+          "recharge": {
+            "5": [
+              "{@spell Darkness|XPHB}",
+              "{@spell Faerie Fire|XPHB}",
+              "{@spell Web|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "bonus",
+          "hidden": [
+            "recharge"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Spider Climb",
+          "entries": [
+            "The drider can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+          ]
+        },
+        {
+          "name": "Sunlight Sensitivity",
+          "entries": [
+            "While in sunlight, the drider has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls."
+          ]
+        },
+        {
+          "name": "Web Walker",
+          "entries": [
+            "The drider ignores movement restrictions caused by webs, and the drider knows the location of any other creature in contact with the same web."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The drider makes three attacks, using Foreleg or Poison Burst in any combination."
+          ]
+        },
+        {
+          "name": "Foreleg",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 10 ft. {@h}13 ({@damage 2d8 + 4}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Poison Burst",
+          "entries": [
+            "{@atkr r} {@hit 6}, range 120 ft. {@h}13 ({@damage 3d6 + 3}) Poison damage."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/drider.mp3"
+      },
+      "traitTags": [
+        "Spider Climb",
+        "Sunlight Sensitivity",
+        "Web Walker"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "E",
+        "U"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "damageTagsSpell": [
+        "F"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflictSpell": [
+        "restrained"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ettercap",
+      "source": "XMM",
+      "page": 115,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 44,
+        "formula": "8d8 + 8"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 14,
+      "dex": 15,
+      "con": 13,
+      "int": 7,
+      "wis": 12,
+      "cha": 8,
+      "skill": {
+        "perception": "+3",
+        "stealth": "+4",
+        "survival": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 13,
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Spider Climb",
+          "entries": [
+            "The ettercap can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+          ]
+        },
+        {
+          "name": "Web Walker",
+          "entries": [
+            "The ettercap ignores movement restrictions caused by webs, and the ettercap knows the location of any other creature in contact with the same web."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The ettercap makes one Bite attack and one Claw attack."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage plus 2 ({@damage 1d4}) Poison damage, and the target has the {@condition Poisoned|XPHB} condition until the start of the ettercap's next turn."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}7 ({@damage 2d4 + 2}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Web Strand {@recharge 5}",
+          "entries": [
+            "{@actSave dex} {@dc 12}, one Large or smaller creature the ettercap can see within 30 feet. {@actSaveFail} The target has the {@condition Restrained|XPHB} condition until the web is destroyed (AC 10; HP 5; {@variantrule Vulnerability|XPHB} to Fire damage; {@variantrule Immunity|XPHB} to Bludgeoning, Poison, and Psychic damage)."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Reel",
+          "entries": [
+            "The ettercap pulls one creature within 30 feet of itself that is {@condition Restrained|XPHB} by its Web Strand up to 25 feet straight toward itself."
+          ]
+        }
+      ],
+      "environment": [
+        "forest"
+      ],
+      "treasure": [
+        "implements"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/ettercap.mp3"
+      },
+      "traitTags": [
+        "Spider Climb",
+        "Web Walker"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "I",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "poisoned",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Flying Snake",
+      "source": "XMM",
+      "page": 353,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "T"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 5,
+        "formula": "2d4"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 60,
+        "swim": 30
+      },
+      "str": 4,
+      "dex": 15,
+      "con": 11,
+      "int": 2,
+      "wis": 12,
+      "cha": 5,
+      "senses": [
+        "blindsight 10 ft."
+      ],
+      "passive": 11,
+      "cr": "1/8",
+      "trait": [
+        {
+          "name": "Flyby",
+          "entries": [
+            "The snake doesn't provoke an Opportunity Attack when it flies out of an enemy's reach."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}1 Piercing damage plus 5 ({@damage 2d4}) Poison damage."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "grassland"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/flying-snake.mp3"
+      },
+      "traitTags": [
+        "Flyby"
+      ],
+      "senseTags": [
+        "B"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Giant Axe Beak",
+      "source": "XMM",
+      "page": 24,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "H"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 84,
+        "formula": "8d12 + 32"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 21,
+      "dex": 14,
+      "con": 19,
+      "int": 3,
+      "wis": 12,
+      "cha": 5,
+      "skill": {
+        "perception": "+4"
+      },
+      "passive": 14,
+      "cr": "5",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The axe beak makes one Sharpened Beak attack and one Talons attack."
+          ]
+        },
+        {
+          "name": "Sharpened Beak",
+          "entries": [
+            "{@atkr m} {@hit 8}, reach 10 ft. {@h}18 ({@damage 2d12 + 5}) Slashing damage, and a creature within 5 feet of the target (axe beak's choice) takes 6 ({@damage 1d12}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Talons",
+          "entries": [
+            "{@atkr m} {@hit 8}, reach 5 ft. {@h}14 ({@damage 2d8 + 5}) Piercing damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "grassland",
+        "hill"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Giant Vulture",
+      "source": "XMM",
+      "page": 361,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        10
+      ],
+      "hp": {
+        "average": 25,
+        "formula": "3d10 + 9"
+      },
+      "speed": {
+        "walk": 10,
+        "fly": 60
+      },
+      "str": 15,
+      "dex": 10,
+      "con": 16,
+      "int": 6,
+      "wis": 12,
+      "cha": 7,
+      "skill": {
+        "perception": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 13,
+      "resist": [
+        "necrotic"
+      ],
+      "languages": [
+        "understands Common but can't speak"
+      ],
+      "cr": "1",
+      "trait": [
+        {
+          "name": "Pack Tactics",
+          "entries": [
+            "The vulture has {@variantrule Advantage|XPHB} on an attack roll against a creature if at least one of the vulture's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Gouge",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}9 ({@damage 2d6 + 2}) Piercing damage, and the target has the {@condition Poisoned|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "grassland",
+        "hill"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/giant-vulture.mp3"
+      },
+      "traitTags": [
+        "Pack Tactics"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "CS"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "poisoned"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Griffon",
+      "source": "XMM",
+      "page": 159,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 59,
+        "formula": "7d10 + 21"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 80
+      },
+      "str": 18,
+      "dex": 15,
+      "con": 16,
+      "int": 2,
+      "wis": 13,
+      "cha": 8,
+      "skill": {
+        "perception": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 15,
+      "cr": "2",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The griffon makes two Rend attacks."
+          ]
+        },
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}8 ({@damage 1d8 + 4}) Piercing damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 14}) from both of the griffon's front claws."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "coastal",
+        "grassland",
+        "hill",
+        "mountain"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/griffon.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "grappled"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Harpy",
+      "source": "XMM",
+      "page": 164,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 38,
+        "formula": "7d8 + 7"
+      },
+      "speed": {
+        "walk": 20,
+        "fly": 40
+      },
+      "str": 12,
+      "dex": 13,
+      "con": 12,
+      "int": 7,
+      "wis": 10,
+      "cha": 13,
+      "passive": 10,
+      "languages": [
+        "Common"
+      ],
+      "cr": "1",
+      "action": [
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}6 ({@damage 2d4 + 1}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Luring Song",
+          "entries": [
+            "The harpy sings a magical melody, which lasts until the harpy's {@status Concentration|XPHB} ends on it. {@actSave wis} {@dc 11}, each Humanoid and Giant in a 300-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the harpy when the song starts. {@actSaveFail} The target has the {@condition Charmed|XPHB} condition until the song ends and repeats the save at the end of each of its turns. While {@condition Charmed|XPHB}, the target has the {@condition Incapacitated|XPHB} condition and ignores the Luring Song of other harpies. If the target is more than 5 feet from the harpy, the target moves on its turn toward the harpy by the most direct route, trying to get within 5 feet of the harpy. It doesn't avoid {@action Opportunity Attack|XPHB|Opportunity Attacks}; however, before moving into damaging terrain (such as lava or a pit) and whenever it takes damage from a source other than the harpy, the target repeats the save. {@actSaveSuccess} The target is immune to this harpy's Luring Song for 24 hours."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "forest",
+        "hill",
+        "mountain"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/harpy.mp3"
+      },
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "charmed",
+        "incapacitated"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Hippogriff",
+      "source": "XMM",
+      "page": 169,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 26,
+        "formula": "4d10 + 4"
+      },
+      "speed": {
+        "walk": 40,
+        "fly": 60
+      },
+      "str": 17,
+      "dex": 13,
+      "con": 13,
+      "int": 2,
+      "wis": 12,
+      "cha": 8,
+      "skill": {
+        "perception": "+5"
+      },
+      "passive": 15,
+      "cr": "1",
+      "trait": [
+        {
+          "name": "Flyby",
+          "entries": [
+            "The hippogriff doesn't provoke an Opportunity Attack when it flies out of an enemy's reach."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The hippogriff makes two Rend attacks."
+          ]
+        },
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Slashing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "grassland",
+        "hill",
+        "mountain"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/hippogriff.mp3"
+      },
+      "traitTags": [
+        "Flyby"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Hook Horror",
+      "source": "XMM",
+      "page": 173,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 75,
+        "formula": "10d10 + 20"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 18,
+      "dex": 10,
+      "con": 15,
+      "int": 6,
+      "wis": 12,
+      "cha": 7,
+      "save": {
+        "con": "+4"
+      },
+      "skill": {
+        "perception": "+5"
+      },
+      "senses": [
+        "blindsight 60 ft.",
+        "darkvision 120 ft."
+      ],
+      "passive": 15,
+      "languages": [
+        "Hook Horror"
+      ],
+      "cr": "3",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The hook horror makes two Hook attacks."
+          ]
+        },
+        {
+          "name": "Hook",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 10 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage. If the target is a Large or smaller creature, the hook horror moves the target 5 feet straight toward or away from itself."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/hook-horror.mp3"
+      },
+      "senseTags": [
+        "B",
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "OTH"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Hydra",
+      "source": "XMM",
+      "page": 175,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "H"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 184,
+        "formula": "16d12 + 80"
+      },
+      "speed": {
+        "walk": 40,
+        "swim": 40
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 20,
+      "dex": 12,
+      "con": 20,
+      "int": 2,
+      "wis": 10,
+      "cha": 7,
+      "skill": {
+        "perception": "+6"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 16,
+      "conditionImmune": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "frightened",
+        "stunned",
+        "unconscious"
+      ],
+      "cr": "8",
+      "trait": [
+        {
+          "name": "Hold Breath",
+          "entries": [
+            "The hydra can hold its breath for 1 hour."
+          ]
+        },
+        {
+          "name": "Multiple Heads",
+          "entries": [
+            "The hydra has five heads. Whenever the hydra takes 25 damage or more on a single turn, one of its heads dies. The hydra dies if all its heads are dead. At the end of each of its turns when it has at least one living head, the hydra grows two heads for each of its heads that died since its last turn, unless it has taken Fire damage since its last turn. The hydra regains 20 {@variantrule Hit Points|XPHB} when it grows new heads."
+          ]
+        },
+        {
+          "name": "Reactive Heads",
+          "entries": [
+            "For each head the hydra has beyond one, it gets an extra {@variantrule Reaction|XPHB} that can be used only for {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The hydra makes as many Bite attacks as it has heads."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 8}, reach 10 ft. {@h}10 ({@damage 1d10 + 5}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "swamp"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/hydra.mp3"
+      },
+      "traitTags": [
+        "Hold Breath"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Kenku",
+      "source": "XMM",
+      "page": 183,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 13,
+        "formula": "3d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 16,
+      "con": 10,
+      "int": 11,
+      "wis": 10,
+      "cha": 10,
+      "skill": {
+        "deception": "+4",
+        "perception": "+2",
+        "stealth": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 12,
+      "languages": [
+        "Common",
+        "Primordial (Auran)"
+      ],
+      "cr": "1/4",
+      "spellcasting": [
+        {
+          "name": "Eldritch Lantern {@recharge 4}",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The kenku casts {@spell Faerie Fire|XPHB}, using Intelligence as the spellcasting ability (spell save {@dc 10})."
+          ],
+          "recharge": {
+            "4": [
+              "{@spell Faerie Fire|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "bonus",
+          "hidden": [
+            "recharge"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Mimicry",
+          "entries": [
+            "The kenku can mimic any sounds it has heard, including voices. A creature that hears the sounds can tell they are imitations with a successful {@dc 14} Wisdom ({@skill Insight|XPHB}) check."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Shadow Blade",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 60 ft. {@h}6 ({@damage 1d6 + 3}) Necrotic damage. {@hom}The blade magically returns to the kenku's hand immediately after a ranged attack."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "planar, shadowfell",
+        "urban"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/kenku.mp3"
+      },
+      "traitTags": [
+        "Mimicry"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "AU",
+        "C",
+        "P"
+      ],
+      "damageTags": [
+        "N"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Kraken",
+      "group": [
+        "Titans"
+      ],
+      "source": "XMM",
+      "page": 187,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "G"
+      ],
+      "type": {
+        "type": "monstrosity",
+        "tags": [
+          "titan"
+        ]
+      },
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 481,
+        "formula": "26d20 + 208"
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 120
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 30,
+      "dex": 11,
+      "con": 26,
+      "int": 22,
+      "wis": 18,
+      "cha": 20,
+      "save": {
+        "str": "+17",
+        "dex": "+7",
+        "con": "+15",
+        "wis": "+11"
+      },
+      "skill": {
+        "history": "+13",
+        "perception": "+11"
+      },
+      "senses": [
+        "truesight 120 ft."
+      ],
+      "passive": 21,
+      "immune": [
+        "cold",
+        "lightning"
+      ],
+      "conditionImmune": [
+        "frightened",
+        "grappled",
+        "paralyzed",
+        "restrained"
+      ],
+      "languages": [
+        "understands Abyssal",
+        "Celestial",
+        "Infernal",
+        "and Primordial but can't speak; telepathy 120 ft."
+      ],
+      "cr": {
+        "cr": "23",
+        "xpLair": 62000
+      },
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The kraken can breathe air and water."
+          ]
+        },
+        {
+          "name": "Legendary Resistance (4/Day, or 5/Day in Lair)",
+          "entries": [
+            "If the kraken fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Siege Monster",
+          "entries": [
+            "The kraken deals double damage to objects and structures."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The kraken makes two Tentacle attacks and uses Fling, Lightning Strike, or Swallow."
+          ]
+        },
+        {
+          "name": "Tentacle",
+          "entries": [
+            "{@atkr m} {@hit 17}, reach 30 ft. {@h}24 ({@damage 4d6 + 10}) Bludgeoning damage. The target has the {@condition Grappled|XPHB} condition (escape {@dc 20}) from one of ten tentacles, and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+          ]
+        },
+        {
+          "name": "Fling",
+          "entries": [
+            "The kraken throws a Large or smaller creature {@condition Grappled|XPHB} by it to a space it can see within 60 feet of itself that isn't in the air. {@actSave dex} {@dc 25}, the creature thrown and each creature in the destination space. {@actSaveFail} 18 ({@damage 4d8}) Bludgeoning damage, and the target has the {@condition Prone|XPHB} condition. {@actSaveSuccess} Half damage only."
+          ]
+        },
+        {
+          "name": "Lightning Strike",
+          "entries": [
+            "{@actSave dex} {@dc 23}, one creature the kraken can see within 120 feet. {@actSaveFail} 33 ({@damage 6d10}) Lightning damage. {@actSaveSuccess} Half damage."
+          ]
+        },
+        {
+          "name": "Swallow",
+          "entries": [
+            "{@actSave dex} {@dc 25}, one creature {@condition Grappled|XPHB} by the kraken (it can have up to four creatures swallowed at a time). {@actSaveFail} 23 ({@damage 3d8 + 10}) Piercing damage. If the target is Large or smaller, it is swallowed and no longer {@condition Grappled|XPHB}. A swallowed creature has the {@condition Restrained|XPHB} condition, has {@variantrule Cover|XPHB|Total Cover} against attacks and other effects outside the kraken, and takes 24 ({@damage 7d6}) Acid damage at the start of each of its turns.",
+            "If the kraken takes 50 damage or more on a single turn from a creature inside it, the kraken must succeed on a {@dc 25} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls in a space within 10 feet of the kraken with the {@condition Prone|XPHB} condition. If the kraken dies, any swallowed creature no longer has the {@condition Restrained|XPHB} condition and can escape from the corpse using 15 feet of movement, exiting {@condition Prone|XPHB}."
+          ]
+        }
+      ],
+      "legendaryActionsLair": 4,
+      "legendary": [
+        {
+          "name": "Storm Bolt",
+          "entries": [
+            "The kraken uses Lightning Strike."
+          ]
+        },
+        {
+          "name": "Toxic Ink",
+          "entries": [
+            "{@actSave con} {@dc 23}, each creature in a 15-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the kraken while it is underwater. {@actSaveFail} The target has the {@condition Blinded|XPHB} and {@condition Poisoned|XPHB} conditions until the end of the kraken's next turn. The kraken then moves up to its {@variantrule Speed|XPHB}. {@actSaveSuccessOrFail} The kraken can't take this action again until the start of its next turn."
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Kraken",
+        "source": "XMM"
+      },
+      "environment": [
+        "underwater"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/kraken.mp3"
+      },
+      "traitTags": [
+        "Amphibious",
+        "Legendary Resistances",
+        "Siege Monster"
+      ],
+      "senseTags": [
+        "U"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Swallow",
+        "Tentacles"
+      ],
+      "languageTags": [
+        "AB",
+        "CE",
+        "CS",
+        "I",
+        "P",
+        "TP"
+      ],
+      "damageTags": [
+        "A",
+        "B",
+        "L",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "prone",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Manticore",
+      "source": "XMM",
+      "page": 202,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 68,
+        "formula": "8d10 + 24"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 50
+      },
+      "str": 17,
+      "dex": 16,
+      "con": 17,
+      "int": 7,
+      "wis": 12,
+      "cha": 8,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "languages": [
+        "Common"
+      ],
+      "cr": "3",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The manticore makes three attacks, using Rend or Tail Spike in any combination."
+          ]
+        },
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Tail Spike",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 100/200 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "coastal",
+        "grassland",
+        "hill",
+        "mountain"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/manticore.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Medusa",
+      "source": "XMM",
+      "page": 205,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 127,
+        "formula": "17d8 + 51"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 10,
+      "dex": 17,
+      "con": 16,
+      "int": 12,
+      "wis": 13,
+      "cha": 15,
+      "save": {
+        "wis": "+4"
+      },
+      "skill": {
+        "deception": "+5",
+        "perception": "+4",
+        "stealth": "+6"
+      },
+      "senses": [
+        "darkvision 150 ft."
+      ],
+      "passive": 14,
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "6",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The medusa makes two Claw attacks and one Snake Hair attack, or it makes three Poison Ray attacks."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Snake Hair",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}5 ({@damage 1d4 + 3}) Piercing damage plus 14 ({@damage 4d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Poison Ray",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 150 ft. {@h}11 ({@damage 2d8 + 2}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Petrifying Gaze {@recharge 5}",
+          "entries": [
+            "{@actSave con} {@dc 13}, each creature in a 30-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. If the medusa sees its reflection in the {@variantrule Cone [Area of Effect]|XPHB|Cone}, the medusa must make this save. {@actSaveFail 1} The target has the {@condition Restrained|XPHB} condition and repeats the save at the end of its next turn if it is still {@condition Restrained|XPHB}, ending the effect on itself on a success. {@actSaveFail 2} The target has the {@condition Petrified|XPHB} condition instead of the {@condition Restrained|XPHB} condition."
+          ]
+        }
+      ],
+      "environment": [
+        "desert"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/medusa.mp3"
+      },
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "I",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "petrified",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Merrow",
+      "source": "XMM",
+      "page": 210,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "6d10 + 12"
+      },
+      "speed": {
+        "walk": 10,
+        "swim": 40
+      },
+      "str": 18,
+      "dex": 15,
+      "con": 15,
+      "int": 8,
+      "wis": 10,
+      "cha": 9,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "languages": [
+        "Abyssal",
+        "Primordial (Aquan)"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The merrow can breathe air and water."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The merrow makes two attacks, using Bite, Claw, or Harpoon in any combination."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}6 ({@damage 1d4 + 4}) Piercing damage, and the target has the {@condition Poisoned|XPHB} condition until the end of the merrow's next turn."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}9 ({@damage 2d4 + 4}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Harpoon",
+          "entries": [
+            "{@atkr m,r} {@hit 6}, reach 5 ft. or range 20/60 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage. If the target is a Large or smaller creature, the merrow pulls the target up to 15 feet straight toward itself."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "underwater"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/merrow.mp3"
+      },
+      "traitTags": [
+        "Amphibious"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AB",
+        "AQ",
+        "P"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "poisoned"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Mimic",
+      "source": "XMM",
+      "page": 212,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 58,
+        "formula": "9d8 + 18"
+      },
+      "speed": {
+        "walk": 20
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 17,
+      "dex": 12,
+      "con": 15,
+      "int": 5,
+      "wis": 13,
+      "cha": 8,
+      "skill": {
+        "stealth": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "immune": [
+        "acid"
+      ],
+      "conditionImmune": [
+        "prone"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Adhesive (Object Form Only)",
+          "entries": [
+            "The mimic adheres to anything that touches it. A Huge or smaller creature adhered to the mimic has the {@condition Grappled|XPHB} condition (escape {@dc 13}). Ability checks made to escape this grapple have {@variantrule Disadvantage|XPHB}."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5} (with {@variantrule Advantage|XPHB} if the target is {@condition Grappled|XPHB} by the mimic), reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage—or 12 ({@damage 2d8 + 3}) Piercing damage if the target is {@condition Grappled|XPHB} by the mimic—plus 4 ({@damage 1d8}) Acid damage."
+          ]
+        },
+        {
+          "name": "Pseudopod",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Bludgeoning damage plus 4 ({@damage 1d8}) Acid damage. If the target is a Large or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 13}). Ability checks made to escape this grapple have {@variantrule Disadvantage|XPHB}."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The mimic shape-shifts to resemble a Medium or Small object while retaining its game statistics, or it returns to its true blob form. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/mimic.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "damageTags": [
+        "A",
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "grappled"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Minotaur of Baphomet",
+      "source": "XMM",
+      "page": 215,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 85,
+        "formula": "10d10 + 30"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 18,
+      "dex": 11,
+      "con": 16,
+      "int": 6,
+      "wis": 16,
+      "cha": 9,
+      "skill": {
+        "perception": "+7",
+        "survival": "+7"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 17,
+      "languages": [
+        "Abyssal"
+      ],
+      "cr": "3",
+      "action": [
+        {
+          "name": "Abyssal Glaive",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 10 ft. {@h}10 ({@damage 1d12 + 4}) Slashing damage plus 10 ({@damage 3d6}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Gore {@recharge 5}",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}18 ({@damage 4d6 + 4}) Piercing damage. If the target is a Large or smaller creature and the minotaur moved 10+ feet straight toward it immediately before the hit, the target takes an extra 10 ({@damage 3d6}) Piercing damage and has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "AB"
+      ],
+      "damageTags": [
+        "N",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Owlbear",
+      "source": "XMM",
+      "page": 234,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 59,
+        "formula": "7d10 + 21"
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 40
+      },
+      "str": 20,
+      "dex": 12,
+      "con": 17,
+      "int": 3,
+      "wis": 12,
+      "cha": 7,
+      "skill": {
+        "perception": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 15,
+      "cr": "3",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The owlbear makes two Rend attacks."
+          ]
+        },
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}14 ({@damage 2d8 + 5}) Slashing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "forest"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/owlbear.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Peryton",
+      "source": "XMM",
+      "page": 238,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 33,
+        "formula": "6d8 + 6"
+      },
+      "speed": {
+        "walk": 20,
+        "fly": 60
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 16,
+      "dex": 12,
+      "con": 13,
+      "int": 9,
+      "wis": 12,
+      "cha": 10,
+      "skill": {
+        "perception": "+5",
+        "stealth": "+3"
+      },
+      "passive": 15,
+      "languages": [
+        "understands Common and Elvish but can't speak"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Flyby",
+          "entries": [
+            "The peryton doesn't provoke an Opportunity Attack when it flies out of an enemy's reach."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The peryton makes one Gore attack and one Talons attack."
+          ]
+        },
+        {
+          "name": "Gore",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage. If the peryton moved 30+ feet straight toward the target immediately before the hit, the target takes an extra 9 ({@damage 2d8}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Talons",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}8 ({@damage 2d4 + 3}) Piercing damage. If the attack reduces a Humanoid target to 0 {@variantrule Hit Points|XPHB}, the peryton kills the target by removing its heart."
+          ]
+        }
+      ],
+      "environment": [
+        "hill",
+        "mountain"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/peryton.mp3"
+      },
+      "traitTags": [
+        "Flyby"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "CS",
+        "E"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Phase Spider",
+      "source": "XMM",
+      "page": 239,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "7d10 + 7"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 15,
+      "dex": 16,
+      "con": 12,
+      "int": 6,
+      "wis": 10,
+      "cha": 6,
+      "skill": {
+        "stealth": "+7"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "cr": "3",
+      "trait": [
+        {
+          "name": "Ethereal Sight",
+          "entries": [
+            "The spider can see 60 feet into the Ethereal Plane while on the Material Plane and vice versa."
+          ]
+        },
+        {
+          "name": "Spider Climb",
+          "entries": [
+            "The spider can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+          ]
+        },
+        {
+          "name": "Web Walker",
+          "entries": [
+            "The spider ignores movement restrictions caused by webs, and the spider knows the location of any other creature in contact with the same web."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The spider makes two Bite attacks."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}8 ({@damage 1d10 + 3}) Piercing damage plus 9 ({@damage 2d8}) Poison damage. If this damage reduces the target to 0 {@variantrule Hit Points|XPHB}, the target becomes {@variantrule Stable|XPHB}, and it has the {@condition Poisoned|XPHB} condition for 1 hour. While {@condition Poisoned|XPHB}, the target also has the {@condition Paralyzed|XPHB} condition."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Ethereal Jaunt",
+          "entries": [
+            "The spider teleports from the Material Plane to the Ethereal Plane or vice versa."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "grassland",
+        "hill",
+        "planar, ethereal",
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/phase-spider.mp3"
+      },
+      "traitTags": [
+        "Spider Climb",
+        "Web Walker"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "paralyzed",
+        "poisoned"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Primeval Owlbear",
+      "source": "XMM",
+      "page": 234,
+      "size": [
+        "H"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 126,
+        "formula": "12d12 + 48"
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 40,
+        "fly": 5
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 22,
+      "dex": 14,
+      "con": 19,
+      "int": 8,
+      "wis": 15,
+      "cha": 7,
+      "save": {
+        "con": "+7",
+        "wis": "+5"
+      },
+      "skill": {
+        "perception": "+8"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 18,
+      "cr": "7",
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The owlbear has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The owlbear makes two Ravage attacks."
+          ]
+        },
+        {
+          "name": "Ravage",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}15 ({@damage 2d8 + 6}) Slashing damage. If the target is a Huge or smaller creature and the owlbear moved 20+ feet straight toward it immediately before the hit, the target takes an extra 9 ({@damage 2d8}) Slashing damage and has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Screech {@recharge 5}",
+          "entries": [
+            "{@actSave con} {@dc 15}, each creature in a 30-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the owlbear. {@actSaveFail} 27 ({@damage 6d8}) Thunder damage, and the target has the {@condition Incapacitated|XPHB} condition until the end of its next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "forest"
+      ],
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "S",
+        "T"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "incapacitated",
+        "prone"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Purple Worm",
+      "source": "XMM",
+      "page": 250,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "G"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 247,
+        "formula": "15d20 + 90"
+      },
+      "speed": {
+        "walk": 50,
+        "burrow": 50
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 28,
+      "dex": 7,
+      "con": 22,
+      "int": 1,
+      "wis": 8,
+      "cha": 4,
+      "save": {
+        "con": "+11",
+        "wis": "+4"
+      },
+      "senses": [
+        "blindsight 30 ft.",
+        "tremorsense 60 ft."
+      ],
+      "passive": 9,
+      "cr": "15",
+      "trait": [
+        {
+          "name": "Tunneler",
+          "entries": [
+            "The worm can burrow through solid rock at half its {@variantrule Burrow Speed|XPHB} and leaves a 10-foot-diameter tunnel in its wake."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The worm makes one Bite attack and one Tail Stinger attack."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 14}, reach 10 ft. {@h}22 ({@damage 3d8 + 9}) Piercing damage. If the target is a Large or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 19}), and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+          ]
+        },
+        {
+          "name": "Tail Stinger",
+          "entries": [
+            "{@atkr m} {@hit 14}, reach 10 ft. {@h}16 ({@damage 2d6 + 9}) Piercing damage plus 35 ({@damage 10d6}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Swallow",
+          "entries": [
+            "{@actSave str} {@dc 19}, one Large or smaller creature {@condition Grappled|XPHB} by the worm (it can have up to three creatures swallowed at a time). {@actSaveFail} The target is swallowed by the worm, and the {@condition Grappled|XPHB} condition ends. A swallowed creature has the {@condition Blinded|XPHB} and {@condition Restrained|XPHB} conditions, has {@variantrule Cover|XPHB|Total Cover} against attacks and other effects outside the worm, and takes 17 ({@damage 5d6}) Acid damage at the start of each of the worm's turns.",
+            "If the worm takes 30 damage or more on a single turn from a creature inside it, the worm must succeed on a {@dc 21} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls in a space within 5 feet of the worm and has the {@condition Prone|XPHB} condition. If the worm dies, any swallowed creature no longer has the {@condition Restrained|XPHB} condition and can escape from the corpse using 20 feet of movement, exiting {@condition Prone|XPHB}."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "underdark"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/purple-worm.mp3"
+      },
+      "traitTags": [
+        "Tunneler"
+      ],
+      "senseTags": [
+        "B",
+        "T"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Swallow"
+      ],
+      "damageTags": [
+        "A",
+        "I",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "prone",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Quaggoth",
+      "source": "XMM",
+      "page": 251,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "6d8 + 18"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 17,
+      "dex": 12,
+      "con": 16,
+      "int": 6,
+      "wis": 12,
+      "cha": 7,
+      "skill": {
+        "athletics": "+5"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 11,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "languages": [
+        "Undercommon"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Bloodied Fury",
+          "entries": [
+            "While {@variantrule Bloodied|XPHB}, the quaggoth has {@variantrule Advantage|XPHB} on attack rolls."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The quaggoth makes two Claw attacks."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage, or 13 ({@damage 3d6 + 3}) Slashing damage if the quaggoth is {@variantrule Bloodied|XPHB}."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/quaggoth.mp3"
+      },
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "U"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Quaggoth Thonot",
+      "source": "XMM",
+      "page": 251,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 67,
+        "formula": "9d8 + 27"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 17,
+      "dex": 12,
+      "con": 16,
+      "int": 6,
+      "wis": 14,
+      "cha": 7,
+      "skill": {
+        "athletics": "+5"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "languages": [
+        "Undercommon"
+      ],
+      "cr": "3",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The quaggoth casts one of the following spells, requiring no spell components and using Wisdom as the spellcasting ability (spell save {@dc 12}):"
+          ],
+          "will": [
+            "{@spell Mage Hand|XPHB} (the hand is Invisible)",
+            "{@spell Minor Illusion|XPHB}"
+          ],
+          "daily": {
+            "2": [
+              "{@spell Mind Spike|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Psionic Defense (3/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The quaggoth casts {@spell Feather Fall|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, requiring no spell components and using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "3": [
+              "{@spell Feather Fall|XPHB}",
+              "{@spell Shield|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "reaction",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Bloodied Fury",
+          "entries": [
+            "While {@variantrule Bloodied|XPHB}, the quaggoth has {@variantrule Advantage|XPHB} on attack rolls."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The quaggoth makes two Claw attacks."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage plus 5 ({@damage 2d4}) Psychic damage."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/quaggoth-thonot.mp3"
+      },
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "U"
+      ],
+      "damageTags": [
+        "S",
+        "Y"
+      ],
+      "damageTagsSpell": [
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Remorhaz",
+      "source": "XMM",
+      "page": 258,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "H"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 195,
+        "formula": "17d12 + 85"
+      },
+      "speed": {
+        "walk": 40,
+        "burrow": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 24,
+      "dex": 13,
+      "con": 21,
+      "int": 4,
+      "wis": 10,
+      "cha": 5,
+      "senses": [
+        "darkvision 60 ft.",
+        "tremorsense 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "cold",
+        "fire"
+      ],
+      "cr": "11",
+      "trait": [
+        {
+          "name": "Heat Aura",
+          "entries": [
+            "At the end of each of the remorhaz's turns, each creature in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the remorhaz takes 16 ({@damage 3d10}) Fire damage."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 11}, reach 10 ft. {@h}18 ({@damage 2d10 + 7}) Piercing damage plus 14 ({@damage 4d6}) Fire damage. If the target is a Large or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 17}), and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Swallow",
+          "entries": [
+            "{@actSave str} {@dc 19}, one Large or smaller creature {@condition Grappled|XPHB} by the remorhaz (it can have up to two creatures swallowed at a time). {@actSaveFail} The target is swallowed by the remorhaz, and the {@condition Grappled|XPHB} condition ends. A swallowed creature has the {@condition Blinded|XPHB} and {@condition Restrained|XPHB} conditions, it has {@variantrule Cover|XPHB|Total Cover} against attacks and other effects outside the remorhaz, and it takes 10 ({@damage 3d6}) Acid damage plus 10 ({@damage 3d6}) Fire damage at the start of each of the remorhaz's turns.",
+            "If the remorhaz takes 30 damage or more on a single turn from a creature inside it, the remorhaz must succeed on a {@dc 15} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls in a space within 5 feet of the remorhaz and has the {@condition Prone|XPHB} condition. If the remorhaz dies, any swallowed creature no longer has the {@condition Restrained|XPHB} condition and can escape from the corpse by using 15 feet of movement, exiting {@condition Prone|XPHB}."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/remorhaz.mp3"
+      },
+      "senseTags": [
+        "D",
+        "T"
+      ],
+      "actionTags": [
+        "Swallow"
+      ],
+      "damageTags": [
+        "A",
+        "F",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "prone",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Roc",
+      "source": "XMM",
+      "page": 261,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "G"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 248,
+        "formula": "16d20 + 80"
+      },
+      "speed": {
+        "walk": 20,
+        "fly": 120
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 28,
+      "dex": 10,
+      "con": 20,
+      "int": 3,
+      "wis": 10,
+      "cha": 9,
+      "save": {
+        "dex": "+4",
+        "wis": "+4"
+      },
+      "skill": {
+        "perception": "+8"
+      },
+      "passive": 18,
+      "cr": "11",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The roc makes two Beak attacks. It can replace one attack with a Talons attack."
+          ]
+        },
+        {
+          "name": "Beak",
+          "entries": [
+            "{@atkr m} {@hit 13}, reach 10 ft. {@h}28 ({@damage 3d12 + 9}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Talons",
+          "entries": [
+            "{@atkr m} {@hit 13}, reach 5 ft. {@h}23 ({@damage 4d6 + 9}) Slashing damage. If the target is a Huge or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 19}) from both talons, and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Swoop {@recharge 5}",
+          "entries": [
+            "If the roc has a creature {@condition Grappled|XPHB}, the roc flies up to half its {@variantrule Fly Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks} and drops that creature."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "coastal",
+        "desert",
+        "hill",
+        "mountain"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/roc.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "restrained"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Rust Monster",
+      "source": "XMM",
+      "page": 263,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 33,
+        "formula": "6d8 + 6"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 13,
+      "dex": 12,
+      "con": 13,
+      "int": 2,
+      "wis": 13,
+      "cha": 6,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "cr": "1/2",
+      "trait": [
+        {
+          "name": "Iron Scent",
+          "entries": [
+            "The rust monster can pinpoint the location of ferrous metal within 30 feet of itself."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The rust monster makes one Bite attack and uses Antennae twice."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}5 ({@damage 1d8 + 1}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Antennae",
+          "entries": [
+            "The rust monster targets one nonmagical metal object—armor or a weapon—worn or carried by a creature within 5 feet of itself. {@actSave dex} {@dc 11}, the creature with the object. {@actSaveFail} The object takes a -1 penalty to the AC it offers (armor) or to its attack rolls (weapon). Armor is destroyed if the penalty reduces its AC to 10, and a weapon is destroyed if its penalty reaches -5. The penalty can be removed by casting the {@spell Mending|XPHB} spell on the armor or weapon."
+          ]
+        },
+        {
+          "name": "Destroy Metal",
+          "entries": [
+            "The rust monster touches a nonmagical metal object within 5 feet of itself that isn't being worn or carried. The touch destroys a 1-foot {@variantrule Cube [Area of Effect]|XPHB|Cube} of the object."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Reflexive Antennae",
+          "entries": [
+            "{@actTrigger} An attack roll hits the rust monster. {@actResponse} The rust monster uses Antennae."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/rust-monster.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Stirge",
+      "source": "XMM",
+      "page": 299,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "T"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 5,
+        "formula": "2d4"
+      },
+      "speed": {
+        "walk": 10,
+        "fly": 40
+      },
+      "str": 4,
+      "dex": 16,
+      "con": 11,
+      "int": 2,
+      "wis": 8,
+      "cha": 6,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "cr": "1/8",
+      "action": [
+        {
+          "name": "Proboscis",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage, and the stirge attaches to the target. While attached, the stirge can't make Proboscis attacks, and the target takes 5 ({@damage 2d4}) Necrotic damage at the start of each of the stirge's turns.",
+            "The stirge can detach itself by spending 5 feet of its movement. The target or a creature within 5 feet of it can detach the stirge as an action."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "grassland",
+        "hill",
+        "mountain",
+        "swamp",
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/stirge.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "damageTags": [
+        "N",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Swarm of Stirges",
+      "source": "XMM",
+      "page": 299,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "monstrosity",
+        "swarmSize": "T"
+      },
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 36,
+        "formula": "8d8"
+      },
+      "speed": {
+        "walk": 10,
+        "fly": 40
+      },
+      "str": 4,
+      "dex": 16,
+      "con": 11,
+      "int": 2,
+      "wis": 8,
+      "cha": 6,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "resist": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "frightened",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "prone",
+        "restrained",
+        "stunned"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Swarm",
+          "entries": [
+            "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny creature. The swarm can't regain {@variantrule Hit Points|XPHB} or gain {@variantrule Temporary Hit Points|XPHB}."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Swarm of Proboscises",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}14 ({@damage 2d10 + 3}) Piercing damage, or 8 ({@damage 1d10 + 3}) Piercing damage if the swarm is {@variantrule Bloodied|XPHB}. If the target is a Medium or smaller creature in the swarm's space, the target has the {@condition Grappled|XPHB} condition (escape {@dc 13}). Until the grapple ends, the target takes 7 ({@damage 2d6}) Necrotic damage at the end of each of its turns."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "grassland",
+        "hill",
+        "mountain",
+        "swamp",
+        "underdark",
+        "urban"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "damageTags": [
+        "N",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "grappled"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Tarrasque",
+      "group": [
+        "Titans"
+      ],
+      "source": "XMM",
+      "page": 305,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "G"
+      ],
+      "type": {
+        "type": "monstrosity",
+        "tags": [
+          "titan"
+        ]
+      },
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        25
+      ],
+      "hp": {
+        "average": 697,
+        "formula": "34d20 + 340"
+      },
+      "speed": {
+        "walk": 60,
+        "burrow": 40,
+        "climb": 60
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 30,
+      "dex": 11,
+      "con": 30,
+      "int": 3,
+      "wis": 11,
+      "cha": 11,
+      "save": {
+        "dex": "+9",
+        "int": "+5",
+        "wis": "+9",
+        "cha": "+9"
+      },
+      "skill": {
+        "perception": "+9"
+      },
+      "senses": [
+        "blindsight 120 ft."
+      ],
+      "passive": 19,
+      "resist": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "immune": [
+        "fire",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "deafened",
+        "frightened",
+        "paralyzed",
+        "poisoned"
+      ],
+      "cr": "30",
+      "trait": [
+        {
+          "name": "Legendary Resistance (6/Day)",
+          "entries": [
+            "If the tarrasque fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The tarrasque has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Reflective Carapace",
+          "entries": [
+            "If the tarrasque is targeted by a {@spell Magic Missile|XPHB} spell or a spell that requires a ranged attack roll, roll {@dice 1d6}. On a 1-5, the tarrasque is unaffected. On a 6, the tarrasque is unaffected and reflects the spell, turning the caster into the target."
+          ]
+        },
+        {
+          "name": "Siege Monster",
+          "entries": [
+            "The tarrasque deals double damage to objects and structures."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The tarrasque makes one Bite attack and three other attacks, using Claw or Tail in any combination."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 19}, reach 15 ft. {@h}36 ({@damage 4d12 + 10}) Piercing damage, and the target has the {@condition Grappled|XPHB} condition (escape {@dc 20}). Until the grapple ends, the target has the {@condition Restrained|XPHB} condition and can't teleport."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 19}, reach 15 ft. {@h}28 ({@damage 4d8 + 10}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Tail",
+          "entries": [
+            "{@atkr m} {@hit 19}, reach 30 ft. {@h}23 ({@damage 3d8 + 10}) Bludgeoning damage. If the target is a Huge or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Thunderous Bellow {@recharge 5}",
+          "entries": [
+            "{@actSave con} {@dc 27}, each creature and each object that isn't being worn or carried in a 150-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 78 ({@damage 12d12}) Thunder damage, and the target has the {@condition Deafened|XPHB} and {@condition Frightened|XPHB} conditions until the end of its next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Swallow",
+          "entries": [
+            "{@actSave str} {@dc 27}, one Large or smaller creature {@condition Grappled|XPHB} by the tarrasque (it can have up to six creatures swallowed at a time). {@actSaveFail} The target is swallowed, and the {@condition Grappled|XPHB} condition ends. A swallowed creature has the {@condition Blinded|XPHB} and {@condition Restrained|XPHB} conditions and can't teleport, it has {@variantrule Cover|XPHB|Total Cover} against attacks and other effects outside the tarrasque, and it takes 56 ({@damage 16d6}) Acid damage at the start of each of the tarrasque's turns.",
+            "If the tarrasque takes 60 damage or more on a single turn from a creature inside it, the tarrasque must succeed on a {@dc 20} Constitution saving throw at the end of that turn or regurgitate all swallowed creatures, each of which falls in a space within 10 feet of the tarrasque and has the {@condition Prone|XPHB} condition. If the tarrasque dies, any swallowed creature no longer has the {@condition Restrained|XPHB} condition and can escape from the corpse using 20 feet of movement, exiting {@condition Prone|XPHB}."
+          ]
+        }
+      ],
+      "legendary": [
+        {
+          "name": "Onslaught",
+          "entries": [
+            "The tarrasque moves up to half its {@variantrule Speed|XPHB}, and it makes one Claw or Tail attack."
+          ]
+        },
+        {
+          "name": "World-Shaking Movement",
+          "entries": [
+            "The tarrasque moves up to its {@variantrule Speed|XPHB}. At the end of this movement, the tarrasque creates an instantaneous shock wave in a 60-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from itself. Creatures in that area lose {@status Concentration|XPHB} and, if Medium or smaller, have the {@condition Prone|XPHB} condition. The tarrasque can't take this action again until the start of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/tarrasque.mp3"
+      },
+      "traitTags": [
+        "Legendary Resistances",
+        "Magic Resistance",
+        "Siege Monster"
+      ],
+      "senseTags": [
+        "B"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Swallow"
+      ],
+      "damageTags": [
+        "A",
+        "B",
+        "P",
+        "S",
+        "T"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "prone",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Thri-kreen Marauder",
+      "source": "XMM",
+      "page": 306,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 33,
+        "formula": "6d8 + 6"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 12,
+      "dex": 15,
+      "con": 13,
+      "int": 8,
+      "wis": 12,
+      "cha": 7,
+      "skill": {
+        "perception": "+3",
+        "stealth": "+4",
+        "survival": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 13,
+      "languages": [
+        "Thri-kreen; telepathy 60 ft."
+      ],
+      "cr": "1",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The thri-kreen makes two attacks, using Gythka or Chatkcha in any combination."
+          ]
+        },
+        {
+          "name": "Gythka",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}5 ({@damage 1d8 + 1}) Slashing damage plus 2 ({@damage 1d4}) Poison damage."
+          ]
+        },
+        {
+          "name": "Chatkcha",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 30/120 ft. {@h}5 ({@damage 1d6 + 2}) Slashing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Leap",
+          "entries": [
+            "The thri-kreen jumps up to 15 feet by spending 5 feet of movement."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "grassland"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "OTH",
+        "TP"
+      ],
+      "damageTags": [
+        "I",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Thri-kreen Psion",
+      "source": "XMM",
+      "page": 306,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 149,
+        "formula": "23d8 + 46"
+      },
+      "speed": {
+        "walk": 40,
+        "fly": {
+          "number": 20,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 18,
+      "dex": 15,
+      "con": 14,
+      "int": 19,
+      "wis": 12,
+      "cha": 11,
+      "save": {
+        "str": "+7",
+        "dex": "+5",
+        "con": "+5",
+        "int": "+7"
+      },
+      "skill": {
+        "perception": "+4",
+        "stealth": "+8"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "resist": [
+        "psychic"
+      ],
+      "languages": [
+        "Thri-kreen; telepathy 120 ft."
+      ],
+      "cr": "8",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The thri-kreen casts one of the following spells, requiring no spell components and using Intelligence as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Mage Hand|XPHB} (the hand is Invisible)"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Detect Thoughts|XPHB}",
+              "{@spell Sending|XPHB}",
+              "{@spell Synaptic Static|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The thri-kreen makes three Psionic Lance attacks."
+          ]
+        },
+        {
+          "name": "Psionic Lance",
+          "entries": [
+            "{@atkr m,r} {@hit 7}, reach 10 ft. or range 120 ft. {@h}18 ({@damage 4d6 + 4}) Psychic damage."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "grassland"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "OTH",
+        "TP"
+      ],
+      "damageTags": [
+        "Y"
+      ],
+      "damageTagsSpell": [
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RCH"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "intelligence",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Troglodyte",
+      "source": "XMM",
+      "page": 309,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 13,
+        "formula": "2d8 + 4"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 14,
+      "dex": 10,
+      "con": 14,
+      "int": 6,
+      "wis": 10,
+      "cha": 6,
+      "skill": {
+        "stealth": "+4"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "languages": [
+        "Troglodyte"
+      ],
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "Stench",
+          "entries": [
+            "{@actSave con} {@dc 12}, any creature (other than a troglodyte) that starts its turn in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the troglodyte. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition until the start of its next turn. {@actSaveSuccess} The target is immune to the Stench of all troglodytes for 1 hour."
+          ]
+        },
+        {
+          "name": "Sunlight Sensitivity",
+          "entries": [
+            "While in sunlight, the troglodyte has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Slashing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/troglodyte.mp3"
+      },
+      "traitTags": [
+        "Sunlight Sensitivity"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "OTH"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "poisoned"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Umber Hulk",
+      "source": "XMM",
+      "page": 312,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 93,
+        "formula": "11d10 + 33"
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 20
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 20,
+      "dex": 13,
+      "con": 16,
+      "int": 9,
+      "wis": 10,
+      "cha": 10,
+      "senses": [
+        "darkvision 120 ft.",
+        "tremorsense 60 ft."
+      ],
+      "passive": 10,
+      "languages": [
+        "Umber Hulk"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Tunneler",
+          "entries": [
+            "The umber hulk can burrow through solid rock at half its {@variantrule Burrow Speed|XPHB} and leaves a 10-foot-diameter tunnel in its wake."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The umber hulk makes three Rend attacks."
+          ]
+        },
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 8}, reach 10 ft. {@h}12 ({@damage 2d6 + 5}) Slashing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Confusing Gaze {@recharge 5}",
+          "entries": [
+            "{@actSave wis} {@dc 14}, each creature in a 30-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} The target can't take Reactions until the start of the umber hulk's next turn, and the target rolls {@dice 1d8} to determine what it does on its next turn:",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "1-4",
+                  "entry": "The target does nothing."
+                },
+                {
+                  "type": "item",
+                  "name": "5-6",
+                  "entry": "The target takes no action or {@variantrule Bonus Action|XPHB} and uses all its movement to move in a random direction."
+                },
+                {
+                  "type": "item",
+                  "name": "7-8",
+                  "entry": "The target makes a melee attack against a random creature within its reach or does nothing if it can't make such an attack."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/umber-hulk.mp3"
+      },
+      "traitTags": [
+        "Tunneler"
+      ],
+      "senseTags": [
+        "SD",
+        "T"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "OTH"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Werebear",
+      "group": [
+        "Lycanthropes"
+      ],
+      "source": "XMM",
+      "page": 324,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "monstrosity",
+        "tags": [
+          "lycanthrope"
+        ]
+      },
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 135,
+        "formula": "18d8 + 54"
+      },
+      "speed": {
+        "walk": 30,
+        "alternate": {
+          "walk": [
+            {
+              "number": 40,
+              "condition": "(bear form only)"
+            }
+          ]
+        },
+        "climb": {
+          "number": 30,
+          "condition": "(bear form only)"
+        }
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 19,
+      "dex": 10,
+      "con": 17,
+      "int": 11,
+      "wis": 12,
+      "cha": 12,
+      "skill": {
+        "perception": "+7"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 17,
+      "languages": [
+        "Common (can't speak in bear form)"
+      ],
+      "cr": "5",
+      "gear": [
+        {
+          "item": "handaxe|xphb",
+          "quantity": 4
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The werebear makes two attacks, using Handaxe or Rend in any combination. It can replace one attack with a Bite attack."
+          ]
+        },
+        {
+          "name": "Bite (Bear or Hybrid Form Only)",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}17 ({@damage 2d12 + 4}) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. {@actSave con} {@dc 14}. {@actSaveFail} The target is cursed. If the cursed target drops to 0 {@variantrule Hit Points|XPHB}, it instead becomes a Werebear under the DM's control and has 10 {@variantrule Hit Points|XPHB}. {@actSaveSuccess} The target is immune to this werebear's curse for 24 hours."
+          ]
+        },
+        {
+          "name": "Handaxe (Humanoid or Hybrid Form Only)",
+          "entries": [
+            "{@atkr m,r} {@hit 7}, reach 5 ft or range 20/60 ft. {@h}14 ({@damage 3d6 + 4}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Rend (Bear or Hybrid Form Only)",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}13 ({@damage 2d8 + 4}) Slashing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The werebear shape-shifts into a Large bear-humanoid hybrid form or a Large bear, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "forest",
+        "hill"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/werebear.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "CS"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "CUR",
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Wereboar",
+      "group": [
+        "Lycanthropes"
+      ],
+      "source": "XMM",
+      "page": 325,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "monstrosity",
+        "tags": [
+          "lycanthrope"
+        ]
+      },
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 97,
+        "formula": "15d8 + 30"
+      },
+      "speed": {
+        "walk": 30,
+        "alternate": {
+          "walk": [
+            {
+              "number": 40,
+              "condition": "(boar form only)"
+            }
+          ]
+        }
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 17,
+      "dex": 10,
+      "con": 15,
+      "int": 10,
+      "wis": 11,
+      "cha": 8,
+      "skill": {
+        "perception": "+2"
+      },
+      "passive": 12,
+      "languages": [
+        "Common (can't speak in boar form)"
+      ],
+      "cr": "4",
+      "gear": [
+        {
+          "item": "javelin|xphb",
+          "quantity": 6
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The wereboar makes two attacks, using Javelin or Tusk in any combination. It can replace one attack with a Gore attack."
+          ]
+        },
+        {
+          "name": "Gore (Boar or Hybrid Form Only)",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}12 ({@damage 2d8 + 3}) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. {@actSave con} {@dc 12}. {@actSaveFail} The target is cursed. If the cursed target drops to 0 {@variantrule Hit Points|XPHB}, it instead becomes a Wereboar under the DM's control and has 10 {@variantrule Hit Points|XPHB}. {@actSaveSuccess} The target is immune to this wereboar's curse for 24 hours."
+          ]
+        },
+        {
+          "name": "Javelin (Humanoid or Hybrid Form Only)",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 30/120 ft. {@h}13 ({@damage 3d6 + 3}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Tusk (Boar or Hybrid Form Only)",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Piercing damage. If the target is a Medium or smaller creature and the wereboar moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 ({@damage 2d6}) Piercing damage and has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The wereboar shape-shifts into a Medium boar-humanoid hybrid or a Small boar, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "hill"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/wereboar.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "CS"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "CUR",
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Wererat",
+      "group": [
+        "Lycanthropes"
+      ],
+      "source": "XMM",
+      "page": 325,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "monstrosity",
+        "tags": [
+          "lycanthrope"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 60,
+        "formula": "11d8 + 11"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 10,
+      "dex": 16,
+      "con": 12,
+      "int": 11,
+      "wis": 10,
+      "cha": 8,
+      "skill": {
+        "perception": "+4",
+        "stealth": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "languages": [
+        "Common (can't speak in rat form)"
+      ],
+      "cr": "2",
+      "gear": [
+        "hand crossbow|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The wererat makes two attacks, using Scratch or Hand Crossbow in any combination. It can replace one attack with a Bite attack."
+          ]
+        },
+        {
+          "name": "Bite (Rat or Hybrid Form Only)",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}8 ({@damage 2d4 + 3}) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. {@actSave con} {@dc 11}. {@actSaveFail} The target is cursed. If the cursed target drops to 0 {@variantrule Hit Points|XPHB}, it instead becomes a Wererat under the DM's control and has 10 {@variantrule Hit Points|XPHB}. {@actSaveSuccess} The target is immune to this wererat's curse for 24 hours."
+          ]
+        },
+        {
+          "name": "Scratch",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Hand Crossbow (Humanoid or Hybrid Form Only)",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 30/120 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The wererat shape-shifts into a Medium rat-humanoid hybrid or a Small rat, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "urban"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/wererat.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "CS"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "CUR",
+        "MA",
+        "RA",
+        "RNG"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Weretiger",
+      "group": [
+        "Lycanthropes"
+      ],
+      "source": "XMM",
+      "page": 326,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "monstrosity",
+        "tags": [
+          "lycanthrope"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 120,
+        "formula": "16d8 + 48"
+      },
+      "speed": {
+        "walk": 30,
+        "alternate": {
+          "walk": [
+            {
+              "number": 40,
+              "condition": "(tiger form only)"
+            }
+          ]
+        }
+      },
+      "str": 17,
+      "dex": 15,
+      "con": 16,
+      "int": 10,
+      "wis": 13,
+      "cha": 11,
+      "skill": {
+        "perception": "+5",
+        "stealth": "+4"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 15,
+      "languages": [
+        "Common (can't speak in tiger form)"
+      ],
+      "cr": "4",
+      "gear": [
+        "longbow|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The weretiger makes two attacks, using Scratch or Longbow in any combination. It can replace one attack with a Bite attack."
+          ]
+        },
+        {
+          "name": "Bite (Tiger or Hybrid Form Only)",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}12 ({@damage 2d8 + 3}) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. {@actSave con} {@dc 13}. {@actSaveFail} The target is cursed. If the cursed target drops to 0 {@variantrule Hit Points|XPHB}, it instead becomes a Weretiger under the DM's control and has 10 {@variantrule Hit Points|XPHB}. {@actSaveSuccess} The target is immune to this weretiger's curse for 24 hours."
+          ]
+        },
+        {
+          "name": "Scratch",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Longbow (Humanoid or Hybrid Form Only)",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 150/600 ft. {@h}11 ({@damage 2d8 + 2}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Prowl (Tiger or Hybrid Form Only)",
+          "entries": [
+            "The weretiger moves up to its {@variantrule Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}. At the end of this movement, the weretiger can take the Hide action."
+          ]
+        },
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The weretiger shape-shifts into a Large tiger-humanoid hybrid or a Large tiger, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "grassland"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/weretiger.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "CS"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "CUR",
+        "MA",
+        "RA",
+        "RNG"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Werewolf",
+      "group": [
+        "Lycanthropes"
+      ],
+      "source": "XMM",
+      "page": 327,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "monstrosity",
+        "tags": [
+          "lycanthrope"
+        ]
+      },
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 71,
+        "formula": "11d8 + 22"
+      },
+      "speed": {
+        "walk": 30,
+        "alternate": {
+          "walk": [
+            {
+              "number": 40,
+              "condition": "(wolf form only)"
+            }
+          ]
+        }
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 16,
+      "dex": 14,
+      "con": 14,
+      "int": 10,
+      "wis": 11,
+      "cha": 10,
+      "skill": {
+        "perception": "+4",
+        "stealth": "+4"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "languages": [
+        "Common (can't speak in wolf form)"
+      ],
+      "cr": "3",
+      "gear": [
+        "longbow|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Pack Tactics",
+          "entries": [
+            "The werewolf has {@variantrule Advantage|XPHB} on an attack roll against a creature if at least one of the werewolf's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The werewolf makes two attacks, using Scratch or Longbow in any combination. It can replace one attack with a Bite attack."
+          ]
+        },
+        {
+          "name": "Bite (Wolf or Hybrid Form Only)",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}12 ({@damage 2d8 + 3}) Piercing damage. If the target is a Humanoid, it is subjected to the following effect. {@actSave con} {@dc 12}. {@actSaveFail} The target is cursed. If the cursed target drops to 0 {@variantrule Hit Points|XPHB}, it instead becomes a Werewolf under the DM's control and has 10 {@variantrule Hit Points|XPHB}. {@actSaveSuccess} The target is immune to this werewolf's curse for 24 hours."
+          ]
+        },
+        {
+          "name": "Scratch",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Longbow (Humanoid or Hybrid Form Only)",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 150/600 ft. {@h}11 ({@damage 2d8 + 2}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The werewolf shape-shifts into a Large wolf-humanoid hybrid or a Medium wolf, or it returns to its true humanoid form. Its game statistics, other than its size, are the same in each form. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "hill"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/werewolf.mp3"
+      },
+      "traitTags": [
+        "Pack Tactics"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "CS"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "CUR",
+        "MA",
+        "RA",
+        "RNG"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Winter Wolf",
+      "source": "XMM",
+      "page": 334,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 75,
+        "formula": "10d10 + 20"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "str": 18,
+      "dex": 13,
+      "con": 14,
+      "int": 7,
+      "wis": 12,
+      "cha": 8,
+      "skill": {
+        "perception": "+5",
+        "stealth": "+5"
+      },
+      "passive": 15,
+      "immune": [
+        "cold"
+      ],
+      "languages": [
+        "Common",
+        "Giant"
+      ],
+      "cr": "3",
+      "trait": [
+        {
+          "name": "Pack Tactics",
+          "entries": [
+            "The wolf has {@variantrule Advantage|XPHB} on an attack roll against a creature if at least one of the wolf's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Cold Breath {@recharge 5}",
+          "entries": [
+            "{@actSave con} {@dc 12}, each creature in a 15-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 18 ({@damage 4d8}) Cold damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/winter-wolf.mp3"
+      },
+      "traitTags": [
+        "Pack Tactics"
+      ],
+      "actionTags": [
+        "Breath Weapon"
+      ],
+      "languageTags": [
+        "C",
+        "GI"
+      ],
+      "damageTags": [
+        "C",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Yeti",
+      "source": "XMM",
+      "page": 339,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 51,
+        "formula": "6d10 + 18"
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 40
+      },
+      "str": 18,
+      "dex": 13,
+      "con": 16,
+      "int": 8,
+      "wis": 12,
+      "cha": 7,
+      "skill": {
+        "perception": "+5",
+        "stealth": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 15,
+      "immune": [
+        "cold"
+      ],
+      "languages": [
+        "Yeti"
+      ],
+      "cr": "3",
+      "trait": [
+        {
+          "name": "Fear of Fire",
+          "entries": [
+            "If the yeti takes Fire damage, it has {@variantrule Disadvantage|XPHB} on attack rolls and ability checks until the end of its next turn."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The yeti can use its Chilling Gaze and makes two attacks, using Claw or Ice Throw in any combination."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}7 ({@damage 1d6 + 4}) Slashing damage plus 3 ({@damage 1d6}) Cold damage."
+          ]
+        },
+        {
+          "name": "Ice Throw",
+          "entries": [
+            "{@atkr r} {@hit 6}, range 30/120 ft. {@h}6 ({@damage 1d4 + 4}) Bludgeoning damage plus 2 ({@damage 1d4}) Cold damage."
+          ]
+        },
+        {
+          "name": "Chilling Gaze",
+          "entries": [
+            "{@actSave con} {@dc 13}, one creature the yeti can see within 30 feet. {@actSaveFail} 5 ({@damage 2d4}) Cold damage, and the target has the {@condition Paralyzed|XPHB} condition until the start of the yeti's next turn unless the target has {@variantrule Immunity|XPHB} to Cold damage. {@actSaveSuccess} The target is immune to the Chilling Gaze of all yetis (but not abominable yetis) for 1 hour."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/yeti.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "OTH"
+      ],
+      "damageTags": [
+        "B",
+        "C",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "paralyzed"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Young Remorhaz",
+      "source": "XMM",
+      "page": 258,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "U"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 93,
+        "formula": "11d10 + 33"
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 20
+      },
+      "str": 18,
+      "dex": 13,
+      "con": 17,
+      "int": 3,
+      "wis": 10,
+      "cha": 4,
+      "senses": [
+        "darkvision 60 ft.",
+        "tremorsense 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "cold",
+        "fire"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Heat Aura",
+          "entries": [
+            "At the end of each of the remorhaz's turns, each creature in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the remorhaz takes 11 ({@damage 2d10}) Fire damage."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}15 ({@damage 2d10 + 4}) Piercing damage plus 13 ({@damage 3d8}) Fire damage."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/remorhaz.mp3"
+      },
+      "senseTags": [
+        "D",
+        "T"
+      ],
+      "damageTags": [
+        "F",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Yuan-ti Abomination",
+      "source": "XMM",
+      "page": 345,
+      "size": [
+        "L"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 127,
+        "formula": "15d10 + 45"
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 19,
+      "dex": 16,
+      "con": 17,
+      "int": 17,
+      "wis": 18,
+      "cha": 15,
+      "skill": {
+        "perception": "+7",
+        "stealth": "+6"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 17,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "languages": [
+        "Abyssal",
+        "Common",
+        "Draconic"
+      ],
+      "cr": "7",
+      "spellcasting": [
+        {
+          "name": "Spellcasting (Yuan-ti Form Only)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The yuan-ti casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Animal Friendship|XPHB} (snakes only)"
+          ],
+          "daily": {
+            "3": [
+              "{@spell Suggestion|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The yuan-ti has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The yuan-ti makes two Bite attacks, and it can use Spellcasting to cast {@spell Suggestion|XPHB} if available."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage plus 10 ({@damage 3d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Constrict",
+          "entries": [
+            "{@actSave str} {@dc 15}, one Large or smaller creature within 5 feet. {@actSaveFail} 28 ({@damage 7d6 + 4}) Bludgeoning damage. The target has the {@condition Grappled|XPHB} condition (escape {@dc 14}), and it has the {@condition Restrained|XPHB} condition until the grapple ends. {@actSaveSuccess} Half damage only."
+          ]
+        },
+        {
+          "name": "Poison Spray {@recharge 5}",
+          "entries": [
+            "{@actSave con} {@dc 14}, each creature in a 30-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 21 ({@damage 6d6}) Poison damage, and the target has the {@condition Poisoned|XPHB} condition until the end of the yuan-ti's next turn. While {@condition Poisoned|XPHB}, the target has the {@condition Blinded|XPHB} condition. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The yuan-ti shape-shifts into a Large snake or returns to its true form. If it dies, it stays in its current form. The yuan-ti's game statistics are the same in each form, except where noted. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "swamp",
+        "urban"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/yuan-ti-abomination.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AB",
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "B",
+        "I",
+        "P"
+      ],
+      "spellcastingTags": [
+        "F"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "blinded",
+        "grappled",
+        "poisoned",
+        "restrained"
+      ],
+      "conditionInflictSpell": [
+        "charmed"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "strength"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Yuan-ti Infiltrator",
+      "source": "XMM",
+      "page": 342,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 40,
+        "formula": "9d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 11,
+      "dex": 12,
+      "con": 11,
+      "int": 13,
+      "wis": 14,
+      "cha": 12,
+      "skill": {
+        "deception": "+5",
+        "perception": "+4",
+        "stealth": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "languages": [
+        "Abyssal",
+        "Common",
+        "Draconic"
+      ],
+      "cr": "1",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The yuan-ti casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 12}):"
+          ],
+          "will": [
+            "{@spell Animal Friendship|XPHB} (snakes only)"
+          ],
+          "daily": {
+            "2": [
+              "{@spell Suggestion|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The yuan-ti has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The yuan-ti makes two Scimitar attacks."
+          ]
+        },
+        {
+          "name": "Scimitar",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}4 ({@damage 1d6 + 1}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Poison Ray",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 120 ft. {@h}9 ({@damage 2d6 + 2}) Poison damage."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "swamp",
+        "urban"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "attachedItems": [
+        "scimitar|phb"
+      ],
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AB",
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "I",
+        "S"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "charmed"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Yuan-ti Malison (Type 1)",
+      "source": "XMM",
+      "page": 343,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 66,
+        "formula": "12d8 + 12"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": {
+          "number": 30,
+          "condition": "(snake form only)"
+        }
+      },
+      "str": 16,
+      "dex": 14,
+      "con": 13,
+      "int": 14,
+      "wis": 16,
+      "cha": 12,
+      "skill": {
+        "stealth": "+4 (+6 while in snake form)"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 13,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "languages": [
+        "Abyssal",
+        "Common",
+        "Draconic"
+      ],
+      "cr": "3",
+      "spellcasting": [
+        {
+          "name": "Spellcasting (Yuan-ti Form Only)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The yuan-ti casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+          ],
+          "will": [
+            "{@spell Animal Friendship|XPHB} (snakes only)"
+          ],
+          "daily": {
+            "2": [
+              "{@spell Suggestion|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The yuan-ti has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The yuan-ti makes two attacks, using Bite or Poison Ray in any combination, and it can use Spellcasting to cast {@spell Suggestion|XPHB} if available."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}5 ({@damage 1d4 + 3}) Piercing damage plus 7 ({@damage 2d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Poison Ray (Yuan-ti Form Only)",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 120 ft. {@h}12 ({@damage 2d8 + 3}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The yuan-ti shape-shifts into a Medium snake or returns to its true form. If it dies, it stays in its current form. The yuan-ti's game statistics are the same in each form, except where noted. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "swamp",
+        "urban"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/yuan-ti-malison.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AB",
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "spellcastingTags": [
+        "F"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "charmed"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Yuan-ti Malison (Type 2)",
+      "source": "XMM",
+      "page": 343,
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 66,
+        "formula": "12d8 + 12"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": {
+          "number": 30,
+          "condition": "(snake form only)"
+        }
+      },
+      "str": 16,
+      "dex": 14,
+      "con": 13,
+      "int": 14,
+      "wis": 16,
+      "cha": 12,
+      "skill": {
+        "stealth": "+4 (+6 while in snake form)"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 13,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "languages": [
+        "Abyssal",
+        "Common",
+        "Draconic"
+      ],
+      "cr": "3",
+      "spellcasting": [
+        {
+          "name": "Spellcasting (Yuan-ti Form Only)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The yuan-ti casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+          ],
+          "will": [
+            "{@spell Animal Friendship|XPHB} (snakes only)"
+          ],
+          "daily": {
+            "2": [
+              "{@spell Suggestion|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The yuan-ti has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The yuan-ti makes two Bite attacks, and it can use Spellcasting to cast {@spell Suggestion|XPHB} if available."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 10 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage plus 7 ({@damage 2d6}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The yuan-ti shape-shifts into a Medium snake or returns to its true form. If it dies, it stays in its current form. The yuan-ti's game statistics are the same in each form, except where noted. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "swamp",
+        "urban"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/yuan-ti-malison.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AB",
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "spellcastingTags": [
+        "F"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflictSpell": [
+        "charmed"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Yuan-ti Malison (Type 3)",
+      "source": "XMM",
+      "page": 344,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "monstrosity",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 66,
+        "formula": "12d8 + 12"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 16,
+      "dex": 14,
+      "con": 13,
+      "int": 14,
+      "wis": 16,
+      "cha": 12,
+      "skill": {
+        "stealth": "+4 (+6 while in snake form)"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 13,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "languages": [
+        "Abyssal",
+        "Common",
+        "Draconic"
+      ],
+      "cr": "3",
+      "spellcasting": [
+        {
+          "name": "Spellcasting (Yuan-ti Form Only)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The yuan-ti casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+          ],
+          "will": [
+            "{@spell Animal Friendship|XPHB} (snakes only)"
+          ],
+          "daily": {
+            "2": [
+              "{@spell Suggestion|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The yuan-ti has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The yuan-ti makes two Poison Burst attacks, and it can use Spellcasting to cast {@spell Suggestion|XPHB} if available."
+          ]
+        },
+        {
+          "name": "Poison Burst (Yuan-ti Form Only)",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 120 ft. {@h}12 ({@damage 2d8 + 3}) Poison damage."
+          ]
+        },
+        {
+          "name": "Constrict",
+          "entries": [
+            "{@actSave str} {@dc 13}, one Medium or smaller creature within 5 feet. {@actSaveFail} 21 ({@damage 4d8 + 3}) Bludgeoning damage. The target has the {@condition Grappled|XPHB} condition (escape {@dc 13}), and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "The yuan-ti shape-shifts into a Medium snake or returns to its true form. If it dies, it stays in its current form. The yuan-ti's game statistics are the same in each form, except where noted. Any equipment it is wearing or carrying isn't transformed."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "swamp",
+        "urban"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/yuan-ti-malison.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AB",
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "B",
+        "I"
+      ],
+      "spellcastingTags": [
+        "F"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "restrained"
+      ],
+      "conditionInflictSpell": [
+        "charmed"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
+}

@@ -1,0 +1,4187 @@
+{
+  "monster_type": "elemental",
+  "count": 32,
+  "monsters": [
+    {
+      "name": "Aarakocra Aeromancer",
+      "source": "XMM",
+      "page": 10,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 66,
+        "formula": "12d8 + 12"
+      },
+      "speed": {
+        "walk": 20,
+        "fly": 50
+      },
+      "str": 10,
+      "dex": 16,
+      "con": 12,
+      "int": 13,
+      "wis": 17,
+      "cha": 12,
+      "save": {
+        "dex": "+5",
+        "wis": "+5"
+      },
+      "skill": {
+        "arcana": "+3",
+        "nature": "+5",
+        "perception": "+7"
+      },
+      "passive": 17,
+      "languages": [
+        "Aarakocra",
+        "Primordial (Auran)"
+      ],
+      "cr": "4",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The aarakocra casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 13}):"
+          ],
+          "will": [
+            "{@spell Elementalism|XPHB}",
+            "{@spell Gust of Wind|XPHB}",
+            "{@spell Mage Hand|XPHB}",
+            "{@spell Message|XPHB}"
+          ],
+          "daily": {
+            "1": [
+              "{@spell Lightning Bolt|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Feather Fall (1/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The aarakocra casts {@spell Feather Fall|XPHB} in response to that spell's trigger, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "1": [
+              "{@spell Feather Fall|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "reaction",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The aarakocra makes two Wind Staff attacks, and it can use Spellcasting to cast {@spell Gust of Wind|XPHB}."
+          ]
+        },
+        {
+          "name": "Wind Staff",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 120 ft. {@h}7 ({@damage 1d8 + 3}) Bludgeoning damage plus 11 ({@damage 2d10}) Lightning damage."
+          ]
+        }
+      ],
+      "environment": [
+        "mountain",
+        "planar, air"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AU",
+        "OTH",
+        "P"
+      ],
+      "damageTags": [
+        "B",
+        "L"
+      ],
+      "damageTagsSpell": [
+        "L"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity",
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Aarakocra Skirmisher",
+      "source": "XMM",
+      "page": 10,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 11,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walk": 20,
+        "fly": 50
+      },
+      "str": 10,
+      "dex": 14,
+      "con": 12,
+      "int": 11,
+      "wis": 12,
+      "cha": 11,
+      "skill": {
+        "perception": "+5"
+      },
+      "passive": 15,
+      "languages": [
+        "Aarakocra",
+        "Primordial (Auran)"
+      ],
+      "cr": "1/4",
+      "action": [
+        {
+          "name": "Talons",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Slashing damage, or 9 ({@damage 3d4 + 2}) Slashing damage if the aarakocra moved 30+ feet straight toward the target immediately before the hit."
+          ]
+        },
+        {
+          "name": "Wind Javelin",
+          "entries": [
+            "{@atkr m,r} {@hit 4}, reach 5 ft. or range 30/120 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage plus 2 ({@damage 1d4}) Thunder damage. {@hom}The javelin magically returns to the aarakocra's hand immediately after a ranged attack."
+          ]
+        }
+      ],
+      "environment": [
+        "mountain",
+        "planar, air"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "languageTags": [
+        "AU",
+        "OTH",
+        "P"
+      ],
+      "damageTags": [
+        "P",
+        "S",
+        "T"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Air Elemental",
+      "source": "XMM",
+      "page": 13,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 90,
+        "formula": "12d10 + 24"
+      },
+      "speed": {
+        "walk": 10,
+        "fly": {
+          "number": 90,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 14,
+      "dex": 20,
+      "con": 14,
+      "int": 6,
+      "wis": 10,
+      "cha": 6,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "bludgeoning",
+        "lightning",
+        "piercing",
+        "slashing"
+      ],
+      "immune": [
+        "poison",
+        "thunder"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "Primordial (Auran)"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Air Form",
+          "entries": [
+            "The elemental can enter a creature's space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The elemental makes two Thunderous Slam attacks."
+          ]
+        },
+        {
+          "name": "Thunderous Slam",
+          "entries": [
+            "{@atkr m} {@hit 8}, reach 10 ft. {@h}14 ({@damage 2d8 + 5}) Thunder damage."
+          ]
+        },
+        {
+          "name": "Whirlwind {@recharge 4}",
+          "entries": [
+            "{@actSave str} {@dc 13}, one Medium or smaller creature in the elemental's space. {@actSaveFail} 24 ({@damage 4d10 + 2}) Thunder damage, and the target is pushed up to 20 feet straight away from the elemental and has the {@condition Prone|XPHB} condition. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "mountain",
+        "planar, air"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/air-elemental.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AU",
+        "P"
+      ],
+      "damageTags": [
+        "T"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Azer Pyromancer",
+      "source": "XMM",
+      "page": 25,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "L",
+        "N"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 97,
+        "formula": "13d8 + 39"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 15,
+      "dex": 14,
+      "con": 16,
+      "int": 12,
+      "wis": 18,
+      "cha": 13,
+      "save": {
+        "con": "+6",
+        "wis": "+7"
+      },
+      "skill": {
+        "arcana": "+4",
+        "perception": "+7"
+      },
+      "passive": 17,
+      "immune": [
+        "fire",
+        "poison"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Ignan)"
+      ],
+      "cr": "6",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The azer casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Elementalism|XPHB}",
+            "{@spell Mage Hand|XPHB}"
+          ],
+          "daily": {
+            "1": [
+              "{@spell Fireball|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Hellish Rebuke (2/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The azer casts {@spell Hellish Rebuke|XPHB} in response to that spell's trigger, using the same spellcasting ability as Spellcasting."
+          ],
+          "daily": {
+            "2": [
+              "{@spell Hellish Rebuke|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "reaction",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Fire Aura",
+          "entries": [
+            "At the end of each of the azer's turns, each creature of the azer's choice in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the azer takes 11 ({@damage 2d10}) Fire damage unless the azer has the {@condition Incapacitated|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Illumination",
+          "entries": [
+            "The azer sheds {@variantrule Bright Light|XPHB} in a 10-foot radius and {@variantrule Dim Light|XPHB} for an additional 10 feet."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The azer makes two Flame Burst attacks."
+          ]
+        },
+        {
+          "name": "Flame Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 7}, reach 5 ft. or range 120 ft. {@h}15 ({@damage 2d10 + 4}) Fire damage."
+          ]
+        }
+      ],
+      "environment": [
+        "mountain",
+        "planar, fire"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "traitTags": [
+        "Illumination"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "IG",
+        "P"
+      ],
+      "damageTags": [
+        "F"
+      ],
+      "damageTagsSpell": [
+        "F"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "incapacitated"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Azer Sentinel",
+      "source": "XMM",
+      "page": 25,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "L",
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 39,
+        "formula": "6d8 + 12"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 17,
+      "dex": 12,
+      "con": 15,
+      "int": 12,
+      "wis": 13,
+      "cha": 10,
+      "save": {
+        "con": "+4"
+      },
+      "passive": 11,
+      "immune": [
+        "fire",
+        "poison"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Ignan)"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Fire Aura",
+          "entries": [
+            "At the end of each of the azer's turns, each creature of the azer's choice in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the azer takes 5 ({@damage 1d10}) Fire damage unless the azer has the {@condition Incapacitated|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Illumination",
+          "entries": [
+            "The azer sheds {@variantrule Bright Light|XPHB} in a 10-foot radius and {@variantrule Dim Light|XPHB} for an additional 10 feet."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Burning Hammer",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}8 ({@damage 1d10 + 3}) Bludgeoning damage plus 3 ({@damage 1d6}) Fire damage."
+          ]
+        }
+      ],
+      "environment": [
+        "mountain",
+        "planar, fire"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "traitTags": [
+        "Illumination"
+      ],
+      "languageTags": [
+        "IG",
+        "P"
+      ],
+      "damageTags": [
+        "B",
+        "F"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA"
+      ],
+      "conditionInflict": [
+        "incapacitated"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Dao",
+      "group": [
+        "Genies"
+      ],
+      "source": "XMM",
+      "page": 89,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": {
+        "type": "elemental",
+        "tags": [
+          "genie"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 200,
+        "formula": "16d10 + 112"
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 30,
+        "fly": {
+          "number": 30,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 23,
+      "dex": 12,
+      "con": 24,
+      "int": 12,
+      "wis": 13,
+      "cha": 18,
+      "save": {
+        "dex": "+5",
+        "wis": "+5"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 11,
+      "conditionImmune": [
+        "petrified"
+      ],
+      "languages": [
+        "Primordial (Terran)"
+      ],
+      "cr": "11",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The dao casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 16}):"
+          ],
+          "will": [
+            "{@spell Detect Evil and Good|XPHB}",
+            "{@spell Detect Magic|XPHB}",
+            "{@spell Stone Shape|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Gaseous Form|XPHB}",
+              "{@spell Invisibility|XPHB}",
+              "{@spell Move Earth|XPHB}",
+              "{@spell Passwall|XPHB}",
+              "{@spell Plane Shift|XPHB}",
+              "{@spell Tongues|XPHB}",
+              "{@spell Wall of Stone|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Earth Glide",
+          "entries": [
+            "The dao can burrow through nonmagical, unworked earth and stone. While doing so, the dao doesn't disturb the material it moves through."
+          ]
+        },
+        {
+          "name": "Elemental Restoration",
+          "entries": [
+            "If the dao dies outside the Elemental Plane of Earth, its body dissolves into dirt, and it gains a new body in {@dice 1d4} days, reviving with all its {@variantrule Hit Points|XPHB} somewhere on the Plane of Earth."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The dao has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Wishes",
+          "entries": [
+            "The dao has a 30 percent chance of knowing the {@spell Wish|XPHB} spell. If the dao knows it, the dao can cast it only on behalf of a non-genie creature who communicates a wish in a way the dao can understand. If the dao casts the spell for the creature, the dao suffers none of the spell's stress. Once the dao has cast it three times, the dao can't do so again for 365 days."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The dao makes three Earthen Maul attacks or two Earth Burst attacks."
+          ]
+        },
+        {
+          "name": "Earthen Maul",
+          "entries": [
+            "{@atkr m} {@hit 10}, reach 5 ft. {@h}20 ({@damage 4d6 + 6}) Bludgeoning damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Earth Burst",
+          "entries": [
+            "{@atkr r} {@hit 10}, range 120 ft. {@h}15 ({@damage 2d8 + 6}) Bludgeoning damage. {@hom}Earth explodes from the target's space, creating the following effect. {@actSave dex} {@dc 16}, each creature in a 10-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from and including the target. {@actSaveFail} 10 ({@damage 3d6}) Thunder damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, earth",
+        "underdark"
+      ],
+      "treasure": [
+        "implements"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/dao.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "B",
+        "T"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "conditionInflictSpell": [
+        "invisible"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Djinni",
+      "group": [
+        "Genies"
+      ],
+      "source": "XMM",
+      "page": 99,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": {
+        "type": "elemental",
+        "tags": [
+          "genie"
+        ]
+      },
+      "alignment": [
+        "C",
+        "G"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 218,
+        "formula": "19d10 + 114"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": {
+          "number": 90,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 21,
+      "dex": 15,
+      "con": 22,
+      "int": 15,
+      "wis": 16,
+      "cha": 20,
+      "save": {
+        "dex": "+6",
+        "wis": "+7"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 13,
+      "immune": [
+        "lightning",
+        "thunder"
+      ],
+      "languages": [
+        "Primordial (Auran)"
+      ],
+      "cr": "11",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The djinni casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 17}):"
+          ],
+          "will": [
+            "{@spell Detect Evil and Good|XPHB}",
+            "{@spell Detect Magic|XPHB}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell Create Food and Water|XPHB} (can create wine instead of water)",
+              "{@spell Tongues|XPHB}",
+              "{@spell Wind Walk|XPHB}"
+            ],
+            "1e": [
+              "{@spell Creation|XPHB}",
+              "{@spell Gaseous Form|XPHB}",
+              "{@spell Invisibility|XPHB}",
+              "{@spell Major Image|XPHB}",
+              "{@spell Plane Shift|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Elemental Restoration",
+          "entries": [
+            "If the djinni dies outside the Elemental Plane of Air, its body dissolves into mist, and it gains a new body in {@dice 1d4} days, reviving with all its {@variantrule Hit Points|XPHB} somewhere on the Plane of Air."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The djinni has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Wishes",
+          "entries": [
+            "The djinni has a 30 percent chance of knowing the {@spell Wish|XPHB} spell. If the djinni knows it, the djinni can cast it only on behalf of a non-genie creature who communicates a wish in a way the djinni can understand. If the djinni casts the spell for the creature, the djinni suffers none of the spell's stress. Once the djinni has cast it three times, the djinni can't do so again for 365 days."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The djinni makes three attacks, using Storm Blade or Storm Bolt in any combination."
+          ]
+        },
+        {
+          "name": "Storm Blade",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 feet. {@h}12 ({@damage 2d6 + 5}) Slashing damage plus 7 ({@damage 2d6}) Lightning damage."
+          ]
+        },
+        {
+          "name": "Storm Bolt",
+          "entries": [
+            "{@atkr r} {@hit 9}, range 120 feet. {@h}13 ({@damage 3d8}) Thunder damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Create Whirlwind",
+          "entries": [
+            "The djinni conjures a whirlwind at a point it can see within 120 feet. The whirlwind fills a 20-foot-radius, 60-foot-high {@variantrule Cylinder [Area of Effect]|XPHB|Cylinder} centered on that point. The whirlwind lasts until the djinni's {@status Concentration|XPHB} on it ends. The djinni can move the whirlwind up to 20 feet at the start of each of its turns.",
+            "Whenever the whirlwind enters a creature's space or a creature enters the whirlwind, that creature is subjected to the following effect. {@actSave str} {@dc 17} (a creature makes this save only once per turn, and the djinni is unaffected). {@actSaveFail} While in the whirlwind, the target has the {@condition Restrained|XPHB} condition and moves with the whirlwind. At the start of each of its turns, the {@condition Restrained|XPHB} target takes 21 ({@damage 6d6}) Thunder damage. At the end of each of its turns, the target repeats the save, ending the effect on itself on a success."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "planar, air"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/djinni.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AU",
+        "P"
+      ],
+      "damageTags": [
+        "L",
+        "S",
+        "T"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "prone",
+        "restrained"
+      ],
+      "conditionInflictSpell": [
+        "invisible",
+        "stunned"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Dust Mephit",
+      "source": "XMM",
+      "page": 206,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 17,
+        "formula": "5d6"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 30
+      },
+      "str": 5,
+      "dex": 14,
+      "con": 10,
+      "int": 9,
+      "wis": 11,
+      "cha": 10,
+      "skill": {
+        "perception": "+2",
+        "stealth": "+4"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "poison"
+      ],
+      "vulnerable": [
+        "fire"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Auran, Terran)"
+      ],
+      "cr": "1/2",
+      "spellcasting": [
+        {
+          "name": "Sleep (1/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The mephit casts the {@spell Sleep|XPHB} spell, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 10})."
+          ],
+          "daily": {
+            "1": [
+              "{@spell Sleep|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Death Burst",
+          "entries": [
+            "The mephit explodes when it dies. {@actSave dex} {@dc 10}, each creature in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the mephit. {@actSaveFail} 5 ({@damage 2d4}) Bludgeoning damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Blinding Breath {@recharge}",
+          "entries": [
+            "{@actSave dex} {@dc 10}, each creature in a 15-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} The target has the {@condition Blinded|XPHB} condition until the end of the mephit's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, elemental"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/mephit.mp3"
+      },
+      "traitTags": [
+        "Death Burst"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Breath Weapon"
+      ],
+      "languageTags": [
+        "AU",
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "B",
+        "S"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "blinded"
+      ],
+      "conditionInflictSpell": [
+        "incapacitated",
+        "unconscious"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Earth Elemental",
+      "source": "XMM",
+      "page": 108,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 147,
+        "formula": "14d10 + 70"
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 30
+      },
+      "str": 20,
+      "dex": 8,
+      "con": 20,
+      "int": 5,
+      "wis": 10,
+      "cha": 5,
+      "senses": [
+        "darkvision 60 ft.",
+        "tremorsense 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "poison"
+      ],
+      "vulnerable": [
+        "thunder"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "unconscious"
+      ],
+      "languages": [
+        "Primordial (Terran)"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Earth Glide",
+          "entries": [
+            "The elemental can burrow through nonmagical, unworked earth and stone. While doing so, the elemental doesn't disturb the material it moves through."
+          ]
+        },
+        {
+          "name": "Siege Monster",
+          "entries": [
+            "The elemental deals double damage to objects and structures."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The elemental makes two attacks, using Slam or Rock Launch in any combination."
+          ]
+        },
+        {
+          "name": "Slam",
+          "entries": [
+            "{@atkr m} {@hit 8}, reach 10 ft. {@h}14 ({@damage 2d8 + 5}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Rock Launch",
+          "entries": [
+            "{@atkr r} {@hit 8}, range 60 ft. {@h}8 ({@damage 1d6 + 5}) Bludgeoning damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "environment": [
+        "mountain",
+        "planar, earth",
+        "underdark"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/earth-elemental.mp3"
+      },
+      "traitTags": [
+        "Siege Monster"
+      ],
+      "senseTags": [
+        "D",
+        "T"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Efreeti",
+      "group": [
+        "Genies"
+      ],
+      "source": "XMM",
+      "page": 109,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": {
+        "type": "elemental",
+        "tags": [
+          "genie"
+        ]
+      },
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 212,
+        "formula": "17d10 + 119"
+      },
+      "speed": {
+        "walk": 40,
+        "fly": {
+          "number": 60,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 22,
+      "dex": 12,
+      "con": 24,
+      "int": 16,
+      "wis": 15,
+      "cha": 19,
+      "save": {
+        "wis": "+6",
+        "cha": "+8"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "fire"
+      ],
+      "languages": [
+        "Primordial (Ignan)"
+      ],
+      "cr": "11",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The efreeti casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 16}):"
+          ],
+          "will": [
+            "{@spell Detect Magic|XPHB}",
+            "{@spell Elementalism|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Gaseous Form|XPHB}",
+              "{@spell Invisibility|XPHB}",
+              "{@spell Major Image|XPHB}",
+              "{@spell Plane Shift|XPHB}",
+              "{@spell Tongues|XPHB}",
+              "{@spell Wall of Fire|XPHB} (level 7 version)"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Elemental Restoration",
+          "entries": [
+            "If the efreeti dies outside the Elemental Plane of Fire, its body dissolves into ash, and it gains a new body in {@dice 1d4} days, reviving with all its {@variantrule Hit Points|XPHB} somewhere on the Plane of Fire."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The efreeti has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Wishes",
+          "entries": [
+            "The efreeti has a 30 percent chance of knowing the {@spell Wish|XPHB} spell. If the efreeti knows it, the efreeti can cast it only on behalf of a non-genie creature who communicates a wish in a way the efreeti can understand. If the efreeti casts the spell for the creature, the efreeti suffers none of the spell's stress. Once the efreeti has cast it three times, the efreeti can't do so again for 365 days."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The efreeti makes three attacks, using Heated Blade or Hurl Flame in any combination."
+          ]
+        },
+        {
+          "name": "Heated Blade",
+          "entries": [
+            "{@atkr m} {@hit 10}, reach 5 ft. {@h}13 ({@damage 2d6 + 6}) Slashing damage plus 13 ({@damage 2d12}) Fire damage."
+          ]
+        },
+        {
+          "name": "Hurl Flame",
+          "entries": [
+            "{@atkr r} {@hit 8}, range 120 ft. {@h}24 ({@damage 7d6}) Fire damage."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "planar, fire"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/efreeti.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "IG",
+        "P"
+      ],
+      "damageTags": [
+        "F",
+        "S"
+      ],
+      "damageTagsSpell": [
+        "F"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "invisible"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Elemental Cataclysm",
+      "group": [
+        "Titans"
+      ],
+      "source": "XMM",
+      "page": 111,
+      "size": [
+        "G"
+      ],
+      "type": {
+        "type": "elemental",
+        "tags": [
+          "titan"
+        ]
+      },
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 370,
+        "formula": "20d20 + 160"
+      },
+      "speed": {
+        "walk": 60,
+        "burrow": 60,
+        "fly": {
+          "number": 80,
+          "condition": "(hover)"
+        },
+        "swim": 80,
+        "canHover": true
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 26,
+      "dex": 19,
+      "con": 27,
+      "int": 9,
+      "wis": 14,
+      "cha": 9,
+      "save": {
+        "dex": "+11",
+        "con": "+15",
+        "wis": "+9",
+        "cha": "+6"
+      },
+      "senses": [
+        "truesight 150 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "acid",
+        "cold",
+        "fire",
+        "lightning",
+        "poison",
+        "thunder"
+      ],
+      "conditionImmune": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "exhaustion",
+        "frightened",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "stunned",
+        "unconscious"
+      ],
+      "languages": [
+        "Primordial"
+      ],
+      "cr": "22",
+      "spellcasting": [
+        {
+          "name": "Control Weather",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cataclysm casts the {@spell Control Weather|XPHB} spell, requiring no spell components and using Constitution as the spellcasting ability."
+          ],
+          "will": [
+            "{@spell Control Weather|XPHB}"
+          ],
+          "ability": "con",
+          "displayAs": "action",
+          "hidden": [
+            "will"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Earth Glide",
+          "entries": [
+            "The cataclysm can burrow through nonmagical, unworked earth and stone. While doing so, the cataclysm doesn't disturb the material it moves through."
+          ]
+        },
+        {
+          "name": "Legendary Resistance (4/Day)",
+          "entries": [
+            "If the cataclysm fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Siege Monster",
+          "entries": [
+            "The cataclysm deals double damage to objects and structures."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cataclysm makes two Elemental Burst attacks."
+          ]
+        },
+        {
+          "name": "Elemental Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 15}, reach 30 ft. or range 150 ft. {@h}25 ({@damage 5d6 + 8}) damage of a type chosen by the cataclysm: Acid, Cold, Fire, Lightning, or Thunder."
+          ]
+        },
+        {
+          "name": "Cataclysmic Event {@recharge 4}",
+          "entries": [
+            "The cataclysm creates one of the following effects at random (roll {@dice 1d4}):",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "1: Clinging Flames",
+                  "entries": [
+                    "{@actSave dex} {@dc 23}, each creature in a 60-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point the cataclysm can see within 150 feet. {@actSaveFail} 45 ({@damage 13d6}) Fire damage. {@actSaveSuccess} Half damage. {@actSaveSuccessOrFail} The target starts {@hazard burning|XPHB}."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "2: Freezing Waves",
+                  "entries": [
+                    "{@actSave str} {@dc 23}, each creature in a 90-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 22 ({@damage 5d8}) Bludgeoning damage plus 22 ({@damage 5d8}) Cold damage, and the target has the {@condition Prone|XPHB} condition. {@actSaveSuccess} Half damage only. {@actSaveSuccessOrFail} The target's {@variantrule Speed|XPHB} is reduced to 0 until the end of its next turn."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "3: Raging Storm",
+                  "entries": [
+                    "A storm cloud fills a 60-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point the cataclysm can see within 150 feet. The cloud lasts for 1 minute or until the cataclysm uses Cataclysmic Event again. Creatures entirely in the cloud have the {@condition Blinded|XPHB} and {@condition Deafened|XPHB} conditions and can't cast spells with a Verbal component. {@actSave dex} {@dc 23}, each creature that enters the cloud for the first time on a turn or starts its turn there. {@actSaveFail} 18 ({@damage 4d8}) Lightning damage plus 18 ({@damage 4d8}) Thunder damage. {@actSaveSuccess} Half damage."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "4: Swallowing Earth",
+                  "entries": [
+                    "{@actSave str} {@dc 23}, each creature in a 90-foot {@variantrule Cube [Area of Effect]|XPHB|Cube} originating from a point on the ground within 150 feet. {@actSaveFail} 18 ({@damage 4d8}) Bludgeoning damage plus 18 ({@damage 4d8}) Acid damage, and the target has the {@condition Prone|XPHB} condition and is buried under rubble. A buried target has the {@condition Restrained|XPHB} condition, has {@variantrule Cover|XPHB|Total Cover}, and is suffocating. As an action, a buried creature or another creature within 5 feet of it can make a {@dc 18} Strength ({@skill Athletics|XPHB}) check. On a successful check, the creature is no longer buried. {@actSaveSuccess} Half damage only."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "legendary": [
+        {
+          "name": "Eruption",
+          "entries": [
+            "The cataclysm makes one Elemental Burst attack."
+          ]
+        },
+        {
+          "name": "Rumbling Movement",
+          "entries": [
+            "The cataclysm moves up to its {@variantrule Speed|XPHB}, {@variantrule Fly Speed|XPHB}, or {@variantrule Swim Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}. Each creature within 5 feet of the cataclysm as it moves is targeted once by the following effect. {@actSave con} {@dc 23}. {@actSaveFail} The target has the {@condition Prone|XPHB} condition. {@actSaveSuccessOrFail} The cataclysm can't take this action again until the start of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, elemental chaos"
+      ],
+      "traitTags": [
+        "Legendary Resistances",
+        "Siege Monster"
+      ],
+      "senseTags": [
+        "U"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "P"
+      ],
+      "damageTags": [
+        "A",
+        "B",
+        "C",
+        "F",
+        "L",
+        "T"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "prone",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "dexterity",
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Fire Elemental",
+      "source": "XMM",
+      "page": 118,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "ScoEE"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 93,
+        "formula": "11d10 + 33"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "str": 10,
+      "dex": 17,
+      "con": 16,
+      "int": 6,
+      "wis": 10,
+      "cha": 7,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "immune": [
+        "fire",
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "Primordial (Ignan)"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Fire Aura",
+          "entries": [
+            "At the end of each of the elemental's turns, each creature in a 10-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the elemental takes 5 ({@damage 1d10}) Fire damage. Creatures and flammable objects in the {@variantrule Emanation [Area of Effect]|XPHB|Emanation} start {@hazard burning|XPHB}."
+          ]
+        },
+        {
+          "name": "Fire Form",
+          "entries": [
+            "The elemental can move through a space as narrow as 1 inch without expending extra movement to do so, and it can enter a creature's space and stop there. The first time it enters a creature's space on a turn, that creature takes 5 ({@damage 1d10}) Fire damage."
+          ]
+        },
+        {
+          "name": "Illumination",
+          "entries": [
+            "The elemental sheds {@variantrule Bright Light|XPHB} in a 30-foot radius and {@variantrule Dim Light|XPHB} for an additional 30 feet."
+          ]
+        },
+        {
+          "name": "Water Susceptibility",
+          "entries": [
+            "The elemental takes 3 ({@damage 1d6}) Cold damage for every 5 feet the elemental moves in water or for every gallon of water splashed on it."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The elemental makes two Burn attacks."
+          ]
+        },
+        {
+          "name": "Burn",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Fire damage. If the target is a creature or a flammable object, it starts {@hazard burning|XPHB}."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "planar, fire"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/fire-elemental.mp3"
+      },
+      "traitTags": [
+        "Illumination"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "IG",
+        "P"
+      ],
+      "damageTags": [
+        "C",
+        "F"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Galeb Duhr",
+      "source": "XMM",
+      "page": 127,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 123,
+        "formula": "13d8 + 65"
+      },
+      "speed": {
+        "walk": {
+          "number": 15,
+          "condition": "(30 ft. when rolling, 60 ft. rolling downhill)"
+        }
+      },
+      "str": 20,
+      "dex": 14,
+      "con": 20,
+      "int": 11,
+      "wis": 12,
+      "cha": 11,
+      "senses": [
+        "darkvision 60 ft.",
+        "tremorsense 60 ft."
+      ],
+      "passive": 11,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "petrified",
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Terran)"
+      ],
+      "cr": "6",
+      "action": [
+        {
+          "name": "Avalanche Slam",
+          "entries": [
+            "{@atkr m} {@hit 8}, reach 5 ft. {@h}12 ({@damage 2d6 + 5}) Bludgeoning damage. If the target is a Large or smaller creature and the galeb duhr moved 20+ feet straight toward it immediately before the hit, the target takes an extra 7 ({@damage 2d6}) Bludgeoning damage and has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Animate Boulders (1/Day)",
+          "entries": [
+            "The galeb duhr magically animates one or two boulders it can see within 60 feet of itself. Each boulder uses the Galeb Duhr stat block, except it has Intelligence and Charisma scores of 1 and lacks this action. The boulder takes its turn immediately after the galeb duhr on the same {@variantrule Initiative|XPHB} count, and it obeys the galeb duhr. A boulder remains animate for 1 minute or until it or the galeb duhr dies."
+          ]
+        }
+      ],
+      "environment": [
+        "hill",
+        "mountain"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/galeb-duhr.mp3"
+      },
+      "senseTags": [
+        "D",
+        "T"
+      ],
+      "languageTags": [
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Gargoyle",
+      "source": "XMM",
+      "page": 128,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 67,
+        "formula": "9d8 + 27"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 60
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 15,
+      "dex": 11,
+      "con": 16,
+      "int": 6,
+      "wis": 11,
+      "cha": 7,
+      "skill": {
+        "stealth": "+4"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "petrified",
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Terran)"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Flyby",
+          "entries": [
+            "The gargoyle doesn't provoke an Opportunity Attack when it flies out of an enemy's reach."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The gargoyle makes two Claw attacks."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}7 ({@damage 2d4 + 2}) Slashing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/gargoyle.mp3"
+      },
+      "traitTags": [
+        "Flyby"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ice Mephit",
+      "source": "XMM",
+      "page": 206,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 21,
+        "formula": "6d6"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 30
+      },
+      "str": 7,
+      "dex": 13,
+      "con": 10,
+      "int": 9,
+      "wis": 11,
+      "cha": 12,
+      "skill": {
+        "perception": "+2",
+        "stealth": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "cold",
+        "poison"
+      ],
+      "vulnerable": [
+        "fire"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Aquan, Auran)"
+      ],
+      "cr": "1/2",
+      "spellcasting": [
+        {
+          "name": "Fog Cloud (1/Day)",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The mephit casts {@spell Fog Cloud|XPHB}, requiring no spell components and using Charisma as the spellcasting ability."
+          ],
+          "daily": {
+            "1": [
+              "{@spell Fog Cloud|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action",
+          "hidden": [
+            "daily"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Death Burst",
+          "entries": [
+            "The mephit explodes when it dies. {@actSave con} {@dc 10}, each creature in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the mephit. {@actSaveFail} 5 ({@damage 2d4}) Cold damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}3 ({@damage 1d4 + 1}) Slashing damage plus 2 ({@damage 1d4}) Cold damage."
+          ]
+        },
+        {
+          "name": "Frost Breath {@recharge}",
+          "entries": [
+            "{@actSave con} {@dc 10}, each creature in a 15-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 7 ({@damage 3d4}) Cold damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, elemental"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/ice-mephit.mp3"
+      },
+      "traitTags": [
+        "Death Burst"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Breath Weapon"
+      ],
+      "languageTags": [
+        "AQ",
+        "AU",
+        "P"
+      ],
+      "damageTags": [
+        "C",
+        "S"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Invisible Stalker",
+      "source": "XMM",
+      "page": 180,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 97,
+        "formula": "13d10 + 26"
+      },
+      "speed": {
+        "walk": 50,
+        "fly": {
+          "number": 50,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 16,
+      "dex": 19,
+      "con": 14,
+      "int": 10,
+      "wis": 15,
+      "cha": 11,
+      "skill": {
+        "perception": "+8",
+        "stealth": "+10"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 18,
+      "resist": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "Common",
+        "Primordial (Auran)"
+      ],
+      "cr": "6",
+      "trait": [
+        {
+          "name": "Air Form",
+          "entries": [
+            "The stalker can enter an enemy's space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so."
+          ]
+        },
+        {
+          "name": "Invisibility",
+          "entries": [
+            "The stalker has the {@condition Invisible|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The stalker makes three Wind Swipe attacks. It can replace one attack with a use of Vortex."
+          ]
+        },
+        {
+          "name": "Wind Swipe",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}11 ({@damage 2d6 + 4}) Force damage."
+          ]
+        },
+        {
+          "name": "Vortex",
+          "entries": [
+            "{@actSave con} {@dc 14}, one Large or smaller creature in the stalker's space. {@actSaveFail} 7 ({@damage 1d8 + 3}) Thunder damage, and the target has the {@condition Grappled|XPHB} condition (escape {@dc 13}). Until the grapple ends, the target can't cast spells with a Verbal component and takes 7 ({@damage 2d6}) Thunder damage at the start of each of the stalker's turns."
+          ]
+        }
+      ],
+      "environment": [
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/invisible-stalker.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AU",
+        "C",
+        "P"
+      ],
+      "damageTags": [
+        "O",
+        "T"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "invisible"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Lizardfolk Geomancer",
+      "source": "XMM",
+      "page": 197,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 33,
+        "formula": "6d8 + 6"
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 20,
+        "swim": 30
+      },
+      "str": 15,
+      "dex": 10,
+      "con": 13,
+      "int": 10,
+      "wis": 15,
+      "cha": 8,
+      "skill": {
+        "nature": "+2",
+        "perception": "+4",
+        "stealth": "+4"
+      },
+      "passive": 14,
+      "languages": [
+        "Draconic",
+        "Primordial (Terran)"
+      ],
+      "cr": "2",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The lizardfolk casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 12}):"
+          ],
+          "will": [
+            "{@spell Elementalism|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Meld into Stone|XPHB}",
+              "{@spell Speak with Plants|XPHB}",
+              "{@spell Spike Growth|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The lizardfolk makes two Earth Burst attacks."
+          ]
+        },
+        {
+          "name": "Earth Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 4}, reach 5 ft. or range 60 ft. {@h}9 ({@damage 2d6 + 2}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Hail of Stone {@recharge 5}",
+          "entries": [
+            "{@actSave con} {@dc 12}, each creature in a 20-foot-radius, 40-foot-high {@variantrule Cylinder [Area of Effect]|XPHB|Cylinder} centered on a point the lizardfolk can see within 60 feet. {@actSaveFail} 15 ({@damage 6d4}) Bludgeoning damage, and the target has the {@condition Prone|XPHB} condition. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "swamp"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "DR",
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "damageTagsSpell": [
+        "O",
+        "P"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "conditionInflictSpell": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Lizardfolk Sovereign",
+      "source": "XMM",
+      "page": 197,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 78,
+        "formula": "12d8 + 24"
+      },
+      "speed": {
+        "walk": 30,
+        "burrow": 20,
+        "swim": 30
+      },
+      "str": 17,
+      "dex": 12,
+      "con": 15,
+      "int": 11,
+      "wis": 11,
+      "cha": 15,
+      "save": {
+        "con": "+4",
+        "wis": "+2"
+      },
+      "skill": {
+        "perception": "+4",
+        "stealth": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "conditionImmune": [
+        "frightened"
+      ],
+      "languages": [
+        "Draconic",
+        "Primordial (Terran)"
+      ],
+      "cr": "4",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The lizardfolk makes one Bite attack and one Earthen Maul attack."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}8 ({@damage 1d10 + 3}) Piercing damage. If the target is a creature that isn't a Construct or an Undead, the lizardfolk gains {@variantrule Temporary Hit Points|XPHB} equal to the damage dealt."
+          ]
+        },
+        {
+          "name": "Earthen Maul",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Bludgeoning damage. If the target is a Medium or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Charge",
+          "entries": [
+            "The lizardfolk moves up to its {@variantrule Speed|XPHB} or {@variantrule Swim Speed|XPHB} straight toward an enemy it can see."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "swamp"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "DR",
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Magma Mephit",
+      "source": "XMM",
+      "page": 207,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 18,
+        "formula": "4d6 + 4"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 30
+      },
+      "str": 8,
+      "dex": 12,
+      "con": 12,
+      "int": 7,
+      "wis": 10,
+      "cha": 10,
+      "skill": {
+        "stealth": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "fire",
+        "poison"
+      ],
+      "vulnerable": [
+        "cold"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Ignan, Terran)"
+      ],
+      "cr": "1/2",
+      "trait": [
+        {
+          "name": "Death Burst",
+          "entries": [
+            "The mephit explodes when it dies. {@actSave dex} {@dc 11}, each creature in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the mephit. {@actSaveFail} 7 ({@damage 2d6}) Fire damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}3 ({@damage 1d4 + 1}) Slashing damage plus 3 ({@damage 1d6}) Fire damage."
+          ]
+        },
+        {
+          "name": "Fire Breath {@recharge}",
+          "entries": [
+            "{@actSave dex} {@dc 11}, each creature in a 15-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 7 ({@damage 2d6}) Fire damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, elemental"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/magma-mephit.mp3"
+      },
+      "traitTags": [
+        "Death Burst"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Breath Weapon"
+      ],
+      "languageTags": [
+        "IG",
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "F",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Magmin",
+      "source": "XMM",
+      "page": 200,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 13,
+        "formula": "3d6 + 3"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 7,
+      "dex": 15,
+      "con": 12,
+      "int": 8,
+      "wis": 11,
+      "cha": 10,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "fire"
+      ],
+      "languages": [
+        "Primordial (Ignan)"
+      ],
+      "cr": "1/2",
+      "trait": [
+        {
+          "name": "Death Burst",
+          "entries": [
+            "The magmin explodes when it dies. {@actSave dex} {@dc 11}, each creature in a 10-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the magmin. {@actSaveFail} 7 ({@damage 2d6}) Fire damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Touch",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}7 ({@damage 2d4 + 2}) Fire damage. If the target is a creature or a flammable object that isn't being worn or carried, it starts {@hazard burning|XPHB}."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Ignited Illumination",
+          "entries": [
+            "The magmin sets itself ablaze or extinguishes its flames. While ablaze, the magmin sheds {@variantrule Bright Light|XPHB} in a 10-foot radius and {@variantrule Dim Light|XPHB} for an additional 10 feet."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, fire"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/magmin.mp3"
+      },
+      "traitTags": [
+        "Death Burst"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "IG",
+        "P"
+      ],
+      "damageTags": [
+        "F"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Marid",
+      "group": [
+        "Genies"
+      ],
+      "source": "XMM",
+      "page": 203,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": {
+        "type": "elemental",
+        "tags": [
+          "genie"
+        ]
+      },
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 229,
+        "formula": "17d10 + 136"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 60,
+        "swim": 90
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 22,
+      "dex": 12,
+      "con": 26,
+      "int": 18,
+      "wis": 17,
+      "cha": 18,
+      "save": {
+        "dex": "+5",
+        "cha": "+8"
+      },
+      "senses": [
+        "blindsight 30 ft.",
+        "darkvision 120 ft."
+      ],
+      "passive": 13,
+      "resist": [
+        "acid",
+        "cold",
+        "lightning"
+      ],
+      "languages": [
+        "Primordial (Aquan)"
+      ],
+      "cr": "11",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The marid casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 16}):"
+          ],
+          "will": [
+            "{@spell Create or Destroy Water|XPHB}",
+            "{@spell Detect Evil and Good|XPHB}",
+            "{@spell Detect Magic|XPHB}",
+            "{@spell Purify Food and Drink|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Control Water|XPHB}",
+              "{@spell Gaseous Form|XPHB}",
+              "{@spell Invisibility|XPHB}",
+              "{@spell Plane Shift|XPHB}",
+              "{@spell Tongues|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        },
+        {
+          "name": "Misty Veil {@recharge 5}",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The marid casts {@spell Fog Cloud|XPHB}, using the same spellcasting ability as Spellcasting."
+          ],
+          "recharge": {
+            "5": [
+              "{@spell Fog Cloud|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "bonus",
+          "hidden": [
+            "recharge"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The marid can breathe air and water."
+          ]
+        },
+        {
+          "name": "Elemental Restoration",
+          "entries": [
+            "If the marid dies outside the Elemental Plane of Water, its body dissolves into brine, and it gains a new body in {@dice 1d4} days, reviving with all its {@variantrule Hit Points|XPHB} somewhere on the Plane of Water."
+          ]
+        },
+        {
+          "name": "Wishes",
+          "entries": [
+            "The marid has a 30 percent chance of knowing the {@spell Wish|XPHB} spell. If the marid knows it, the marid can cast it only on behalf of a non-genie creature who communicates a wish in a way the marid can understand. If the marid casts the spell for the creature, the marid suffers none of the spell's stress. Once the marid has cast it three times, the marid can't do so again for 365 days."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The marid makes three Aquatic Lash attacks."
+          ]
+        },
+        {
+          "name": "Aquatic Lash",
+          "entries": [
+            "{@atkr m} {@hit 10}, reach 15 ft. {@h}15 ({@damage 2d8 + 6}) Slashing damage plus 9 ({@damage 2d8}) Cold damage."
+          ]
+        },
+        {
+          "name": "Water Jet",
+          "entries": [
+            "{@actSave dex} {@dc 18}, each creature in a 60-foot-long, 10-foot-wide {@variantrule Line [Area of Effect]|XPHB|Line}. {@actSaveFail} 31 ({@damage 9d6}) Cold damage. If the target is a Huge or smaller creature, it is pushed up to 20 feet straight away from the marid and has the {@condition Prone|XPHB} condition. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "planar, water",
+        "underwater"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/marid.mp3"
+      },
+      "traitTags": [
+        "Amphibious"
+      ],
+      "senseTags": [
+        "B",
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AQ",
+        "P"
+      ],
+      "damageTags": [
+        "C",
+        "S"
+      ],
+      "damageTagsSpell": [
+        "B"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "conditionInflictSpell": [
+        "invisible"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "savingThrowForcedSpell": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Merfolk Skirmisher",
+      "source": "XMM",
+      "page": 209,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 11,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walk": 10,
+        "swim": 40
+      },
+      "str": 10,
+      "dex": 13,
+      "con": 12,
+      "int": 11,
+      "wis": 14,
+      "cha": 12,
+      "passive": 12,
+      "languages": [
+        "Common",
+        "Primordial (Aquan)"
+      ],
+      "cr": "1/8",
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The merfolk can breathe air and water."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Ocean Spear",
+          "entries": [
+            "{@atkr m,r} {@hit 2}, reach 5 ft. or range 20/60 ft. {@h}3 ({@damage 1d6}) Piercing damage plus 2 ({@damage 1d4}) Cold damage. If the target is a creature, its {@variantrule Speed|XPHB} decreases by 10 feet until the end of its next turn. {@hom}The spear magically returns to the merfolk's hand immediately after a ranged attack."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "underwater"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "traitTags": [
+        "Amphibious"
+      ],
+      "languageTags": [
+        "AQ",
+        "C",
+        "P"
+      ],
+      "damageTags": [
+        "C",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Merfolk Wavebender",
+      "source": "XMM",
+      "page": 209,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 97,
+        "formula": "15d8 + 30"
+      },
+      "speed": {
+        "walk": 10,
+        "swim": 40
+      },
+      "str": 10,
+      "dex": 18,
+      "con": 14,
+      "int": 13,
+      "wis": 19,
+      "cha": 15,
+      "save": {
+        "dex": "+7",
+        "con": "+5",
+        "wis": "+7",
+        "cha": "+5"
+      },
+      "skill": {
+        "perception": "+7"
+      },
+      "passive": 17,
+      "resist": [
+        "cold"
+      ],
+      "languages": [
+        "Common",
+        "Primordial (Aquan)"
+      ],
+      "cr": "6",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The merfolk casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Elementalism|XPHB}",
+            "{@spell Light|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Control Water|XPHB}",
+              "{@spell Create or Destroy Water|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The merfolk can breathe air and water."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The merfolk makes two Aquatic Burst attacks."
+          ]
+        },
+        {
+          "name": "Aquatic Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 7}, reach 5 ft. or range 60 ft. {@h}20 ({@damage 3d10 + 4}) Cold damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Watery Rebuke",
+          "entries": [
+            "{@actTrigger} An enemy the merfolk can see enters a space within 5 feet of the merfolk. {@actResponse d}{@actSave str} {@dc 15}, the triggering enemy. {@actSaveFail} 14 ({@damage 4d6}) Cold damage. If the target is Large or smaller, it is pushed up to 30 feet straight away from the merfolk by conjured water."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "underwater"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "traitTags": [
+        "Amphibious"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AQ",
+        "C",
+        "P"
+      ],
+      "damageTags": [
+        "C"
+      ],
+      "damageTagsSpell": [
+        "B"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "savingThrowForcedSpell": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Mud Mephit",
+      "source": "XMM",
+      "page": 207,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 13,
+        "formula": "3d6 + 3"
+      },
+      "speed": {
+        "walk": 20,
+        "fly": 20,
+        "swim": 20
+      },
+      "str": 8,
+      "dex": 12,
+      "con": 12,
+      "int": 9,
+      "wis": 11,
+      "cha": 7,
+      "skill": {
+        "stealth": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Aquan, Terran)"
+      ],
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "Death Burst",
+          "entries": [
+            "The mephit explodes when it dies. {@actSave dex} {@dc 11}, each creature in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the mephit. {@actSaveFail} The target has the {@condition Restrained|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Slam",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}4 ({@damage 1d6 + 1}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Mud Breath {@recharge}",
+          "entries": [
+            "{@actSave dex} {@dc 11}, one creature the mephit can see within 15 feet. {@actSaveFail} The target has the {@condition Restrained|XPHB} condition until the end of the mephit's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, elemental"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/mud-mephit.mp3"
+      },
+      "traitTags": [
+        "Death Burst"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Breath Weapon"
+      ],
+      "languageTags": [
+        "AQ",
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Salamander",
+      "source": "XMM",
+      "page": 267,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 90,
+        "formula": "12d10 + 24"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 15,
+      "int": 11,
+      "wis": 10,
+      "cha": 12,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "fire"
+      ],
+      "vulnerable": [
+        "cold"
+      ],
+      "languages": [
+        "Primordial (Ignan)"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Fire Aura",
+          "entries": [
+            "At the end of each of the salamander's turns, each creature of the salamander's choice in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the salamander takes 7 ({@damage 2d6}) Fire damage."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The salamander makes two Flame Spear attacks. It can replace one attack with a use of Constrict."
+          ]
+        },
+        {
+          "name": "Flame Spear",
+          "entries": [
+            "{@atkr m,r} {@hit 7}, reach 5 ft. or range 20/60 ft. {@h}13 ({@damage 2d8 + 4}) Piercing damage plus 7 ({@damage 2d6}) Fire damage. {@hom}The spear magically returns to the salamander's hand immediately after a ranged attack."
+          ]
+        },
+        {
+          "name": "Constrict",
+          "entries": [
+            "{@actSave str} {@dc 15}, one Large or smaller creature the salamander can see within 10 feet. {@actSaveFail} 11 ({@damage 2d6 + 4}) Bludgeoning damage plus 7 ({@damage 2d6}) Fire damage. The target has the {@condition Grappled|XPHB} condition (escape {@dc 14}), and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, fire",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/salamander.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "IG",
+        "P"
+      ],
+      "damageTags": [
+        "B",
+        "F",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Salamander Fire Snake",
+      "source": "XMM",
+      "page": 266,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 27,
+        "formula": "6d8"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 12,
+      "dex": 14,
+      "con": 11,
+      "int": 7,
+      "wis": 10,
+      "cha": 8,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "fire"
+      ],
+      "vulnerable": [
+        "cold"
+      ],
+      "languages": [
+        "understands Primordial but can't speak"
+      ],
+      "cr": "1",
+      "trait": [
+        {
+          "name": "Fire Aura",
+          "entries": [
+            "At the end of each of the salamander's turns, each creature of the salamander's choice in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the salamander takes 3 ({@damage 1d6}) Fire damage."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}6 ({@damage 1d8 + 2}) Piercing damage plus 3 ({@damage 1d6}) Fire damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, fire",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "CS",
+        "P"
+      ],
+      "damageTags": [
+        "F",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Salamander Inferno Master",
+      "source": "XMM",
+      "page": 267,
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 256,
+        "formula": "27d10 + 108"
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 40
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 24,
+      "dex": 16,
+      "con": 18,
+      "int": 14,
+      "wis": 10,
+      "cha": 20,
+      "save": {
+        "dex": "+8",
+        "wis": "+5"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "fire"
+      ],
+      "vulnerable": [
+        "cold"
+      ],
+      "languages": [
+        "Primordial (Ignan)"
+      ],
+      "cr": "15",
+      "trait": [
+        {
+          "name": "Fire Aura",
+          "entries": [
+            "At the end of each of the salamander's turns, each creature of the salamander's choice in a 10-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the salamander takes 10 ({@damage 3d6}) Fire damage."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The salamander has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The salamander makes two Flame Trident attacks."
+          ]
+        },
+        {
+          "name": "Flame Trident",
+          "entries": [
+            "{@atkr m,r} {@hit 12}, reach 5 ft. or range 30/90 ft. {@h}16 ({@damage 2d8 + 7}) Piercing damage plus 14 ({@damage 4d6}) Fire damage. {@hom}The trident magically returns to the salamander's hand immediately after a ranged attack."
+          ]
+        },
+        {
+          "name": "Inferno Blast {@recharge 5}",
+          "entries": [
+            "{@actSave dex} {@dc 18}, each creature in a 30-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point the salamander can see within 120 feet. {@actSaveFail} 35 ({@damage 10d6}) Fire damage, and the target starts {@hazard burning|XPHB}, taking 5 ({@damage 1d10}) Fire damage at the start of each of its turns instead of the normal {@hazard burning|XPHB} damage. The target gains 1 {@condition Exhaustion|XPHB} level whenever it takes this {@hazard burning|XPHB} damage. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Blazing Movement",
+          "entries": [
+            "The salamander moves up to its {@variantrule Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}. During this movement, fire fills a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the salamander. When the {@variantrule Emanation [Area of Effect]|XPHB|Emanation} enters a creature's space, that creature takes 7 ({@damage 2d6}) Fire damage. A creature can take this damage only once per turn."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, fire",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "IG",
+        "P"
+      ],
+      "damageTags": [
+        "F",
+        "P"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Smoke Mephit",
+      "source": "XMM",
+      "page": 208,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 13,
+        "formula": "3d6 + 3"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 30
+      },
+      "str": 6,
+      "dex": 14,
+      "con": 12,
+      "int": 10,
+      "wis": 10,
+      "cha": 11,
+      "skill": {
+        "perception": "+2",
+        "stealth": "+4"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "fire",
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Auran, Ignan)"
+      ],
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "Death Burst",
+          "entries": [
+            "The mephit explodes when it dies. {@actSave con} {@dc 11}, each creature in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the mephit. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Cinder Breath {@recharge}",
+          "entries": [
+            "{@actSave dex} {@dc 11}, one creature the mephit can see within 15 feet. {@actSaveFail} The target has the {@condition Blinded|XPHB} condition until the end of the mephit's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, elemental"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/smoke-mephit.mp3"
+      },
+      "traitTags": [
+        "Death Burst"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Breath Weapon"
+      ],
+      "languageTags": [
+        "AU",
+        "IG",
+        "P"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "blinded",
+        "poisoned"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Steam Mephit",
+      "source": "XMM",
+      "page": 208,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        10
+      ],
+      "hp": {
+        "average": 17,
+        "formula": "5d6"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": 30
+      },
+      "str": 5,
+      "dex": 11,
+      "con": 10,
+      "int": 11,
+      "wis": 10,
+      "cha": 12,
+      "skill": {
+        "stealth": "+2"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "fire",
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Aquan, Ignan)"
+      ],
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "Blurred Form",
+          "entries": [
+            "Attack rolls against the mephit are made with {@variantrule Disadvantage|XPHB} unless the mephit has the {@condition Incapacitated|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Death Burst",
+          "entries": [
+            "The mephit explodes when it dies. {@actSave dex} {@dc 10}, each creature in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the mephit. {@actSaveFail} 5 ({@damage 2d4}) Fire damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 2}, reach 5 ft. {@h}2 ({@damage 1d4}) Slashing damage plus 2 ({@damage 1d4}) Fire damage."
+          ]
+        },
+        {
+          "name": "Steam Breath {@recharge}",
+          "entries": [
+            "{@actSave con} {@dc 10}, each creature in a 15-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 5 ({@damage 2d4}) Fire damage, and the target's {@variantrule Speed|XPHB} decreases by 10 feet until the end of the mephit's next turn. {@actSaveSuccess} Half damage only. {@actSaveSuccessOrFail} Being underwater doesn't grant {@variantrule Resistance|XPHB} to this Fire damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, elemental"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/steam-mephit.mp3"
+      },
+      "traitTags": [
+        "Death Burst"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Breath Weapon"
+      ],
+      "languageTags": [
+        "AQ",
+        "IG",
+        "P"
+      ],
+      "damageTags": [
+        "F",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "incapacitated"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Water Elemental",
+      "source": "XMM",
+      "page": 322,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 114,
+        "formula": "12d10 + 48"
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 90
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 18,
+      "int": 5,
+      "wis": 10,
+      "cha": 8,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "acid",
+        "fire"
+      ],
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "Primordial (Aquan)"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Freeze",
+          "entries": [
+            "If the elemental takes Cold damage, its {@variantrule Speed|XPHB} decreases by 20 feet until the end of its next turn."
+          ]
+        },
+        {
+          "name": "Water Form",
+          "entries": [
+            "The elemental can enter an enemy's space and stop there. It can move through a space as narrow as 1 inch without expending extra movement to do so."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The elemental makes two Slam attacks."
+          ]
+        },
+        {
+          "name": "Slam",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}13 ({@damage 2d8 + 4}) Bludgeoning damage. If the target is a Medium or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Whelm {@recharge 4}",
+          "entries": [
+            "{@actSave str} {@dc 15}, each creature in the elemental's space. {@actSaveFail} 22 ({@damage 4d8 + 4}) Bludgeoning damage. If the target is a Large or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 14}). Until the grapple ends, the target has the {@condition Restrained|XPHB} condition, is suffocating unless it can breathe water, and takes 9 ({@damage 2d8}) Bludgeoning damage at the start of each of the elemental's turns. The elemental can grapple one Large creature or up to two Medium or smaller creatures at a time with Whelm. As an action, a creature within 5 feet of the elemental can pull a creature out of it by succeeding on a {@dc 14} Strength ({@skill Athletics|XPHB}) check. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "planar, water",
+        "swamp",
+        "underwater"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/water-elemental.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AQ",
+        "P"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "prone",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Water Weird",
+      "source": "XMM",
+      "page": 323,
+      "size": [
+        "L"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 65,
+        "formula": "10d10 + 10"
+      },
+      "speed": {
+        "walk": 5,
+        "swim": 60
+      },
+      "str": 17,
+      "dex": 16,
+      "con": 13,
+      "int": 11,
+      "wis": 10,
+      "cha": 10,
+      "senses": [
+        "blindsight 30 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "fire"
+      ],
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "understands Primordial but can't speak"
+      ],
+      "cr": "3",
+      "trait": [
+        {
+          "name": "Invisible in Water",
+          "entries": [
+            "The water weird has the {@condition Invisible|XPHB} condition while fully immersed in water."
+          ]
+        },
+        {
+          "name": "Water Bound",
+          "entries": [
+            "The water weird dies if it leaves the water to which it is bound or if that water is destroyed."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Surge",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 10 ft. {@h}13 ({@damage 3d6 + 3}) Cold damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 13}), and it has the {@condition Restrained|XPHB} condition until the grapple ends."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/water-weird.mp3"
+      },
+      "senseTags": [
+        "B"
+      ],
+      "languageTags": [
+        "CS",
+        "P"
+      ],
+      "damageTags": [
+        "C"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "invisible",
+        "restrained"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Xorn",
+      "source": "XMM",
+      "page": 338,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "elemental",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        19
+      ],
+      "hp": {
+        "average": 84,
+        "formula": "8d8 + 48"
+      },
+      "speed": {
+        "walk": 20,
+        "burrow": 20
+      },
+      "str": 17,
+      "dex": 10,
+      "con": 22,
+      "int": 11,
+      "wis": 10,
+      "cha": 11,
+      "skill": {
+        "perception": "+6",
+        "stealth": "+6"
+      },
+      "senses": [
+        "darkvision 60 ft.",
+        "tremorsense 60 ft."
+      ],
+      "passive": 16,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "paralyzed",
+        "petrified",
+        "poisoned"
+      ],
+      "languages": [
+        "Primordial (Terran)"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Earth Glide",
+          "entries": [
+            "The xorn can burrow through nonmagical, unworked earth and stone. While doing so, the xorn doesn't disturb the material it moves through."
+          ]
+        },
+        {
+          "name": "Treasure Sense",
+          "entries": [
+            "The xorn can pinpoint the location of precious metals and stones within 60 feet of itself."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The xorn makes one Bite attack and three Claw attacks."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}17 ({@damage 4d6 + 3}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}8 ({@damage 1d10 + 3}) Slashing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Charge",
+          "entries": [
+            "The xorn moves up to its {@variantrule Speed|XPHB} or {@variantrule Burrow Speed|XPHB} straight toward an enemy it can sense."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, earth",
+        "underdark"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/xorn.mp3"
+      },
+      "senseTags": [
+        "D",
+        "T"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "P",
+        "T"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
+}

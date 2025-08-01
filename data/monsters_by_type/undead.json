@@ -1,0 +1,5767 @@
+{
+  "monster_type": "undead",
+  "count": 38,
+  "monsters": [
+    {
+      "name": "Banshee",
+      "source": "XMM",
+      "page": 29,
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 54,
+        "formula": "12d8"
+      },
+      "speed": {
+        "walk": 5,
+        "fly": {
+          "number": 40,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 1,
+      "dex": 14,
+      "con": 10,
+      "int": 12,
+      "wis": 11,
+      "cha": 17,
+      "save": {
+        "wis": "+2"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "acid",
+        "bludgeoning",
+        "fire",
+        "lightning",
+        "piercing",
+        "slashing",
+        "thunder"
+      ],
+      "immune": [
+        "cold",
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained"
+      ],
+      "languages": [
+        "Common",
+        "Elvish"
+      ],
+      "cr": "4",
+      "trait": [
+        {
+          "name": "Detect Life",
+          "entries": [
+            "The banshee magically senses the direction of creatures up to 1 mile away that aren't Constructs or Undead."
+          ]
+        },
+        {
+          "name": "Incorporeal Movement",
+          "entries": [
+            "The banshee can move through other creatures and objects as if they were {@variantrule Difficult Terrain|XPHB}. It takes 5 ({@damage 1d10}) Force damage if it ends its turn inside an object."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The banshee makes two Corrupting Touch attacks and uses Horrify."
+          ]
+        },
+        {
+          "name": "Corrupting Touch",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Horrify",
+          "entries": [
+            "{@actSave wis} {@dc 13}, one creature the banshee can see within 60 feet that can see the banshee. {@actSaveFail} The target has the {@condition Frightened|XPHB} condition until the start of the banshee's next turn. {@actSaveSuccess} The target is immune to this banshee's Horrify for 24 hours."
+          ]
+        },
+        {
+          "name": "Deathly Wail (1/Day)",
+          "entries": [
+            "The banshee releases a mournful wail if it isn't in sunlight. {@actSave con} {@dc 13}, each creature within 30 feet that can hear the wail and isn't a Construct or an Undead. {@actSaveFail} If the target has 25 {@variantrule Hit Points|XPHB} or fewer, it drops to 0 {@variantrule Hit Points|XPHB}. Otherwise, the target takes 10 ({@damage 3d6}) Psychic damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/banshee.mp3"
+      },
+      "traitTags": [
+        "Incorporeal Movement"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "E"
+      ],
+      "damageTags": [
+        "N",
+        "O",
+        "Y"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA"
+      ],
+      "conditionInflict": [
+        "frightened"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Beholder Zombie",
+      "group": [
+        "Beholders"
+      ],
+      "source": "XMM",
+      "page": 347,
+      "size": [
+        "L"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 93,
+        "formula": "11d10 + 33"
+      },
+      "speed": {
+        "walk": 5,
+        "fly": {
+          "number": 20,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 14,
+      "dex": 8,
+      "con": 16,
+      "int": 3,
+      "wis": 8,
+      "cha": 5,
+      "save": {
+        "wis": "+2"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned",
+        "prone"
+      ],
+      "languages": [
+        "understands Deep Speech and Undercommon but can't speak"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Undead Fortitude",
+          "entries": [
+            "If damage reduces the zombie to 0 {@variantrule Hit Points|XPHB}, it makes a Constitution saving throw ({@dc 5} plus the damage taken) unless the damage is Radiant or from a {@variantrule Critical Hit|XPHB}. On a successful save, the zombie drops to 1 {@variantrule Hit Points|XPHB|Hit Point} instead."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The zombie uses Eye Rays twice."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}16 ({@damage 4d6 + 2}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Eye Rays",
+          "entries": [
+            "The zombie randomly shoots one of the following magical rays at a target it can see within 120 feet of itself (roll {@dice 1d4}; reroll if the zombie has already used that ray during this turn):",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "1: Paralyzing Ray",
+                  "entries": [
+                    "{@actSave con} {@dc 14}. {@actSaveFail} The target has the {@condition Paralyzed|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "2: Fear Ray",
+                  "entries": [
+                    "{@actSave wis} {@dc 14}. {@actSaveFail} 13 ({@damage 3d8}) Psychic damage, and the target has the {@condition Frightened|XPHB} condition until the end of its next turn."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "3: Enervation Ray",
+                  "entries": [
+                    "{@actSave con} {@dc 14}. {@actSaveFail} 10 ({@damage 3d6}) Necrotic damage, and the target has the {@condition Poisoned|XPHB} condition until the end of its next turn. While {@condition Poisoned|XPHB}, the target can't regain {@variantrule Hit Points|XPHB}. {@actSaveSuccess} Half damage only."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "4: Disintegration Ray",
+                  "entries": [
+                    "{@actSave dex} {@dc 14}. {@actSaveFail} 27 ({@damage 5d10}) Force damage. If the target is a nonmagical object or a creation of magical force, a 10-foot {@variantrule Cube [Area of Effect]|XPHB|Cube} of it disintegrates into dust. {@actSaveSuccess} Half damage. {@actSaveSuccessOrFail} If the target is a creature and this damage reduces it to 0 {@variantrule Hit Points|XPHB}, it disintegrates into dust."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "environment": [
+        "planar, shadowfell",
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/beholder-zombie.mp3"
+      },
+      "traitTags": [
+        "Undead Fortitude"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "CS",
+        "DS",
+        "U"
+      ],
+      "damageTags": [
+        "N",
+        "O",
+        "P",
+        "Y"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "frightened",
+        "paralyzed",
+        "poisoned"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "dexterity",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bone Naga",
+      "source": "XMM",
+      "page": 53,
+      "size": [
+        "L"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 65,
+        "formula": "10d10 + 10"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 15,
+      "dex": 16,
+      "con": 12,
+      "int": 16,
+      "wis": 15,
+      "cha": 15,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "paralyzed",
+        "poisoned"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "4",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The naga casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability (spell save {@dc 13}):"
+          ],
+          "will": [
+            "{@spell Mage Hand|XPHB}",
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Command|XPHB}",
+              "{@spell Detect Thoughts|XPHB}",
+              "{@spell Lightning Bolt|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The naga makes two Bite attacks. It can replace any attack with a use of Serpentine Gaze."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 10 ft. {@h}10 ({@damage 2d6 + 3}) Piercing damage plus 7 ({@damage 2d6}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Serpentine Gaze",
+          "entries": [
+            "{@actSave wis} {@dc 13}, one creature the naga can see within 60 feet. {@actSaveFail} 13 ({@damage 3d6 + 3}) Psychic damage, and the target has the {@condition Charmed|XPHB} condition until the start of the naga's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "N",
+        "P",
+        "Y"
+      ],
+      "damageTagsSpell": [
+        "L"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "conditionInflictSpell": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Crawling Claw",
+      "source": "XMM",
+      "page": 83,
+      "size": [
+        "T"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 2,
+        "formula": "1d4"
+      },
+      "speed": {
+        "walk": 20,
+        "climb": 20
+      },
+      "str": 13,
+      "dex": 14,
+      "con": 11,
+      "int": 5,
+      "wis": 10,
+      "cha": 4,
+      "senses": [
+        "blindsight 30 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "incapacitated",
+        "poisoned"
+      ],
+      "languages": [
+        "understands Common but can't speak"
+      ],
+      "cr": "0",
+      "action": [
+        {
+          "name": "Slam",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}2 Necrotic damage."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/crawling-claw.mp3"
+      },
+      "senseTags": [
+        "B"
+      ],
+      "languageTags": [
+        "C",
+        "CS"
+      ],
+      "damageTags": [
+        "N"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Death Knight",
+      "source": "XMM",
+      "page": 92,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 199,
+        "formula": "21d8 + 105"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 20,
+      "dex": 11,
+      "con": 20,
+      "int": 12,
+      "wis": 16,
+      "cha": 18,
+      "save": {
+        "dex": "+6",
+        "wis": "+9"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 13,
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "frightened",
+        "poisoned"
+      ],
+      "languages": [
+        "Abyssal",
+        "Common"
+      ],
+      "cr": "17",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The death knight casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 18}):"
+          ],
+          "will": [
+            "{@spell Command|XPHB}",
+            "{@spell Phantom Steed|XPHB}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell Destructive Wave|XPHB} (Necrotic)",
+              "{@spell Dispel Magic|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Legendary Resistance (3/Day)",
+          "entries": [
+            "If the death knight fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The death knight has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Marshal Undead",
+          "entries": [
+            "Undead creatures of the death knight's choice (excluding itself) in a 60-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from it have {@variantrule Advantage|XPHB} on attack rolls and saving throws. It can't use this trait if it has the {@condition Incapacitated|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Undead Restoration",
+          "entries": [
+            "If the death knight is destroyed before it atones for its evil, it gains a new body in {@dice 1d10} days, reviving with all its {@variantrule Hit Points|XPHB}. The new body appears in a location significant to the death knight."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The death knight makes three Dread Blade attacks."
+          ]
+        },
+        {
+          "name": "Dread Blade",
+          "entries": [
+            "{@atkr m} {@hit 11}, reach 5 ft. {@h}12 ({@damage 2d6 + 5}) Slashing damage plus 13 ({@damage 3d8}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Hellfire Orb {@recharge 5}",
+          "entries": [
+            "{@actSave dex} {@dc 18}, each creature in a 20-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point the death knight can see within 120 feet. {@actSaveFail} 35 ({@damage 10d6}) Fire damage plus 35 ({@damage 10d6}) Necrotic damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "{@actTrigger} The death knight is hit by a melee attack roll while holding a weapon. {@actResponse} The death knight adds 6 to its AC against that attack, possibly causing it to miss."
+          ]
+        }
+      ],
+      "legendary": [
+        {
+          "name": "Dread Authority",
+          "entries": [
+            "The death knight uses Spellcasting to cast {@spell Command|XPHB}. The death knight can't take this action again until the start of its next turn."
+          ]
+        },
+        {
+          "name": "Fell Word",
+          "entries": [
+            "{@actSave con} {@dc 18}, one creature the death knight can see within 120 feet. {@actSaveFail} 17 ({@damage 5d6}) Necrotic damage, and the target's {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the damage taken. {@actSaveSuccessOrFail} The death knight can't take this action again until the start of its next turn."
+          ]
+        },
+        {
+          "name": "Lunge",
+          "entries": [
+            "The death knight moves up to half its {@variantrule Speed|XPHB}, and it makes one Dread Blade attack."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/death-knight.mp3"
+      },
+      "traitTags": [
+        "Legendary Resistances",
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Parry"
+      ],
+      "languageTags": [
+        "AB",
+        "C"
+      ],
+      "damageTags": [
+        "F",
+        "N",
+        "S"
+      ],
+      "damageTagsSpell": [
+        "N",
+        "R",
+        "T"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA"
+      ],
+      "conditionInflict": [
+        "incapacitated"
+      ],
+      "conditionInflictSpell": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "dexterity"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Death Knight Aspirant",
+      "source": "XMM",
+      "page": 93,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 178,
+        "formula": "21d8 + 84"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 20,
+      "dex": 10,
+      "con": 18,
+      "int": 10,
+      "wis": 12,
+      "cha": 16,
+      "save": {
+        "dex": "+4",
+        "wis": "+5"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 11,
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "frightened",
+        "poisoned"
+      ],
+      "languages": [
+        "Abyssal",
+        "Common"
+      ],
+      "cr": "11",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The aspirant casts one of the following spells, using Charisma as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Phantom Steed|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Destructive Wave|XPHB} (Necrotic)",
+              "{@spell Dispel Magic|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The aspirant has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Marshal Undead",
+          "entries": [
+            "Undead creatures of the aspirant's choice (excluding itself) in a 60-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from it have {@variantrule Advantage|XPHB} on attack rolls and saving throws. It can't use this trait if it has the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The aspirant makes three Dread Blade attacks."
+          ]
+        },
+        {
+          "name": "Dread Blade",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}14 ({@damage 2d8 + 5}) Slashing damage plus 10 ({@damage 3d6}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Hellfire Orb {@recharge 5}",
+          "entries": [
+            "{@actSave dex} {@dc 15}, each creature in a 20-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point the aspirant can see within 120 feet of itself. {@actSaveFail} 21 ({@damage 6d6}) Fire damage plus 21 ({@damage 6d6}) Necrotic damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "{@actTrigger} The aspirant is hit by a melee attack roll while holding a weapon. {@actResponse} The aspirant adds 4 to its AC against that attack, possibly causing it to miss."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Parry"
+      ],
+      "languageTags": [
+        "AB",
+        "C"
+      ],
+      "damageTags": [
+        "F",
+        "N",
+        "S"
+      ],
+      "damageTagsSpell": [
+        "N",
+        "R",
+        "T"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA"
+      ],
+      "conditionInflict": [
+        "incapacitated"
+      ],
+      "conditionInflictSpell": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Death Tyrant",
+      "group": [
+        "Beholders"
+      ],
+      "source": "XMM",
+      "page": 95,
+      "size": [
+        "L"
+      ],
+      "type": {
+        "type": "undead",
+        "tags": [
+          "beholder"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        19
+      ],
+      "hp": {
+        "average": 195,
+        "formula": "26d10 + 52"
+      },
+      "speed": {
+        "walk": 5,
+        "fly": {
+          "number": 40,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 14,
+      "int": 19,
+      "wis": 15,
+      "cha": 19,
+      "save": {
+        "con": "+7",
+        "wis": "+7"
+      },
+      "skill": {
+        "perception": "+12"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 22,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone"
+      ],
+      "languages": [
+        "Deep Speech",
+        "Undercommon"
+      ],
+      "cr": {
+        "cr": "14",
+        "xpLair": 13000
+      },
+      "trait": [
+        {
+          "name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+          "entries": [
+            "If the death tyrant fails a saving throw, it can choose to succeed instead."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The death tyrant uses Eye Rays three times."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 feet. {@h}13 ({@damage 2d8 + 4}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Eye Rays",
+          "entries": [
+            "The death tyrant randomly shoots one of the following magical rays at a target it can see within 120 feet of itself (roll {@dice 1d10}; reroll if the death tyrant has already used that ray during this turn):",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "1: Charm Ray",
+                  "entries": [
+                    "{@actSave wis} {@dc 17}. {@actSaveFail} 13 ({@damage 3d8}) Psychic damage, and the target has the {@condition Charmed|XPHB} condition for 1 hour or until it takes damage. {@actSaveSuccess} Half damage only."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "2: Paralyzing Ray",
+                  "entries": [
+                    "{@actSave con} {@dc 17}. {@actSaveFail} The target has the {@condition Paralyzed|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "3: Fear Ray",
+                  "entries": [
+                    "{@actSave wis} {@dc 17}. {@actSaveFail} 10 ({@damage 3d6}) Psychic damage, and the target has the {@condition Frightened|XPHB} condition until the end of its next turn. {@actSaveSuccess} Half damage only."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "4: Slowing Ray",
+                  "entries": [
+                    "{@actSave con} {@dc 17}. {@actSaveFail} 18 ({@damage 4d8}) Necrotic damage. Until the end of the target's next turn, the target can't take Reactions; its {@variantrule Speed|XPHB} is halved; and it can take either an action or a {@variantrule Bonus Action|XPHB} on its turn, not both. {@actSaveSuccess} Half damage only."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "5: Enervation Ray",
+                  "entries": [
+                    "{@actSave con} {@dc 17}. {@actSaveFail} 16 ({@damage 3d10}) Poison damage, and the target has the {@condition Poisoned|XPHB} condition until the end of its next turn. While {@condition Poisoned|XPHB}, the target can't regain {@variantrule Hit Points|XPHB}. {@actSaveSuccess} Half damage only."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "6: Telekinetic Ray",
+                  "entries": [
+                    "{@actSave str} {@dc 17} (the target succeeds automatically if it is Gargantuan). {@actSaveFail} The death tyrant moves the target up to 30 feet in any direction. The target has the {@condition Restrained|XPHB} condition until the start of the death tyrant's next turn or until the death tyrant has the {@condition Incapacitated|XPHB} condition. The death tyrant can also exert fine control on objects with this ray, such as manipulating a tool or opening a door or container."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "7: Sleep Ray",
+                  "entries": [
+                    "{@actSave wis} {@dc 17} (the target succeeds automatically if it is a Construct or an Undead). {@actSaveFail} The target has the {@condition Unconscious|XPHB} condition for 1 minute. The condition ends if the target takes damage or a creature within 5 feet of it takes an action to wake it."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "8: Petrification Ray",
+                  "entries": [
+                    "{@actSave con} {@dc 17}. {@actSaveFail 1} The target has the {@condition Restrained|XPHB} condition and repeats the save at the end of its next turn if it is still {@condition Restrained|XPHB}, ending the effect on itself on a success. {@actSaveFail 2} The target has the {@condition Petrified|XPHB} condition instead of the {@condition Restrained|XPHB} condition."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "9: Disintegration Ray",
+                  "entries": [
+                    "{@actSave dex} {@dc 17}. {@actSaveFail} 36 ({@damage 8d8}) Force damage. If the target is a nonmagical object or a creation of magical force, a 10-foot {@variantrule Cube [Area of Effect]|XPHB|Cube} of it disintegrates into dust. {@actSaveSuccess} Half damage. {@actSaveSuccessOrFail} If the target is a creature and this damage reduces it to 0 {@variantrule Hit Points|XPHB}, it disintegrates into dust."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "10: Death Ray",
+                  "entries": [
+                    "{@actSave dex} {@dc 17}. {@actSaveFail} 55 ({@damage 10d10}) Necrotic damage. {@actSaveSuccess} Half damage. {@actSaveSuccessOrFail} The target dies if the ray reduces it to 0 {@variantrule Hit Points|XPHB}."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Negative Energy Cone",
+          "entries": [
+            "The death tyrant's central eye emits an imperceptible, magical wave of negative energy in a 150-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. Creatures in that area can't regain {@variantrule Hit Points|XPHB} until the start of the death tyrant's next turn. An intact Humanoid corpse there instantly rises as a {@creature Zombie|XMM} under the death tyrant's control and takes its turn immediately after the death tyrant on the same initiative count."
+          ]
+        }
+      ],
+      "legendaryActionsLair": 4,
+      "legendary": [
+        {
+          "name": "Chomp",
+          "entries": [
+            "The death tyrant makes two Bite attacks."
+          ]
+        },
+        {
+          "name": "Glare",
+          "entries": [
+            "The death tyrant uses Eye Rays."
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Death Tyrant",
+        "source": "XMM"
+      },
+      "environment": [
+        "underdark"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/death-tyrant.mp3"
+      },
+      "traitTags": [
+        "Legendary Resistances"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "DS",
+        "U"
+      ],
+      "damageTags": [
+        "I",
+        "N",
+        "O",
+        "P",
+        "Y"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "charmed",
+        "frightened",
+        "incapacitated",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "restrained",
+        "unconscious"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "dexterity",
+        "strength",
+        "wisdom"
+      ],
+      "savingThrowForcedLegendary": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Demilich",
+      "source": "XMM",
+      "page": 96,
+      "size": [
+        "T"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 180,
+        "formula": "72d4"
+      },
+      "speed": {
+        "walk": 5,
+        "fly": {
+          "number": 30,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 1,
+      "dex": 20,
+      "con": 10,
+      "int": 20,
+      "wis": 17,
+      "cha": 20,
+      "save": {
+        "con": "+6",
+        "int": "+11",
+        "wis": "+9"
+      },
+      "senses": [
+        "truesight 120 ft."
+      ],
+      "passive": 13,
+      "resist": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "immune": [
+        "necrotic",
+        "poison",
+        "psychic"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "deafened",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "stunned"
+      ],
+      "cr": {
+        "cr": "18",
+        "xpLair": 22000
+      },
+      "trait": [
+        {
+          "name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+          "entries": [
+            "If the demilich fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Undead Restoration",
+          "entries": [
+            "If the demilich is destroyed, it reforms and regains all its {@variantrule Hit Points|XPHB} in {@dice 1d10} days unless a {@spell Wish|XPHB} spell is cast on its remains."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The demilich makes three Necrotic Burst attacks."
+          ]
+        },
+        {
+          "name": "Necrotic Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 11}, reach 5 ft. or range 120 ft. {@h}24 ({@damage 7d6}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Howl {@recharge 5}",
+          "entries": [
+            "{@actSave con} {@dc 19}, each creature in a 30-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the demilich. {@actSaveFail} 70 ({@damage 20d6}) Psychic damage. {@actSaveSuccessOrFail} The target has the {@condition Frightened|XPHB} condition until the start of the demilich's next turn."
+          ]
+        }
+      ],
+      "legendaryActionsLair": 4,
+      "legendary": [
+        {
+          "name": "Energy Drain",
+          "entries": [
+            "{@actSave con} {@dc 19}, one creature the demilich can see within 120 feet. {@actSaveFail} The target's {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by 14 ({@dice 4d6}). {@actSaveSuccessOrFail} The demilich can't take this action again until the start of its next turn."
+          ]
+        },
+        {
+          "name": "Grave-Dust Flight",
+          "entries": [
+            "The demilich flies up to its {@variantrule Fly Speed|XPHB}, shedding grave dust. Each creature within 5 feet of the demilich as it moves is targeted once by the following effect. {@actSave con} {@dc 19}. {@actSaveFail} The target has the {@condition Blinded|XPHB} condition until the end of the demilich's next turn. {@actSaveSuccessOrFail} The demilich can't take this action again until the start of its next turn."
+          ]
+        },
+        {
+          "name": "Necrosis",
+          "entries": [
+            "The demilich makes one Necrotic Burst attack."
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Demilich",
+        "source": "XMM"
+      },
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/demilich.mp3"
+      },
+      "traitTags": [
+        "Legendary Resistances"
+      ],
+      "senseTags": [
+        "U"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "damageTags": [
+        "N",
+        "Y"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "blinded",
+        "frightened"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "savingThrowForcedLegendary": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Dracolich",
+      "source": "XMM",
+      "page": 102,
+      "size": [
+        "H",
+        "G"
+      ],
+      "type": "undead",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 225,
+        "formula": "18d12 + 108"
+      },
+      "speed": {
+        "walk": 40,
+        "burrow": 30,
+        "fly": 80
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 25,
+      "dex": 10,
+      "con": 23,
+      "int": 19,
+      "wis": 15,
+      "cha": 21,
+      "save": {
+        "dex": "+6",
+        "wis": "+8"
+      },
+      "skill": {
+        "perception": "+14",
+        "stealth": "+6"
+      },
+      "senses": [
+        "blindsight 60 ft.",
+        "darkvision 120 ft."
+      ],
+      "passive": 24,
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "poisoned"
+      ],
+      "languages": [
+        "Common",
+        "Draconic"
+      ],
+      "cr": {
+        "cr": "17",
+        "xpLair": 20000
+      },
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The dracolich casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 19}, {@hit 11} to hit with spell attacks):"
+          ],
+          "will": [
+            "{@spell Detect Magic|XPHB}",
+            "{@spell Ray of Sickness|XPHB} (level 2 version)"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Create Undead|XPHB} (level 8 version)",
+              "{@spell Finger of Death|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+          "entries": [
+            "If the dracolich fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Life Suppression",
+          "entries": [
+            "Creatures within 60 feet of the dracolich can't regain {@variantrule Hit Points|XPHB}."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The dracolich has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Soul Gem",
+          "entries": [
+            "The dracolich has a magical gem. If the dracolich is destroyed while the gem is on the same plane of existence as it, the dracolich gains a new body in {@dice 1d20} days, regaining all its {@variantrule Hit Points|XPHB} and appearing within 5 feet of the gem.",
+            "The gem is a Tiny object that has AC 20; HP 50; and {@variantrule Immunity|XPHB} to Necrotic, Poison, and Psychic damage. The gem regains all its {@variantrule Hit Points|XPHB} at the end of every turn, but it turns to dust if reduced to 0 {@variantrule Hit Points|XPHB}. If the gem is destroyed, the dracolich can create a new one by completing an 8-hour ritual using a gem worth 1,000+ GP and by expending 5,000 GP, which the ritual consumes."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The dracolich makes three Rend attacks. It can replace one attack with a use of Spellcasting to cast {@spell Ray of Sickness|XPHB} (level 2 version)."
+          ]
+        },
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 13}, reach 10 ft. {@h}18 ({@damage 2d10 + 7}) Slashing damage plus 4 ({@damage 1d8}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Necrotic Breath {@recharge 5}",
+          "entries": [
+            "{@actSave con} {@dc 20}, each creature in a 60-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 52 ({@damage 8d12}) Necrotic damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "legendaryActionsLair": 4,
+      "legendary": [
+        {
+          "name": "Pounce",
+          "entries": [
+            "The dracolich moves up to half its {@variantrule Speed|XPHB}, and it makes one Rend attack."
+          ]
+        },
+        {
+          "name": "Sickening Ray",
+          "entries": [
+            "The dracolich uses Spellcasting to cast {@spell Ray of Sickness|XPHB} (level 2 version). The dracolich can't take this action again until the start of its next turn."
+          ]
+        },
+        {
+          "name": "Terrifying Presence",
+          "entries": [
+            "{@actSave wis} {@dc 19}, each creature in a 30-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the dracolich. {@actSaveFail} 11 ({@damage 2d10}) Psychic damage, and the target has the {@condition Frightened|XPHB} condition until the end of its next turn. {@actSaveSuccessOrFail} The dracolich can't take this action again until the start of its next turn."
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Dracolich",
+        "source": "XMM"
+      },
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "traitTags": [
+        "Legendary Resistances",
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "B",
+        "SD"
+      ],
+      "actionTags": [
+        "Breath Weapon",
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "DR"
+      ],
+      "damageTags": [
+        "N",
+        "S",
+        "Y"
+      ],
+      "damageTagsSpell": [
+        "I",
+        "N"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "frightened"
+      ],
+      "conditionInflictSpell": [
+        "poisoned"
+      ],
+      "savingThrowForced": [
+        "constitution",
+        "wisdom"
+      ],
+      "savingThrowForcedLegendary": [
+        "constitution"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Flameskull",
+      "source": "XMM",
+      "page": 120,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "T"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 40,
+        "formula": "9d4 + 18"
+      },
+      "speed": {
+        "walk": 5,
+        "fly": {
+          "number": 40,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 1,
+      "dex": 17,
+      "con": 14,
+      "int": 16,
+      "wis": 10,
+      "cha": 11,
+      "skill": {
+        "arcana": "+5",
+        "perception": "+2"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "fire",
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "poisoned",
+        "prone"
+      ],
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "4",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The flameskull casts one of the following spells, requiring no Somatic or Material components and using Intelligence as the spellcasting ability (spell save {@dc 13}):"
+          ],
+          "will": [
+            "{@spell Mage Hand|XPHB}"
+          ],
+          "daily": {
+            "1": [
+              "{@spell Fireball|XPHB}"
+            ],
+            "2": [
+              "{@spell Magic Missile|XPHB} (level 2 version)"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Illumination",
+          "entries": [
+            "The flameskull sheds {@variantrule Bright Light|XPHB} in a 15-foot radius and {@variantrule Dim Light|XPHB} for an additional 15 feet."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The flameskull has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Undead Restoration",
+          "entries": [
+            "If the flameskull is destroyed, it regains all its {@variantrule Hit Points|XPHB} in 1 hour unless Holy Water is sprinkled on its remains or the {@spell Dispel Evil and Good|XPHB} spell is cast on them."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The flameskull makes two Fire Ray attacks."
+          ]
+        },
+        {
+          "name": "Fire Ray",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 60 ft. {@h}13 ({@damage 3d6 + 3}) Fire damage."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/flameskull.mp3"
+      },
+      "traitTags": [
+        "Illumination",
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "F"
+      ],
+      "damageTagsSpell": [
+        "F",
+        "O"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Flaming Skeleton",
+      "source": "XMM",
+      "page": 283,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 65,
+        "formula": "10d8 + 20"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 14,
+      "con": 15,
+      "int": 10,
+      "wis": 15,
+      "cha": 8,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "fire",
+        "poison"
+      ],
+      "vulnerable": [
+        "bludgeoning"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "understands Common plus one other language but can't speak"
+      ],
+      "cr": "3",
+      "trait": [
+        {
+          "name": "Death Burst",
+          "entries": [
+            "The skeleton explodes when it dies. {@actSave dex} {@dc 12}, each creature in a 10-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the skeleton. {@actSaveFail} 14 ({@damage 4d6}) Fire damage. {@actSaveSuccess} Half damage."
+          ]
+        },
+        {
+          "name": "Illumination",
+          "entries": [
+            "The skeleton sheds {@variantrule Bright Light|XPHB} in a 15-foot radius and {@variantrule Dim Light|XPHB} for an additional 15 feet."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The skeleton makes two attacks, using Flame Scepter or Hurl Flame in any combination."
+          ]
+        },
+        {
+          "name": "Flame Scepter",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Bludgeoning damage plus 3 ({@damage 1d6}) Fire damage."
+          ]
+        },
+        {
+          "name": "Hurl Flame",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 60 ft. {@h}7 ({@damage 1d10 + 2}) Fire damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, shadowfell",
+        "underdark",
+        "urban"
+      ],
+      "traitTags": [
+        "Death Burst",
+        "Illumination"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "CS",
+        "X"
+      ],
+      "damageTags": [
+        "B",
+        "F"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "RA"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ghast",
+      "source": "XMM",
+      "page": 130,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 36,
+        "formula": "8d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 16,
+      "dex": 17,
+      "con": 10,
+      "int": 11,
+      "wis": 10,
+      "cha": 8,
+      "save": {
+        "wis": "+2"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "necrotic"
+      ],
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Common"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Stench",
+          "entries": [
+            "{@actSave con} {@dc 10}, any creature that starts its turn in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the ghast. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition until the start of its next turn. {@actSaveSuccess} The target is immune to this ghast's Stench for 24 hours."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage plus 9 ({@damage 2d8}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Slashing damage. If the target is a non-Undead creature, it is subjected to the following effect. {@actSave con} {@dc 10}. {@actSaveFail} The target has the {@condition Paralyzed|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "swamp",
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/ghast.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "N",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "paralyzed",
+        "poisoned"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ghast Gravecaller",
+      "source": "XMM",
+      "page": 130,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 97,
+        "formula": "15d8 + 30"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 16,
+      "dex": 17,
+      "con": 14,
+      "int": 18,
+      "wis": 14,
+      "cha": 8,
+      "save": {
+        "con": "+5",
+        "wis": "+5"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 12,
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Abyssal",
+        "Common"
+      ],
+      "cr": "6",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The ghast casts one of the following spells, requiring no Material components and using Intelligence as the spellcasting ability:"
+          ],
+          "will": [
+            "{@spell Speak with Dead|XPHB}",
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "ability": "int",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Stench",
+          "entries": [
+            "{@actSave con} {@dc 13}, any creature that starts its turn in a 5-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the ghast. {@actSaveFail} The target has the {@condition Poisoned|XPHB} condition until the start of its next turn. {@actSaveSuccess} The target is immune to this ghast's Stench for 24 hours."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The ghast makes two Horrific Necrosis attacks. It can replace one attack with a Claw attack."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}13 ({@damage 3d6 + 3}) Slashing damage. If the target isn't an Undead, it has the {@condition Paralyzed|XPHB} condition until the end of its next turn."
+          ]
+        },
+        {
+          "name": "Horrific Necrosis",
+          "entries": [
+            "{@atkr m,r} {@hit 7}, reach 5 ft. or range 120 ft. {@h}15 ({@damage 2d10 + 4}) Necrotic damage, and the target has the {@condition Frightened|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "swamp",
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "AB",
+        "C"
+      ],
+      "damageTags": [
+        "N",
+        "S"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "frightened",
+        "paralyzed",
+        "poisoned"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ghost",
+      "source": "XMM",
+      "page": 131,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "10d8"
+      },
+      "speed": {
+        "walk": 5,
+        "fly": {
+          "number": 40,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 7,
+      "dex": 13,
+      "con": 10,
+      "int": 10,
+      "wis": 12,
+      "cha": 17,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "resist": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "lightning",
+        "piercing",
+        "slashing",
+        "thunder"
+      ],
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "4",
+      "spellcasting": [
+        {
+          "name": "Etherealness",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The ghost casts the {@spell Etherealness|XPHB} spell, requiring no spell components and using Charisma as the spellcasting ability. The ghost is visible on the Material Plane while on the Border Ethereal and vice versa, but it can't affect or be affected by anything on the other plane."
+          ],
+          "will": [
+            "{@spell Etherealness|XPHB}"
+          ],
+          "ability": "cha",
+          "displayAs": "action",
+          "hidden": [
+            "will"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Ethereal Sight",
+          "entries": [
+            "The ghost can see 60 feet into the Ethereal Plane when it is on the Material Plane."
+          ]
+        },
+        {
+          "name": "Incorporeal Movement",
+          "entries": [
+            "The ghost can move through other creatures and objects as if they were {@variantrule Difficult Terrain|XPHB}. It takes 5 ({@damage 1d10}) Force damage if it ends its turn inside an object."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The ghost makes two Withering Touch attacks."
+          ]
+        },
+        {
+          "name": "Withering Touch",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}19 ({@damage 3d10 + 3}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Horrific Visage",
+          "entries": [
+            "{@actSave wis} {@dc 13}, each creature in a 60-foot {@variantrule Cone [Area of Effect]|XPHB|Cone} that can see the ghost and isn't an Undead. {@actSaveFail} 10 ({@damage 2d6 + 3}) Psychic damage, and the target has the {@condition Frightened|XPHB} condition until the start of the ghost's next turn. {@actSaveSuccess} The target is immune to this ghost's Horrific Visage for 24 hours."
+          ]
+        },
+        {
+          "name": "Possession {@recharge}",
+          "entries": [
+            "{@actSave cha} {@dc 13}, one Humanoid the ghost can see within 5 feet. {@actSaveFail} The target is possessed by the ghost; the ghost disappears, and the target has the {@condition Incapacitated|XPHB} condition and loses control of its body. The ghost now controls the body, but the target retains awareness. The ghost can't be targeted by any attack, spell, or other effect, except ones that specifically target Undead. The ghost's game statistics are the same, except it uses the possessed target's {@variantrule Speed|XPHB}, as well as the target's Strength, Dexterity, and Constitution modifiers.",
+            "The possession lasts until the body drops to 0 {@variantrule Hit Points|XPHB} or the ghost leaves as a {@variantrule Bonus Action|XPHB}. When the possession ends, the ghost appears in an unoccupied space within 5 feet of the target, and the target is immune to this ghost's {@variantrule Possession|XPHB} for 24 hours. {@actSaveSuccess} The target is immune to this ghost's {@variantrule Possession|XPHB} for 24 hours."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/ghost.mp3"
+      },
+      "traitTags": [
+        "Incorporeal Movement"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "N",
+        "O",
+        "Y"
+      ],
+      "damageTagsSpell": [
+        "O"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "frightened",
+        "incapacitated"
+      ],
+      "savingThrowForced": [
+        "charisma",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ghoul",
+      "source": "XMM",
+      "page": 132,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "5d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 13,
+      "dex": 15,
+      "con": 10,
+      "int": 7,
+      "wis": 10,
+      "cha": 6,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Common"
+      ],
+      "cr": "1",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The ghoul makes two Bite attacks."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage plus 3 ({@damage 1d6}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Slashing damage. If the target is a creature that isn't an Undead or elf, it is subjected to the following effect. {@actSave con} {@dc 10}. {@actSaveFail} The target has the {@condition Paralyzed|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "swamp",
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/ghoul.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "N",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "paralyzed"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Graveyard Revenant",
+      "source": "XMM",
+      "page": 260,
+      "size": [
+        "H"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 161,
+        "formula": "14d12 + 70"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 20,
+      "dex": 14,
+      "con": 20,
+      "int": 13,
+      "wis": 16,
+      "cha": 18,
+      "save": {
+        "str": "+8",
+        "con": "+8",
+        "wis": "+6",
+        "cha": "+7"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 13,
+      "resist": [
+        "necrotic",
+        "psychic"
+      ],
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "stunned",
+        "unconscious"
+      ],
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "7",
+      "trait": [
+        {
+          "name": "Undead Restoration",
+          "entries": [
+            "If the revenant dies, it revives 24 hours later unless {@spell Dispel Evil and Good|XPHB} is cast on its remains. If it revives, it animates another group of corpses elsewhere on the same plane of existence; it now looks different but uses the same stat block and returns with all its {@variantrule Hit Points|XPHB}."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The revenant makes two Suffocate attacks."
+          ]
+        },
+        {
+          "name": "Suffocate",
+          "entries": [
+            "{@atkr m} {@hit 8}, reach 10 ft. {@h}10 ({@damage 1d10 + 5}) Bludgeoning damage plus 10 ({@damage 3d6}) Necrotic damage. If the target is a Large or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 15}). Until the grapple ends, the target is suffocating. The revenant can have up to two targets {@condition Grappled|XPHB} in this way at a time."
+          ]
+        },
+        {
+          "name": "Haunting Glare {@recharge 5}",
+          "entries": [
+            "{@actSave wis} {@dc 15}, each creature in a 30-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the revenant. {@actSaveFail} The target has the {@condition Paralyzed|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "swamp",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "B",
+        "N"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "paralyzed"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Haunting Revenant",
+      "source": "XMM",
+      "page": 260,
+      "size": [
+        "G"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 203,
+        "formula": "14d20 + 56"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 20,
+      "dex": 12,
+      "con": 18,
+      "int": 16,
+      "wis": 18,
+      "cha": 20,
+      "save": {
+        "con": "+8",
+        "wis": "+8"
+      },
+      "senses": [
+        "truesight 60 ft."
+      ],
+      "passive": 14,
+      "resist": [
+        "necrotic",
+        "psychic"
+      ],
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "10",
+      "trait": [
+        {
+          "name": "Haunted Zone",
+          "entries": [
+            "{@actSave con} {@dc 17}, any creature that casts a spell while inside the revenant's space. {@actSaveFail} The spell fails and is wasted."
+          ]
+        },
+        {
+          "name": "Undead Restoration",
+          "entries": [
+            "If the revenant dies, it revives 24 hours later unless {@spell Dispel Evil and Good|XPHB} is cast on its remains. If it revives, it animates another Gargantuan object or structure elsewhere on the same plane of existence; it now looks different but uses the same stat block and returns with all its {@variantrule Hit Points|XPHB}."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The revenant makes two {@variantrule Object|XPHB} Slam attacks and uses Invitation."
+          ]
+        },
+        {
+          "name": "Object Slam",
+          "entries": [
+            "{@atkr m,r} {@hit 9} (with {@variantrule Advantage|XPHB} if the target is inside the revenant's space), reach 10 ft. or range 30/90 ft. {@h}27 ({@damage 5d8 + 5}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Invitation",
+          "entries": [
+            "{@actSave cha} {@dc 17}, each creature in a 60-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} The target is teleported inside the revenant's space and swallowed. A swallowed creature has {@variantrule Cover|XPHB|Total Cover} against attacks and other effects outside the revenant.",
+            "While the revenant has {@variantrule Hit Points|XPHB}, a swallowed creature can leave the revenant's space only by using magic that enables planar travel, such as the {@spell Plane Shift|XPHB} spell."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "swamp",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "senseTags": [
+        "U"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Swallow"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "savingThrowForced": [
+        "charisma",
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Lacedon Ghoul",
+      "source": "XMM",
+      "page": 132,
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "5d8"
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 30
+      },
+      "str": 13,
+      "dex": 15,
+      "con": 10,
+      "int": 7,
+      "wis": 10,
+      "cha": 6,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "cold"
+      ],
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Common"
+      ],
+      "cr": "1",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The ghoul makes two Icy Bite attacks."
+          ]
+        },
+        {
+          "name": "Icy Bite",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}9 ({@damage 2d6 + 2}) Cold damage, and the target's {@variantrule Speed|XPHB} decreases by 5 feet until the start of the ghoul's next turn."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}4 ({@damage 1d4 + 2}) Slashing damage. If the target is a creature that isn't an Undead or elf, it is subjected to the following effect. {@actSave con} {@dc 10}. {@actSaveFail} The target has the {@condition Paralyzed|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Watery Rush",
+          "entries": [
+            "While underwater, the ghoul moves up to half its {@variantrule Swim Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}."
+          ]
+        }
+      ],
+      "environment": [
+        "swamp",
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "C",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "paralyzed"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Lich",
+      "source": "XMM",
+      "page": 196,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "undead",
+        "tags": [
+          "wizard"
+        ]
+      },
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 315,
+        "formula": "42d8 + 126"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 11,
+      "dex": 16,
+      "con": 16,
+      "int": 21,
+      "wis": 14,
+      "cha": 16,
+      "save": {
+        "dex": "+10",
+        "con": "+10",
+        "int": "+12",
+        "wis": "+9"
+      },
+      "skill": {
+        "arcana": "+19",
+        "history": "+12",
+        "insight": "+9",
+        "perception": "+9"
+      },
+      "senses": [
+        "truesight 120 ft."
+      ],
+      "passive": 19,
+      "resist": [
+        "cold",
+        "lightning"
+      ],
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "poisoned"
+      ],
+      "languages": [
+        "all"
+      ],
+      "cr": {
+        "cr": "21",
+        "xpLair": 41000
+      },
+      "gear": [
+        "component pouch|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The lich casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 20}):"
+          ],
+          "will": [
+            "{@spell Detect Magic|XPHB}",
+            "{@spell Detect Thoughts|XPHB}",
+            "{@spell Dispel Magic|XPHB}",
+            "{@spell Fireball|XPHB} (level 5 version)",
+            "{@spell Invisibility|XPHB}",
+            "{@spell Lightning Bolt|XPHB} (level 5 version)",
+            "{@spell Mage Hand|XPHB}",
+            "{@spell Prestidigitation|XPHB}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell Animate Dead|XPHB}",
+              "{@spell Dimension Door|XPHB}",
+              "{@spell Plane Shift|XPHB}"
+            ],
+            "1e": [
+              "{@spell Chain Lightning|XPHB}",
+              "{@spell Finger of Death|XPHB}",
+              "{@spell Power Word Kill|XPHB}",
+              "{@spell Scrying|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "action"
+        },
+        {
+          "name": "Protective Magic",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The lich casts {@spell Counterspell|XPHB} or {@spell Shield|XPHB} in response to the spell's trigger, using the same spellcasting ability as Spellcasting."
+          ],
+          "will": [
+            "{@spell Counterspell|XPHB}",
+            "{@spell Shield|XPHB}"
+          ],
+          "ability": "int",
+          "displayAs": "reaction",
+          "hidden": [
+            "will"
+          ]
+        },
+        {
+          "name": "Frightening Gaze",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The lich casts {@spell Fear|XPHB}, using the same spellcasting ability as Spellcasting. The lich can't take this action again until the start of its next turn."
+          ],
+          "legendary": {
+            "1": [
+              "{@spell Fear|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "legendary",
+          "hidden": [
+            "legendary"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Legendary Resistance (4/Day, or 5/Day in Lair)",
+          "entries": [
+            "If the lich fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Spirit Jar",
+          "entries": [
+            "If destroyed, the lich reforms in {@dice 1d10} days if it has a spirit jar, reviving with all its {@variantrule Hit Points|XPHB}. The new body appears in an unoccupied space within the lich's lair."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The lich makes three attacks, using Eldritch Burst or Paralyzing Touch in any combination."
+          ]
+        },
+        {
+          "name": "Eldritch Burst",
+          "entries": [
+            "{@atkr m,r} {@hit 12}, reach 5 ft. or range 120 ft. {@h}31 ({@damage 4d12 + 5}) Force damage."
+          ]
+        },
+        {
+          "name": "Paralyzing Touch",
+          "entries": [
+            "{@atkr m} {@hit 12}, reach 5 ft. {@h}15 ({@damage 3d6 + 5}) Cold damage, and the target has the {@condition Paralyzed|XPHB} condition until the start of the lich's next turn."
+          ]
+        }
+      ],
+      "legendaryActionsLair": 4,
+      "legendary": [
+        {
+          "name": "Deathly Teleport",
+          "entries": [
+            "The lich teleports up to 60 feet to an unoccupied space it can see, and each creature within 10 feet of the space it left takes 11 ({@damage 2d10}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Disrupt Life",
+          "entries": [
+            "{@actSave con} {@dc 20}, each creature that isn't an Undead in a 20-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the lich. {@actSaveFail} 31 ({@damage 9d6}) Necrotic damage. {@actSaveSuccess} Half damage. {@actSaveSuccessOrFail} The lich can't take this action again until the start of its next turn."
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Lich",
+        "source": "XMM"
+      },
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/lich.mp3"
+      },
+      "traitTags": [
+        "Legendary Resistances"
+      ],
+      "senseTags": [
+        "U"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "XX"
+      ],
+      "damageTags": [
+        "C",
+        "N",
+        "O"
+      ],
+      "damageTagsSpell": [
+        "F",
+        "L",
+        "N",
+        "O",
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "paralyzed"
+      ],
+      "conditionInflictSpell": [
+        "frightened",
+        "invisible"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "dexterity",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Minotaur Skeleton",
+      "source": "XMM",
+      "page": 283,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "undead",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "6d10 + 12"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 18,
+      "dex": 11,
+      "con": 15,
+      "int": 6,
+      "wis": 8,
+      "cha": 5,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "immune": [
+        "poison"
+      ],
+      "vulnerable": [
+        "bludgeoning"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "understands Abyssal but can't speak"
+      ],
+      "cr": "2",
+      "action": [
+        {
+          "name": "Gore",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage. If the target is a Large or smaller creature and the skeleton moved 20+ feet straight toward it immediately before the hit, the target takes an extra 9 ({@damage 2d8}) Piercing damage and has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Slam",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}15 ({@damage 2d10 + 4}) Bludgeoning damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, shadowfell",
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/minotaur-skeleton.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "AB",
+        "CS"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Mummy",
+      "source": "XMM",
+      "page": 219,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 58,
+        "formula": "9d8 + 18"
+      },
+      "speed": {
+        "walk": 20
+      },
+      "str": 16,
+      "dex": 8,
+      "con": 15,
+      "int": 6,
+      "wis": 12,
+      "cha": 12,
+      "save": {
+        "wis": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "vulnerable": [
+        "fire"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "poisoned"
+      ],
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "3",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The mummy makes two Rotting Fist attacks and uses Dreadful Glare."
+          ]
+        },
+        {
+          "name": "Rotting Fist",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}8 ({@damage 1d10 + 3}) Bludgeoning damage plus 10 ({@damage 3d6}) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target can't regain {@variantrule Hit Points|XPHB}, its {@variantrule Hit Points|XPHB|Hit Point} maximum doesn't return to normal when finishing a {@variantrule Long Rest|XPHB}, and its {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by 10 ({@dice 3d6}) every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 {@variantrule Hit Points|XPHB} by this attack."
+          ]
+        },
+        {
+          "name": "Dreadful Glare",
+          "entries": [
+            "{@actSave wis} {@dc 11}, one creature the mummy can see within 60 feet. {@actSaveFail} The target has the {@condition Frightened|XPHB} condition until the end of the mummy's next turn. {@actSaveSuccess} The target is immune to this mummy's Dreadful Glare for 24 hours."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "swamp"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/mummy.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "B",
+        "N"
+      ],
+      "miscTags": [
+        "CUR",
+        "MA"
+      ],
+      "conditionInflict": [
+        "frightened"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Mummy Lord",
+      "source": "XMM",
+      "page": 221,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": {
+        "type": "undead",
+        "tags": [
+          "cleric"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 187,
+        "formula": "25d8 + 75"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 18,
+      "dex": 10,
+      "con": 17,
+      "int": 11,
+      "wis": 19,
+      "cha": 16,
+      "save": {
+        "int": "+5",
+        "wis": "+9"
+      },
+      "skill": {
+        "history": "+5",
+        "perception": "+9",
+        "religion": "+5"
+      },
+      "senses": [
+        "truesight 60 ft."
+      ],
+      "passive": 19,
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "vulnerable": [
+        "fire"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "poisoned"
+      ],
+      "languages": [
+        "Common plus three other languages"
+      ],
+      "cr": {
+        "cr": "15",
+        "xpLair": 15000
+      },
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The mummy casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 17}, {@hit 9} to hit with spell attacks):"
+          ],
+          "will": [
+            "{@spell Dispel Magic|XPHB}",
+            "{@spell Thaumaturgy|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Animate Dead|XPHB}",
+              "{@spell Harm|XPHB}",
+              "{@spell Insect Plague|XPHB} (level 7 version)"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        },
+        {
+          "name": "Dread Command",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The mummy casts {@spell Command|XPHB} (level 2 version), using the same spellcasting ability as Spellcasting. The mummy can't take this action again until the start of its next turn."
+          ],
+          "legendary": {
+            "1": [
+              "{@spell Command|XPHB} (level 2 version)"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "legendary",
+          "hidden": [
+            "legendary"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+          "entries": [
+            "If the mummy fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The mummy has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Undead Restoration",
+          "entries": [
+            "If destroyed, the mummy gains a new body in 24 hours if its heart is intact, reviving with all its {@variantrule Hit Points|XPHB}. The new body appears in an unoccupied space within the mummy's lair. The heart is a Tiny object that has AC 17, HP 10, and {@variantrule Immunity|XPHB} to all damage except Fire."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The mummy makes one Rotting Fist or Channel Negative Energy attack, and it uses Dreadful Glare."
+          ]
+        },
+        {
+          "name": "Rotting Fist",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}15 ({@damage 2d10 + 4}) Bludgeoning damage plus 10 ({@damage 3d6}) Necrotic damage. If the target is a creature, it is cursed. While cursed, the target can't regain {@variantrule Hit Points|XPHB}, it gains no benefit from finishing a {@variantrule Long Rest|XPHB}, and its {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by 10 ({@dice 3d6}) every 24 hours that elapse. A creature dies and turns to dust if reduced to 0 {@variantrule Hit Points|XPHB} by this attack."
+          ]
+        },
+        {
+          "name": "Channel Negative Energy",
+          "entries": [
+            "{@atkr r} {@hit 9}, range 60 ft. {@h}25 ({@damage 6d6 + 4}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Dreadful Glare",
+          "entries": [
+            "{@actSave wis} {@dc 17}, one creature the mummy can see within 60 feet. {@actSaveFail} 25 ({@damage 6d6 + 4}) Psychic damage, and the target has the {@condition Paralyzed|XPHB} condition until the end of the mummy's next turn."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Whirlwind of Sand",
+          "entries": [
+            "{@actTrigger} The mummy is hit by an attack roll. {@actResponse} The mummy adds 2 to its AC against the attack, possibly causing the attack to miss, and the mummy teleports up to 60 feet to an unoccupied space it can see. Each creature of its choice that it can see within 5 feet of its destination space has the {@condition Blinded|XPHB} condition until the end of the mummy's next turn."
+          ]
+        }
+      ],
+      "legendaryActionsLair": 4,
+      "legendary": [
+        {
+          "name": "Glare",
+          "entries": [
+            "The mummy uses Dreadful Glare. The mummy can't take this action again until the start of its next turn."
+          ]
+        },
+        {
+          "name": "Necrotic Strike",
+          "entries": [
+            "The mummy makes one Rotting Fist or Channel Negative Energy attack."
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Mummy Lord",
+        "source": "XMM"
+      },
+      "environment": [
+        "desert",
+        "swamp"
+      ],
+      "treasure": [
+        "relics"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/mummy-lord.mp3"
+      },
+      "traitTags": [
+        "Legendary Resistances",
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "U"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "B",
+        "N",
+        "Y"
+      ],
+      "damageTagsSpell": [
+        "N",
+        "P"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "CUR",
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "blinded",
+        "paralyzed"
+      ],
+      "conditionInflictSpell": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "savingThrowForcedLegendary": [
+        "constitution"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ogre Zombie",
+      "source": "XMM",
+      "page": 346,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "HBTD"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        8
+      ],
+      "hp": {
+        "average": 85,
+        "formula": "9d10 + 36"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 19,
+      "dex": 6,
+      "con": 18,
+      "int": 3,
+      "wis": 6,
+      "cha": 5,
+      "save": {
+        "wis": "+0"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 8,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "understands Common and Giant but can't speak"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Undead Fortitude",
+          "entries": [
+            "If damage reduces the zombie to 0 {@variantrule Hit Points|XPHB}, it makes a Constitution saving throw ({@dc 5} plus the damage taken) unless the damage is Radiant or from a {@variantrule Critical Hit|XPHB}. On a successful save, the zombie drops to 1 {@variantrule Hit Points|XPHB|Hit Point} instead."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Slam",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}13 ({@damage 2d8 + 4}) Bludgeoning damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, shadowfell",
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/ogre-zombie.mp3"
+      },
+      "traitTags": [
+        "Undead Fortitude"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "CS",
+        "GI"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Poltergeist",
+      "source": "XMM",
+      "page": 246,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "5d8"
+      },
+      "speed": {
+        "walk": 5,
+        "fly": {
+          "number": 50,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 1,
+      "dex": 14,
+      "con": 11,
+      "int": 10,
+      "wis": 10,
+      "cha": 14,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "lightning",
+        "piercing",
+        "slashing",
+        "thunder"
+      ],
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Incorporeal Movement",
+          "entries": [
+            "The poltergeist can move through other creatures and objects as if they were {@variantrule Difficult Terrain|XPHB}. It takes 5 ({@damage 1d10}) Force damage if it ends its turn inside an object."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The poltergeist makes one Object Slam attack and uses Telekinetic Thrust."
+          ]
+        },
+        {
+          "name": "Object Slam",
+          "entries": [
+            "{@atkr m,r} {@hit 4}, reach 5 ft. or range 30 ft. {@h}7 ({@damage 2d4 + 2}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Telekinetic Thrust",
+          "entries": [
+            "{@actSave str} {@dc 12}, one creature the poltergeist can see within 30 feet. {@actSaveFail} 9 ({@damage 2d6 + 2}) Force damage, and the target is pushed up to 30 feet straight away from the poltergeist."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Vanish",
+          "entries": [
+            "The poltergeist gives itself the {@condition Invisible|XPHB} condition or ends that condition on itself."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/poltergeist.mp3"
+      },
+      "traitTags": [
+        "Incorporeal Movement"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "B",
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Revenant",
+      "source": "XMM",
+      "page": 259,
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 127,
+        "formula": "15d8 + 60"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 18,
+      "int": 13,
+      "wis": 16,
+      "cha": 18,
+      "save": {
+        "str": "+7",
+        "con": "+7",
+        "wis": "+6",
+        "cha": "+7"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 13,
+      "resist": [
+        "necrotic",
+        "psychic"
+      ],
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "paralyzed",
+        "poisoned",
+        "stunned"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Regeneration",
+          "entries": [
+            "The revenant regains 10 {@variantrule Hit Points|XPHB} at the start of each of its turns. If the revenant takes Fire or Radiant damage, this trait doesn't function at the start of its next turn. Its body is destroyed only if it starts its turn with 0 {@variantrule Hit Points|XPHB} and doesn't regenerate."
+          ]
+        },
+        {
+          "name": "Undead Restoration",
+          "entries": [
+            "If the revenant dies, it revives 24 hours later in a different body unless {@spell Dispel Evil and Good|XPHB} is cast on its corpse. If it revives, it animates a Humanoid corpse elsewhere on the same plane of existence; it now looks different but uses the same stat block and returns with all its {@variantrule Hit Points|XPHB}."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The revenant uses Vengeful Glare and makes two Slam attacks."
+          ]
+        },
+        {
+          "name": "Slam",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}11 ({@damage 2d6 + 4}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Vengeful Glare",
+          "entries": [
+            "{@actSave wis} {@dc 15}, one creature the revenant can see within 30 feet. {@actSaveFail} The target has the {@condition Frightened|XPHB} condition and repeats the save at the end of each of its turns, ending the effect on itself on a success. After 1 minute, it succeeds automatically. If the {@condition Frightened|XPHB} target is cursed by the revenant (see Vow of Revenge), the target also has the {@condition Paralyzed|XPHB} condition for the duration."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Vow of Revenge (1/Day)",
+          "entries": [
+            "The revenant curses one creature it can see within 30 feet of itself. The revenant knows the distance to and direction of the cursed target, even if it is on a different plane of existence. The curse ends on the target if the revenant uses this {@variantrule Bonus Action|XPHB} on a different creature."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "swamp",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/revenant.mp3"
+      },
+      "traitTags": [
+        "Regeneration"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "N"
+      ],
+      "miscTags": [
+        "CUR",
+        "MA"
+      ],
+      "conditionInflict": [
+        "frightened",
+        "paralyzed"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Shadow",
+      "source": "XMM",
+      "page": 272,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "HBTD"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 27,
+        "formula": "5d8 + 5"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 6,
+      "dex": 14,
+      "con": 13,
+      "int": 6,
+      "wis": 10,
+      "cha": 8,
+      "skill": {
+        "stealth": "+6"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "acid",
+        "cold",
+        "fire",
+        "lightning",
+        "thunder"
+      ],
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "vulnerable": [
+        "radiant"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "frightened",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "cr": "1/2",
+      "trait": [
+        {
+          "name": "Amorphous",
+          "entries": [
+            "The shadow can move through a space as narrow as 1 inch without expending extra movement to do so."
+          ]
+        },
+        {
+          "name": "Sunlight Weakness",
+          "entries": [
+            "While in sunlight, the shadow has {@variantrule Disadvantage|XPHB} on {@variantrule D20 Test|XPHB|D20 Tests}."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Draining Swipe",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Necrotic damage, and the target's Strength score decreases by {@dice 1d4}. The target dies if this reduces that score to 0. If a Humanoid is slain by this attack, a Shadow rises from the corpse {@dice 1d4} hours later."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shadow Stealth",
+          "entries": [
+            "While in {@variantrule Dim Light|XPHB} or {@variantrule Darkness|XPHB}, the shadow takes the Hide action."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, shadowfell",
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/shadow.mp3"
+      },
+      "traitTags": [
+        "Amorphous"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "damageTags": [
+        "N"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Skeleton",
+      "source": "XMM",
+      "page": 282,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "XPHB",
+          "page": 356
+        },
+        {
+          "source": "HBTD"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 13,
+        "formula": "2d8 + 4"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 16,
+      "con": 15,
+      "int": 6,
+      "wis": 8,
+      "cha": 5,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "immune": [
+        "poison"
+      ],
+      "vulnerable": [
+        "bludgeoning"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "understands Common plus one other language but can't speak"
+      ],
+      "cr": "1/4",
+      "gear": [
+        "shortbow|xphb",
+        "shortsword|xphb"
+      ],
+      "action": [
+        {
+          "name": "Shortsword",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Shortbow",
+          "entries": [
+            "{@atkr r} {@hit 5}, range 80/320 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, shadowfell",
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/skeleton.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "CS",
+        "X"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Specter",
+      "source": "XMM",
+      "page": 290,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "HBTD"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "5d8"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": {
+          "number": 50,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 1,
+      "dex": 14,
+      "con": 11,
+      "int": 10,
+      "wis": 10,
+      "cha": 11,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "lightning",
+        "piercing",
+        "slashing",
+        "thunder"
+      ],
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "understands Common plus one other language but can't speak"
+      ],
+      "cr": "1",
+      "trait": [
+        {
+          "name": "Incorporeal Movement",
+          "entries": [
+            "The specter can move through other creatures and objects as if they were {@variantrule Difficult Terrain|XPHB}. It takes 5 ({@damage 1d10}) Force damage if it ends its turn inside an object."
+          ]
+        },
+        {
+          "name": "Sunlight Sensitivity",
+          "entries": [
+            "While in sunlight, the specter has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Life Drain",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}7 ({@damage 2d6}) Necrotic damage. If the target is a creature, its {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the damage taken."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/specter.mp3"
+      },
+      "traitTags": [
+        "Incorporeal Movement",
+        "Sunlight Sensitivity"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "CS",
+        "X"
+      ],
+      "damageTags": [
+        "N",
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Swarm of Crawling Claws",
+      "source": "XMM",
+      "page": 83,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "HBTD"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "undead",
+        "swarmSize": "T"
+      },
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 49,
+        "formula": "11d8"
+      },
+      "speed": {
+        "walk": 30,
+        "climb": 30
+      },
+      "str": 14,
+      "dex": 14,
+      "con": 11,
+      "int": 5,
+      "wis": 10,
+      "cha": 4,
+      "senses": [
+        "blindsight 30 ft."
+      ],
+      "passive": 10,
+      "resist": [
+        "bludgeoning",
+        "piercing",
+        "slashing"
+      ],
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened",
+        "grappled",
+        "incapacitated",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "stunned"
+      ],
+      "languages": [
+        "understands Common but can't speak"
+      ],
+      "cr": "3",
+      "trait": [
+        {
+          "name": "Swarm",
+          "entries": [
+            "The swarm can occupy another creature's space and vice versa, and the swarm can move through any opening large enough for a Tiny creature. The swarm can't regain {@variantrule Hit Points|XPHB} or gain {@variantrule Temporary Hit Points|XPHB}."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Swarm of Grasping Hands",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}20 ({@damage 4d8 + 2}) Necrotic damage, or 11 ({@damage 2d8 + 2}) Necrotic damage if the swarm is {@variantrule Bloodied|XPHB}. If the target is a Medium or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "environment": [
+        "any"
+      ],
+      "senseTags": [
+        "B"
+      ],
+      "languageTags": [
+        "C",
+        "CS"
+      ],
+      "damageTags": [
+        "N"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Vampire",
+      "source": "XMM",
+      "page": 317,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 195,
+        "formula": "23d8 + 92"
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 40
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 18,
+      "dex": 18,
+      "con": 18,
+      "int": 17,
+      "wis": 15,
+      "cha": 18,
+      "save": {
+        "dex": "+9",
+        "con": "+9",
+        "wis": "+7",
+        "cha": "+9"
+      },
+      "skill": {
+        "perception": "+7",
+        "stealth": "+9"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 17,
+      "resist": [
+        "necrotic"
+      ],
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": {
+        "cr": "13",
+        "xpLair": 11500
+      },
+      "spellcasting": [
+        {
+          "name": "Charm {@recharge 5}",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The vampire casts {@spell Charm Person|XPHB}, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 17}), and the duration is 24 hours. The Charmed target is a willing recipient of the vampire's Bite, the damage of which doesn't end the spell. When the spell ends, the target is unaware it was Charmed by the vampire."
+          ],
+          "recharge": {
+            "5": [
+              "{@spell Charm Person|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "bonus",
+          "hidden": [
+            "recharge"
+          ]
+        },
+        {
+          "name": "Beguile",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The vampire casts {@spell Command|XPHB}, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 17}). The vampire can't take this action again until the start of its next turn."
+          ],
+          "legendary": {
+            "1": [
+              "{@spell Command|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "legendary",
+          "hidden": [
+            "legendary"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+          "entries": [
+            "If the vampire fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Misty Escape",
+          "entries": [
+            "If the vampire drops to 0 {@variantrule Hit Points|XPHB} outside its resting place, the vampire uses Shape-Shift to become mist (no action required). If it can't use Shape-Shift, it is destroyed.",
+            "While it has 0 {@variantrule Hit Points|XPHB} in mist form, it can't return to its vampire form, and it must reach its resting place within 2 hours or be destroyed. Once in its resting place, it returns to its vampire form and has the {@condition Paralyzed|XPHB} condition until it regains any {@variantrule Hit Points|XPHB}, and it regains 1 {@variantrule Hit Points|XPHB|Hit Point} after spending 1 hour there."
+          ]
+        },
+        {
+          "name": "Spider Climb",
+          "entries": [
+            "The vampire can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+          ]
+        },
+        {
+          "name": "Vampire Weakness",
+          "entries": [
+            "The vampire has these weaknesses:",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "Forbiddance",
+                  "entries": [
+                    "The vampire can't enter a residence without an invitation from an occupant."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Running Water",
+                  "entries": [
+                    "The vampire takes 20 Acid damage if it ends its turn in running water."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Stake to the Heart",
+                  "entries": [
+                    "If a weapon that deals Piercing damage is driven into the vampire's heart while the vampire has the {@condition Incapacitated|XPHB} condition in its resting place, the vampire has the {@condition Paralyzed|XPHB} condition until the weapon is removed."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Sunlight",
+                  "entries": [
+                    "The vampire takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has {@variantrule Disadvantage|XPHB} on attack rolls and ability checks."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack (Vampire Form Only)",
+          "entries": [
+            "The vampire makes two Grave Strike attacks and uses Bite."
+          ]
+        },
+        {
+          "name": "Grave Strike (Vampire Form Only)",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 5 ft. {@h}8 ({@damage 1d8 + 4}) Bludgeoning damage plus 7 ({@damage 2d6}) Necrotic damage. If the target is a Large or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 14}) from one of two hands."
+          ]
+        },
+        {
+          "name": "Bite (Bat or Vampire Form Only)",
+          "entries": [
+            "{@actSave con} {@dc 17}, one creature within 5 feet that is willing or that has the {@condition Grappled|XPHB}, {@condition Incapacitated|XPHB}, or {@condition Restrained|XPHB} condition. {@actSaveFail} 6 ({@damage 1d4 + 4}) Piercing damage plus 13 ({@damage 3d8}) Necrotic damage. The target's {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains {@variantrule Hit Points|XPHB} equal to that amount. A Humanoid reduced to 0 {@variantrule Hit Points|XPHB} by this damage and then buried rises the following sunset as a {@creature Vampire Spawn|XMM} under the vampire's control."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shape-Shift",
+          "entries": [
+            "If the vampire isn't in sunlight or running water, it shape-shifts into a Tiny bat ({@variantrule Speed|XPHB} 5 ft., {@variantrule Fly Speed|XPHB} 30 ft.) or a Medium cloud of mist ({@variantrule Speed|XPHB} 5 ft., {@variantrule Fly Speed|XPHB} 20 ft. [hover]), or it returns to its vampire form. Anything it is wearing transforms with it.",
+            "While in bat form, the vampire can't speak. Its game statistics, other than its size and {@variantrule Speed|XPHB}, are unchanged.",
+            "While in mist form, the vampire can't take any actions, speak, or manipulate objects. It is weightless and can enter an enemy's space and stop there. If air can pass through a space, the mist can do so, but it can't pass through liquid. It has {@variantrule Resistance|XPHB} to all damage, except the damage it takes from sunlight."
+          ]
+        }
+      ],
+      "legendaryActionsLair": 4,
+      "legendary": [
+        {
+          "name": "Deathless Strike",
+          "entries": [
+            "The vampire moves up to half its {@variantrule Speed|XPHB}, and it makes one Grave Strike attack."
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Vampire",
+        "source": "XMM"
+      },
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/vampire.mp3"
+      },
+      "traitTags": [
+        "Legendary Resistances",
+        "Spider Climb"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "A",
+        "B",
+        "N",
+        "P",
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "charmed",
+        "grappled",
+        "incapacitated",
+        "paralyzed"
+      ],
+      "conditionInflictSpell": [
+        "charmed",
+        "prone"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "savingThrowForcedLegendary": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Vampire Nightbringer",
+      "source": "XMM",
+      "page": 316,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 142,
+        "formula": "19d8 + 57"
+      },
+      "speed": {
+        "walk": 30,
+        "fly": {
+          "number": 30,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 16,
+      "dex": 18,
+      "con": 16,
+      "int": 13,
+      "wis": 14,
+      "cha": 15,
+      "save": {
+        "dex": "+7",
+        "wis": "+5"
+      },
+      "skill": {
+        "perception": "+5",
+        "stealth": "+7"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 15,
+      "immune": [
+        "cold",
+        "necrotic"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "8",
+      "trait": [
+        {
+          "name": "Sunlight Hypersensitivity",
+          "entries": [
+            "The vampire takes 10 Radiant damage if it starts its turn in sunlight. While in sunlight, it has {@variantrule Disadvantage|XPHB} on attack rolls and ability checks."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The vampire makes one Bite attack and one Shadow Strike attack."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}7 ({@damage 1d6 + 4}) Piercing damage plus 10 ({@damage 3d6}) Necrotic damage. The target's {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains {@variantrule Hit Points|XPHB} equal to that amount."
+          ]
+        },
+        {
+          "name": "Shadow Strike",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}7 ({@damage 1d6 + 4}) Slashing damage plus 14 ({@damage 4d6}) Cold damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Shadow Stealth",
+          "entries": [
+            "While in {@variantrule Dim Light|XPHB} or {@variantrule Darkness|XPHB}, the vampire takes the Hide action."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "traitTags": [
+        "Sunlight Sensitivity"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "C",
+        "N",
+        "P",
+        "R",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Vampire Spawn",
+      "source": "XMM",
+      "page": 315,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 90,
+        "formula": "12d8 + 36"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 16,
+      "dex": 16,
+      "con": 16,
+      "int": 11,
+      "wis": 10,
+      "cha": 12,
+      "save": {
+        "dex": "+6",
+        "wis": "+3"
+      },
+      "skill": {
+        "perception": "+3",
+        "stealth": "+6"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 13,
+      "resist": [
+        "necrotic"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Spider Climb",
+          "entries": [
+            "The vampire can climb difficult surfaces, including along ceilings, without needing to make an ability check."
+          ]
+        },
+        {
+          "name": "Vampire Weakness",
+          "entries": [
+            "The vampire has these weaknesses:",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "Forbiddance",
+                  "entries": [
+                    "The vampire can't enter a residence without an invitation from an occupant."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Running Water",
+                  "entries": [
+                    "The vampire takes 20 Acid damage if it ends its turn in running water."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Stake to the Heart",
+                  "entries": [
+                    "The vampire is destroyed if a weapon that deals Piercing damage is driven into the vampire's heart while the vampire has the {@condition Incapacitated|XPHB} condition."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Sunlight",
+                  "entries": [
+                    "The vampire takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has {@variantrule Disadvantage|XPHB} on attack rolls and ability checks."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The vampire makes two Claw attacks and uses Bite."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}8 ({@damage 2d4 + 3}) Slashing damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 13}) from one of two claws."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@actSave con} {@dc 14}, one creature within 5 feet that is willing or that has the {@condition Grappled|XPHB}, {@condition Incapacitated|XPHB}, or {@condition Restrained|XPHB} condition. {@actSaveFail} 5 ({@damage 1d4 + 3}) Piercing damage plus 10 ({@damage 3d6}) Necrotic damage. The target's {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the Necrotic damage taken, and the vampire regains {@variantrule Hit Points|XPHB} equal to that amount."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Deathless Agility",
+          "entries": [
+            "The vampire takes the Dash or Disengage action."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/vampire-spawn.mp3"
+      },
+      "traitTags": [
+        "Spider Climb"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "A",
+        "N",
+        "P",
+        "R",
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "grappled",
+        "incapacitated"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Vampire Umbral Lord",
+      "source": "XMM",
+      "page": 318,
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 187,
+        "formula": "22d8 + 88"
+      },
+      "speed": {
+        "walk": 40,
+        "climb": 40,
+        "fly": {
+          "number": 40,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 20,
+      "dex": 18,
+      "con": 18,
+      "int": 19,
+      "wis": 16,
+      "cha": 21,
+      "save": {
+        "str": "+10",
+        "dex": "+9",
+        "wis": "+8",
+        "cha": "+10"
+      },
+      "skill": {
+        "arcana": "+9",
+        "perception": "+13",
+        "stealth": "+9"
+      },
+      "senses": [
+        "blindsight 120 ft."
+      ],
+      "passive": 23,
+      "immune": [
+        "cold",
+        "necrotic"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion"
+      ],
+      "languages": [
+        "Common plus three other languages"
+      ],
+      "cr": {
+        "cr": "15",
+        "xpLair": 15000
+      },
+      "spellcasting": [
+        {
+          "name": "Hunger of Hadar {@recharge 5}",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The vampire casts {@spell Hunger of Hadar|XPHB} (level 5 version), requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 18})."
+          ],
+          "recharge": {
+            "5": [
+              "{@spell Hunger of Hadar|XPHB} (level 5 version)"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action",
+          "hidden": [
+            "recharge"
+          ]
+        },
+        {
+          "name": "Beguile",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The vampire casts {@spell Command|XPHB}, requiring no spell components and using Charisma as the spellcasting ability (spell save {@dc 18}). The vampire can't take this action again until the start of its next turn."
+          ],
+          "legendary": {
+            "1": [
+              "{@spell Command|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "legendary",
+          "hidden": [
+            "legendary"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Legendary Resistance (3/Day, or 4/Day in Lair)",
+          "entries": [
+            "If the vampire fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Shadow Escape",
+          "entries": [
+            "If the vampire drops to 0 {@variantrule Hit Points|XPHB} outside its resting place, it teleports into its resting place unless it is in running water or sunlight. If it can't teleport, it is destroyed. Once inside its resting place, it has the {@condition Paralyzed|XPHB} condition for 1 hour, after which it regains 1 {@variantrule Hit Points|XPHB|Hit Point}."
+          ]
+        },
+        {
+          "name": "Vampire Weakness",
+          "entries": [
+            "The vampire has these weaknesses:",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "Forbiddance",
+                  "entries": [
+                    "The vampire can't enter a residence without an invitation from an occupant."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Running Water",
+                  "entries": [
+                    "The vampire takes 20 Acid damage if it ends its turn in running water."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Stake to the Heart",
+                  "entries": [
+                    "If a weapon that deals Piercing damage is driven into the vampire's heart while the vampire has the {@condition Incapacitated|XPHB} condition in its resting place, the vampire has the {@condition Paralyzed|XPHB} condition until the weapon is removed."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Sunlight",
+                  "entries": [
+                    "The vampire takes 20 Radiant damage if it starts its turn in sunlight. While in sunlight, it has {@variantrule Disadvantage|XPHB} on attack rolls and ability checks."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The vampire makes two attacks, using Grave Strike or Sickening Ray in any combination."
+          ]
+        },
+        {
+          "name": "Grave Strike",
+          "entries": [
+            "{@atkr m} {@hit 10}, reach 5 ft. {@h}9 ({@damage 1d8 + 5}) Slashing damage plus 13 ({@damage 3d8}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Sickening Ray",
+          "entries": [
+            "{@atkr r} {@hit 10}, range 120 ft. {@h}16 ({@damage 2d10 + 5}) Necrotic damage, and the target has the {@condition Poisoned|XPHB} condition until the start of the vampire's next turn."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Sanguine Drain",
+          "entries": [
+            "{@actSave con} {@dc 18}, one creature the vampire can see within 30 feet that isn't a Construct or an Undead. {@actSaveFail} 14 ({@damage 4d6}) Necrotic damage. The target's {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the damage taken, and the vampire regains {@variantrule Hit Points|XPHB} equal to that amount."
+          ]
+        }
+      ],
+      "legendaryActionsLair": 4,
+      "legendary": [
+        {
+          "name": "Umbral Strike",
+          "entries": [
+            "The vampire moves up to half its {@variantrule Speed|XPHB}, and it makes one Grave Strike or Sickening Ray attack."
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Vampire",
+        "source": "XMM"
+      },
+      "environment": [
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "traitTags": [
+        "Legendary Resistances"
+      ],
+      "senseTags": [
+        "B"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C"
+      ],
+      "damageTags": [
+        "A",
+        "N",
+        "R",
+        "S"
+      ],
+      "damageTagsSpell": [
+        "A",
+        "C"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "incapacitated",
+        "paralyzed",
+        "poisoned"
+      ],
+      "conditionInflictSpell": [
+        "blinded",
+        "prone"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "savingThrowForcedLegendary": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Warhorse Skeleton",
+      "source": "XMM",
+      "page": 282,
+      "srd52": true,
+      "size": [
+        "L"
+      ],
+      "type": "undead",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "3d10 + 6"
+      },
+      "speed": {
+        "walk": 60
+      },
+      "str": 18,
+      "dex": 12,
+      "con": 15,
+      "int": 2,
+      "wis": 8,
+      "cha": 5,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "immune": [
+        "poison"
+      ],
+      "vulnerable": [
+        "bludgeoning"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "cr": "1/2",
+      "action": [
+        {
+          "name": "Hooves",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}7 ({@damage 1d6 + 4}) Bludgeoning damage. If the target is a Large or smaller creature and the skeleton moved 20+ feet straight toward it immediately before the hit, the target has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, shadowfell",
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/warhorse-skeleton.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Wight",
+      "source": "XMM",
+      "page": 332,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 82,
+        "formula": "11d8 + 33"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 15,
+      "dex": 14,
+      "con": 16,
+      "int": 10,
+      "wis": 13,
+      "cha": 15,
+      "skill": {
+        "perception": "+3",
+        "stealth": "+4"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 13,
+      "resist": [
+        "necrotic"
+      ],
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "3",
+      "gear": [
+        "studded leather armor|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Sunlight Sensitivity",
+          "entries": [
+            "While in sunlight, the wight has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The wight makes two attacks, using Necrotic Sword or Necrotic Bow in any combination. It can replace one attack with a use of Life Drain."
+          ]
+        },
+        {
+          "name": "Necrotic Sword",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}6 ({@damage 1d8 + 2}) Slashing damage plus 4 ({@damage 1d8}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Necrotic Bow",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 150/600 ft. {@h}6 ({@damage 1d8 + 2}) Piercing damage plus 4 ({@damage 1d8}) Necrotic damage."
+          ]
+        },
+        {
+          "name": "Life Drain",
+          "entries": [
+            "{@actSave con} {@dc 13}, one creature within 5 feet. {@actSaveFail} 6 ({@damage 1d8 + 2}) Necrotic damage, and the target's {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the damage taken.",
+            "A Humanoid slain by this attack rises 24 hours later as a {@creature Zombie|XMM} under the wight's control, unless the Humanoid is restored to life or its body is destroyed. The wight can have no more than twelve zombies under its control at a time."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "planar, shadowfell",
+        "swamp",
+        "underdark",
+        "urban"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/wight.mp3"
+      },
+      "traitTags": [
+        "Sunlight Sensitivity"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "N",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Will-o'-Wisp",
+      "source": "XMM",
+      "page": 333,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "T"
+      ],
+      "type": "undead",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        19
+      ],
+      "hp": {
+        "average": 27,
+        "formula": "11d4"
+      },
+      "speed": {
+        "walk": 5,
+        "fly": {
+          "number": 50,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 1,
+      "dex": 28,
+      "con": 10,
+      "int": 13,
+      "wis": 14,
+      "cha": 11,
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 12,
+      "resist": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "necrotic",
+        "piercing",
+        "slashing"
+      ],
+      "immune": [
+        "lightning",
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "Common plus one other language"
+      ],
+      "cr": "2",
+      "trait": [
+        {
+          "name": "Ephemeral",
+          "entries": [
+            "The wisp can't wear or carry anything."
+          ]
+        },
+        {
+          "name": "Illumination",
+          "entries": [
+            "The wisp sheds {@variantrule Bright Light|XPHB} in a 20-foot radius and {@variantrule Dim Light|XPHB} for an additional 20 feet."
+          ]
+        },
+        {
+          "name": "Incorporeal Movement",
+          "entries": [
+            "The wisp can move through other creatures and objects as if they were {@variantrule Difficult Terrain|XPHB}. It takes 5 ({@damage 1d10}) Force damage if it ends its turn inside an object."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Shock",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}11 ({@damage 2d8 + 2}) Lightning damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Consume Life",
+          "entries": [
+            "{@actSave con} {@dc 10}, one living creature the wisp can see within 5 feet that has 0 {@variantrule Hit Points|XPHB}. {@actSaveFail} The target dies, and the wisp regains 10 ({@dice 3d6}) {@variantrule Hit Points|XPHB}."
+          ]
+        },
+        {
+          "name": "Vanish",
+          "entries": [
+            "The wisp and its light have the {@condition Invisible|XPHB} condition until the wisp's {@status Concentration|XPHB} ends on this effect, which ends early immediately after the wisp makes an attack roll or uses Consume Life."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "swamp",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/will-o-wisp.mp3"
+      },
+      "traitTags": [
+        "Illumination",
+        "Incorporeal Movement"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "L",
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA"
+      ],
+      "savingThrowForced": [
+        "constitution"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Wraith",
+      "source": "XMM",
+      "page": 336,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "HBTD"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S",
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 67,
+        "formula": "9d8 + 27"
+      },
+      "speed": {
+        "walk": 5,
+        "fly": {
+          "number": 60,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "str": 6,
+      "dex": 16,
+      "con": 16,
+      "int": 12,
+      "wis": 14,
+      "cha": 15,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 12,
+      "resist": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "piercing",
+        "slashing"
+      ],
+      "immune": [
+        "necrotic",
+        "poison"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "grappled",
+        "paralyzed",
+        "petrified",
+        "poisoned",
+        "prone",
+        "restrained",
+        "unconscious"
+      ],
+      "languages": [
+        "Common plus two other languages"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Incorporeal Movement",
+          "entries": [
+            "The wraith can move through other creatures and objects as if they were {@variantrule Difficult Terrain|XPHB}. It takes 5 ({@damage 1d10}) Force damage if it ends its turn inside an object."
+          ]
+        },
+        {
+          "name": "Sunlight Sensitivity",
+          "entries": [
+            "While in sunlight, the wraith has {@variantrule Disadvantage|XPHB} on ability checks and attack rolls."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Life Drain",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}21 ({@damage 4d8 + 3}) Necrotic damage. If the target is a creature, its {@variantrule Hit Points|XPHB|Hit Point} maximum decreases by an amount equal to the damage taken."
+          ]
+        },
+        {
+          "name": "Create Specter",
+          "entries": [
+            "The wraith targets a Humanoid corpse within 10 feet of itself that has been dead for no longer than 1 minute. The target's spirit rises as a {@creature Specter|XMM} in the space of its corpse or in the nearest unoccupied space. The specter is under the wraith's control. The wraith can have no more than seven specters under its control at a time."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, shadowfell",
+        "underdark"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/wraith.mp3"
+      },
+      "traitTags": [
+        "Incorporeal Movement",
+        "Sunlight Sensitivity"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "X"
+      ],
+      "damageTags": [
+        "N",
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Zombie",
+      "source": "XMM",
+      "page": 346,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "XPHB",
+          "page": 359
+        },
+        {
+          "source": "HBTD"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "undead",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        8
+      ],
+      "hp": {
+        "average": 15,
+        "formula": "2d8 + 6"
+      },
+      "speed": {
+        "walk": 20
+      },
+      "str": 13,
+      "dex": 6,
+      "con": 16,
+      "int": 3,
+      "wis": 6,
+      "cha": 5,
+      "save": {
+        "wis": "+0"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 8,
+      "immune": [
+        "poison"
+      ],
+      "conditionImmune": [
+        "exhaustion",
+        "poisoned"
+      ],
+      "languages": [
+        "understands Common plus one other language but can't speak"
+      ],
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "Undead Fortitude",
+          "entries": [
+            "If damage reduces the zombie to 0 {@variantrule Hit Points|XPHB}, it makes a Constitution saving throw ({@dc 5} plus the damage taken) unless the damage is Radiant or from a {@variantrule Critical Hit|XPHB}. On a successful save, the zombie drops to 1 {@variantrule Hit Points|XPHB|Hit Point} instead."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Slam",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}5 ({@damage 1d8 + 1}) Bludgeoning damage."
+          ]
+        }
+      ],
+      "environment": [
+        "planar, shadowfell",
+        "underdark",
+        "urban"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/zombie.mp3"
+      },
+      "traitTags": [
+        "Undead Fortitude"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "CS",
+        "X"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
+}

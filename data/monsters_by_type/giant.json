@@ -1,0 +1,1589 @@
+{
+  "monster_type": "giant",
+  "count": 14,
+  "monsters": [
+    {
+      "name": "Cloud Giant",
+      "source": "XMM",
+      "page": 74,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 200,
+        "formula": "16d12 + 96"
+      },
+      "speed": {
+        "walk": 40,
+        "fly": {
+          "number": 20,
+          "condition": "(hover)"
+        },
+        "canHover": true
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 27,
+      "dex": 10,
+      "con": 22,
+      "int": 12,
+      "wis": 16,
+      "cha": 16,
+      "save": {
+        "con": "+10",
+        "wis": "+7"
+      },
+      "skill": {
+        "insight": "+7",
+        "perception": "+11"
+      },
+      "passive": 21,
+      "languages": [
+        "Common",
+        "Giant"
+      ],
+      "cr": "9",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The giant casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Detect Magic|XPHB}",
+            "{@spell Fog Cloud|XPHB}",
+            "{@spell Light|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Control Weather|XPHB}",
+              "{@spell Gaseous Form|XPHB}",
+              "{@spell Telekinesis|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        },
+        {
+          "name": "Misty Step",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The giant casts the {@spell Misty Step|XPHB} spell, using the same spellcasting ability as Spellcasting."
+          ],
+          "will": [
+            "{@spell Misty Step|XPHB}"
+          ],
+          "ability": "cha",
+          "displayAs": "bonus",
+          "hidden": [
+            "will"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The giant makes two attacks, using Thunderous Mace or Thundercloud in any combination. It can replace one attack with a use of Spellcasting to cast {@spell Fog Cloud|XPHB}."
+          ]
+        },
+        {
+          "name": "Thunderous Mace",
+          "entries": [
+            "{@atkr m} {@hit 12}, reach 10 ft. {@h}21 ({@damage 3d8 + 8}) Bludgeoning damage plus 7 ({@damage 2d6}) Thunder damage."
+          ]
+        },
+        {
+          "name": "Thundercloud",
+          "entries": [
+            "{@atkr r} {@hit 12}, range 240 ft. {@h}18 ({@damage 3d6 + 8}) Thunder damage, and the target has the {@condition Incapacitated|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "mountain"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/cloud-giant.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "GI"
+      ],
+      "damageTags": [
+        "B",
+        "T"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "incapacitated"
+      ],
+      "conditionInflictSpell": [
+        "restrained"
+      ],
+      "savingThrowForcedSpell": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Cyclops Oracle",
+      "source": "XMM",
+      "page": 88,
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 207,
+        "formula": "18d12 + 90"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 22,
+      "dex": 11,
+      "con": 20,
+      "int": 16,
+      "wis": 18,
+      "cha": 10,
+      "save": {
+        "con": "+9",
+        "wis": "+8"
+      },
+      "skill": {
+        "history": "+11",
+        "perception": "+12"
+      },
+      "senses": [
+        "truesight 30 ft."
+      ],
+      "passive": 22,
+      "languages": [
+        "Giant"
+      ],
+      "cr": "10",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The cyclops casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 16}):"
+          ],
+          "daily": {
+            "1": [
+              "{@spell Legend Lore|XPHB}"
+            ],
+            "2e": [
+              "{@spell Arcane Eye|XPHB}",
+              "{@spell Detect Magic|XPHB}",
+              "{@spell Locate Object|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cyclops makes three attacks, using Radiant Strike or Flash of Light in any combination."
+          ]
+        },
+        {
+          "name": "Radiant Strike",
+          "entries": [
+            "{@atkr m} {@hit 10}, reach 10 ft. {@h}22 ({@damage 3d10 + 6}) Radiant damage."
+          ]
+        },
+        {
+          "name": "Flash of Light",
+          "entries": [
+            "{@atkr r} {@hit 10}, range 120 ft. {@h}17 ({@damage 2d10 + 6}) Radiant damage, and the target has {@variantrule Disadvantage|XPHB} on attack rolls until the end of the cyclops's next turn."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Portent {@recharge 4}",
+          "entries": [
+            "{@actTrigger} The cyclops or an ally it can see makes a {@variantrule D20 Test|XPHB}. {@actResponse} The cyclops rolls {@dice 1d20} and chooses whether to use that roll in place of the {@dice d20} rolled for the {@variantrule D20 Test|XPHB}."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "desert",
+        "grassland",
+        "hill",
+        "mountain",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "senseTags": [
+        "U"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GI"
+      ],
+      "damageTags": [
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Cyclops Sentry",
+      "source": "XMM",
+      "page": 88,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 138,
+        "formula": "12d12 + 60"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 22,
+      "dex": 11,
+      "con": 20,
+      "int": 8,
+      "wis": 6,
+      "cha": 10,
+      "passive": 8,
+      "languages": [
+        "Giant"
+      ],
+      "cr": "6",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The cyclops makes two attacks, using Stone Club or Rock in any combination."
+          ]
+        },
+        {
+          "name": "Stone Club",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 10 ft. {@h}16 ({@damage 3d6 + 6}) Bludgeoning damage. If the target is a Huge or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Rock",
+          "entries": [
+            "{@atkr r} {@hit 9}, range 30/120 ft. {@h}22 ({@damage 3d10 + 6}) Bludgeoning damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Limited Foresight {@recharge}",
+          "entries": [
+            "{@actTrigger} A creature the cyclops can see makes an attack roll against it. {@actResponse} The cyclops imposes {@variantrule Disadvantage|XPHB} on the roll, and the cyclops gains {@variantrule Advantage|XPHB} on attack rolls against the target until the end of the cyclops's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "desert",
+        "grassland",
+        "hill",
+        "mountain",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GI"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ettin",
+      "source": "XMM",
+      "page": 116,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 85,
+        "formula": "10d10 + 30"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 21,
+      "dex": 8,
+      "con": 17,
+      "int": 6,
+      "wis": 10,
+      "cha": 8,
+      "skill": {
+        "perception": "+4"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "conditionImmune": [
+        "blinded",
+        "charmed",
+        "deafened",
+        "frightened",
+        "stunned",
+        "unconscious"
+      ],
+      "languages": [
+        "Giant"
+      ],
+      "cr": "4",
+      "gear": [
+        "battleaxe|xphb",
+        "morningstar|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The ettin makes one Battleaxe attack and one Morningstar attack."
+          ]
+        },
+        {
+          "name": "Battleaxe",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}14 ({@damage 2d8 + 5}) Slashing damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Morningstar",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}14 ({@damage 2d8 + 5}) Piercing damage, and the target has {@variantrule Disadvantage|XPHB} on the next attack roll it makes before the end of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "hill",
+        "mountain",
+        "underdark"
+      ],
+      "treasure": [
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/ettin.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GI"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Fire Giant",
+      "source": "XMM",
+      "page": 119,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 162,
+        "formula": "13d12 + 78"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 25,
+      "dex": 9,
+      "con": 23,
+      "int": 10,
+      "wis": 14,
+      "cha": 13,
+      "save": {
+        "dex": "+3",
+        "con": "+10",
+        "cha": "+5"
+      },
+      "skill": {
+        "athletics": "+11",
+        "perception": "+6"
+      },
+      "passive": 16,
+      "immune": [
+        "fire"
+      ],
+      "languages": [
+        "Giant"
+      ],
+      "cr": "9",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The giant makes two attacks, using Flame Sword or Hammer Throw in any combination."
+          ]
+        },
+        {
+          "name": "Flame Sword",
+          "entries": [
+            "{@atkr m} {@hit 11}, reach 10 ft. {@h}21 ({@damage 4d6 + 7}) Slashing damage plus 10 ({@damage 3d6}) Fire damage."
+          ]
+        },
+        {
+          "name": "Hammer Throw",
+          "entries": [
+            "{@atkr r} {@hit 11}, range 60/240 ft. {@h}23 ({@damage 3d10 + 7}) Bludgeoning damage plus 4 ({@damage 1d8}) Fire damage, and the target is pushed up to 15 feet straight away from the giant and has {@variantrule Disadvantage|XPHB} on the next attack roll it makes before the end of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "mountain",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/fire-giant.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GI"
+      ],
+      "damageTags": [
+        "B",
+        "F",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Fomorian",
+      "source": "XMM",
+      "page": 123,
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 172,
+        "formula": "15d12 + 75"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 23,
+      "dex": 10,
+      "con": 20,
+      "int": 9,
+      "wis": 14,
+      "cha": 6,
+      "skill": {
+        "perception": "+8",
+        "stealth": "+3"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 18,
+      "languages": [
+        "Giant",
+        "Undercommon"
+      ],
+      "cr": "8",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The fomorian makes two Stone Club attacks. It can replace one attack with a use of Warping Hex if available."
+          ]
+        },
+        {
+          "name": "Stone Club",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 15 ft. {@h}24 ({@damage 4d8 + 6}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Warping Hex {@recharge 4}",
+          "entries": [
+            "{@actSave wis} {@dc 16}, one creature the fomorian can see within 120 feet. {@actSaveFail} 21 ({@damage 6d6}) Psychic damage, and the target gains 1 {@condition Exhaustion|XPHB} level. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "environment": [
+        "underdark"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/fomorian.mp3"
+      },
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GI",
+        "U"
+      ],
+      "damageTags": [
+        "B",
+        "Y"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RCH"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Frost Giant",
+      "source": "XMM",
+      "page": 124,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 149,
+        "formula": "13d12 + 65"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 23,
+      "dex": 9,
+      "con": 21,
+      "int": 9,
+      "wis": 10,
+      "cha": 12,
+      "save": {
+        "con": "+8",
+        "wis": "+3",
+        "cha": "+4"
+      },
+      "skill": {
+        "athletics": "+9",
+        "perception": "+3"
+      },
+      "passive": 13,
+      "immune": [
+        "cold"
+      ],
+      "languages": [
+        "Giant"
+      ],
+      "cr": "8",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The giant makes two attacks, using Frost Axe or Great Bow in any combination."
+          ]
+        },
+        {
+          "name": "Frost Axe",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 10 ft. {@h}19 ({@damage 2d12 + 6}) Slashing damage plus 9 ({@damage 2d8}) Cold damage."
+          ]
+        },
+        {
+          "name": "Great Bow",
+          "entries": [
+            "{@atkr r} {@hit 9}, range 150/600 ft. {@h}17 ({@damage 2d10 + 6}) Piercing damage plus 7 ({@damage 2d6}) Cold damage, and the target's {@variantrule Speed|XPHB} decreases by 10 feet until the end of its next turn."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "War Cry {@recharge 5}",
+          "entries": [
+            "The giant or one creature of its choice that can see or hear it gains 16 ({@dice 2d10 + 5}) {@variantrule Temporary Hit Points|XPHB} and has {@variantrule Advantage|XPHB} on attack rolls until the start of the giant's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "mountain"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/frost-giant.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GI"
+      ],
+      "damageTags": [
+        "C",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Hill Giant",
+      "source": "XMM",
+      "page": 168,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 105,
+        "formula": "10d12 + 40"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 21,
+      "dex": 8,
+      "con": 19,
+      "int": 5,
+      "wis": 9,
+      "cha": 6,
+      "skill": {
+        "perception": "+2"
+      },
+      "passive": 12,
+      "languages": [
+        "Giant"
+      ],
+      "cr": "5",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The giant makes two attacks, using Tree Club or Trash Lob in any combination."
+          ]
+        },
+        {
+          "name": "Tree Club",
+          "entries": [
+            "{@atkr m} {@hit 8}, reach 10 ft. {@h}18 ({@damage 3d8 + 5}) Bludgeoning damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Trash Lob",
+          "entries": [
+            "{@atkr r} {@hit 8}, range 60/240 ft. {@h}16 ({@damage 2d10 + 5}) Bludgeoning damage, and the target has the {@condition Poisoned|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "hill"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/hill-giant.mp3"
+      },
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GI"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "poisoned",
+        "prone"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ogre",
+      "source": "XMM",
+      "page": 231,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "ScoEE"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        11
+      ],
+      "hp": {
+        "average": 68,
+        "formula": "8d10 + 24"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 19,
+      "dex": 8,
+      "con": 16,
+      "int": 5,
+      "wis": 7,
+      "cha": 7,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 8,
+      "languages": [
+        "Common",
+        "Giant"
+      ],
+      "cr": "2",
+      "gear": [
+        "greatclub|xphb",
+        {
+          "item": "javelin|xphb",
+          "quantity": 3
+        }
+      ],
+      "action": [
+        {
+          "name": "Greatclub",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}13 ({@damage 2d8 + 4}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Javelin",
+          "entries": [
+            "{@atkr m,r} {@hit 6}, reach 5 ft. or range 30/120 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "desert",
+        "forest",
+        "grassland",
+        "hill",
+        "mountain",
+        "swamp",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/ogre.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "GI"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ogrillon Ogre",
+      "source": "XMM",
+      "page": 231,
+      "size": [
+        "L"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 52,
+        "formula": "7d10 + 14"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 17,
+      "dex": 10,
+      "con": 14,
+      "int": 7,
+      "wis": 9,
+      "cha": 10,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "languages": [
+        "Common",
+        "Giant"
+      ],
+      "cr": "1",
+      "gear": [
+        "battleaxe|xphb",
+        {
+          "item": "javelin|xphb",
+          "quantity": 3
+        }
+      ],
+      "action": [
+        {
+          "name": "Battleaxe",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Javelin",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 30/120 ft. {@h}6 ({@damage 1d6 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "desert",
+        "forest",
+        "grassland",
+        "hill",
+        "mountain",
+        "swamp",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "GI"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Stone Giant",
+      "source": "XMM",
+      "page": 300,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 126,
+        "formula": "11d12 + 55"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 23,
+      "dex": 15,
+      "con": 20,
+      "int": 10,
+      "wis": 12,
+      "cha": 9,
+      "save": {
+        "dex": "+5",
+        "con": "+8",
+        "wis": "+4"
+      },
+      "skill": {
+        "athletics": "+12",
+        "perception": "+4",
+        "stealth": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "languages": [
+        "Giant"
+      ],
+      "cr": "7",
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The giant makes two attacks, using Stone Club or Boulder in any combination."
+          ]
+        },
+        {
+          "name": "Stone Club",
+          "entries": [
+            "{@atkr m} {@hit 9}, reach 15 ft. {@h}22 ({@damage 3d10 + 6}) Bludgeoning damage."
+          ]
+        },
+        {
+          "name": "Boulder",
+          "entries": [
+            "{@atkr r} {@hit 9}, range 60/240 ft. {@h}15 ({@damage 2d8 + 6}) Bludgeoning damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Deflect Missile {@recharge 5}",
+          "entries": [
+            "{@actTrigger} The giant is hit by a ranged attack roll and takes Bludgeoning, Piercing, or Slashing damage from it. {@actResponse} The giant reduces the damage it takes from the attack by 11 ({@dice 1d10 + 6}), and if that damage is reduced to 0, the giant can redirect some of the attack's force. {@actSave dex} {@dc 17}, one creature the giant can see within 60 feet. {@actSaveFail} 11 ({@damage 1d10 + 6}) Force damage."
+          ]
+        }
+      ],
+      "environment": [
+        "mountain",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/stone-giant.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GI"
+      ],
+      "damageTags": [
+        "B",
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Storm Giant",
+      "source": "XMM",
+      "page": 302,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "H"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "G"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 230,
+        "formula": "20d12 + 100"
+      },
+      "speed": {
+        "walk": 50,
+        "fly": {
+          "number": 25,
+          "condition": "(hover)"
+        },
+        "swim": 50,
+        "canHover": true
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 29,
+      "dex": 14,
+      "con": 20,
+      "int": 16,
+      "wis": 20,
+      "cha": 18,
+      "save": {
+        "str": "+14",
+        "con": "+10",
+        "wis": "+10",
+        "cha": "+9"
+      },
+      "skill": {
+        "arcana": "+8",
+        "athletics": "+14",
+        "history": "+8",
+        "perception": "+10"
+      },
+      "senses": [
+        "darkvision 120 ft.",
+        "truesight 30 ft."
+      ],
+      "passive": 20,
+      "resist": [
+        "cold"
+      ],
+      "immune": [
+        "lightning",
+        "thunder"
+      ],
+      "languages": [
+        "Common",
+        "Giant"
+      ],
+      "cr": "13",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The giant casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 18}):"
+          ],
+          "will": [
+            "{@spell Detect Magic|XPHB}",
+            "{@spell Light|XPHB}"
+          ],
+          "daily": {
+            "1": [
+              "{@spell Control Weather|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The giant can breathe air and water."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The giant makes two attacks, using Storm Sword or Thunderbolt in any combination."
+          ]
+        },
+        {
+          "name": "Storm Sword",
+          "entries": [
+            "{@atkr m} {@hit 14}, reach 10 ft. {@h}23 ({@damage 4d6 + 9}) Slashing damage plus 13 ({@damage 3d8}) Lightning damage."
+          ]
+        },
+        {
+          "name": "Thunderbolt",
+          "entries": [
+            "{@atkr r} {@hit 14}, range 500 ft. {@h}22 ({@damage 2d12 + 9}) Lightning damage, and the target has the {@condition Blinded|XPHB} and {@condition Deafened|XPHB} conditions until the start of the giant's next turn."
+          ]
+        },
+        {
+          "name": "Lightning Storm {@recharge 5}",
+          "entries": [
+            "{@actSave dex} {@dc 18}, each creature in a 10-foot-radius, 40-foot-high {@variantrule Cylinder [Area of Effect]|XPHB|Cylinder} originating from a point the giant can see within 500 feet. {@actSaveFail} 55 ({@damage 10d10}) Lightning damage. {@actSaveSuccess} Half damage."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "underwater"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/storm-giant.mp3"
+      },
+      "traitTags": [
+        "Amphibious"
+      ],
+      "senseTags": [
+        "SD",
+        "U"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "GI"
+      ],
+      "damageTags": [
+        "L",
+        "S"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Troll",
+      "source": "XMM",
+      "page": 310,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 94,
+        "formula": "9d10 + 45"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 18,
+      "dex": 13,
+      "con": 20,
+      "int": 7,
+      "wis": 9,
+      "cha": 7,
+      "skill": {
+        "perception": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 15,
+      "languages": [
+        "Giant"
+      ],
+      "cr": "5",
+      "trait": [
+        {
+          "name": "Loathsome Limbs (4/Day)",
+          "entries": [
+            "If the troll ends any turn {@variantrule Bloodied|XPHB} and took 15+ Slashing damage during that turn, one of the troll's limbs is severed, falls into the troll's space, and becomes a {@creature Troll Limb|XMM}. The limb acts immediately after the troll's turn. The troll has 1 {@condition Exhaustion|XPHB} level for each missing limb, and it grows replacement limbs the next time it regains {@variantrule Hit Points|XPHB}."
+          ]
+        },
+        {
+          "name": "Regeneration",
+          "entries": [
+            "The troll regains 15 {@variantrule Hit Points|XPHB} at the start of each of its turns. If the troll takes Acid or Fire damage, this trait doesn't function on the troll's next turn. The troll dies only if it starts its turn with 0 {@variantrule Hit Points|XPHB} and doesn't regenerate."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The troll makes three Rend attacks."
+          ]
+        },
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 10 ft. {@h}11 ({@damage 2d6 + 4}) Slashing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Charge",
+          "entries": [
+            "The troll moves up to half its {@variantrule Speed|XPHB} straight toward an enemy it can see."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "forest",
+        "hill",
+        "mountain",
+        "swamp",
+        "underdark"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/troll.mp3"
+      },
+      "traitTags": [
+        "Regeneration"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GI"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "RCH"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Troll Limb",
+      "source": "XMM",
+      "page": 310,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S"
+      ],
+      "type": "giant",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 14,
+        "formula": "4d6"
+      },
+      "speed": {
+        "walk": 20
+      },
+      "str": 18,
+      "dex": 12,
+      "con": 10,
+      "int": 1,
+      "wis": 9,
+      "cha": 1,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "cr": "1/2",
+      "trait": [
+        {
+          "name": "Regeneration",
+          "entries": [
+            "The limb regains 5 {@variantrule Hit Points|XPHB} at the start of each of its turns. If the limb takes Acid or Fire damage, this trait doesn't function on the limb's next turn. The limb dies only if it starts its turn with 0 {@variantrule Hit Points|XPHB} and doesn't regenerate."
+          ]
+        },
+        {
+          "name": "Troll Spawn",
+          "entries": [
+            "The limb uncannily has the same senses as a whole troll. If the limb isn't destroyed within 24 hours, roll {@dice 1d12}. On a 12, the limb turns into a {@creature Troll|XMM}. Otherwise, the limb withers away."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Rend",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}9 ({@damage 2d4 + 4}) Slashing damage."
+          ]
+        }
+      ],
+      "environment": [
+        "arctic",
+        "forest",
+        "hill",
+        "mountain",
+        "swamp",
+        "underdark"
+      ],
+      "traitTags": [
+        "Regeneration"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "damageTags": [
+        "S"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
+}

@@ -1,0 +1,3269 @@
+{
+  "monster_type": "fey",
+  "count": 25,
+  "monsters": [
+    {
+      "name": "Arch-hag",
+      "source": "XMM",
+      "page": 21,
+      "size": [
+        "L"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 333,
+        "formula": "29d10 + 174"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "initiative": {
+        "proficiency": 2
+      },
+      "str": 24,
+      "dex": 15,
+      "con": 23,
+      "int": 19,
+      "wis": 19,
+      "cha": 25,
+      "save": {
+        "dex": "+9",
+        "wis": "+11"
+      },
+      "skill": {
+        "deception": "+14",
+        "perception": "+11",
+        "persuasion": "+21"
+      },
+      "senses": [
+        "truesight 60 ft."
+      ],
+      "passive": 21,
+      "resist": [
+        "cold",
+        "fire",
+        "psychic"
+      ],
+      "conditionImmune": [
+        "charmed",
+        "exhaustion",
+        "frightened"
+      ],
+      "languages": [
+        "all"
+      ],
+      "cr": {
+        "cr": "21",
+        "xpLair": 41000
+      },
+      "spellcasting": [
+        {
+          "name": "Coven Magic",
+          "type": "spellcasting",
+          "headerEntries": [
+            "While within 30 feet of at least two hag allies, the hag can cast one of the following spells, requiring no Material components, using the spell's normal casting time, and using Intelligence as the spellcasting ability (spell save {@dc 19}): {@spell Augury|XPHB}, {@spell Find Familiar|XPHB}, {@spell Identify|XPHB}, {@spell Locate Object|XPHB}, {@spell Scrying|XPHB}, or {@spell Unseen Servant|XPHB}. The hag must finish a {@variantrule Long Rest|XPHB} before using this trait to cast that spell again."
+          ],
+          "restLong": {
+            "1": [
+              "{@spell Augury|XPHB}",
+              "{@spell Find Familiar|XPHB}",
+              "{@spell Identify|XPHB}",
+              "{@spell Locate Object|XPHB}",
+              "{@spell Scrying|XPHB}",
+              "{@spell Unseen Servant|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "hidden": [
+            "restLong"
+          ]
+        },
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The hag casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 22}):"
+          ],
+          "will": [
+            "{@spell Detect Thoughts|XPHB}",
+            "{@spell Dimension Door|XPHB}",
+            "{@spell Dispel Magic|XPHB}",
+            "{@spell Hypnotic Pattern|XPHB}"
+          ],
+          "daily": {
+            "2e": [
+              "{@spell Mass Suggestion|XPHB}",
+              "{@spell Modify Memory|XPHB}",
+              "{@spell Plane Shift|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        },
+        {
+          "name": "Tongue Twister",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The hag casts {@spell Counterspell|XPHB} in response to that spell's trigger, using the same spellcasting ability as Spellcasting. If the target fails its saving throw, it is cursed until the end of its next turn. Until the curse ends, the target can't cast spells with a Verbal component, and when it speaks, it says the opposite of what it means."
+          ],
+          "will": [
+            "{@spell Counterspell|XPHB}"
+          ],
+          "ability": "cha",
+          "displayAs": "reaction",
+          "hidden": [
+            "will"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Legendary Resistance (4/Day, or 5/Day in Lair)",
+          "entries": [
+            "If the hag fails a saving throw, it can choose to succeed instead."
+          ]
+        },
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The hag has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Spiteful Escape",
+          "entries": [
+            "When the hag drops to 0 {@variantrule Hit Points|XPHB}, it dies only if it is within 30 feet of its anathema (a thing the DM chooses as the hag's most hated thing). Otherwise, the hag drops to 1 {@variantrule Hit Points|XPHB|Hit Point} and teleports to a harmless demiplane, and it can't return to the plane it left for {@dice 2d6} days. When the hag teleports away, each creature within 60 feet of the space it left is cursed. Until the curse ends, a creature has {@variantrule Disadvantage|XPHB} on ability checks and saving throws, and the hag knows its location anywhere in the multiverse."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The hag makes two Spectral Claw attacks and uses Crackling Wave."
+          ]
+        },
+        {
+          "name": "Spectral Claw",
+          "entries": [
+            "{@atkr m,r} {@hit 14}, reach 10 ft. or range 60 ft. {@h}17 ({@damage 3d6 + 7}) Force damage. If the target is a Large or smaller creature, it has the {@condition Prone|XPHB} condition."
+          ]
+        },
+        {
+          "name": "Crackling Wave",
+          "entries": [
+            "{@actSave dex} {@dc 22}, each creature in a 60-foot {@variantrule Cone [Area of Effect]|XPHB|Cone}. {@actSaveFail} 32 ({@damage 5d12}) Lightning damage. {@actSaveSuccess} Half damage. {@actSaveSuccessOrFail} The target is cursed until the end of the hag's next turn. The target can't take Reactions until the curse ends."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Witch Strike",
+          "entries": [
+            "Each creature cursed by the hag and within 60 feet of it takes 14 ({@damage 4d6}) Lightning damage."
+          ]
+        }
+      ],
+      "legendaryActionsLair": 4,
+      "legendary": [
+        {
+          "name": "Hag's Swipe",
+          "entries": [
+            "The hag makes one Spectral Claw attack."
+          ]
+        },
+        {
+          "name": "Malicious Magic",
+          "entries": [
+            "The hag uses Spellcasting to cast {@spell Dimension Door|XPHB} or {@spell Hypnotic Pattern|XPHB}. The hag can't take this action again until the start of its next turn."
+          ]
+        }
+      ],
+      "legendaryGroup": {
+        "name": "Arch-hag",
+        "source": "XMM"
+      },
+      "environment": [
+        "any"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "traitTags": [
+        "Legendary Resistances",
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "U"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "XX"
+      ],
+      "damageTags": [
+        "L",
+        "O"
+      ],
+      "damageTagsSpell": [
+        "O"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "CUR",
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "conditionInflictSpell": [
+        "charmed",
+        "incapacitated"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "savingThrowForcedLegendary": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Blink Dog",
+      "source": "XMM",
+      "page": 46,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "UtHftLH"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "fey",
+      "alignment": [
+        "L",
+        "G"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "4d8 + 4"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 12,
+      "dex": 17,
+      "con": 12,
+      "int": 10,
+      "wis": 13,
+      "cha": 11,
+      "skill": {
+        "perception": "+5",
+        "stealth": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 15,
+      "languages": [
+        "understands Elvish and Sylvan but can't speak them"
+      ],
+      "cr": "1/4",
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}5 ({@damage 1d4 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Teleport {@recharge 4}",
+          "entries": [
+            "The dog teleports up to 40 feet to an unoccupied space it can see."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "planar, feywild"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/blink-dog.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Teleport"
+      ],
+      "languageTags": [
+        "CS",
+        "E",
+        "S"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bugbear Stalker",
+      "group": [
+        "Goblinoids"
+      ],
+      "source": "XMM",
+      "page": 62,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "fey",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 65,
+        "formula": "10d8 + 20"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 17,
+      "dex": 14,
+      "con": 14,
+      "int": 11,
+      "wis": 12,
+      "cha": 11,
+      "save": {
+        "con": "+4",
+        "wis": "+3"
+      },
+      "skill": {
+        "stealth": "+6",
+        "survival": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "languages": [
+        "Common",
+        "Goblin"
+      ],
+      "cr": "3",
+      "gear": [
+        "chain shirt|xphb",
+        {
+          "item": "javelin|xphb",
+          "quantity": 6
+        },
+        "morningstar|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Abduct",
+          "entries": [
+            "The bugbear needn't spend extra movement to move a creature it is grappling."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The bugbear makes two Javelin or Morningstar attacks."
+          ]
+        },
+        {
+          "name": "Javelin",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 10 ft. or range 30/120 ft. {@h}13 ({@damage 3d6 + 3}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Morningstar",
+          "entries": [
+            "{@atkr m} {@hit 5} (with {@variantrule Advantage|XPHB} if the target is {@condition Grappled|XPHB} by the bugbear), reach 10 ft. {@h}12 ({@damage 2d8 + 3}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Quick Grapple",
+          "entries": [
+            "{@actSave dex} {@dc 13}, one Medium or smaller creature the bugbear can see within 10 feet. {@actSaveFail} The target has the {@condition Grappled|XPHB} condition (escape {@dc 13})."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "planar, feywild",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "GO"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RCH",
+        "THW"
+      ],
+      "conditionInflict": [
+        "grappled"
+      ],
+      "savingThrowForced": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bugbear Warrior",
+      "group": [
+        "Goblinoids"
+      ],
+      "source": "XMM",
+      "page": 62,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "UtHftLH"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "fey",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 33,
+        "formula": "6d8 + 6"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 15,
+      "dex": 14,
+      "con": 13,
+      "int": 8,
+      "wis": 11,
+      "cha": 9,
+      "skill": {
+        "stealth": "+6",
+        "survival": "+2"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "languages": [
+        "Common",
+        "Goblin"
+      ],
+      "cr": "1",
+      "gear": [
+        "hide armor|xphb",
+        {
+          "item": "light hammer|xphb",
+          "quantity": 3
+        }
+      ],
+      "trait": [
+        {
+          "name": "Abduct",
+          "entries": [
+            "The bugbear needn't spend extra movement to move a creature it is grappling."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Grab",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 10 ft. {@h}9 ({@damage 2d6 + 2}) Bludgeoning damage. If the target is a Medium or smaller creature, it has the {@condition Grappled|XPHB} condition (escape {@dc 12})."
+          ]
+        },
+        {
+          "name": "Light Hammer",
+          "entries": [
+            "{@atkr m,r} {@hit 4} (with {@variantrule Advantage|XPHB} if the target is {@condition Grappled|XPHB} by the bugbear), reach 10 ft. or range 20/60 ft. {@h}9 ({@damage 3d4 + 2}) Bludgeoning damage."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "planar, feywild",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "GO"
+      ],
+      "damageTags": [
+        "B"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RCH",
+        "THW"
+      ],
+      "conditionInflict": [
+        "grappled"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bullywug Bog Sage",
+      "source": "XMM",
+      "page": 64,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "UtHftLH"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 52,
+        "formula": "8d8 + 16"
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 30
+      },
+      "str": 8,
+      "dex": 16,
+      "con": 14,
+      "int": 10,
+      "wis": 16,
+      "cha": 12,
+      "save": {
+        "con": "+4",
+        "wis": "+5",
+        "cha": "+3"
+      },
+      "skill": {
+        "nature": "+4",
+        "stealth": "+5"
+      },
+      "passive": 13,
+      "languages": [
+        "Bullywug",
+        "Common"
+      ],
+      "cr": "4",
+      "gear": [
+        "component pouch|xphb"
+      ],
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The bullywug casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 13}, {@hit 5} to hit with spell attacks):"
+          ],
+          "will": [
+            "{@spell Dancing Lights|XPHB}",
+            "{@spell Druidcraft|XPHB}",
+            "{@spell Ray of Sickness|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Speak with Plants|XPHB}",
+              "{@spell Vitriolic Sphere|XPHB}"
+            ]
+          },
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The bullywug can breathe air and water."
+          ]
+        },
+        {
+          "name": "Speak with Frogs and Toads",
+          "entries": [
+            "The bullywug can communicate simple concepts to frogs and toads when it speaks in Bullywug."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The bullywug makes two Bog Staff attacks. It can replace any attack with a use of Spellcasting to cast {@spell Ray of Sickness|XPHB}."
+          ]
+        },
+        {
+          "name": "Bog Staff",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Bludgeoning damage plus 10 ({@damage 3d6}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Leap",
+          "entries": [
+            "The bullywug can jump up to 30 feet by spending 10 feet of movement."
+          ]
+        }
+      ],
+      "environment": [
+        "swamp"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "traitTags": [
+        "Amphibious"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "OTH"
+      ],
+      "damageTags": [
+        "B",
+        "I"
+      ],
+      "damageTagsSpell": [
+        "A",
+        "I"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflictSpell": [
+        "poisoned"
+      ],
+      "savingThrowForcedSpell": [
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Bullywug Warrior",
+      "source": "XMM",
+      "page": 64,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "UtHftLH"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 11,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 30
+      },
+      "str": 12,
+      "dex": 14,
+      "con": 13,
+      "int": 7,
+      "wis": 10,
+      "cha": 7,
+      "skill": {
+        "stealth": "+4"
+      },
+      "passive": 10,
+      "languages": [
+        "Bullywug",
+        "Common"
+      ],
+      "cr": "1/4",
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The bullywug can breathe air and water."
+          ]
+        },
+        {
+          "name": "Speak with Frogs and Toads",
+          "entries": [
+            "The bullywug can communicate simple concepts to frogs and toads when it speaks in Bullywug."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Insectile Rapier",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}6 ({@damage 1d8 + 2}) Piercing damage plus 2 ({@damage 1d4}) Poison damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Leap",
+          "entries": [
+            "The bullywug can jump up to 30 feet by spending 10 feet of movement."
+          ]
+        }
+      ],
+      "environment": [
+        "swamp"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "traitTags": [
+        "Amphibious"
+      ],
+      "languageTags": [
+        "C",
+        "OTH"
+      ],
+      "damageTags": [
+        "I",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Centaur Trooper",
+      "source": "XMM",
+      "page": 67,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "L"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "6d10 + 12"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 14,
+      "int": 9,
+      "wis": 13,
+      "cha": 11,
+      "skill": {
+        "athletics": "+6",
+        "perception": "+3"
+      },
+      "passive": 13,
+      "languages": [
+        "Elvish",
+        "Sylvan"
+      ],
+      "cr": "2",
+      "gear": [
+        "breastplate|xphb",
+        "longbow|xphb",
+        "pike|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The centaur makes two attacks, using Pike or Longbow in any combination."
+          ]
+        },
+        {
+          "name": "Pike",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 10 ft. {@h}9 ({@damage 1d10 + 4}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Longbow",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 150/600 ft. {@h}6 ({@damage 1d8 + 2}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Trampling Charge {@recharge 5}",
+          "entries": [
+            "The centaur moves up to its {@variantrule Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks} and can move through the spaces of Medium or smaller creatures. Each creature whose space the centaur enters is targeted once by the following effect. {@actSave str} {@dc 14}. {@actSaveFail} 7 ({@damage 1d6 + 4}) Bludgeoning damage, and the target has the {@condition Prone|XPHB} condition."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "planar, feywild"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "E",
+        "S"
+      ],
+      "damageTags": [
+        "B",
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RCH",
+        "RNG"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Centaur Warden",
+      "source": "XMM",
+      "page": 67,
+      "size": [
+        "L"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 105,
+        "formula": "14d10 + 28"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "str": 18,
+      "dex": 14,
+      "con": 14,
+      "int": 9,
+      "wis": 18,
+      "cha": 11,
+      "save": {
+        "con": "+5",
+        "wis": "+7"
+      },
+      "skill": {
+        "athletics": "+7",
+        "nature": "+5",
+        "perception": "+7"
+      },
+      "passive": 17,
+      "languages": [
+        "Druidic",
+        "Elvish",
+        "Sylvan"
+      ],
+      "cr": "7",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The centaur casts one of the following spells, using Wisdom as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Druidcraft|XPHB}",
+            "{@spell Speak with Animals|XPHB}"
+          ],
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The centaur makes two attacks, using Forest Staff or Sun Ray in any combination."
+          ]
+        },
+        {
+          "name": "Forest Staff",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}13 ({@damage 2d8 + 4}) Bludgeoning damage plus 14 ({@damage 4d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Sun Ray",
+          "entries": [
+            "{@atkr r} {@hit 7}, range 90 ft. {@h}14 ({@damage 3d6 + 4}) Radiant damage, and the target has the {@condition Blinded|XPHB} condition until the start of the centaur's next turn."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Entangling Trail {@recharge 5}",
+          "entries": [
+            "The centaur moves up to its {@variantrule Speed|XPHB} without provoking {@action Opportunity Attack|XPHB|Opportunity Attacks}. Each creature within 5 feet of the centaur as it moves is targeted once by the following effect. {@actSave str} {@dc 15}. {@actSaveFail} 11 ({@damage 2d6 + 4}) Bludgeoning damage, and the target has the {@condition Restrained|XPHB} condition until the end of its next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "planar, feywild"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "DU",
+        "E",
+        "S"
+      ],
+      "damageTags": [
+        "B",
+        "I",
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "blinded",
+        "restrained"
+      ],
+      "savingThrowForced": [
+        "strength"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Dire Worg",
+      "source": "XMM",
+      "page": 335,
+      "size": [
+        "H"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 147,
+        "formula": "14d12 + 56"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "str": 22,
+      "dex": 14,
+      "con": 18,
+      "int": 7,
+      "wis": 16,
+      "cha": 8,
+      "save": {
+        "dex": "+6",
+        "wis": "+7"
+      },
+      "skill": {
+        "perception": "+11"
+      },
+      "senses": [
+        "darkvision 120 ft."
+      ],
+      "passive": 21,
+      "languages": [
+        "Goblin",
+        "Sylvan",
+        "Worg"
+      ],
+      "cr": "10",
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The worg has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The worg makes three Bite attacks."
+          ]
+        },
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 10}, reach 5 ft. {@h}15 ({@damage 2d8 + 6}) Piercing damage plus 7 ({@damage 2d6}) Poison damage, and the target has the {@condition Poisoned|XPHB} condition until the start of the worg's next turn. While {@condition Poisoned|XPHB}, the target can't regain {@variantrule Hit Points|XPHB}."
+          ]
+        },
+        {
+          "name": "Dreadful Howl {@recharge 5}",
+          "entries": [
+            "{@actSave wis} {@dc 16}, each creature within 30 feet that isn't a worg. {@actSaveFail} 36 ({@damage 8d8}) Psychic damage, and the target has the {@condition Frightened|XPHB} condition until the start of the worg's next turn. {@actSaveSuccess} Half damage only."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Warp Step",
+          "entries": [
+            "The worg teleports, along with a willing creature of its choice within 5 feet of it, up to 30 feet to an unoccupied space it can see."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "hill",
+        "planar, feywild"
+      ],
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "SD"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "GO",
+        "OTH",
+        "S"
+      ],
+      "damageTags": [
+        "I",
+        "P",
+        "Y"
+      ],
+      "miscTags": [
+        "AOE",
+        "MA"
+      ],
+      "conditionInflict": [
+        "frightened",
+        "poisoned"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Dryad",
+      "source": "XMM",
+      "page": 107,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N"
+      ],
+      "ac": [
+        16
+      ],
+      "hp": {
+        "average": 22,
+        "formula": "5d8"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 12,
+      "con": 11,
+      "int": 14,
+      "wis": 15,
+      "cha": 18,
+      "skill": {
+        "perception": "+4",
+        "stealth": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "languages": [
+        "Elvish",
+        "Sylvan"
+      ],
+      "cr": "1",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The dryad casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 14}):"
+          ],
+          "will": [
+            "{@spell Animal Friendship|XPHB}",
+            "{@spell Charm Monster|XPHB} (lasts 24 hours; ends early if the dryad casts the spell again)",
+            "{@spell Druidcraft|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Entangle|XPHB}",
+              "{@spell Pass without Trace|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The dryad has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        },
+        {
+          "name": "Speak with Beasts and Plants",
+          "entries": [
+            "The dryad can communicate with Beasts and Plants as if they shared a language."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The dryad makes one Vine Lash or Thorn Burst attack, and it can use Spellcasting to cast {@spell Charm Monster|XPHB}."
+          ]
+        },
+        {
+          "name": "Vine Lash",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 10 ft. {@h}8 ({@damage 1d8 + 4}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Thorn Burst",
+          "entries": [
+            "{@atkr r} {@hit 6}, range 60 ft. {@h}7 ({@damage 1d6 + 4}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Tree Stride",
+          "entries": [
+            "If within 5 feet of a Large or bigger tree, the dryad teleports to an unoccupied space within 5 feet of a second Large or bigger tree that is within 60 feet of the previous tree."
+          ]
+        }
+      ],
+      "environment": [
+        "forest"
+      ],
+      "treasure": [
+        "any"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/dryad.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "E",
+        "S"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA",
+        "RCH"
+      ],
+      "conditionInflictSpell": [
+        "charmed",
+        "restrained"
+      ],
+      "savingThrowForcedSpell": [
+        "strength",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Goblin Boss",
+      "group": [
+        "Goblinoids"
+      ],
+      "source": "XMM",
+      "page": 143,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S"
+      ],
+      "type": {
+        "type": "fey",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 21,
+        "formula": "6d6"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 10,
+      "dex": 15,
+      "con": 10,
+      "int": 10,
+      "wis": 8,
+      "cha": 10,
+      "skill": {
+        "stealth": "+6"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "languages": [
+        "Common",
+        "Goblin"
+      ],
+      "cr": "1",
+      "gear": [
+        "chain shirt|xphb",
+        "scimitar|xphb",
+        "shield|xphb",
+        "shortbow|xphb"
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The goblin makes two attacks, using Scimitar or Shortbow in any combination."
+          ]
+        },
+        {
+          "name": "Scimitar",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Slashing damage, plus 2 ({@damage 1d4}) Slashing damage if the attack roll had {@variantrule Advantage|XPHB}."
+          ]
+        },
+        {
+          "name": "Shortbow",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 80/320 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage, plus 2 ({@damage 1d4}) Piercing damage if the attack roll had {@variantrule Advantage|XPHB}."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Nimble Escape",
+          "entries": [
+            "The goblin takes the Disengage or Hide action."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Redirect Attack",
+          "entries": [
+            "{@actTrigger} A creature the goblin can see makes an attack roll against it. {@actResponse} The goblin chooses a Small or Medium ally within 5 feet of itself. The goblin and that ally swap places, and the ally becomes the target of the attack instead."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "hill",
+        "planar, acheron",
+        "planar, feywild",
+        "underdark"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/goblin-boss.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "GO"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Goblin Hexer",
+      "group": [
+        "Goblinoids"
+      ],
+      "source": "XMM",
+      "page": 143,
+      "size": [
+        "S"
+      ],
+      "type": {
+        "type": "fey",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 45,
+        "formula": "10d6 + 10"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 8,
+      "dex": 16,
+      "con": 12,
+      "int": 16,
+      "wis": 10,
+      "cha": 10,
+      "skill": {
+        "sleight of hand": "+5",
+        "stealth": "+7"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "languages": [
+        "Common",
+        "Goblin"
+      ],
+      "cr": "3",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The goblin casts one of the following spells, using Intelligence as the spellcasting ability (spell save {@dc 13}):"
+          ],
+          "will": [
+            "{@spell Minor Illusion|XPHB}"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Blindness/Deafness|XPHB}",
+              "{@spell Faerie Fire|XPHB}",
+              "{@spell Grease|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "displayAs": "action"
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The goblin makes two Hex Stick attacks. It can replace one attack with a use of Spellcasting."
+          ]
+        },
+        {
+          "name": "Hex Stick",
+          "entries": [
+            "{@atkr m,r} {@hit 5}, reach 5 ft. or range 60 ft. {@h}12 ({@damage 2d8 + 3}) Psychic damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Jinx",
+          "entries": [
+            "{@actTrigger} A creature the goblin can see hits it with an attack roll. {@actResponse d}{@actSave wis} {@dc 13}, the triggering creature. {@actSaveFail} The attack misses instead."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "hill",
+        "planar, acheron",
+        "planar, feywild",
+        "underdark"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "GO"
+      ],
+      "damageTags": [
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "blinded",
+        "deafened",
+        "prone"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "constitution",
+        "dexterity"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Goblin Minion",
+      "group": [
+        "Goblinoids"
+      ],
+      "source": "XMM",
+      "page": 142,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "S"
+      ],
+      "type": {
+        "type": "fey",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        12
+      ],
+      "hp": {
+        "average": 7,
+        "formula": "2d6"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 8,
+      "dex": 15,
+      "con": 10,
+      "int": 10,
+      "wis": 8,
+      "cha": 8,
+      "skill": {
+        "stealth": "+6"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "languages": [
+        "Common",
+        "Goblin"
+      ],
+      "cr": "1/8",
+      "gear": [
+        {
+          "item": "dagger|xphb",
+          "quantity": 3
+        }
+      ],
+      "action": [
+        {
+          "name": "Dagger",
+          "entries": [
+            "{@atkr m,r} {@hit 4}, reach 5 ft. or range 20/60 ft. {@h}4 ({@damage 1d4 + 2}) Piercing damage."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Nimble Escape",
+          "entries": [
+            "The goblin takes the Disengage or Hide action."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "hill",
+        "planar, acheron",
+        "planar, feywild",
+        "underdark"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "GO"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Goblin Warrior",
+      "group": [
+        "Goblinoids"
+      ],
+      "source": "XMM",
+      "page": 142,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "BQGT"
+        },
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "S"
+      ],
+      "type": {
+        "type": "fey",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 10,
+        "formula": "3d6"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "str": 8,
+      "dex": 15,
+      "con": 10,
+      "int": 10,
+      "wis": 8,
+      "cha": 8,
+      "skill": {
+        "stealth": "+6"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 9,
+      "languages": [
+        "Common",
+        "Goblin"
+      ],
+      "cr": "1/4",
+      "gear": [
+        "leather armor|xphb",
+        "scimitar|xphb",
+        "shield|xphb",
+        "shortbow|xphb"
+      ],
+      "action": [
+        {
+          "name": "Scimitar",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}5 ({@damage 1d6 + 2}) Slashing damage, plus 2 ({@damage 1d4}) Slashing damage if the attack roll had {@variantrule Advantage|XPHB}."
+          ]
+        },
+        {
+          "name": "Shortbow",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 80/320 ft. {@h}5 ({@damage 1d6 + 2}) Piercing damage, plus 2 ({@damage 1d4}) Piercing damage if the attack roll had {@variantrule Advantage|XPHB}."
+          ]
+        }
+      ],
+      "bonus": [
+        {
+          "name": "Nimble Escape",
+          "entries": [
+            "The goblin takes the Disengage or Hide action."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "hill",
+        "planar, acheron",
+        "planar, feywild",
+        "underdark"
+      ],
+      "treasure": [
+        "implements",
+        "individual"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "GO"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Green Hag",
+      "source": "XMM",
+      "page": 156,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "DrDe"
+        }
+      ],
+      "size": [
+        "M"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 82,
+        "formula": "11d8 + 33"
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 30
+      },
+      "str": 18,
+      "dex": 12,
+      "con": 16,
+      "int": 13,
+      "wis": 14,
+      "cha": 14,
+      "skill": {
+        "arcana": "+5",
+        "deception": "+4",
+        "perception": "+4",
+        "stealth": "+3"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "languages": [
+        "Common",
+        "Elvish",
+        "Sylvan"
+      ],
+      "cr": "3",
+      "spellcasting": [
+        {
+          "name": "Coven Magic",
+          "type": "spellcasting",
+          "headerEntries": [
+            "While within 30 feet of at least two hag allies, the hag can cast one of the following spells, requiring no Material components, using the spell's normal casting time, and using Intelligence as the spellcasting ability (spell save {@dc 11}): {@spell Augury|XPHB}, {@spell Find Familiar|XPHB}, {@spell Identify|XPHB}, {@spell Locate Object|XPHB}, {@spell Scrying|XPHB}, or {@spell Unseen Servant|XPHB}. The hag must finish a {@variantrule Long Rest|XPHB} before using this trait to cast that spell again."
+          ],
+          "restLong": {
+            "1": [
+              "{@spell Augury|XPHB}",
+              "{@spell Find Familiar|XPHB}",
+              "{@spell Identify|XPHB}",
+              "{@spell Locate Object|XPHB}",
+              "{@spell Scrying|XPHB}",
+              "{@spell Unseen Servant|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "hidden": [
+            "restLong"
+          ]
+        },
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The hag casts one of the following spells, requiring no Material components and using Wisdom as the spellcasting ability (spell save {@dc 12}, {@hit 4} to hit with spell attacks):"
+          ],
+          "will": [
+            "{@spell Dancing Lights|XPHB}",
+            "{@spell Disguise Self|XPHB} (24-hour duration)",
+            "{@spell Invisibility|XPHB} (self only, and the hag leaves no tracks while Invisible)",
+            "{@spell Minor Illusion|XPHB}",
+            "{@spell Ray of Sickness|XPHB} (level 3 version)"
+          ],
+          "ability": "wis",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The hag can breathe air and water."
+          ]
+        },
+        {
+          "name": "Mimicry",
+          "entries": [
+            "The hag can mimic animal sounds and humanoid voices. A creature that hears the sounds can tell they are imitations only with a successful {@dc 14} Wisdom ({@skill Insight|XPHB}) check."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The hag makes two Claw attacks."
+          ]
+        },
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}8 ({@damage 1d8 + 4}) Slashing damage plus 3 ({@damage 1d6}) Poison damage."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "hill",
+        "swamp"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/green-hag.mp3"
+      },
+      "traitTags": [
+        "Amphibious",
+        "Mimicry"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "E",
+        "S"
+      ],
+      "damageTags": [
+        "I",
+        "S"
+      ],
+      "damageTagsSpell": [
+        "I"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflictSpell": [
+        "invisible",
+        "poisoned"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Hobgoblin Captain",
+      "group": [
+        "Goblinoids"
+      ],
+      "source": "XMM",
+      "page": 171,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "fey",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 58,
+        "formula": "9d8 + 18"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 15,
+      "dex": 14,
+      "con": 14,
+      "int": 12,
+      "wis": 10,
+      "cha": 13,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "languages": [
+        "Common",
+        "Goblin"
+      ],
+      "cr": "3",
+      "gear": [
+        "greatsword|xphb",
+        "half plate armor|xphb",
+        "longbow|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Aura of Authority",
+          "entries": [
+            "While in a 10-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the hobgoblin, the hobgoblin and its allies have {@variantrule Advantage|XPHB} on attack rolls and saving throws, provided the hobgoblin doesn't have the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The hobgoblin makes two attacks, using Greatsword or Longbow in any combination."
+          ]
+        },
+        {
+          "name": "Greatsword",
+          "entries": [
+            "{@atkr m} {@hit 4}, reach 5 ft. {@h}9 ({@damage 2d6 + 2}) Slashing damage plus 3 ({@damage 1d6}) Poison damage."
+          ]
+        },
+        {
+          "name": "Longbow",
+          "entries": [
+            "{@atkr r} {@hit 4}, range 150/600 ft. {@h}6 ({@damage 1d8 + 2}) Piercing damage plus 5 ({@damage 2d4}) Poison damage."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "grassland",
+        "hill",
+        "mountain",
+        "planar, acheron",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/hobgoblin-captain.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "GO"
+      ],
+      "damageTags": [
+        "I",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Hobgoblin Warlord",
+      "group": [
+        "Goblinoids"
+      ],
+      "source": "XMM",
+      "page": 171,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "fey",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        20
+      ],
+      "hp": {
+        "average": 112,
+        "formula": "15d8 + 45"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 17,
+      "dex": 14,
+      "con": 16,
+      "int": 14,
+      "wis": 11,
+      "cha": 15,
+      "save": {
+        "dex": "+5",
+        "int": "+5",
+        "wis": "+3",
+        "cha": "+5"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "languages": [
+        "Common",
+        "Goblin"
+      ],
+      "cr": "6",
+      "gear": [
+        {
+          "item": "javelin|xphb",
+          "quantity": 9
+        },
+        "longsword|xphb",
+        "plate armor|xphb",
+        "shield|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Aura of Authority",
+          "entries": [
+            "While in a 30-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the hobgoblin, the hobgoblin and its allies have {@variantrule Advantage|XPHB} on attack rolls and saving throws, provided the hobgoblin doesn't have the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The hobgoblin makes three attacks, using Javelin or Longsword in any combination."
+          ]
+        },
+        {
+          "name": "Javelin",
+          "entries": [
+            "{@atkr m,r} {@hit 6}, reach 5 ft. or range 30/120 ft. {@h}11 ({@damage 2d6 + 4}) Piercing damage, and the target's {@variantrule Speed|XPHB} decreases by 10 feet until the start of the hobgoblin's next turn."
+          ]
+        },
+        {
+          "name": "Longsword",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}12 ({@damage 2d8 + 3}) Slashing damage."
+          ]
+        }
+      ],
+      "reaction": [
+        {
+          "name": "Parry",
+          "entries": [
+            "{@actTrigger} The hobgoblin is hit by a melee attack roll while holding a weapon. {@actResponse} The hobgoblin adds 3 to its AC against that attack, possibly causing it to miss."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "grassland",
+        "hill",
+        "mountain",
+        "planar, acheron",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/hobgoblin-warlord.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "actionTags": [
+        "Multiattack",
+        "Parry"
+      ],
+      "languageTags": [
+        "C",
+        "GO"
+      ],
+      "damageTags": [
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "THW"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Hobgoblin Warrior",
+      "group": [
+        "Goblinoids"
+      ],
+      "source": "XMM",
+      "page": 170,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": {
+        "type": "fey",
+        "tags": [
+          "goblinoid"
+        ]
+      },
+      "alignment": [
+        "L",
+        "E"
+      ],
+      "ac": [
+        18
+      ],
+      "hp": {
+        "average": 11,
+        "formula": "2d8 + 2"
+      },
+      "speed": {
+        "walk": 30
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 13,
+      "dex": 12,
+      "con": 12,
+      "int": 10,
+      "wis": 10,
+      "cha": 9,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 10,
+      "languages": [
+        "Common",
+        "Goblin"
+      ],
+      "cr": "1/2",
+      "gear": [
+        "half plate armor|xphb",
+        "longbow|xphb",
+        "longsword|xphb",
+        "shield|xphb"
+      ],
+      "trait": [
+        {
+          "name": "Pack Tactics",
+          "entries": [
+            "The hobgoblin has {@variantrule Advantage|XPHB} on an attack roll against a creature if at least one of the hobgoblin's allies is within 5 feet of the creature and the ally doesn't have the {@condition Incapacitated|XPHB} condition."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Longsword",
+          "entries": [
+            "{@atkr m} {@hit 3}, reach 5 ft. {@h}12 ({@damage 2d10 + 1}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Longbow",
+          "entries": [
+            "{@atkr r} {@hit 3}, range 150/600 ft. {@h}5 ({@damage 1d8 + 1}) Piercing damage plus 7 ({@damage 3d4}) Poison damage."
+          ]
+        }
+      ],
+      "environment": [
+        "desert",
+        "forest",
+        "grassland",
+        "hill",
+        "mountain",
+        "planar, acheron",
+        "underdark"
+      ],
+      "treasure": [
+        "armaments",
+        "individual"
+      ],
+      "traitTags": [
+        "Pack Tactics"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "C",
+        "GO"
+      ],
+      "damageTags": [
+        "I",
+        "P",
+        "S"
+      ],
+      "miscTags": [
+        "MA",
+        "MLW",
+        "RA",
+        "RNG"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Pixie",
+      "source": "XMM",
+      "page": 244,
+      "size": [
+        "T"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 9,
+        "formula": "6d4 - 6"
+      },
+      "speed": {
+        "walk": 10,
+        "fly": 30
+      },
+      "str": 2,
+      "dex": 20,
+      "con": 8,
+      "int": 10,
+      "wis": 14,
+      "cha": 15,
+      "skill": {
+        "perception": "+4",
+        "stealth": "+7"
+      },
+      "passive": 14,
+      "languages": [
+        "Sylvan"
+      ],
+      "cr": "1/4",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The pixie casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 12}):"
+          ],
+          "will": [
+            "{@spell Dancing Lights|XPHB}",
+            "{@spell Druidcraft|XPHB}",
+            "{@spell Invisibility|XPHB} (self only)"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Detect Thoughts|XPHB}",
+              "{@spell Fly|XPHB}",
+              "{@spell Sleep|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The pixie has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Faerie Dust",
+          "entries": [
+            "{@atkr m,r} {@hit 4}, reach 5 ft. or range 60 ft. {@h}1 Radiant damage, and the target has the {@condition Charmed|XPHB} or {@condition Poisoned|XPHB} condition (pixie's choice) until the start of the pixie's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "planar, feywild"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/pixie.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "languageTags": [
+        "S"
+      ],
+      "damageTags": [
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "incapacitated",
+        "invisible",
+        "unconscious"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Pixie Wonderbringer",
+      "source": "XMM",
+      "page": 244,
+      "size": [
+        "T"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 60,
+        "formula": "24d4"
+      },
+      "speed": {
+        "walk": 10,
+        "fly": 30
+      },
+      "str": 2,
+      "dex": 20,
+      "con": 10,
+      "int": 11,
+      "wis": 14,
+      "cha": 18,
+      "skill": {
+        "arcana": "+3",
+        "perception": "+5",
+        "stealth": "+8"
+      },
+      "passive": 15,
+      "languages": [
+        "Common",
+        "Elvish",
+        "Sylvan"
+      ],
+      "cr": "5",
+      "spellcasting": [
+        {
+          "name": "Spellcasting",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The pixie casts one of the following spells, requiring no Material components and using Charisma as the spellcasting ability (spell save {@dc 15}):"
+          ],
+          "will": [
+            "{@spell Dancing Lights|XPHB}",
+            "{@spell Druidcraft|XPHB}",
+            "{@spell Invisibility|XPHB} (self only)"
+          ],
+          "daily": {
+            "1e": [
+              "{@spell Detect Thoughts|XPHB}",
+              "{@spell Fly|XPHB}",
+              "{@spell Major Image|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "action"
+        },
+        {
+          "name": "Burst of Wonder {@recharge 5}",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The pixie casts {@spell Entangle|XPHB}, {@spell Polymorph|XPHB}, or {@spell Tasha's Hideous Laughter|XPHB}, requiring no Material components and using the same spellcasting ability as Spellcasting."
+          ],
+          "recharge": {
+            "5": [
+              "{@spell Entangle|XPHB}",
+              "{@spell Polymorph|XPHB}",
+              "{@spell Tasha's Hideous Laughter|XPHB}"
+            ]
+          },
+          "ability": "cha",
+          "displayAs": "bonus",
+          "hidden": [
+            "recharge"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The pixie has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The pixie makes two Faerie Dust attacks."
+          ]
+        },
+        {
+          "name": "Faerie Dust",
+          "entries": [
+            "{@atkr m,r} {@hit 7}, reach 5 ft. or range 60 ft. {@h}15 ({@damage 2d10 + 4}) Radiant damage, and the target has the {@condition Charmed|XPHB} or {@condition Poisoned|XPHB} condition (pixie's choice) until the start of the pixie's next turn."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "planar, feywild"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "E",
+        "S"
+      ],
+      "damageTags": [
+        "R"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflictSpell": [
+        "incapacitated",
+        "invisible",
+        "prone",
+        "restrained"
+      ],
+      "savingThrowForcedSpell": [
+        "strength",
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Satyr",
+      "source": "XMM",
+      "page": 268,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "fey",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 31,
+        "formula": "7d8"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "str": 12,
+      "dex": 16,
+      "con": 11,
+      "int": 12,
+      "wis": 10,
+      "cha": 14,
+      "skill": {
+        "perception": "+2",
+        "performance": "+6",
+        "stealth": "+5"
+      },
+      "passive": 12,
+      "languages": [
+        "Common",
+        "Elvish",
+        "Sylvan"
+      ],
+      "cr": "1/2",
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The satyr has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Hooves",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}5 ({@damage 1d4 + 3}) Bludgeoning damage. If the target is a Medium or smaller creature, the satyr pushes the target up to 10 feet straight away from itself."
+          ]
+        },
+        {
+          "name": "Mockery",
+          "entries": [
+            "{@actSave wis} {@dc 12}, one creature the satyr can see within 90 feet. {@actSaveFail} 5 ({@damage 1d6 + 2}) Psychic damage."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "planar, feywild"
+      ],
+      "treasure": [
+        "implements"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/satyr.mp3"
+      },
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "languageTags": [
+        "C",
+        "E",
+        "S"
+      ],
+      "damageTags": [
+        "B",
+        "Y"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Satyr Revelmaster",
+      "source": "XMM",
+      "page": 268,
+      "size": [
+        "M"
+      ],
+      "type": "fey",
+      "alignment": [
+        "C",
+        "N"
+      ],
+      "ac": [
+        17
+      ],
+      "hp": {
+        "average": 82,
+        "formula": "15d8 + 15"
+      },
+      "speed": {
+        "walk": 40
+      },
+      "initiative": {
+        "proficiency": 1
+      },
+      "str": 12,
+      "dex": 18,
+      "con": 12,
+      "int": 12,
+      "wis": 14,
+      "cha": 17,
+      "save": {
+        "dex": "+7",
+        "wis": "+5"
+      },
+      "skill": {
+        "acrobatics": "+7",
+        "perception": "+5",
+        "performance": "+9"
+      },
+      "passive": 15,
+      "languages": [
+        "Common",
+        "Elvish",
+        "Sylvan"
+      ],
+      "cr": "6",
+      "trait": [
+        {
+          "name": "Magic Resistance",
+          "entries": [
+            "The satyr has {@variantrule Advantage|XPHB} on saving throws against spells and other magical effects."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Multiattack",
+          "entries": [
+            "The satyr makes three Prance attacks."
+          ]
+        },
+        {
+          "name": "Prance",
+          "entries": [
+            "{@atkr m} {@hit 7}, reach 5 ft. {@h}13 ({@damage 2d8 + 4}) Bludgeoning damage, and the target has the {@condition Charmed|XPHB} condition until the start of the satyr's next turn."
+          ]
+        },
+        {
+          "name": "Fey Melody {@recharge 4}",
+          "entries": [
+            "The satyr conjures a charming or frightening song. {@actSave wis} {@dc 14}, each enemy in a 60-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation} originating from the satyr. {@actSaveFail} The target is subjected to the song's effect:",
+            {
+              "type": "list",
+              "style": "list-hang-notitle",
+              "items": [
+                {
+                  "type": "item",
+                  "name": "Charming",
+                  "entries": [
+                    "The target has the {@condition Charmed|XPHB} condition for 1 minute. While {@condition Charmed|XPHB}, the target has the {@condition Incapacitated|XPHB} condition and uses all its movement to dance in place. The effect ends on the target if it takes any damage."
+                  ]
+                },
+                {
+                  "type": "item",
+                  "name": "Frightening",
+                  "entries": [
+                    "10 ({@damage 2d6 + 3}) Psychic damage, and the target has the {@condition Frightened|XPHB} condition for 1 minute. If the target ends its turn out of line of sight from the satyr, the condition ends on it."
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "planar, feywild"
+      ],
+      "treasure": [
+        "implements"
+      ],
+      "traitTags": [
+        "Magic Resistance"
+      ],
+      "actionTags": [
+        "Multiattack"
+      ],
+      "languageTags": [
+        "C",
+        "E",
+        "S"
+      ],
+      "damageTags": [
+        "B",
+        "Y"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "charmed",
+        "frightened",
+        "incapacitated"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Sea Hag",
+      "source": "XMM",
+      "page": 271,
+      "srd52": true,
+      "basicRules2024": true,
+      "size": [
+        "M"
+      ],
+      "type": "fey",
+      "alignment": [
+        "C",
+        "E"
+      ],
+      "ac": [
+        14
+      ],
+      "hp": {
+        "average": 52,
+        "formula": "7d8 + 21"
+      },
+      "speed": {
+        "walk": 30,
+        "swim": 40
+      },
+      "str": 16,
+      "dex": 13,
+      "con": 16,
+      "int": 12,
+      "wis": 12,
+      "cha": 13,
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 11,
+      "languages": [
+        "Common",
+        "Giant",
+        "Primordial (Aquan)"
+      ],
+      "cr": "2",
+      "spellcasting": [
+        {
+          "name": "Coven Magic",
+          "type": "spellcasting",
+          "headerEntries": [
+            "While within 30 feet of at least two hag allies, the hag can cast one of the following spells, requiring no Material components, using the spell's normal casting time, and using Intelligence as the spellcasting ability (spell save {@dc 11}): {@spell Augury|XPHB}, {@spell Find Familiar|XPHB}, {@spell Identify|XPHB}, {@spell Locate Object|XPHB}, {@spell Scrying|XPHB}, or {@spell Unseen Servant|XPHB}. The hag must finish a {@variantrule Long Rest|XPHB} before using this trait to cast that spell again."
+          ],
+          "restLong": {
+            "1": [
+              "{@spell Augury|XPHB}",
+              "{@spell Find Familiar|XPHB}",
+              "{@spell Identify|XPHB}",
+              "{@spell Locate Object|XPHB}",
+              "{@spell Scrying|XPHB}",
+              "{@spell Unseen Servant|XPHB}"
+            ]
+          },
+          "ability": "int",
+          "hidden": [
+            "restLong"
+          ]
+        },
+        {
+          "name": "Illusory Appearance",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The hag casts {@spell Disguise Self|XPHB}, using Constitution as the spellcasting ability (spell save {@dc 13}). The spell's duration is 24 hours."
+          ],
+          "will": [
+            "{@spell Disguise Self|XPHB}"
+          ],
+          "ability": "con",
+          "displayAs": "action",
+          "hidden": [
+            "will"
+          ]
+        }
+      ],
+      "trait": [
+        {
+          "name": "Amphibious",
+          "entries": [
+            "The hag can breathe air and water."
+          ]
+        },
+        {
+          "name": "Vile Appearance",
+          "entries": [
+            "{@actSave wis} {@dc 11}, any Beast or Humanoid that starts its turn within 30 feet of the hag and can see the hag's true form. {@actSaveFail} The target has the {@condition Frightened|XPHB} condition until the start of its next turn. {@actSaveSuccess} The target is immune to this hag's Vile Appearance for 24 hours."
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Claw",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}10 ({@damage 2d6 + 3}) Slashing damage."
+          ]
+        },
+        {
+          "name": "Death Glare {@recharge 5}",
+          "entries": [
+            "{@actSave wis} {@dc 11}, one {@condition Frightened|XPHB} creature the hag can see within 30 feet. {@actSaveFail} If the target has 20 {@variantrule Hit Points|XPHB} or fewer, it drops to 0 {@variantrule Hit Points|XPHB}. Otherwise, the target takes 13 ({@damage 3d8}) Psychic damage."
+          ]
+        }
+      ],
+      "environment": [
+        "coastal",
+        "underwater"
+      ],
+      "treasure": [
+        "arcana"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/sea-hag.mp3"
+      },
+      "traitTags": [
+        "Amphibious"
+      ],
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "AQ",
+        "C",
+        "GI",
+        "P"
+      ],
+      "damageTags": [
+        "S",
+        "Y"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "conditionInflict": [
+        "frightened"
+      ],
+      "savingThrowForced": [
+        "wisdom"
+      ],
+      "savingThrowForcedSpell": [
+        "wisdom"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Sprite",
+      "source": "XMM",
+      "page": 298,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "XPHB",
+          "page": 358
+        }
+      ],
+      "size": [
+        "T"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "G"
+      ],
+      "ac": [
+        15
+      ],
+      "hp": {
+        "average": 10,
+        "formula": "4d4"
+      },
+      "speed": {
+        "walk": 10,
+        "fly": 40
+      },
+      "str": 3,
+      "dex": 18,
+      "con": 10,
+      "int": 14,
+      "wis": 13,
+      "cha": 11,
+      "skill": {
+        "perception": "+3",
+        "stealth": "+8"
+      },
+      "passive": 13,
+      "languages": [
+        "Common",
+        "Elvish",
+        "Sylvan"
+      ],
+      "cr": "1/4",
+      "spellcasting": [
+        {
+          "name": "Invisibility",
+          "type": "spellcasting",
+          "headerEntries": [
+            "The sprite casts {@spell Invisibility|XPHB} on itself, requiring no spell components and using Charisma as the spellcasting ability."
+          ],
+          "will": [
+            "{@spell Invisibility|XPHB}"
+          ],
+          "ability": "cha",
+          "displayAs": "action",
+          "hidden": [
+            "will"
+          ]
+        }
+      ],
+      "action": [
+        {
+          "name": "Needle Sword",
+          "entries": [
+            "{@atkr m} {@hit 6}, reach 5 ft. {@h}6 ({@damage 1d4 + 4}) Piercing damage."
+          ]
+        },
+        {
+          "name": "Enchanting Bow",
+          "entries": [
+            "{@atkr r} {@hit 6}, range 40/160 ft. {@h}1 Piercing damage, and the target has the {@condition Charmed|XPHB} condition until the start of the sprite's next turn."
+          ]
+        },
+        {
+          "name": "Heart Sight",
+          "entries": [
+            "{@actSave cha} {@dc 10}, one creature within 5 feet the sprite can see (Celestials, Fiends, and Undead automatically fail the save). {@actSaveFail} The sprite knows the target's emotions and alignment."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "planar, feywild"
+      ],
+      "treasure": [
+        "armaments"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/sprite.mp3"
+      },
+      "languageTags": [
+        "C",
+        "E",
+        "S"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "spellcastingTags": [
+        "O"
+      ],
+      "miscTags": [
+        "MA",
+        "RA"
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "conditionInflictSpell": [
+        "invisible"
+      ],
+      "savingThrowForced": [
+        "charisma"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    },
+    {
+      "name": "Worg",
+      "source": "XMM",
+      "page": 335,
+      "srd52": true,
+      "basicRules2024": true,
+      "otherSources": [
+        {
+          "source": "UtHftLH"
+        }
+      ],
+      "size": [
+        "L"
+      ],
+      "type": "fey",
+      "alignment": [
+        "N",
+        "E"
+      ],
+      "ac": [
+        13
+      ],
+      "hp": {
+        "average": 26,
+        "formula": "4d10 + 4"
+      },
+      "speed": {
+        "walk": 50
+      },
+      "str": 16,
+      "dex": 13,
+      "con": 13,
+      "int": 7,
+      "wis": 11,
+      "cha": 8,
+      "skill": {
+        "perception": "+4"
+      },
+      "senses": [
+        "darkvision 60 ft."
+      ],
+      "passive": 14,
+      "languages": [
+        "Goblin",
+        "Worg"
+      ],
+      "cr": "1/2",
+      "action": [
+        {
+          "name": "Bite",
+          "entries": [
+            "{@atkr m} {@hit 5}, reach 5 ft. {@h}7 ({@damage 1d8 + 3}) Piercing damage, and the next attack roll made against the target before the start of the worg's next turn has {@variantrule Advantage|XPHB}."
+          ]
+        }
+      ],
+      "environment": [
+        "forest",
+        "grassland",
+        "hill",
+        "planar, feywild"
+      ],
+      "soundClip": {
+        "type": "internal",
+        "path": "bestiary/worg.mp3"
+      },
+      "senseTags": [
+        "D"
+      ],
+      "languageTags": [
+        "GO",
+        "OTH"
+      ],
+      "damageTags": [
+        "P"
+      ],
+      "miscTags": [
+        "MA"
+      ],
+      "hasToken": true,
+      "hasFluff": true,
+      "hasFluffImages": true
+    }
+  ]
+}
