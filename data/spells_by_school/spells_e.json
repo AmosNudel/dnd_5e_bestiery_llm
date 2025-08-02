@@ -1,0 +1,2416 @@
+{
+  "school": "Enchantment",
+  "school_code": "E",
+  "spell_count": 42,
+  "spells": [
+    {
+      "name": "Animal Friendship",
+      "source": "XPHB",
+      "page": 239,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a morsel of food"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 24
+          }
+        }
+      ],
+      "entries": [
+        "Target a Beast that you can see within range. The target must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration. If you or one of your allies deals damage to the target, the spells ends."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can target one additional Beast for each spell slot level above 1."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "affectsCreatureType": [
+        "beast"
+      ],
+      "miscTags": [
+        "SCT",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Animal Messenger",
+      "source": "XPHB",
+      "page": 240,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a morsel of food"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 24
+          }
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "A {@filter Tiny Beast|bestiary|size=T|type=beast|miscellaneous=!swarm} of your choice that you can see within range must succeed on a Charisma saving throw, or it attempts to deliver a message for you (if the target's {@variantrule Challenge Rating|XPHB} isn't 0, it automatically succeeds). You specify a location you have visited and a recipient who matches a general description, such as \"a person dressed in the uniform of the town guard\" or \"a red-haired dwarf wearing a pointed hat.\" You also communicate a message of up to twenty-five words. The Beast travels for the duration toward the specified location, covering about 25 miles per 24 hours or 50 miles if the Beast can fly.",
+        "When the Beast arrives, it delivers your message to the creature that you described, mimicking your communication. If the Beast doesn't reach its destination before the spell ends, the message is lost, and the Beast returns to where you cast the spell."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The spell's duration increases by 48 hours for each spell slot level above 2."
+          ]
+        }
+      ],
+      "savingThrow": [
+        "charisma"
+      ],
+      "affectsCreatureType": [
+        "beast"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Antipathy/Sympathy",
+      "source": "XPHB",
+      "page": 242,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 8,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "hour"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a mix of vinegar and honey"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "day",
+            "amount": 10
+          }
+        }
+      ],
+      "entries": [
+        "As you cast the spell, choose whether it creates antipathy or sympathy, and target one creature or object that is Huge or smaller. Then specify a kind of creature, such as red dragons, goblins, or vampires. A creature of the chosen kind makes a Wisdom saving throw when it comes within 120 feet of the target. Your choice of antipathy or sympathy determines what happens to a creature when it fails that save:",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "Antipathy",
+              "entries": [
+                "The creature has the {@condition Frightened|XPHB} condition. The {@condition Frightened|XPHB} creature must use its movement on its turns to get as far away as possible from the target, moving by the safest route."
+              ]
+            },
+            {
+              "type": "item",
+              "name": "Sympathy",
+              "entries": [
+                "The creature has the {@condition Charmed|XPHB} condition. The {@condition Charmed|XPHB} creature must use its movement on its turns to get as close as possible to the target, moving by the safest route. If the creature is within 5 feet of the target, the creature can't willingly move away. If the target damages the {@condition Charmed|XPHB} creature, that creature can make a Wisdom saving throw to end the effect, as described below."
+              ]
+            }
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Ending the Effect",
+          "entries": [
+            "If the {@condition Frightened|XPHB} or {@condition Charmed|XPHB} creature ends its turn more than 120 feet away from the target, the creature makes a Wisdom saving throw. On a successful save, the creature is no longer affected by the target. A creature that successfully saves against this effect is immune to it for 1 minute, after which it can be affected again."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "frightened",
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "OBJ"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Bane",
+      "source": "XPHB",
+      "page": 245,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a drop of blood"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "Up to three creatures of your choice that you can see within range must each make a Charisma saving throw. Whenever a target that fails this save makes an attack roll or a saving throw before the spell ends, the target must subtract {@dice 1d4} from the attack roll or save."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can target one additional creature for each spell slot level above 1."
+          ]
+        }
+      ],
+      "savingThrow": [
+        "charisma"
+      ],
+      "miscTags": [
+        "SCT",
+        "SGT"
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    },
+    {
+      "name": "Befuddlement",
+      "source": "XPHB",
+      "page": 245,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 8,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 150
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a key ring with no keys"
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You blast the mind of a creature that you can see within range. The target makes an Intelligence saving throw.",
+        "On a failed save, the target takes {@damage 10d12} Psychic damage and can't cast spells or take the {@action Magic|XPHB} action. At the end of every 30 days, the target repeats the save, ending the effect on a success. The effect can also be ended by the {@spell Greater Restoration|XPHB}, {@spell Heal|XPHB}, or {@spell Wish|XPHB} spell.",
+        "On a successful save, the target takes half as much damage only."
+      ],
+      "damageInflict": [
+        "psychic"
+      ],
+      "savingThrow": [
+        "intelligence"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Bless",
+      "source": "XPHB",
+      "page": 247,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a Holy Symbol worth 5+ GP",
+          "cost": 500
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You bless up to three creatures within range. Whenever a target makes an attack roll or a saving throw before the spell ends, the target adds {@dice 1d4} to the attack roll or save."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can target one additional creature for each spell slot level above 1."
+          ]
+        }
+      ],
+      "miscTags": [
+        "SCT"
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    },
+    {
+      "name": "Calm Emotions",
+      "source": "XPHB",
+      "page": 249,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "Each Humanoid in a 20-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point you choose within range must succeed on a Charisma saving throw or be affected by one of the following effects (choose for each creature):",
+        {
+          "type": "list",
+          "items": [
+            "The creature has {@variantrule Immunity|XPHB} to the {@condition Charmed|XPHB} and {@condition Frightened|XPHB} conditions until the spell ends. If the creature was already {@condition Charmed|XPHB} or {@condition Frightened|XPHB}, those conditions are suppressed for the duration.",
+            "The creature becomes {@variantrule Indifferent [Attitude]|XPHB|Indifferent} about creatures of your choice that it's {@variantrule Hostile [Attitude]|XPHB|Hostile} toward. This indifference ends if the target takes damage or witnesses its allies taking damage. When the spell ends, the creature's attitude returns to normal."
+          ]
+        }
+      ],
+      "savingThrow": [
+        "charisma"
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "areaTags": [
+        "S"
+      ]
+    },
+    {
+      "name": "Charm Monster",
+      "source": "XPHB",
+      "page": 249,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 4,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "One creature you can see within range makes a Wisdom saving throw. It does so with {@variantrule Advantage|XPHB} if you or your allies are fighting it. On a failed save, the target has the {@condition Charmed|XPHB} condition until the spell ends or until you or your allies damage it. The {@condition Charmed|XPHB} creature is {@variantrule Friendly [Attitude]|XPHB|Friendly} to you. When the spell ends, the target knows it was {@condition Charmed|XPHB} by you."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can target one additional creature for each spell slot level above 4."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SCT",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Charm Person",
+      "source": "XPHB",
+      "page": 249,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "One Humanoid you can see within range makes a Wisdom saving throw. It does so with {@variantrule Advantage|XPHB} if you or your allies are fighting it. On a failed save, the target has the {@condition Charmed|XPHB} condition until the spell ends or until you or your allies damage it. The {@condition Charmed|XPHB} creature is {@variantrule Friendly [Attitude]|XPHB|Friendly} to you. When the spell ends, the target knows it was {@condition Charmed|XPHB} by you."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can target one additional creature for each spell slot level above 1."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "miscTags": [
+        "SCT",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Command",
+      "source": "XPHB",
+      "page": 251,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You speak a one-word command to a creature you can see within range. The target must succeed on a Wisdom saving throw or follow the command on its next turn. Choose the command from these options:",
+        {
+          "type": "list",
+          "style": "list-hang-notitle",
+          "items": [
+            {
+              "type": "item",
+              "name": "Approach",
+              "entries": [
+                "The target moves toward you by the shortest and most direct route, ending its turn if it moves within 5 feet of you."
+              ]
+            },
+            {
+              "type": "item",
+              "name": "Drop",
+              "entries": [
+                "The target drops whatever it is holding and then ends its turn."
+              ]
+            },
+            {
+              "type": "item",
+              "name": "Flee",
+              "entries": [
+                "The target spends its turn moving away from you by the fastest available means."
+              ]
+            },
+            {
+              "type": "item",
+              "name": "Grovel",
+              "entries": [
+                "The target has the {@condition Prone|XPHB} condition and then ends its turn."
+              ]
+            },
+            {
+              "type": "item",
+              "name": "Halt",
+              "entries": [
+                "On its turn, the target doesn't move and takes no action or {@variantrule Bonus Action|XPHB}."
+              ]
+            }
+          ]
+        }
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can affect one additional creature for each spell slot level above 1."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SCT",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Compelled Duel",
+      "source": "XPHB",
+      "page": 252,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "bonus"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You try to compel a creature into a duel. One creature that you can see within range makes a Wisdom saving throw. On a failed save, the target has {@variantrule Disadvantage|XPHB} on attack rolls against creatures other than you, and it can't willingly move to a space that is more than 30 feet away from you.",
+        "The spell ends if you make an attack roll against a creature other than the target, if you cast a spell on an enemy other than the target, if an ally of yours damages the target, or if you end your turn more than 30 feet away from the target."
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Compulsion",
+      "source": "XPHB",
+      "page": 252,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 4,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "Each creature of your choice that you can see within range must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition until the spell ends.",
+        "For the duration, you can take a {@variantrule Bonus Action|XPHB} to designate a direction that is horizontal to you. Each {@condition Charmed|XPHB} target must use as much of its movement as possible to move in that direction on its next turn, taking the safest route. After moving in this way, a target repeats the save, ending the spell on itself on a success."
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT",
+        "UBA"
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    },
+    {
+      "name": "Confusion",
+      "source": "XPHB",
+      "page": 253,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 4,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 90
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "three nut shells"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "Each creature in a 10-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point you choose within range must succeed on a Wisdom saving throw, or that target can't take Bonus Actions or Reactions and must roll {@dice 1d10} at the start of each of its turns to determine its behavior for that turn, consulting the table below.",
+        {
+          "type": "table",
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "colLabels": [
+            "1d10",
+            "Behavior for the Turn"
+          ],
+          "rows": [
+            [
+              "1",
+              "The target doesn't take an action, and it uses all its movement to move. Roll {@dice 1d4} for the direction: {@b 1}, north; {@b 2}, east; {@b 3}, south; or {@b 4}, west."
+            ],
+            [
+              "2-6",
+              "The target doesn't move or take actions."
+            ],
+            [
+              "7-8",
+              "The target doesn't move, and it takes the {@action Attack|XPHB} action to make one melee attack against a random creature within reach. If none are within reach, the target takes no action."
+            ],
+            [
+              "9-10",
+              "The target chooses its behavior."
+            ]
+          ]
+        },
+        "At the end of each of its turns, an affected target repeats the save, ending the spell on itself on a success."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The {@variantrule Sphere [Area of Effect]|XPHB|Sphere}'s radius increases by 5 feet for each spell slot level above 4."
+          ]
+        }
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "RO"
+      ],
+      "areaTags": [
+        "S"
+      ]
+    },
+    {
+      "name": "Crown of Madness",
+      "source": "XPHB",
+      "page": 259,
+      "level": 2,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 120
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "One creature that you can see within range must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration. The creature succeeds automatically if it isn't Humanoid.",
+        "A spectral crown appears on the {@condition Charmed|XPHB} target's head, and it must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if no creature is within its reach. The target repeats the save at the end of each of its turns, ending the spell on itself on a success.",
+        "On your later turns, you must take the {@action Magic|XPHB} action to maintain control of the target, or the spell ends."
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Dissonant Whispers",
+      "source": "XPHB",
+      "page": 264,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "One creature of your choice that you can see within range hears a discordant melody in its mind. The target makes a Wisdom saving throw. On a failed save, it takes {@damage 3d6} Psychic damage and must immediately use its {@variantrule Reaction|XPHB}, if available, to move as far away from you as it can, using the safest route. On a successful save, the target takes half as much damage only."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The damage increases by {@scaledamage 3d6|1-9|1d6} for each spell slot level above 1."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "psychic"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Dominate Beast",
+      "source": "XPHB",
+      "page": 265,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 4,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "One Beast you can see within range must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration. The target has {@variantrule Advantage|XPHB} on the save if you or your allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success.",
+        "You have a telepathic link with the {@condition Charmed|XPHB} target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"{@action Attack|XPHB} that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself.",
+        "You can command the target to take a {@variantrule Reaction|XPHB} but must take your own {@variantrule Reaction|XPHB} to do so."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "Your {@status Concentration|XPHB} can last longer with a spell slot of level 5 (up to 10 minutes), 6 (up to 1 hour), or 7+ (up to 8 hours)."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "affectsCreatureType": [
+        "beast"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Dominate Monster",
+      "source": "XPHB",
+      "page": 265,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 8,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "One creature you can see within range must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration. The target has {@variantrule Advantage|XPHB} on the save if you or your allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success.",
+        "You have a telepathic link with the {@condition Charmed|XPHB} target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"{@action Attack|XPHB} that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself.",
+        "You can command the target to take a {@variantrule Reaction|XPHB} but must take your own {@variantrule Reaction|XPHB} to do so."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "Your {@status Concentration|XPHB} can last longer with a level 9 spell slot (up to 8 hours)."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Dominate Person",
+      "source": "XPHB",
+      "page": 266,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "One Humanoid you can see within range must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration. The target has {@variantrule Advantage|XPHB} on the save if you or your allies are fighting it. Whenever the target takes damage, it repeats the save, ending the spell on itself on a success.",
+        "You have a telepathic link with the {@condition Charmed|XPHB} target while the two of you are on the same plane of existence. On your turn, you can use this link to issue commands to the target (no action required), such as \"{@action Attack|XPHB} that creature,\" \"Move over there,\" or \"Fetch that object.\" The target does its best to obey on its turn. If it completes an order and doesn't receive further direction from you, it acts and moves as it likes, focusing on protecting itself.",
+        "You can command the target to take a {@variantrule Reaction|XPHB} but must take your own {@variantrule Reaction|XPHB} to do so."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "Your {@status Concentration|XPHB} can last longer with a spell slot of level 6 (up to 10 minutes), 7 (up to 1 hour), or 8+ (up to 8 hours)."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Enthrall",
+      "source": "XPHB",
+      "page": 269,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "You weave a distracting string of words, causing creatures of your choice that you can see within range to make a Wisdom saving throw. Any creature you or your companions are fighting automatically succeeds on this save. On a failed save, a target has a -10 penalty to Wisdom ({@skill Perception|XPHB}) checks and Passive {@skill Perception|XPHB} until the spell ends."
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    },
+    {
+      "name": "Friends",
+      "source": "XPHB",
+      "page": 277,
+      "level": 0,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 10
+        }
+      },
+      "components": {
+        "s": true,
+        "m": "some makeup"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You magically emanate a sense of friendship toward one creature you can see within range. The target must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration. The target succeeds automatically if it isn't a Humanoid, if you're fighting it, or if you have cast this spell on it within the past 24 hours.",
+        "The spell ends early if the target takes damage or if you make an attack roll, deal damage, or force anyone to make a saving throw. When the spell ends, the target knows it was {@condition Charmed|XPHB} by you."
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Geas",
+      "source": "XPHB",
+      "page": 278,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "day",
+            "amount": 30
+          }
+        }
+      ],
+      "entries": [
+        "You give a verbal command to a creature that you can see within range, ordering it to carry out some service or refrain from an action or a course of activity as you decide. The target must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration. The target automatically succeeds if it can't understand your command.",
+        "While {@condition Charmed|XPHB}, the creature takes {@damage 5d10} Psychic damage if it acts in a manner directly counter to your command. It takes this damage no more than once each day.",
+        "You can issue any command you choose, short of an activity that would result in certain death. Should you issue a suicidal command, the spell ends.",
+        "A {@spell Remove Curse|XPHB}, {@spell Greater Restoration|XPHB}, or {@spell Wish|XPHB} spell ends this spell."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "If you use a level 7 or 8 spell slot, the duration is 365 days. If you use a level 9 spell slot, the spell lasts until it is ended by one of the spells mentioned above."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "psychic"
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "PRM",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Glibness",
+      "source": "XPHB",
+      "page": 279,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 8,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "Until the spell ends, when you make a Charisma check, you can replace the number you roll with a 15. Additionally, no matter what you say, magic that would determine if you are telling the truth indicates that you are being truthful."
+      ]
+    },
+    {
+      "name": "Heroism",
+      "source": "XPHB",
+      "page": 285,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "A willing creature you touch is imbued with bravery. Until the spell ends, the creature is immune to the {@condition Frightened|XPHB} condition and gains {@variantrule Temporary Hit Points|XPHB} equal to your spellcasting ability modifier at the start of each of its turns."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can target one additional creature for each spell slot level above 1."
+          ]
+        }
+      ],
+      "conditionImmune": [
+        "frightened"
+      ],
+      "miscTags": [
+        "SCT",
+        "THP"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Hex",
+      "source": "XPHB",
+      "page": 285,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "bonus"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 90
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "the petrified eye of a newt"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You place a curse on a creature that you can see within range. Until the spell ends, you deal an extra {@damage 1d6} Necrotic damage to the target whenever you hit it with an attack roll. Also, choose one ability when you cast the spell. The target has {@variantrule Disadvantage|XPHB} on ability checks made with the chosen ability.",
+        "If the target drops to 0 {@variantrule Hit Points|XPHB} before this spell ends, you can take a {@variantrule Bonus Action|XPHB} on a later turn to curse a new creature."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "Your {@status Concentration|XPHB} can last longer with a spell slot of level 2 (up to 4 hours), 3-4 (up to 8 hours), or 5+ (24 hours)."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "miscTags": [
+        "AAD",
+        "SGT",
+        "UBA"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Hold Monster",
+      "source": "XPHB",
+      "page": 285,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 90
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a straight piece of iron"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "Choose a creature that you can see within range. The target must succeed on a Wisdom saving throw or have the {@condition Paralyzed|XPHB} condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can target one additional creature for each spell slot level above 5."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "paralyzed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SCT",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Hold Person",
+      "source": "XPHB",
+      "page": 286,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a straight piece of iron"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "Choose a Humanoid that you can see within range. The target must succeed on a Wisdom saving throw or have the {@condition Paralyzed|XPHB} condition for the duration. At the end of each of its turns, the target repeats the save, ending the spell on itself on a success."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can target one additional Humanoid for each spell slot level above 2."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "paralyzed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "miscTags": [
+        "SCT",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Mass Suggestion",
+      "source": "XPHB",
+      "page": 296,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 6,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "m": "a snake's tongue"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 24
+          }
+        }
+      ],
+      "entries": [
+        "You suggest a course of activity—described in no more than 25 words—to twelve or fewer creatures you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to any of the targets or their allies. For example, you could say, \"Walk to the village down that road, and help the villagers there harvest crops until sunset.\" Or you could say, \"Now is not the time for violence. Drop your weapons, and dance! Stop in an hour.\"",
+        "Each target must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration or until you or your allies deal damage to the target. Each {@condition Charmed|XPHB} target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for a target upon completing it."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The duration is longer with a spell slot of level 7 (10 days), 8 (30 days), or 9 (366 days)."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    },
+    {
+      "name": "Mind Sliver",
+      "source": "XPHB",
+      "page": 298,
+      "level": 0,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You try to temporarily sliver the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take {@damage 1d6} Psychic damage and subtract {@dice 1d4} from the next saving throw it makes before the end of your next turn."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Cantrip Upgrade",
+          "entries": [
+            "The damage increases by {@damage 1d6} when you reach levels 5 ({@damage 2d6}), 11 ({@damage 3d6}), and 17 ({@damage 4d6})."
+          ]
+        }
+      ],
+      "scalingLevelDice": {
+        "label": "Psychic damage",
+        "scaling": {
+          "1": "1d6",
+          "5": "2d6",
+          "11": "3d6",
+          "17": "4d6"
+        }
+      },
+      "damageInflict": [
+        "psychic"
+      ],
+      "savingThrow": [
+        "intelligence"
+      ],
+      "miscTags": [
+        "SCL",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Modify Memory",
+      "source": "XPHB",
+      "page": 299,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You attempt to reshape another creature's memories. One creature that you can see within range makes a Wisdom saving throw. If you are fighting the creature, it has {@variantrule Advantage|XPHB} on the save. On a failed save, the target has the {@condition Charmed|XPHB} condition for the duration. While {@condition Charmed|XPHB} in this way, the target also has the {@condition Incapacitated|XPHB} condition and is unaware of its surroundings, though it can hear you. If it takes any damage or is targeted by another spell, this spell ends, and no memories are modified.",
+        "While this charm lasts, you can affect the target's memory of an event that it experienced within the last 24 hours and that lasted no more than 10 minutes. You can permanently eliminate all memory of the event, allow the target to recall the event with perfect clarity, change its memory of the event's details, or create a memory of some other event.",
+        "You must speak to the target to describe how its memories are affected, and it must be able to understand your language for the modified memories to take root. Its mind fills in any gaps in the details of your description. If the spell ends before you finish describing the modified memories, the creature's memory isn't altered. Otherwise, the modified memories take hold when the spell ends.",
+        "A modified memory doesn't necessarily affect how a creature behaves, particularly if the memory contradicts the creature's natural inclinations, alignment, or beliefs. An illogical modified memory, such as a false memory of how much the creature enjoyed swimming in acid, is dismissed as a bad dream. The DM might deem a modified memory too nonsensical to affect a creature.",
+        "A {@spell Remove Curse|XPHB} or {@spell Greater Restoration|XPHB} spell cast on the target restores the creature's true memory."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can alter the target's memories of an event that took place up to 7 days ago (level 6 spell slot), 30 days ago (level 7 spell slot), 365 days ago (level 8 spell slot), or any time in the creature's past (level 9 spell slot)."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "charmed",
+        "incapacitated"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "PRM",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Otto's Irresistible Dance",
+      "source": "XPHB",
+      "page": 303,
+      "srd52": "Irresistible Dance",
+      "basicRules2024": true,
+      "level": 6,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "One creature that you can see within range must make a Wisdom saving throw. On a successful save, the target dances comically until the end of its next turn, during which it must spend all its movement to dance in place.",
+        "On a failed save, the target has the {@condition Charmed|XPHB} condition for the duration. While {@condition Charmed|XPHB}, the target dances comically, must use all its movement to dance in place, and has {@variantrule Disadvantage|XPHB} on Dexterity saving throws and attack rolls, and other creatures have {@variantrule Advantage|XPHB} on attack rolls against it. On each of its turns, the target can take an action to collect itself and repeat the save, ending the spell on itself on a success."
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Power Word Fortify",
+      "source": "XPHB",
+      "page": 306,
+      "level": 7,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You fortify up to six creatures you can see within range. The spell bestows 120 {@variantrule Temporary Hit Points|XPHB}, which you divide among the spell's recipients."
+      ],
+      "miscTags": [
+        "SGT",
+        "THP"
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    },
+    {
+      "name": "Power Word Heal",
+      "source": "XPHB",
+      "page": 306,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 9,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "A wave of healing energy washes over one creature you can see within range. The target regains all its {@variantrule Hit Points|XPHB}. If the creature has the {@condition Charmed|XPHB}, {@condition Frightened|XPHB}, {@condition Paralyzed|XPHB}, {@condition Poisoned|XPHB}, or {@condition Stunned|XPHB} condition, the condition ends. If the creature has the {@condition Prone|XPHB} condition, it can use its {@variantrule Reaction|XPHB} to stand up."
+      ],
+      "miscTags": [
+        "HL"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Power Word Kill",
+      "source": "XPHB",
+      "page": 306,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 9,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You compel one creature you can see within range to die. If the target has 100 {@variantrule Hit Points|XPHB} or fewer, it dies. Otherwise, it takes {@damage 12d12} Psychic damage."
+      ],
+      "damageInflict": [
+        "psychic"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Power Word Stun",
+      "source": "XPHB",
+      "page": 306,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 8,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You overwhelm the mind of one creature you can see within range. If the target has 150 {@variantrule Hit Points|XPHB} or fewer, it has the {@condition Stunned|XPHB} condition. Otherwise, its {@variantrule Speed|XPHB} is 0 until the start of your next turn.",
+        "The {@condition Stunned|XPHB} target makes a Constitution saving throw at the end of each of its turns, ending the condition on itself on a success."
+      ],
+      "conditionInflict": [
+        "stunned"
+      ],
+      "savingThrow": [
+        "constitution"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Sleep",
+      "source": "XPHB",
+      "page": 317,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a pinch of sand or rose petals"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "Each creature of your choice in a 5-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point within range must succeed on a Wisdom saving throw or have the {@condition Incapacitated|XPHB} condition until the end of its next turn, at which point it must repeat the save. If the target fails the second save, the target has the {@condition Unconscious|XPHB} condition for the duration. The spell ends on a target if it takes damage or someone within 5 feet of it takes an action to shake it out of the spell's effect.",
+        "Creatures that don't sleep, such as elves, or that have {@variantrule Immunity|XPHB} to the {@condition Exhaustion|XPHB} condition automatically succeed on saves against this spell."
+      ],
+      "conditionInflict": [
+        "incapacitated",
+        "unconscious"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "areaTags": [
+        "S"
+      ]
+    },
+    {
+      "name": "Staggering Smite",
+      "source": "XPHB",
+      "page": 320,
+      "level": 4,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "bonus",
+          "condition": "which you take immediately after hitting a creature with a Melee weapon or an {@variantrule Unarmed Strike|XPHB}"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "The target takes an extra {@damage 4d6} Psychic damage from the attack, and the target must succeed on a Wisdom saving throw or have the {@condition Stunned|XPHB} condition until the end of your next turn."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The extra damage increases by {@scaledamage 4d6|4-9|1d6} for each spell slot level above 4."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "psychic"
+      ],
+      "conditionInflict": [
+        "stunned"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "AAD"
+      ]
+    },
+    {
+      "name": "Suggestion",
+      "source": "XPHB",
+      "page": 321,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "m": "a drop of honey"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 8
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You suggest a course of activity—described in no more than 25 words—to one creature you can see within range that can hear and understand you. The suggestion must sound achievable and not involve anything that would obviously deal damage to the target or its allies. For example, you could say, \"Fetch the key to the cult's treasure vault, and give the key to me.\" Or you could say, \"Stop fighting, leave this library peacefully, and don't return.\"",
+        "The target must succeed on a Wisdom saving throw or have the {@condition Charmed|XPHB} condition for the duration or until you or your allies deal damage to the target. The {@condition Charmed|XPHB} target pursues the suggestion to the best of its ability. The suggested activity can continue for the entire duration, but if the suggested activity can be completed in a shorter time, the spell ends for the target upon completing it."
+      ],
+      "conditionInflict": [
+        "charmed"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Synaptic Static",
+      "source": "XPHB",
+      "page": 330,
+      "level": 5,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 120
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You cause psychic energy to erupt at a point within range. Each creature in a 20-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on that point makes an Intelligence saving throw, taking {@damage 8d6} Psychic damage on a failed save or half as much damage on a successful one.",
+        "On a failed save, a target also has muddled thoughts for 1 minute. During that time, it subtracts {@dice 1d6} from all its attack rolls and ability checks, as well as any Constitution saving throws to maintain {@status Concentration|XPHB}. The target makes an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success."
+      ],
+      "damageInflict": [
+        "psychic"
+      ],
+      "savingThrow": [
+        "intelligence",
+        "constitution"
+      ],
+      "areaTags": [
+        "S"
+      ]
+    },
+    {
+      "name": "Tasha's Hideous Laughter",
+      "source": "XPHB",
+      "page": 331,
+      "srd52": "Hideous Laughter",
+      "basicRules2024": true,
+      "level": 1,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a tart and a feather"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "One creature of your choice that you can see within range makes a Wisdom saving throw. On a failed save, it has the {@condition Prone|XPHB} and {@condition Incapacitated|XPHB} conditions for the duration. During that time, it laughs uncontrollably if it's capable of laughter, and it can't end the {@condition Prone|XPHB} condition on itself.",
+        "At the end of each of its turns and each time it takes damage, it makes another Wisdom saving throw. The target has {@variantrule Advantage|XPHB} on the save if the save is triggered by damage. On a successful save, the spell ends."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You can target one additional creature for each spell slot level above 1."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "incapacitated",
+        "prone"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SCT",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Vicious Mockery",
+      "source": "XPHB",
+      "page": 337,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 0,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You unleash a string of insults laced with subtle enchantments at one creature you can see or hear within range. The target must succeed on a Wisdom saving throw or take {@damage 1d6} Psychic damage and have {@variantrule Disadvantage|XPHB} on the next attack roll it makes before the end of its next turn."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Cantrip Upgrade",
+          "entries": [
+            "The damage increases by {@damage 1d6} when you reach levels 5 ({@damage 2d6}), 11 ({@damage 3d6}), and 17 ({@damage 4d6})."
+          ]
+        }
+      ],
+      "scalingLevelDice": {
+        "label": "Psychic damage",
+        "scaling": {
+          "1": "1d6",
+          "5": "2d6",
+          "11": "3d6",
+          "17": "4d6"
+        }
+      },
+      "damageInflict": [
+        "psychic"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SCL",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "Yolande's Regal Presence",
+      "source": "XPHB",
+      "page": 343,
+      "level": 5,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "emanation",
+        "distance": {
+          "type": "feet",
+          "amount": 10
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a miniature tiara"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You surround yourself with unearthly majesty in a 10-foot {@variantrule Emanation [Area of Effect]|XPHB|Emanation}. Whenever the {@variantrule Emanation [Area of Effect]|XPHB|Emanation} enters the space of a creature you can see and whenever a creature you can see enters the {@variantrule Emanation [Area of Effect]|XPHB|Emanation} or ends its turn there, you can force that creature to make a Wisdom saving throw. On a failed save, the target takes {@damage 4d6} Psychic damage and has the {@condition Prone|XPHB} condition, and you can push it up to 10 feet away. On a successful save, the target takes half as much damage only. A creature makes this save only once per turn."
+      ],
+      "damageInflict": [
+        "psychic"
+      ],
+      "conditionInflict": [
+        "prone"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "FMV",
+        "SGT"
+      ],
+      "areaTags": [
+        "S"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "Zone of Truth",
+      "source": "XPHB",
+      "page": 343,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "E",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          }
+        }
+      ],
+      "entries": [
+        "You create a magical zone that guards against deception in a 15-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} centered on a point within range. Until the spell ends, a creature that enters the spell's area for the first time on a turn or starts its turn there makes a Charisma saving throw. On a failed save, a creature can't speak a deliberate lie while in the radius. You know whether a creature succeeds or fails on this save.",
+        "An affected creature is aware of the spell and can avoid answering questions to which it would normally respond with a lie. Such a creature can be evasive yet must be truthful."
+      ],
+      "savingThrow": [
+        "charisma"
+      ],
+      "areaTags": [
+        "S"
+      ]
+    }
+  ]
+}

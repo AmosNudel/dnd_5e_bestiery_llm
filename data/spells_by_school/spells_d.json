@@ -1,0 +1,1586 @@
+{
+  "school": "Divination",
+  "school_code": "D",
+  "spell_count": 33,
+  "spells": [
+    {
+      "name": "Arcane Eye",
+      "source": "XPHB",
+      "page": 242,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 4,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a bit of bat fur"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You create an {@condition Invisible|XPHB}, invulnerable eye within range that hovers for the duration. You mentally receive visual information from the eye, which can see in every direction. It also has {@sense Darkvision|XPHB} with a range of 30 feet.",
+        "As a {@variantrule Bonus Action|XPHB}, you can move the eye up to 30 feet in any direction. A solid barrier blocks the eye's movement, but the eye can pass through an opening as small as 1 inch in diameter."
+      ],
+      "miscTags": [
+        "UBA"
+      ]
+    },
+    {
+      "name": "Augury",
+      "source": "XPHB",
+      "page": 244,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "specially marked sticks, bones, cards, or other divinatory tokens worth 25+ GP",
+          "cost": 2500
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "You receive an omen from an otherworldly entity about the results of a course of action that you plan to take within the next 30 minutes. The DM chooses the omen from the Omens table.",
+        {
+          "type": "table",
+          "caption": "Omens",
+          "colStyles": [
+            "col-4",
+            "col-8"
+          ],
+          "colLabels": [
+            "Omen",
+            "For Results That Will Be..."
+          ],
+          "rows": [
+            [
+              "Weal",
+              "Good"
+            ],
+            [
+              "Woe",
+              "Bad"
+            ],
+            [
+              "Weal and woe",
+              "Good and bad"
+            ],
+            [
+              "Indifference",
+              "Neither good nor bad"
+            ]
+          ]
+        },
+        "The spell doesn't account for circumstances, such as other spells, that might change the results.",
+        "If you cast the spell more than once before finishing a {@variantrule Long Rest|XPHB}, there is a cumulative {@chance 25|||Random reading!|Regular reading} chance for each casting after the first that you get no answer."
+      ]
+    },
+    {
+      "name": "Beast Sense",
+      "source": "XPHB",
+      "page": 245,
+      "level": 2,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "You touch a willing Beast. For the duration, you can perceive through the Beast's senses as well as your own. When perceiving through the Beast's senses, you benefit from any special senses it has."
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Clairvoyance",
+      "source": "XPHB",
+      "page": 250,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 3,
+      "school": "D",
+      "time": [
+        {
+          "number": 10,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "miles",
+          "amount": 1
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a focus worth 100+ GP, either a jeweled horn for hearing or a glass eye for seeing",
+          "cost": 10000
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You create an {@condition Invisible|XPHB} sensor within range in a location familiar to you (a place you have visited or seen before) or in an obvious location that is unfamiliar to you (such as behind a door, around a corner, or in a grove of trees). The intangible, invulnerable sensor remains in place for the duration.",
+        "When you cast the spell, choose seeing or hearing. You can use the chosen sense through the sensor as if you were in its space. As a {@variantrule Bonus Action|XPHB}, you can switch between seeing and hearing.",
+        "A creature that sees the sensor (such as a creature benefiting from {@spell See Invisibility|XPHB} or {@sense Truesight|XPHB}) sees a luminous orb about the size of your fist."
+      ],
+      "miscTags": [
+        "UBA"
+      ]
+    },
+    {
+      "name": "Commune",
+      "source": "XPHB",
+      "page": 251,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "incense"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          }
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "You contact a deity or a divine proxy and ask up to three questions that can be answered with yes or no. You must ask your questions before the spell ends. You receive a correct answer for each question.",
+        "Divine beings aren't necessarily omniscient, so you might receive \"unclear\" as an answer if a question pertains to information that lies beyond the deity's knowledge. In a case where a one-word answer could be misleading or contrary to the deity's interests, the DM might offer a short phrase as an answer instead.",
+        "If you cast the spell more than once before finishing a {@variantrule Long Rest|XPHB}, there is a cumulative {@chance 25|||No answer!|Answer} chance for each casting after the first that you get no answer."
+      ]
+    },
+    {
+      "name": "Commune with Nature",
+      "source": "XPHB",
+      "page": 252,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          }
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "You commune with nature spirits and gain knowledge of the surrounding area. In the outdoors, the spell gives you knowledge of the area within 3 miles of you. In caves and other natural underground settings, the radius is limited to 300 feet. The spell doesn't function where nature has been replaced by construction, such as in castles and settlements.",
+        "Choose three of the following facts; you learn those facts as they pertain to the spell's area:",
+        {
+          "type": "list",
+          "items": [
+            "Locations of settlements",
+            "Locations of portals to other planes of existence",
+            "Location of one {@variantrule Challenge Rating|XPHB} 10+ creature (DM's choice) that is a Celestial, an Elemental, a Fey, a Fiend, or an Undead",
+            "The most prevalent kind of plant, mineral, or Beast (you choose which to learn)",
+            "Locations of bodies of water"
+          ]
+        },
+        "For example, you could determine the location of a powerful monster in the area, the locations of bodies of water, and the locations of any towns."
+      ]
+    },
+    {
+      "name": "Comprehend Languages",
+      "source": "XPHB",
+      "page": 252,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a pinch of soot and salt"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "For the duration, you understand the literal meaning of any language that you hear or see signed. You also understand any written language that you see, but you must be touching the surface on which the words are written. It takes about 1 minute to read one page of text. This spell doesn't decode symbols or secret messages."
+      ]
+    },
+    {
+      "name": "Contact Other Plane",
+      "source": "XPHB",
+      "page": 255,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          }
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "You mentally contact a demigod, the spirit of a long-dead sage, or some other knowledgeable entity from another plane. Contacting this otherworldly intelligence can break your mind. When you cast this spell, make a {@dc 15} Intelligence saving throw. On a successful save, you can ask the entity up to five questions. You must ask your questions before the spell ends. The DM answers each question with one word, such as \"yes,\" \"no,\" \"maybe,\" \"never,\" \"irrelevant,\" or \"unclear\" (if the entity doesn't know the answer to the question). If a one-word answer would be misleading, the DM might instead offer a short phrase as an answer.",
+        "On a failed save, you take {@damage 6d6} Psychic damage and have the {@condition Incapacitated|XPHB} condition until you finish a {@variantrule Long Rest|XPHB}. A {@spell Greater Restoration|XPHB} spell cast on you ends this effect."
+      ],
+      "damageInflict": [
+        "psychic"
+      ],
+      "savingThrow": [
+        "intelligence"
+      ]
+    },
+    {
+      "name": "Detect Evil and Good",
+      "source": "XPHB",
+      "page": 261,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "sphere",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "For the duration, you sense the location of any Aberration, Celestial, Elemental, Fey, Fiend, or Undead within 30 feet of yourself. You also sense whether the {@spell Hallow|XPHB} spell is active there and, if so, where.",
+        "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
+      ],
+      "affectsCreatureType": [
+        "aberration",
+        "celestial",
+        "elemental",
+        "fey",
+        "fiend",
+        "undead"
+      ]
+    },
+    {
+      "name": "Detect Magic",
+      "source": "XPHB",
+      "page": 262,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "sphere",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          },
+          "concentration": true
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "For the duration, you sense the presence of magical effects within 30 feet of yourself. If you sense such effects, you can take the {@action Magic|XPHB} action to see a faint aura around any visible creature or object in the area that bears the magic, and if an effect was created by a spell, you learn the spell's {@book school of magic|XPHB|7|Schools of Magic}.",
+        "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
+      ]
+    },
+    {
+      "name": "Detect Poison and Disease",
+      "source": "XPHB",
+      "page": 262,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "sphere",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a yew leaf"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          },
+          "concentration": true
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "For the duration, you sense the location of poisons, poisonous or venomous creatures, and magical contagions within 30 feet of yourself. You sense the kind of poison, creature, or contagion in each case.",
+        "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
+      ]
+    },
+    {
+      "name": "Detect Thoughts",
+      "source": "XPHB",
+      "page": 262,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "1 Copper Piece"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You activate one of the effects below. Until the spell ends, you can activate either effect as a {@action Magic|XPHB} action on your later turns.",
+        {
+          "type": "entries",
+          "name": "Sense Thoughts",
+          "entries": [
+            "You sense the presence of thoughts within 30 feet of yourself that belong to creatures that know languages or are telepathic. You don't read the thoughts, but you know that a thinking creature is present.",
+            "The spell is blocked by 1 foot of stone, dirt, or wood; 1 inch of metal; or a thin sheet of lead."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Read Thoughts",
+          "entries": [
+            "Target one creature you can see within 30 feet of yourself or one creature within 30 feet of yourself that you detected with the Sense Thoughts option. You learn what is most on the target's mind right now. If the target doesn't know any languages and isn't telepathic, you learn nothing.",
+            "As a {@action Magic|XPHB} action on your next turn, you can try to probe deeper into the target's mind. If you probe deeper, the target makes a Wisdom saving throw. On a failed save, you discern the target's reasoning, emotions, and something that looms large in its mind (such as a worry, love, or hate). On a successful save, the spell ends. Either way, the target knows that you are probing into its mind, and until you shift your attention away from the target's mind, the target can take an action on its turn to make an Intelligence ({@skill Arcana|XPHB}) check against your spell save DC, ending the spell on a success."
+          ]
+        }
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "abilityCheck": [
+        "intelligence"
+      ],
+      "miscTags": [
+        "SGT"
+      ]
+    },
+    {
+      "name": "Divination",
+      "source": "XPHB",
+      "page": 264,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 4,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "incense worth 25+ GP, which the spell consumes",
+          "cost": 2500,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "This spell puts you in contact with a god or a god's servants. You ask one question about a specific goal, event, or activity to occur within 7 days. The DM offers a truthful reply, which might be a short phrase or cryptic rhyme. The spell doesn't account for circumstances that might change the answer, such as the casting of other spells.",
+        "If you cast the spell more than once before finishing a {@variantrule Long Rest|XPHB}, there is a cumulative {@chance 25|||Random reading!|Regular reading} chance for each casting after the first that you get no answer."
+      ]
+    },
+    {
+      "name": "Find the Path",
+      "source": "XPHB",
+      "page": 273,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 6,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a set of divination tools—such as cards or runes—worth 100+ GP",
+          "cost": 10000
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "day",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You magically sense the most direct physical route to a location you name. You must be familiar with the location, and the spell fails if you name a destination on another plane of existence, a moving destination (such as a mobile fortress), or an unspecific destination (such as \"a green dragon's lair\").",
+        "For the duration, as long as you are on the same plane of existence as the destination, you know how far it is and in what direction it lies. Whenever you face a choice of paths along the way there, you know which path is the most direct."
+      ]
+    },
+    {
+      "name": "Find Traps",
+      "source": "XPHB",
+      "page": 273,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 120
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You sense any trap within range that is within line of sight. A trap, for the purpose of this spell, includes any object or mechanism that was created to cause damage or other danger. Thus, the spell would sense the {@spell Alarm|XPHB} or {@spell Glyph of Warding|XPHB} spell or a mechanical pit trap, but it wouldn't reveal a natural weakness in the floor, an unstable ceiling, or a hidden sinkhole.",
+        "This spell reveals that a trap is present but not its location. You do learn the general nature of the danger posed by a trap you sense."
+      ],
+      "miscTags": [
+        "SGT"
+      ]
+    },
+    {
+      "name": "Foresight",
+      "source": "XPHB",
+      "page": 276,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 9,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a hummingbird feather"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 8
+          }
+        }
+      ],
+      "entries": [
+        "You touch a willing creature and bestow a limited ability to see into the immediate future. For the duration, the target has {@variantrule Advantage|XPHB} on {@variantrule D20 Test|XPHB|D20 Tests}, and other creatures have {@variantrule Disadvantage|XPHB} on attack rolls against it. The spell ends early if you cast it again."
+      ],
+      "miscTags": [
+        "ADV"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Guidance",
+      "source": "XPHB",
+      "page": 282,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 0,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You touch a willing creature and choose a skill. Until the spell ends, the creature adds {@dice 1d4} to any ability check using the chosen skill."
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Hunter's Mark",
+      "source": "XPHB",
+      "page": 287,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "bonus"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 90
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You magically mark one creature you can see within range as your quarry. Until the spell ends, you deal an extra {@damage 1d6} Force damage to the target whenever you hit it with an attack roll. You also have {@variantrule Advantage|XPHB} on any Wisdom ({@skill Perception|XPHB} or {@skill Survival|XPHB}) check you make to find it.",
+        "If the target drops to 0 {@variantrule Hit Points|XPHB} before this spell ends, you can take a {@variantrule Bonus Action|XPHB} to move the mark to a new creature you can see within range."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "Your {@status Concentration|XPHB} can last longer with a spell slot of level 3-4 (up to 8 hours) or 5+ (up to 24 hours)."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "force"
+      ],
+      "miscTags": [
+        "AAD",
+        "ADV",
+        "SGT",
+        "UBA"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Identify",
+      "source": "XPHB",
+      "page": 287,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a pearl worth 100+ GP",
+          "cost": 10000
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "You touch an object throughout the spell's casting. If the object is a magic item or some other magical object, you learn its properties and how to use them, whether it requires {@variantrule Attunement|XPHB}, and how many charges it has, if any. You learn whether any ongoing spells are affecting the item and what they are. If the item was created by a spell, you learn that spell's name.",
+        "If you instead touch a creature throughout the casting, you learn which ongoing spells, if any, are currently affecting it."
+      ],
+      "miscTags": [
+        "OBJ"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Legend Lore",
+      "source": "XPHB",
+      "page": 290,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "D",
+      "time": [
+        {
+          "number": 10,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "incense worth 250+ GP, which the spell consumes, and four ivory strips worth 50+ GP each",
+          "cost": 25000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "Name or describe a famous person, place, or object. The spell brings to your mind a brief summary of the significant lore about that famous thing, as described by the DM.",
+        "The lore might consist of important details, amusing revelations, or even secret lore that has never been widely known. The more information you already know about the thing, the more precise and detailed the information you receive is. That information is accurate but might be couched in figurative language or poetry, as determined by the DM.",
+        "If the famous thing you chose isn't actually famous, you hear sad musical notes played on a trombone, and the spell fails."
+      ],
+      "miscTags": [
+        "OBJ"
+      ]
+    },
+    {
+      "name": "Locate Animals or Plants",
+      "source": "XPHB",
+      "page": 292,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "fur from a bloodhound"
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "Describe or name a specific kind of Beast, Plant creature, or nonmagical plant. You learn the direction and distance to the closest creature or plant of that kind within 5 miles, if any are present."
+      ],
+      "affectsCreatureType": [
+        "beast",
+        "plant"
+      ]
+    },
+    {
+      "name": "Locate Creature",
+      "source": "XPHB",
+      "page": 292,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 4,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "fur from a bloodhound"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "Describe or name a creature that is familiar to you. You sense the direction to the creature's location if that creature is within 1,000 feet of you. If the creature is moving, you know the direction of its movement.",
+        "The spell can locate a specific creature known to you or the nearest creature of a specific kind (such as a human or a unicorn) if you have seen such a creature up close—within 30 feet—at least once. If the creature you described or named is in a different form, such as under the effects of a {@spell Flesh to Stone|XPHB} or {@spell Polymorph|XPHB} spell, this spell doesn't locate the creature.",
+        "This spell can't locate a creature if any thickness of lead blocks a direct path between you and the creature."
+      ]
+    },
+    {
+      "name": "Locate Object",
+      "source": "XPHB",
+      "page": 293,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a forked twig"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "Describe or name an object that is familiar to you. You sense the direction to the object's location if that object is within 1,000 feet of you. If the object is in motion, you know the direction of its movement.",
+        "The spell can locate a specific object known to you if you have seen it up close—within 30 feet—at least once. Alternatively, the spell can locate the nearest object of a particular kind, such as a certain kind of apparel, jewelry, furniture, tool, or weapon.",
+        "This spell can't locate an object if any thickness of lead blocks a direct path between you and the object."
+      ],
+      "miscTags": [
+        "OBJ"
+      ]
+    },
+    {
+      "name": "Mind Spike",
+      "source": "XPHB",
+      "page": 298,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 120
+        }
+      },
+      "components": {
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You drive a spike of psionic energy into the mind of one creature you can see within range. The target makes a Wisdom saving throw, taking {@damage 3d8} Psychic damage on a failed save or half as much damage on a successful one. On a failed save, you also always know the target's location until the spell ends, but only while the two of you are on the same plane of existence. While you have this knowledge, the target can't become hidden from you, and if it has the {@condition Invisible|XPHB} condition, it gains no benefit from that condition against you."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The damage increases by {@scaledamage 3d8|2-9|1d8} for each spell slot level above 2."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "psychic"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Rary's Telepathic Bond",
+      "source": "XPHB",
+      "page": 311,
+      "srd52": "Telepathic Bond",
+      "basicRules2024": true,
+      "level": 5,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "two eggs"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures that can't communicate in any languages aren't affected by this spell.",
+        "Until the spell ends, the targets can communicate telepathically through the bond whether or not they share a language. The communication is possible over any distance, though it can't extend to other planes of existence."
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    },
+    {
+      "name": "Scrying",
+      "source": "XPHB",
+      "page": 313,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "D",
+      "time": [
+        {
+          "number": 10,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a focus worth 1,000+ GP, such as a crystal ball, mirror, or water-filled font",
+          "cost": 100000
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You can see and hear a creature you choose that is on the same plane of existence as you. The target makes a Wisdom saving throw, which is modified (see the tables below) by how well you know the target and the sort of physical connection you have to it. The target doesn't know what it is making the save against, only that it feels uneasy.",
+        {
+          "type": "table",
+          "colStyles": [
+            "col-10",
+            "col-2 text-center"
+          ],
+          "colLabels": [
+            "Your Knowledge of the Target Is...",
+            "Save Modifier"
+          ],
+          "rows": [
+            [
+              "Secondhand (heard of the target)",
+              "+5"
+            ],
+            [
+              "Firsthand (met the target)",
+              "+0"
+            ],
+            [
+              "Extensive (know the target well)",
+              "-5"
+            ]
+          ]
+        },
+        {
+          "type": "table",
+          "colStyles": [
+            "col-10",
+            "col-2 text-center"
+          ],
+          "colLabels": [
+            "You Have the Target's...",
+            "Save Modifier"
+          ],
+          "rows": [
+            [
+              "Picture or other likeness",
+              "-2"
+            ],
+            [
+              "Garment or other possession",
+              "-4"
+            ],
+            [
+              "Body part, lock of hair, or bit of nail",
+              "-10"
+            ]
+          ]
+        },
+        "On a successful save, the target isn't affected, and you can't use this spell on it again for 24 hours.",
+        "On a failed save, the spell creates an {@condition Invisible|XPHB}, intangible sensor within 10 feet of the target. You can see and hear through the sensor as if you were there. The sensor moves with the target, remaining within 10 feet of it for the duration. If something can see the sensor, it appears as a luminous orb about the size of your fist.",
+        "Instead of targeting a creature, you can target a location you have seen. When you do so, the sensor appears at that location and doesn't move."
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "See Invisibility",
+      "source": "XPHB",
+      "page": 314,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a pinch of talc"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "For the duration, you see creatures and objects that have the {@condition Invisible|XPHB} condition as if they were visible, and you can see into the Ethereal Plane. Creatures and objects there appear ghostly."
+      ]
+    },
+    {
+      "name": "Sending",
+      "source": "XPHB",
+      "page": 314,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 3,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "unlimited"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a copper wire"
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You send a short message of 25 words or fewer to a creature you have met or a creature described to you by someone who has met it. The target hears the message in its mind, recognizes you as the sender if it knows you, and can answer in a like manner immediately. The spell enables targets to understand the meaning of your message.",
+        "You can send the message across any distance and even to other planes of existence, but if the target is on a different plane than you, there is a {@chance 5|||Message lost!|Message arrives} chance that the message doesn't arrive. You know if the delivery fails.",
+        "Upon receiving your message, a creature can block your ability to reach it again with this spell for 8 hours. If you try to send another message during that time, you learn that you are blocked, and the spell fails."
+      ]
+    },
+    {
+      "name": "Speak with Animals",
+      "source": "XPHB",
+      "page": 318,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          }
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "For the duration, you can comprehend and verbally communicate with Beasts, and you can use any of the {@action Influence|XPHB} action's skill options with them.",
+        "Most Beasts have little to say about topics that don't pertain to survival or companionship, but at minimum, a Beast can give you information about nearby locations and monsters, including whatever it has perceived within the past day."
+      ],
+      "affectsCreatureType": [
+        "beast"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "Telepathy",
+      "source": "XPHB",
+      "page": 331,
+      "level": 8,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "unlimited"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a pair of linked silver rings"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 24
+          }
+        }
+      ],
+      "entries": [
+        "You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane.",
+        "Until the spell ends, you and the target can instantly share words, images, sounds, and other sensory messages with each other through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature to understand the meaning of your words and any sensory messages you send to it."
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Tongues",
+      "source": "XPHB",
+      "page": 334,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 3,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "m": "a miniature ziggurat"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "This spell grants the creature you touch the ability to understand any spoken or signed language that it hears or sees. Moreover, when the target communicates by speaking or signing, any creature that knows at least one language can understand it if that creature can hear the speech or see the signing."
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "True Seeing",
+      "source": "XPHB",
+      "page": 336,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 6,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "mushroom powder worth 25+ GP, which the spell consumes",
+          "cost": 2500,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "For the duration, the willing creature you touch has {@sense Truesight|XPHB} with a range of 120 feet."
+      ]
+    },
+    {
+      "name": "True Strike",
+      "source": "XPHB",
+      "page": 336,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 0,
+      "school": "D",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "s": true,
+        "m": {
+          "text": "a weapon with which you have proficiency and that is worth 1+ CP",
+          "cost": 1
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "Guided by a flash of magical insight, you make one attack with the weapon used in the spell's casting. The attack uses your spellcasting ability for the attack and damage rolls instead of using Strength or Dexterity. If the attack deals damage, it can be Radiant damage or the weapon's normal damage type (your choice)."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Cantrip Upgrade",
+          "entries": [
+            "Whether you deal Radiant damage or the weapon's normal damage type, the attack deals extra Radiant damage when you reach levels 5 ({@damage 1d6}), 11 ({@damage 2d6}), and 17 ({@damage 3d6})."
+          ]
+        }
+      ],
+      "scalingLevelDice": [
+        {
+          "label": "extra Radiant damage",
+          "scaling": {
+            "5": "1d6",
+            "11": "2d6",
+            "17": "3d6"
+          }
+        }
+      ],
+      "damageInflict": [
+        "radiant"
+      ],
+      "miscTags": [
+        "AAD"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    }
+  ]
+}

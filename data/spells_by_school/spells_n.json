@@ -1,0 +1,1763 @@
+{
+  "school": "Necromancy",
+  "school_code": "N",
+  "spell_count": 31,
+  "spells": [
+    {
+      "name": "Animate Dead",
+      "source": "XPHB",
+      "page": 240,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 3,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 10
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a drop of blood, a piece of flesh, and a pinch of bone dust"
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "Choose a pile of bones or a corpse of a Medium or Small Humanoid within range. The target becomes an Undead creature: a {@creature Skeleton|XMM} if you chose bones or a {@creature Zombie|XMM} if you chose a corpse.",
+        "On each of your turns, you can take a {@variantrule Bonus Action|XPHB} to mentally command any creature you made with this spell if the creature is within 60 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to each one). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a chamber or corridor. If you issue no commands, the creature takes the {@action Dodge|XPHB} action and moves only to avoid harm. Once given an order, the creature continues to follow it until its task is complete.",
+        "The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature again before the current 24-hour period ends. This use of the spell reasserts your control over up to four creatures you have animated with this spell rather than animating a new creature."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You animate or reassert control over two additional Undead creatures for each spell slot level above 3. Each of the creatures must come from a different corpse or pile of bones."
+          ]
+        }
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "miscTags": [
+        "PRM",
+        "SMN",
+        "UBA"
+      ]
+    },
+    {
+      "name": "Astral Projection",
+      "source": "XPHB",
+      "page": 243,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 9,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "hour"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 10
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "for each of the spell's targets, one jacinth worth 1,000+ GP and one silver bar worth 100+ GP, all of which the spell consumes",
+          "cost": 100000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "permanent",
+          "ends": [
+            "dispel"
+          ]
+        }
+      ],
+      "entries": [
+        "You and up to eight willing creatures within range project your astral bodies into the Astral Plane (the spell ends instantly if you are already on that plane). Each target's body is left behind in a state of suspended animation; it has the {@condition Unconscious|XPHB} condition, doesn't need food or air, and doesn't age.",
+        "A target's astral form resembles its body in almost every way, replicating its game statistics and possessions. The principal difference is the addition of a silvery cord that trails from between the shoulder blades of the astral form. The cord fades from view after 1 foot. If the cord is cut—which happens only when an effect states that it does so—the target's body and astral form both die.",
+        "A target's astral form can travel through the Astral Plane. The moment an astral form leaves that plane, the target's body and possessions travel along the silver cord, causing the target to re-enter its body on the new plane.",
+        "Any damage or other effects that apply to an astral form have no effect on the target's body and vice versa. If a target's body or astral form drops to 0 {@variantrule Hit Points|XPHB}, the spell ends for that target. The spell ends for all the targets if you take a {@action Magic|XPHB} action to dismiss it.",
+        "When the spell ends for a target who isn't dead, the target reappears in its body and exits the state of suspended animation."
+      ],
+      "conditionInflict": [
+        "unconscious"
+      ],
+      "miscTags": [
+        "PRM",
+        "PS"
+      ],
+      "areaTags": [
+        "MT"
+      ]
+    },
+    {
+      "name": "Bestow Curse",
+      "source": "XPHB",
+      "page": 246,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 3,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You touch a creature, which must succeed on a Wisdom saving throw or become cursed for the duration. Until the curse ends, the target suffers one of the following effects of your choice:",
+        {
+          "type": "list",
+          "items": [
+            "Choose one ability. The target has {@variantrule Disadvantage|XPHB} on ability checks and saving throws made with that ability.",
+            "The target has {@variantrule Disadvantage|XPHB} on attack rolls against you.",
+            "In combat, the target must succeed on a Wisdom saving throw at the start of each of its turns or be forced to take the {@action Dodge|XPHB} action on that turn.",
+            "If you deal damage to the target with an attack roll or a spell, the target takes an extra {@damage 1d8} Necrotic damage."
+          ]
+        }
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "If you cast this spell using a level 4 spell slot, you can maintain {@status Concentration|XPHB} on it for up to 10 minutes. If you use a level 5+ spell slot, the spell doesn't require {@status Concentration|XPHB}, and the duration becomes 8 hours (level 5-6 slot) or 24 hours (level 7-8 slot). If you use a level 9 spell slot, the spell lasts until dispelled."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "PRM"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Blight",
+      "source": "XPHB",
+      "page": 247,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 4,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "A creature that you can see within range makes a Constitution saving throw, taking {@damage 8d8} Necrotic damage on a failed save or half as much damage on a successful one. A Plant creature automatically fails the save.",
+        "Alternatively, target a nonmagical plant that isn't a creature, such as a tree or shrub. It doesn't make a save; it simply withers and dies."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The damage increases by {@scaledamage 8d8|4-9|1d8} for each spell slot level above 4."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "savingThrow": [
+        "constitution"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Chill Touch",
+      "source": "XPHB",
+      "page": 249,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 0,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "Channeling the chill of the grave, make a melee spell attack against a target within reach. On a hit, the target takes {@damage 1d10} Necrotic damage, and it can't regain {@variantrule Hit Points|XPHB} until the end of your next turn."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Cantrip Upgrade",
+          "entries": [
+            "The damage increases by {@damage 1d10} when you reach levels 5 ({@damage 2d10}), 11 ({@damage 3d10}), and 17 ({@damage 4d10})."
+          ]
+        }
+      ],
+      "scalingLevelDice": {
+        "label": "Necrotic damage",
+        "scaling": {
+          "1": "1d10",
+          "5": "2d10",
+          "11": "3d10",
+          "17": "4d10"
+        }
+      },
+      "damageInflict": [
+        "necrotic"
+      ],
+      "spellAttack": [
+        "M"
+      ],
+      "miscTags": [
+        "SCL"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Circle of Death",
+      "source": "XPHB",
+      "page": 250,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 6,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 150
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "the powder of a crushed black pearl worth 500+ GP",
+          "cost": 50000
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "Negative energy ripples out in a 60-foot-radius {@variantrule Sphere [Area of Effect]|XPHB|Sphere} from a point you choose within range. Each creature in that area makes a Constitution saving throw, taking {@damage 8d8} Necrotic damage on a failed save or half as much damage on a successful one."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The damage increases by {@scaledamage 8d8|6-9|2d8} for each spell slot level above 6."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "savingThrow": [
+        "constitution"
+      ],
+      "areaTags": [
+        "S"
+      ]
+    },
+    {
+      "name": "Clone",
+      "source": "XPHB",
+      "page": 251,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 8,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "hour"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a diamond worth 1,000+ GP, which the spell consumes, and a sealable vessel worth 2,000+ GP that is large enough to hold the creature being cloned",
+          "cost": 100000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You touch a creature or at least 1 cubic inch of its flesh. An inert duplicate of that creature forms inside the vessel used in the spell's casting and finishes growing after 120 days; you choose whether the finished clone is the same age as the creature or younger. The clone remains inert and endures indefinitely while its vessel remains undisturbed.",
+        "If the original creature dies after the clone finishes forming, the creature's soul transfers to the clone if the soul is free and willing to return. The clone is physically identical to the original and has the same personality, memories, and abilities, but none of the original's equipment. The creature's original remains, if any, become inert and can't be revived, since the creature's soul is elsewhere."
+      ],
+      "miscTags": [
+        "PRM"
+      ]
+    },
+    {
+      "name": "Contagion",
+      "source": "XPHB",
+      "page": 256,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "day",
+            "amount": 7
+          }
+        }
+      ],
+      "entries": [
+        "Your touch inflicts a magical contagion. The target must succeed on a Constitution saving throw or take {@damage 11d8} Necrotic damage and have the {@condition Poisoned|XPHB} condition. Also, choose one ability when you cast the spell. While {@condition Poisoned|XPHB}, the target has {@variantrule Disadvantage|XPHB} on saving throws made with the chosen ability.",
+        "The target must repeat the saving throw at the end of each of its turns until it gets three successes or failures. If the target succeeds on three of these saves, the spell ends on the target. If the target fails three of the saves, the spell lasts for 7 days on it.",
+        "Whenever the {@condition Poisoned|XPHB} target receives an effect that would end the {@condition Poisoned|XPHB} condition, the target must succeed on a Constitution saving throw, or the {@condition Poisoned|XPHB} condition doesn't end on it."
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "conditionInflict": [
+        "poisoned"
+      ],
+      "savingThrow": [
+        "constitution"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Create Undead",
+      "source": "XPHB",
+      "page": 258,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 6,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 10
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "one 150+ GP black onyx stone for each corpse",
+          "cost": 15000
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You can cast this spell only at night. Choose up to three corpses of Medium or Small Humanoids within range. Each one becomes a {@creature Ghoul|XMM} under your control (see the {@book Monster Manual|XMM} for its stat block).",
+        "As a {@variantrule Bonus Action|XPHB} on each of your turns, you can mentally command any creature you animated with this spell if the creature is within 120 feet of you (if you control multiple creatures, you can command any of them at the same time, issuing the same command to them). You decide what action the creature will take and where it will move on its next turn, or you can issue a general command, such as to guard a particular place. If you issue no commands, the creature takes the {@action Dodge|XPHB} action and moves only to avoid harm. Once given an order, the creature continues to follow the order until its task is complete.",
+        "The creature is under your control for 24 hours, after which it stops obeying any command you've given it. To maintain control of the creature for another 24 hours, you must cast this spell on the creature before the current 24-hour period ends. This use of the spell reasserts your control over up to three creatures you have animated with this spell rather than animating new ones."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "If you use a level 7 spell slot, you can animate or reassert control over four {@creature Ghoul|XMM|Ghouls}. If you use a level 8 spell slot, you can animate or reassert control over five {@creature Ghoul|XMM|Ghouls} or two {@creature Ghast|XMM|Ghasts} or {@creature Wight|XMM|Wights}. If you use a level 9 spell slot, you can animate or reassert control over six {@creature Ghoul|XMM|Ghouls}, three {@creature Ghast|XMM|Ghasts} or {@creature Wight|XMM|Wights}, or two {@creature Mummy|XMM|Mummies}. See the {@book Monster Manual|XMM} for these stat blocks."
+          ]
+        }
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "miscTags": [
+        "PRM",
+        "SMN",
+        "UBA"
+      ]
+    },
+    {
+      "name": "Eyebite",
+      "source": "XPHB",
+      "page": 270,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 6,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "For the duration, your eyes become an inky void. One creature of your choice within 60 feet of you that you can see must succeed on a Wisdom saving throw or be affected by one of the following effects of your choice for the duration.",
+        "On each of your turns until the spell ends, you can take a {@action Magic|XPHB} action to target another creature but can't target a creature again if it has succeeded on a save against this casting of the spell.",
+        {
+          "type": "entries",
+          "name": "Asleep",
+          "entries": [
+            "The target has the {@condition Unconscious|XPHB} condition. It wakes up if it takes any damage or if another creature takes an action to shake it awake."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Panicked",
+          "entries": [
+            "The target has the {@condition Frightened|XPHB} condition. On each of its turns, the {@condition Frightened|XPHB} target must take the {@action Dash|XPHB} action and move away from you by the safest and shortest route available. If the target moves to a space at least 60 feet away from you where it can't see you, this effect ends."
+          ]
+        },
+        {
+          "type": "entries",
+          "name": "Sickened",
+          "entries": [
+            "The target has the {@condition Poisoned|XPHB} condition."
+          ]
+        }
+      ],
+      "conditionInflict": [
+        "frightened",
+        "unconscious"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "False Life",
+      "source": "XPHB",
+      "page": 271,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a drop of alcohol"
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You gain {@dice 2d4 + 4} {@variantrule Temporary Hit Points|XPHB}."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "You gain 5 additional {@variantrule Temporary Hit Points|XPHB} for each spell slot level above 1."
+          ]
+        }
+      ],
+      "miscTags": [
+        "THP"
+      ]
+    },
+    {
+      "name": "Feign Death",
+      "source": "XPHB",
+      "page": 271,
+      "level": 3,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "a pinch of graveyard dirt"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          }
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.",
+        "For the duration, the target appears dead to outward inspection and to spells used to determine the target's status. The target has the {@condition Blinded|XPHB} and {@condition Incapacitated|XPHB} conditions, and its {@variantrule Speed|XPHB} is 0.",
+        "The target also has {@variantrule Resistance|XPHB} to all damage except Psychic damage, and it has {@variantrule Immunity|XPHB} to the {@condition Poisoned|XPHB} condition."
+      ],
+      "damageResist": [
+        "acid",
+        "bludgeoning",
+        "cold",
+        "fire",
+        "force",
+        "lightning",
+        "necrotic",
+        "piercing",
+        "poison",
+        "radiant",
+        "slashing",
+        "thunder"
+      ],
+      "conditionImmune": [
+        "poisoned"
+      ],
+      "conditionInflict": [
+        "blinded",
+        "incapacitated"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Finger of Death",
+      "source": "XPHB",
+      "page": 273,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 7,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You unleash negative energy toward a creature you can see within range. The target makes a Constitution saving throw, taking {@damage 7d8 + 30} Necrotic damage on a failed save or half as much damage on a successful one.",
+        "A Humanoid killed by this spell rises at the start of your next turn as a {@creature Zombie|XMM} that follows your verbal orders."
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "savingThrow": [
+        "constitution"
+      ],
+      "miscTags": [
+        "PRM",
+        "SGT",
+        "SMN"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Gentle Repose",
+      "source": "XPHB",
+      "page": 278,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "2 Copper Pieces, which the spell consumes",
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "day",
+            "amount": 10
+          }
+        }
+      ],
+      "meta": {
+        "ritual": true
+      },
+      "entries": [
+        "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become Undead.",
+        "The spell also effectively extends the time limit on raising the target from the dead, since days spent under the influence of this spell don't count against the time limit of spells such as {@spell Raise Dead|XPHB}."
+      ]
+    },
+    {
+      "name": "Harm",
+      "source": "XPHB",
+      "page": 283,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 6,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You unleash virulent magic on a creature you can see within range. The target makes a Constitution saving throw. On a failed save, it takes {@damage 14d6} Necrotic damage, and its {@variantrule Hit Points|XPHB|Hit Point} maximum is reduced by an amount equal to the Necrotic damage it took. On a successful save, it takes half as much damage only. This spell can't reduce a target's {@variantrule Hit Points|XPHB|Hit Point} maximum below 1."
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "savingThrow": [
+        "constitution"
+      ],
+      "miscTags": [
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Inflict Wounds",
+      "source": "XPHB",
+      "page": 288,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "A creature you touch makes a Constitution saving throw, taking {@damage 2d10} Necrotic damage on a failed save or half as much damage on a successful one."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The damage increases by {@scaledamage 2d10|1-9|1d10} for each spell slot level above 1."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "savingThrow": [
+        "constitution"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Magic Jar",
+      "source": "XPHB",
+      "page": 294,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 6,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "minute"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a gem, crystal, or reliquary worth 500+ GP",
+          "cost": 50000
+        }
+      },
+      "duration": [
+        {
+          "type": "permanent",
+          "ends": [
+            "dispel"
+          ]
+        }
+      ],
+      "entries": [
+        "Your body falls into a catatonic state as your soul leaves it and enters the container you used for the spell's Material component. While your soul inhabits the container, you are aware of your surroundings as if you were in the container's space. You can't move or take Reactions. The only action you can take is to project your soul up to 100 feet out of the container, either returning to your living body (and ending the spell) or attempting to possess a Humanoid's body.",
+        "You can attempt to possess any Humanoid within 100 feet of you that you can see (creatures warded by a {@spell Protection from Evil and Good|XPHB} or {@spell Magic Circle|XPHB} spell can't be possessed). The target makes a Charisma saving throw. On a failed save, your soul enters the target's body, and the target's soul becomes trapped in the container. On a successful save, the target resists your efforts to possess it, and you can't attempt to possess it again for 24 hours.",
+        "Once you possess a creature's body, you control it. Your {@variantrule Hit Points|XPHB}, {@variantrule Hit Point Dice|XPHB}, Strength, Dexterity, Constitution, {@variantrule Speed|XPHB}, and senses are replaced by the creature's. You otherwise keep your game statistics.",
+        "Meanwhile, the possessed creature's soul can perceive from the container using its own senses, but it can't move and it is {@condition Incapacitated|XPHB}.",
+        "While possessing a body, you can take a {@action Magic|XPHB} action to return from the host body to the container if it is within 100 feet of you, returning the host creature's soul to its body. If the host body dies while you're in it, the creature dies, and you make a Charisma saving throw against your own spellcasting DC. On a success, you return to the container if it is within 100 feet of you. Otherwise, you die.",
+        "If the container is destroyed or the spell ends, your soul returns to your body. If your body is more than 100 feet away from you or if your body is dead, you die. If another creature's soul is in the container when it is destroyed, the creature's soul returns to its body if the body is alive and within 100 feet. Otherwise, that creature dies.",
+        "When the spell ends, the container is destroyed."
+      ],
+      "savingThrow": [
+        "charisma"
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "miscTags": [
+        "SGT"
+      ]
+    },
+    {
+      "name": "Poison Spray",
+      "source": "XPHB",
+      "page": 306,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 0,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 30
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You spray toxic mist at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 1d12} Poison damage."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Cantrip Upgrade",
+          "entries": [
+            "The damage increases by {@damage 1d12} when you reach levels 5 ({@damage 2d12}), 11 ({@damage 3d12}), and 17 ({@damage 4d12})."
+          ]
+        }
+      ],
+      "scalingLevelDice": {
+        "label": "Poison damage",
+        "scaling": {
+          "1": "1d12",
+          "5": "2d12",
+          "11": "3d12",
+          "17": "4d12"
+        }
+      },
+      "damageInflict": [
+        "poison"
+      ],
+      "spellAttack": [
+        "R"
+      ],
+      "miscTags": [
+        "SCL"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Raise Dead",
+      "source": "XPHB",
+      "page": 310,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "hour"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a diamond worth 500+ GP, which the spell consumes",
+          "cost": 50000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "With a touch, you revive a dead creature if it has been dead no longer than 10 days and it wasn't Undead when it died.",
+        "The creature returns to life with 1 {@variantrule Hit Points|XPHB|Hit Point}. This spell also neutralizes any poisons that affected the creature at the time of death.",
+        "This spell closes all mortal wounds, but it doesn't restore missing body parts. If the creature is lacking body parts or organs integral for its survival—its head, for instance—the spell automatically fails.",
+        "Coming back from the dead is an ordeal. The target takes a -4 penalty to {@variantrule D20 Test|XPHB|D20 Tests}. Every time the target finishes a {@variantrule Long Rest|XPHB}, the penalty is reduced by 1 until it becomes 0."
+      ],
+      "affectsCreatureType": [
+        "aberration",
+        "beast",
+        "celestial",
+        "construct",
+        "dragon",
+        "elemental",
+        "fey",
+        "fiend",
+        "giant",
+        "humanoid",
+        "monstrosity",
+        "ooze",
+        "plant"
+      ],
+      "miscTags": [
+        "HL"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "Ray of Enfeeblement",
+      "source": "XPHB",
+      "page": 311,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 2,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "A beam of enervating energy shoots from you toward a creature within range. The target must make a Constitution saving throw. On a successful save, the target has {@variantrule Disadvantage|XPHB} on the next attack roll it makes until the start of your next turn.",
+        "On a failed save, the target has {@variantrule Disadvantage|XPHB} on Strength-based {@variantrule D20 Test|XPHB|D20 Tests} for the duration. During that time, it also subtracts {@dice 1d8} from all its damage rolls. The target repeats the save at the end of each of its turns, ending the spell on a success."
+      ],
+      "savingThrow": [
+        "constitution"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Ray of Sickness",
+      "source": "XPHB",
+      "page": 311,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 1,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You shoot a greenish ray at a creature within range. Make a ranged spell attack against the target. On a hit, the target takes {@damage 2d8} Poison damage and has the {@condition Poisoned|XPHB} condition until the end of your next turn."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The damage increases by {@scaledamage 2d8|1-9|1d8} for each spell slot level above 1."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "poison"
+      ],
+      "conditionInflict": [
+        "poisoned"
+      ],
+      "spellAttack": [
+        "R"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Reincarnate",
+      "source": "XPHB",
+      "page": 311,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 5,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "hour"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "rare oils worth 1,000+ GP, which the spell consumes",
+          "cost": 100000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You touch a dead Humanoid or a piece of one. If the creature has been dead no longer than 10 days, the spell forms a new body for it and calls the soul to enter that body. Roll {@dice 1d10} and consult the table below to determine the body's species, or the DM chooses another playable species.",
+        {
+          "type": "table",
+          "colStyles": [
+            "col-2 text-center",
+            "col-10"
+          ],
+          "colLabels": [
+            "1d10",
+            "Species"
+          ],
+          "rows": [
+            [
+              "1",
+              "{@race Aasimar|XPHB}"
+            ],
+            [
+              "2",
+              "{@race Dragonborn|XPHB}"
+            ],
+            [
+              "3",
+              "{@race Dwarf|XPHB}"
+            ],
+            [
+              "4",
+              "{@race Elf|XPHB}"
+            ],
+            [
+              "5",
+              "{@race Gnome|XPHB}"
+            ],
+            [
+              "6",
+              "{@race Goliath|XPHB}"
+            ],
+            [
+              "7",
+              "{@race Halfling|XPHB}"
+            ],
+            [
+              "8",
+              "{@race Human|XPHB}"
+            ],
+            [
+              "9",
+              "{@race Orc|XPHB}"
+            ],
+            [
+              "10",
+              "{@race Tiefling|XPHB}"
+            ]
+          ]
+        },
+        "The reincarnated creature makes any choices that a species' description offers, and the creature recalls its former life. It retains the capabilities it had in its original form, except it loses the traits of its previous species and gains the traits of its new one."
+      ],
+      "affectsCreatureType": [
+        "humanoid"
+      ],
+      "miscTags": [
+        "HL",
+        "RO"
+      ]
+    },
+    {
+      "name": "Resurrection",
+      "source": "XPHB",
+      "page": 312,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 7,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "hour"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a diamond worth 1,000+ GP, which the spell consumes",
+          "cost": 100000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "With a touch, you revive a dead creature that has been dead for no more than a century, didn't die of old age, and wasn't Undead when it died.",
+        "The creature returns to life with all its {@variantrule Hit Points|XPHB}. This spell also neutralizes any poisons that affected the creature at the time of death. This spell closes all mortal wounds and restores any missing body parts.",
+        "Coming back from the dead is an ordeal. The target takes a -4 penalty to {@variantrule D20 Test|XPHB|D20 Tests}. Every time the target finishes a {@variantrule Long Rest|XPHB}, the penalty is reduced by 1 until it becomes 0.",
+        "Casting this spell to revive a creature that has been dead for 365 days or longer taxes you. Until you finish a {@variantrule Long Rest|XPHB}, you can't cast spells again, and you have {@variantrule Disadvantage|XPHB} on {@variantrule D20 Test|XPHB|D20 Tests}."
+      ],
+      "affectsCreatureType": [
+        "aberration",
+        "beast",
+        "celestial",
+        "construct",
+        "dragon",
+        "elemental",
+        "fey",
+        "fiend",
+        "giant",
+        "humanoid",
+        "monstrosity",
+        "ooze",
+        "plant"
+      ],
+      "miscTags": [
+        "HL"
+      ]
+    },
+    {
+      "name": "Revivify",
+      "source": "XPHB",
+      "page": 312,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 3,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a diamond worth 300+ GP, which the spell consumes",
+          "cost": 30000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You touch a creature that has died within the last minute. That creature revives with 1 {@variantrule Hit Points|XPHB|Hit Point}. This spell can't revive a creature that has died of old age, nor does it restore any missing body parts."
+      ],
+      "miscTags": [
+        "HL"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Spare the Dying",
+      "source": "XPHB",
+      "page": 318,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 0,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 15
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "Choose a creature within range that has 0 {@variantrule Hit Points|XPHB} and isn't dead. The creature becomes {@variantrule Stable|XPHB}."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Cantrip Upgrade",
+          "entries": [
+            "The range doubles when you reach levels 5 (30 feet), 11 (60 feet), and 17 (120 feet)."
+          ]
+        }
+      ],
+      "miscTags": [
+        "SCL"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Speak with Dead",
+      "source": "XPHB",
+      "page": 318,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 3,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 10
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": "burning incense"
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 10
+          }
+        }
+      ],
+      "entries": [
+        "You grant the semblance of life to a corpse of your choice within range, allowing it to answer questions you pose. The corpse must have a mouth, and this spell fails if the deceased creature was Undead when it died. The spell also fails if the corpse was the target of this spell within the past 10 days.",
+        "Until the spell ends, you can ask the corpse up to five questions. The corpse knows only what it knew in life, including the languages it knew. Answers are usually brief, cryptic, or repetitive, and the corpse is under no compulsion to offer a truthful answer if you are antagonistic toward it or it recognizes you as an enemy. This spell doesn't return the creature's soul to its body, only its animating spirit. Thus, the corpse can't learn new information, doesn't comprehend anything that has happened since it died, and can't speculate about future events."
+      ],
+      "affectsCreatureType": [
+        "aberration",
+        "beast",
+        "celestial",
+        "construct",
+        "dragon",
+        "elemental",
+        "fey",
+        "fiend",
+        "giant",
+        "humanoid",
+        "monstrosity",
+        "ooze",
+        "plant"
+      ]
+    },
+    {
+      "name": "Summon Undead",
+      "source": "XPHB",
+      "page": 328,
+      "level": 3,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 90
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "a gilded skull worth 300+ GP",
+          "cost": 30000
+        }
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "hour",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "You call forth an Undead spirit. It manifests in an unoccupied space that you can see within range and uses the {@creature Undead Spirit|XPHB} stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an Undead creature with the chosen form, which determines certain details in its stat block. The creature disappears when it drops to 0 {@variantrule Hit Points|XPHB} or when the spell ends.",
+        "The creature is an ally to you and your allies. In combat, the creature shares your {@variantrule Initiative|XPHB} count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the {@action Dodge|XPHB} action and uses its movement to avoid danger."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "Use the spell slot's level for the spell's level in the stat block."
+          ]
+        }
+      ],
+      "miscTags": [
+        "SGT",
+        "SMN"
+      ],
+      "hasFluffImages": true
+    },
+    {
+      "name": "Toll the Dead",
+      "source": "XPHB",
+      "page": 334,
+      "level": 0,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "feet",
+          "amount": 60
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You point at one creature you can see within range, and the single chime of a dolorous bell is audible within 10 feet of the target. The target must succeed on a Wisdom saving throw or take {@damage 1d8} Necrotic damage. If the target is missing any of its {@variantrule Hit Points|XPHB}, it instead takes {@damage 1d12} Necrotic damage."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Cantrip Upgrade",
+          "entries": [
+            "The damage increases by one die when you reach levels 5 ({@damage 2d8} or {@damage 2d12}), 11 ({@damage 3d8} or {@damage 3d12}), and 17 ({@damage 4d8} or {@damage 4d12})."
+          ]
+        }
+      ],
+      "scalingLevelDice": [
+        {
+          "label": "Necrotic damage",
+          "scaling": {
+            "1": "1d8",
+            "5": "2d8",
+            "11": "3d8",
+            "17": "4d8"
+          }
+        },
+        {
+          "label": "Necrotic damage to wounded creature",
+          "scaling": {
+            "1": "1d12",
+            "5": "2d12",
+            "11": "3d12",
+            "17": "4d12"
+          }
+        }
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "SCL",
+        "SGT"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "True Resurrection",
+      "source": "XPHB",
+      "page": 336,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 9,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "hour"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "touch"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true,
+        "m": {
+          "text": "diamonds worth 25,000+ GP, which the spell consumes",
+          "cost": 2500000,
+          "consume": true
+        }
+      },
+      "duration": [
+        {
+          "type": "instant"
+        }
+      ],
+      "entries": [
+        "You touch a creature that has been dead for no longer than 200 years and that died for any reason except old age. The creature is revived with all its {@variantrule Hit Points|XPHB}.",
+        "This spell closes all wounds, neutralizes any poison, cures all magical contagions, and lifts any curses affecting the creature when it died. The spell replaces damaged or missing organs and limbs. If the creature was Undead, it is restored to its non-Undead form.",
+        "The spell can provide a new body if the original no longer exists, in which case you must speak the creature's name. The creature then appears in an unoccupied space you choose within 10 feet of you."
+      ],
+      "miscTags": [
+        "HL"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Vampiric Touch",
+      "source": "XPHB",
+      "page": 337,
+      "srd52": true,
+      "basicRules2024": true,
+      "level": 3,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "action"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true,
+        "s": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          },
+          "concentration": true
+        }
+      ],
+      "entries": [
+        "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against one creature within reach. On a hit, the target takes {@damage 3d6} Necrotic damage, and you regain {@variantrule Hit Points|XPHB} equal to half the amount of Necrotic damage dealt.",
+        "Until the spell ends, you can make the attack again on each of your turns as a {@action Magic|XPHB} action, targeting the same creature or a different one."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The damage increases by {@scaledamage 3d6|3-9|1d6} for each spell slot level above 3."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "spellAttack": [
+        "M"
+      ],
+      "miscTags": [
+        "HL"
+      ],
+      "areaTags": [
+        "ST"
+      ]
+    },
+    {
+      "name": "Wrathful Smite",
+      "source": "XPHB",
+      "page": 343,
+      "level": 1,
+      "school": "N",
+      "time": [
+        {
+          "number": 1,
+          "unit": "bonus",
+          "condition": "which you take immediately after hitting a creature with a Melee weapon or an {@variantrule Unarmed Strike|XPHB}"
+        }
+      ],
+      "range": {
+        "type": "point",
+        "distance": {
+          "type": "self"
+        }
+      },
+      "components": {
+        "v": true
+      },
+      "duration": [
+        {
+          "type": "timed",
+          "duration": {
+            "type": "minute",
+            "amount": 1
+          }
+        }
+      ],
+      "entries": [
+        "The target takes an extra {@damage 1d6} Necrotic damage from the attack, and it must succeed on a Wisdom saving throw or have the {@condition Frightened|XPHB} condition until the spell ends. At the end of each of its turns, the {@condition Frightened|XPHB} target repeats the save, ending the spell on itself on a success."
+      ],
+      "entriesHigherLevel": [
+        {
+          "type": "entries",
+          "name": "Using a Higher-Level Spell Slot",
+          "entries": [
+            "The damage increases by {@scaledamage 1d6|1-9|1d6} for each spell slot level above 1."
+          ]
+        }
+      ],
+      "damageInflict": [
+        "necrotic"
+      ],
+      "conditionInflict": [
+        "frightened"
+      ],
+      "savingThrow": [
+        "wisdom"
+      ],
+      "miscTags": [
+        "AAD"
+      ]
+    }
+  ]
+}
